@@ -14,6 +14,7 @@ import { ThemeProvider } from "../contexts/ThemeContext";
 import { lightTheme } from "../theme/theme";
 import "reactflow/dist/style.css";
 import { rawNodes, rawEdges } from "../_lib/graphContent";
+import { MINIMAL_DELTA } from "../constants/movement";
 
 const FlowContainer = styled.div`
   width: 100vw;
@@ -85,6 +86,24 @@ export default function LectureTree() {
     []
   );
 
+  const snapToGrid = useCallback((position) => {
+    return {
+      x: Math.round(position.x / MINIMAL_DELTA) * MINIMAL_DELTA,
+      y: Math.round(position.y / MINIMAL_DELTA) * MINIMAL_DELTA,
+    };
+  }, []);
+
+  const onNodeDrag = useCallback((event, node) => {
+    const snappedPosition = snapToGrid(node.position);
+    
+    // Update node position to snapped coordinates
+    setNodes(nds => nds.map(n => 
+      n.id === node.id 
+        ? { ...n, position: snappedPosition }
+        : n
+    ));
+  }, [snapToGrid]);
+
   return (
     <ThemeProvider theme={lightTheme}>
       <FlowContainer>
@@ -96,8 +115,9 @@ export default function LectureTree() {
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
+          onNodeDrag={onNodeDrag}
           fitView
-          nodesDraggable={false}
+          nodesDraggable={true}
           nodeTypes={nodeTypes}
         >
           <Controls />
