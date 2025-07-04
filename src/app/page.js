@@ -10,6 +10,8 @@ import ReactFlow, {
 import dagre from "dagre";
 import styled from 'styled-components';
 import CustomNode from "../components/CustomNode";
+import { ThemeProvider } from "../contexts/ThemeContext";
+import { lightTheme } from "../theme/theme";
 import "reactflow/dist/style.css";
 import { rawNodes, rawEdges } from "../_lib/graphContent";
 
@@ -39,6 +41,7 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
     const { x, y } = dagreGraph.node(n.id);
     return {
       ...n,
+      type: 'custom',
       position: {
         x: x - nodeWidth / 2,
         y: y - nodeHeight / 2,
@@ -51,8 +54,6 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
 
 // кастомный тип нода
 const nodeTypes = { custom: CustomNode };
-
-// жёстко заданная структура с кастомным типом
 
 export default function LectureTree() {
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
@@ -85,22 +86,24 @@ export default function LectureTree() {
   );
 
   return (
-    <FlowContainer>
-      <ReactFlow
-        panOnScroll={true}
-        zoomOnScroll={false}
-        preventScrolling={true}
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        fitView
-        nodesDraggable={false}
-        nodeTypes={nodeTypes}
-      >
-        <Controls />
-        <Background />
-      </ReactFlow>
-    </FlowContainer>
+    <ThemeProvider theme={lightTheme}>
+      <FlowContainer>
+        <ReactFlow
+          panOnScroll={true}
+          zoomOnScroll={false}
+          preventScrolling={true}
+          nodes={nodes}
+          edges={edges}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          fitView
+          nodesDraggable={false}
+          nodeTypes={nodeTypes}
+        >
+          <Controls />
+          <Background />
+        </ReactFlow>
+      </FlowContainer>
+    </ThemeProvider>
   );
 }
