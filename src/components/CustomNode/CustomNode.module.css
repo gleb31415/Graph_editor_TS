@@ -1,0 +1,41 @@
+.customNode {
+  padding: 10px;
+  border: 2px solid #0066ff;
+  border-radius: 8px;
+  background: #e6f0ff;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.section,
+.grade,
+.status {
+  margin-bottom: 2px;
+}
+
+.statusCircle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.handle {
+  width: 8px;
+  height: 8px;
+  background: #0066ff;
+  border-radius: 50%;
+}
