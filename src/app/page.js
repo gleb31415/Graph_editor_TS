@@ -47,6 +47,8 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
         x: x - nodeWidth / 2,
         y: y - nodeHeight / 2,
       },
+      width: Math.round(nodeWidth / MINIMAL_DELTA) * MINIMAL_DELTA,
+      height: Math.round(nodeHeight / MINIMAL_DELTA) * MINIMAL_DELTA,
     };
   });
 
@@ -77,15 +79,6 @@ export default function LectureTree() {
     setEdges(initEdges);
   }, [initNodes, initEdges]);
 
-  const onNodesChange = useCallback(
-    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
-    []
-  );
-  const onEdgesChange = useCallback(
-    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    []
-  );
-
   const snapToGrid = useCallback((position) => {
     return {
       x: Math.round(position.x / MINIMAL_DELTA) * MINIMAL_DELTA,
@@ -93,16 +86,41 @@ export default function LectureTree() {
     };
   }, []);
 
-  const onNodeDrag = useCallback((event, node) => {
-    const snappedPosition = snapToGrid(node.position);
+  const snapSizeToGrid = useCallback((width, height) => {
+    return {
+      width: Math.round(width / MINIMAL_DELTA) * MINIMAL_DELTA,
+      height: Math.round(height / MINIMAL_DELTA) * MINIMAL_DELTA,
+    };
+  }, []);
+
+  const onNodesChange = useCallback((changes) => {
+    const quantizedChanges = changes.map(change => {
+      if (change.type === 'position' && change.position) {
+        return {
+          ...change,
+          position: snapToGrid(change.position)
+        };
+      }
+      if (change.type === 'dimensions' && (change.dimensions || change.resizing === false)) {
+        const node = nodes.find(n => n.id === change.id);
+        if (node && change.dimensions) {
+          const snappedSize = snapSizeToGrid(change.dimensions.width, change.dimensions.height);
+          return {
+            ...change,
+            dimensions: snappedSize
+          };
+        }
+      }
+      return change;
+    });
     
-    // Update node position to snapped coordinates
-    setNodes(nds => nds.map(n => 
-      n.id === node.id 
-        ? { ...n, position: snappedPosition }
-        : n
-    ));
-  }, [snapToGrid]);
+    setNodes((nds) => applyNodeChanges(quantizedChanges, nds));
+  }, [snapToGrid, snapSizeToGrid, nodes]);
+
+  const onEdgesChange = useCallback(
+    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    []
+  );
 
   return (
     <ThemeProvider theme={lightTheme}>
@@ -115,9 +133,9 @@ export default function LectureTree() {
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
-          onNodeDrag={onNodeDrag}
           fitView
           nodesDraggable={true}
+          nodesConnectable={false}
           nodeTypes={nodeTypes}
         >
           <Controls />

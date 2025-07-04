@@ -1,7 +1,8 @@
 import React from "react";
-import { Handle, Position } from "reactflow";
+import { Handle, Position, NodeResizer } from "reactflow";
 import styled from "styled-components";
 import { useTheme } from "../contexts/ThemeContext";
+import { MINIMAL_DELTA } from "../constants/movement";
 
 const CustomNodeWrap = styled.div`
     padding: 10px;
@@ -12,6 +13,10 @@ const CustomNodeWrap = styled.div`
     align-items: center;
     font-size: 12px;
     opacity: ${(props) => props.opacity};
+    width: 100%;
+    height: 100%;
+    min-width: ${MINIMAL_DELTA * 4}px;
+    min-height: ${MINIMAL_DELTA * 2}px;
 `;
 
 const CustomHandle = styled(Handle)`
@@ -25,14 +30,18 @@ const NodeContent = styled.div`
   flex: 1;
   text-align: left;
   padding: 0 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 `;
 
 const NodeTitle = styled.div`
   font-weight: bold;
-  margin-bottom: 4px;
+  line-height: 1.2;
+  white-space: pre-wrap;
 `;
 
-export default function CustomNode({ id, data }) {
+export default function CustomNode({ id, data, selected }) {
   const theme = useTheme();
   
   const getSectionColor = (section) => {
@@ -47,18 +56,36 @@ export default function CustomNode({ id, data }) {
   const opacity = getGradeOpacity(data?.grade);
 
   return (
-    <CustomNodeWrap backgroundColor={backgroundColor} opacity={opacity}>
-      <CustomHandle
-        type="target"
-        position={Position.Left}
+    <>
+      <NodeResizer
+        minWidth={MINIMAL_DELTA * 4}
+        minHeight={MINIMAL_DELTA * 2}
+        isVisible={selected}
+        lineStyle={{
+          borderColor: '#0066ff',
+          borderWidth: 2,
+        }}
+        handleStyle={{
+          backgroundColor: '#0066ff',
+          width: 8,
+          height: 8,
+          borderRadius: '50%',
+          border: '1px solid #fff',
+        }}
       />
-      <NodeContent>
-        <NodeTitle>{id}</NodeTitle>
-      </NodeContent>
-      <CustomHandle
-        type="source"
-        position={Position.Right}
-      />
-    </CustomNodeWrap>
+      <CustomNodeWrap backgroundColor={backgroundColor} opacity={opacity}>
+        <CustomHandle
+          type="target"
+          position={Position.Left}
+        />
+        <NodeContent>
+          <NodeTitle>{id}</NodeTitle>
+        </NodeContent>
+        <CustomHandle
+          type="source"
+          position={Position.Right}
+        />
+      </CustomNodeWrap>
+    </>
   );
 }
