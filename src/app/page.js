@@ -8,9 +8,15 @@ import ReactFlow, {
   applyEdgeChanges,
 } from "reactflow";
 import dagre from "dagre";
+import styled from 'styled-components';
 import CustomNode from "../components/CustomNode";
 import "reactflow/dist/style.css";
 import { rawNodes, rawEdges } from "../_lib/graphContent";
+
+const FlowContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
@@ -79,7 +85,7 @@ export default function LectureTree() {
   );
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <FlowContainer>
       <ReactFlow
         panOnScroll={true}
         zoomOnScroll={false}
@@ -95,6 +101,6 @@ export default function LectureTree() {
         <Controls />
         <Background />
       </ReactFlow>
-    </div>
+    </FlowContainer>
   );
 }
