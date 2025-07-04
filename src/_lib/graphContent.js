@@ -1,1662 +1,1164 @@
 export const rawNodes = [
   {
     id: "TS",
-    type: "custom",
     data: {
-      title: "TS",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Равномерное прямолинейное движение",
-    type: "custom",
     data: {
-      title: "Равномерное прямолинейное движение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Плотность",
-    type: "custom",
     data: {
-      title: "Плотность",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Работа с графиками",
-    type: "custom",
     data: {
-      title: "Работа с графиками",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Электрический заряд. Закон Кулона.",
-    type: "custom",
     data: {
-      title: "Электрический заряд. Закон Кулона.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Температура. Связь температуры с кинетической энергией движения молекул.",
-    type: "custom",
     data: {
-      title: "Температура. Связь температуры с кинетической энергией движения молекул.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тень. Полутень.",
-    type: "custom",
     data: {
-      title: "Тень. Полутень.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Средняя скорость. Относительное движение.",
-    type: "custom",
     data: {
-      title: "Средняя скорость. Относительное движение.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Кинематические связи. Блоки.",
-    type: "custom",
     data: {
-      title: "Кинематические связи. Блоки.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Закон Гука. Системы пружин.",
-    type: "custom",
     data: {
-      title: "Закон Гука. Системы пружин.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сила. Третий закон Ньютона.",
-    type: "custom",
     data: {
-      title: "Сила. Третий закон Ньютона.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сила тяжести",
-    type: "custom",
     data: {
-      title: "Сила тяжести",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Моменты",
-    type: "custom",
     data: {
-      title: "Моменты",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Работа. Мощность. КПД",
-    type: "custom",
     data: {
-      title: "Работа. Мощность. КПД",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Системы блоков. Статика со связями.",
-    type: "custom",
     data: {
-      title: "Системы блоков. Статика со связями.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Давление. Сообщающиеся сосуды",
-    type: "custom",
     data: {
-      title: "Давление. Сообщающиеся сосуды",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сила Архимеда",
-    type: "custom",
     data: {
-      title: "Сила Архимеда",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Механика, 7 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Механика, 7 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Энергия",
-    type: "custom",
     data: {
-      title: "Энергия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Движение со связями",
-    type: "custom",
     data: {
-      title: "Движение со связями",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Равноускоренное движение",
-    type: "custom",
     data: {
-      title: "Равноускоренное движение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Конус Маха",
-    type: "custom",
     data: {
-      title: "Конус Маха",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Упругие столкновения с тяжёлой стенкой",
-    type: "custom",
     data: {
-      title: "Упругие столкновения с тяжёлой стенкой",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Метод виртуальных перемещений",
-    type: "custom",
     data: {
-      title: "Метод виртуальных перемещений",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Бернулли",
-    type: "custom",
     data: {
-      title: "Бернулли",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Устойчивость равновесия",
-    type: "custom",
     data: {
-      title: "Устойчивость равновесия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Мгновенный центр вращения",
-    type: "custom",
     data: {
-      title: "Мгновенный центр вращения",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Теорема Кёнига",
-    type: "custom",
     data: {
-      title: "Теорема Кёнига",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Динамика. Второй закон Ньютона.",
-    type: "custom",
     data: {
-      title: "Динамика. Второй закон Ньютона.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Равномерное движение по окружности",
-    type: "custom",
     data: {
-      title: "Равномерное движение по окружности",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Баллистика. Координатный метод.",
-    type: "custom",
     data: {
-      title: "Баллистика. Координатный метод.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Баллистика. Векторный метод.",
-    type: "custom",
     data: {
-      title: "Баллистика. Векторный метод.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Баллистика, 9 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Баллистика, 9 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Центростремительное ускорение",
-    type: "custom",
     data: {
-      title: "Центростремительное ускорение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Неравномерное движение по окружности",
-    type: "custom",
     data: {
-      title: "Неравномерное движение по окружности",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Всемирное тяготение. Космические скорости.",
-    type: "custom",
     data: {
-      title: "Всемирное тяготение. Космические скорости.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Неинерциальные системы отсчёта",
-    type: "custom",
     data: {
-      title: "Неинерциальные системы отсчёта",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Вращательные НеИСО",
-    type: "custom",
     data: {
-      title: "Вращательные НеИСО",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сухое трение",
-    type: "custom",
     data: {
-      title: "Сухое трение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Импульс",
-    type: "custom",
     data: {
-      title: "Импульс",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Реактивная сила",
-    type: "custom",
     data: {
-      title: "Реактивная сила",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Вязкое трение",
-    type: "custom",
     data: {
-      title: "Вязкое трение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Статика",
-    type: "custom",
     data: {
-      title: "Статика",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Столкновения",
-    type: "custom",
     data: {
-      title: "Столкновения",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Законы сохранения, 9 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Законы сохранения, 9 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Динамика, 9 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Динамика, 9 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Момент импульса",
-    type: "custom",
     data: {
-      title: "Момент импульса",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Момент инерции",
-    type: "custom",
     data: {
-      title: "Момент инерции",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Гравитация. Законы Кеплера.",
-    type: "custom",
     data: {
-      title: "Гравитация. Законы Кеплера.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Механика, 11 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Механика, 11 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Гармонические колебания",
-    type: "custom",
     data: {
-      title: "Гармонические колебания",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Энергия в гармонических колебаниях",
-    type: "custom",
     data: {
-      title: "Энергия в гармонических колебаниях",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Затухающие колебания",
-    type: "custom",
     data: {
-      title: "Затухающие колебания",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Резонанс",
-    type: "custom",
     data: {
-      title: "Резонанс",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сложение колебаний. Биения.",
-    type: "custom",
     data: {
-      title: "Сложение колебаний. Биения.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Колебания, 11 класс",
-    type: "custom",
     data: {
-      title: "Тур. Колебания, 11 класс",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Механические волны",
-    type: "custom",
     data: {
-      title: "Механические волны",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Постулаты специальной теории относительности",
-    type: "custom",
     data: {
-      title: "Постулаты специальной теории относительности",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Эффект Доплера",
-    type: "custom",
     data: {
-      title: "Эффект Доплера",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Парадоксы и эффекты",
-    type: "custom",
     data: {
-      title: "Парадоксы и эффекты",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Релятивистская динамика",
-    type: "custom",
     data: {
-      title: "Релятивистская динамика",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тригонометрия",
-    type: "custom",
     data: {
-      title: "Тригонометрия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Свойства тригонометрических функций",
-    type: "custom",
     data: {
-      title: "Свойства тригонометрических функций",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Векторы",
-    type: "custom",
     data: {
-      title: "Векторы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дифференцирование",
-    type: "custom",
     data: {
-      title: "Дифференцирование",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Интегрирование",
-    type: "custom",
     data: {
-      title: "Интегрирование",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Работа с малыми величинами",
-    type: "custom",
     data: {
-      title: "Работа с малыми величинами",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Логарифмы, показательные функции",
-    type: "custom",
     data: {
-      title: "Логарифмы, показательные функции",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Телесный угол",
-    type: "custom",
     data: {
-      title: "Телесный угол",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Векторное произведение",
-    type: "custom",
     data: {
-      title: "Векторное произведение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дифференциальные уравнения. Уравнения колебаний.",
-    type: "custom",
     data: {
-      title: "Дифференциальные уравнения. Уравнения колебаний.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Ряды",
-    type: "custom",
     data: {
-      title: "Ряды",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Комплексные числа",
-    type: "custom",
     data: {
-      title: "Комплексные числа",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Отражение света. Зеркала.",
-    type: "custom",
     data: {
-      title: "Отражение света. Зеркала.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Преломление света. Закон Снеллиуса.",
-    type: "custom",
     data: {
-      title: "Преломление света. Закон Снеллиуса.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Пластины, призмы",
-    type: "custom",
     data: {
-      title: "Пластины, призмы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Полное внутреннее отражение",
-    type: "custom",
     data: {
-      title: "Полное внутреннее отражение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Линза, построение изображений",
-    type: "custom",
     data: {
-      title: "Линза, построение изображений",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Формула тонкой линзы",
-    type: "custom",
     data: {
-      title: "Формула тонкой линзы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Увеличение",
-    type: "custom",
     data: {
-      title: "Увеличение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Оптические системы",
-    type: "custom",
     data: {
-      title: "Оптические системы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Оптика, 10 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Оптика, 10 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дисперсия",
-    type: "custom",
     data: {
-      title: "Дисперсия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Интерференция света. Когерентные источники.",
-    type: "custom",
     data: {
-      title: "Интерференция света. Когерентные источники.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Интерференция света. Временная когерентность.",
-    type: "custom",
     data: {
-      title: "Интерференция света. Временная когерентность.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дифракция Фраунгофера",
-    type: "custom",
     data: {
-      title: "Дифракция Фраунгофера",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дифракция Френеля",
-    type: "custom",
     data: {
-      title: "Дифракция Френеля",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дифракционная решётка",
-    type: "custom",
     data: {
-      title: "Дифракционная решётка",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Поляризация света",
-    type: "custom",
     data: {
-      title: "Поляризация света",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Волновая оптика, 11 класс",
-    type: "custom",
     data: {
-      title: "Тур. Волновая оптика, 11 класс",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Напряжённость электрического поля, потенциал",
-    type: "custom",
     data: {
-      title: "Напряжённость электрического поля, потенциал",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сила тока, напряжение. Закон Ома.",
-    type: "custom",
     data: {
-      title: "Сила тока, напряжение. Закон Ома.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Мощность электрического тока",
-    type: "custom",
     data: {
-      title: "Мощность электрического тока",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Электричество, 8 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Электричество, 8 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Удельное сопротивление",
-    type: "custom",
     data: {
-      title: "Удельное сопротивление",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Параллельное и последовательное соединения резисторов",
-    type: "custom",
     data: {
-      title: "Параллельное и последовательное соединения резисторов",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Правила Кирхгофа",
-    type: "custom",
     data: {
-      title: "Правила Кирхгофа",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Симметричные цепи",
-    type: "custom",
     data: {
-      title: "Симметричные цепи",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Метод наложения токов",
-    type: "custom",
     data: {
-      title: "Метод наложения токов",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Источники тока",
-    type: "custom",
     data: {
-      title: "Источники тока",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Метод эквивалентного источника",
-    type: "custom",
     data: {
-      title: "Метод эквивалентного источника",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Измерительные приборы",
-    type: "custom",
     data: {
-      title: "Измерительные приборы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Вольтамперная характеристика",
-    type: "custom",
     data: {
-      title: "Вольтамперная характеристика",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Мостовые схемы",
-    type: "custom",
     data: {
-      title: "Мостовые схемы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Преобразование звезда-треугольник",
-    type: "custom",
     data: {
-      title: "Преобразование звезда-треугольник",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Поток электрического поля. Закон Гаусса.",
-    type: "custom",
     data: {
-      title: "Поток электрического поля. Закон Гаусса.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Рассчёт электрического поля и потенциала",
-    type: "custom",
     data: {
-      title: "Рассчёт электрического поля и потенциала",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Принцип суперпозиции",
-    type: "custom",
     data: {
-      title: "Принцип суперпозиции",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Проводники в электростатическом поле",
-    type: "custom",
     data: {
-      title: "Проводники в электростатическом поле",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Теорема о единственности",
-    type: "custom",
     data: {
-      title: "Теорема о единственности",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Метод электростатических изображений",
-    type: "custom",
     data: {
-      title: "Метод электростатических изображений",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Энергия систем зарядов",
-    type: "custom",
     data: {
-      title: "Энергия систем зарядов",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Диэлектрики в электростатическом поле",
-    type: "custom",
     data: {
-      title: "Диэлектрики в электростатическом поле",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Электростатика, 10 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Электростатика, 10 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Конденсаторы",
-    type: "custom",
     data: {
-      title: "Конденсаторы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Соединение конденсаторов. Энергия конденсатора.",
-    type: "custom",
     data: {
-      title: "Соединение конденсаторов. Энергия конденсатора.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Объёмная плотность энергии электрического поля",
-    type: "custom",
     data: {
-      title: "Объёмная плотность энергии электрического поля",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "RC-цепи",
-    type: "custom",
     data: {
-      title: "RC-цепи",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Ток в различных средах",
-    type: "custom",
     data: {
-      title: "Ток в различных средах",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Электростатика, 11 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Электростатика, 11 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Магнитное поле. Сила Лоренца.",
-    type: "custom",
     data: {
-      title: "Магнитное поле. Сила Лоренца.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Сила Ампера. Момент силы Ампера.",
-    type: "custom",
     data: {
-      title: "Сила Ампера. Момент силы Ампера.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Закон Био-Савара-Лапласа",
-    type: "custom",
     data: {
-      title: "Закон Био-Савара-Лапласа",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Теорема Гаусса для магнитного поля",
-    type: "custom",
     data: {
-      title: "Теорема Гаусса для магнитного поля",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Теорема о циркуляции магнитного поля",
-    type: "custom",
     data: {
-      title: "Теорема о циркуляции магнитного поля",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Закон электромагнитной индукции Фарадея",
-    type: "custom",
     data: {
-      title: "Закон электромагнитной индукции Фарадея",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Движущийся проводник в магнитном поле",
-    type: "custom",
     data: {
-      title: "Движущийся проводник в магнитном поле",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Магнитная гидродинамика",
-    type: "custom",
     data: {
-      title: "Магнитная гидродинамика",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Эффект Холла",
-    type: "custom",
     data: {
-      title: "Эффект Холла",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Самоиндукция",
-    type: "custom",
     data: {
-      title: "Самоиндукция",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Энергия магнитного поля",
-    type: "custom",
     data: {
-      title: "Энергия магнитного поля",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Электромагнетизм, 11 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Электромагнетизм, 11 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Электромагнитные волны",
-    type: "custom",
     data: {
-      title: "Электромагнитные волны",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Интерференция и дифракция ЭМ волн",
-    type: "custom",
     data: {
-      title: "Интерференция и дифракция ЭМ волн",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Дисперсия",
-    type: "custom",
     data: {
-      title: "Дисперсия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Импульс и энергия фотонов",
-    type: "custom",
     data: {
-      title: "Импульс и энергия фотонов",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Фотоэффект",
-    type: "custom",
     data: {
-      title: "Фотоэффект",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Корпускулярно-волновой дуализм",
-    type: "custom",
     data: {
-      title: "Корпускулярно-волновой дуализм",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Соотношение неопределённостей Гейзенберга",
-    type: "custom",
     data: {
-      title: "Соотношение неопределённостей Гейзенберга",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Переменный ток. Импеданс.",
-    type: "custom",
     data: {
-      title: "Переменный ток. Импеданс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Резонанс. Мощность переменного тока",
-    type: "custom",
     data: {
-      title: "Резонанс. Мощность переменного тока",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Переменный ток, 11 класc",
-    type: "custom",
     data: {
-      title: "Тур. Переменный ток, 11 класc",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тепловое расширение",
-    type: "custom",
     data: {
-      title: "Тепловое расширение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Количество теплоты, внутренняя энергия",
-    type: "custom",
     data: {
-      title: "Количество теплоты, внутренняя энергия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Влажность",
-    type: "custom",
     data: {
-      title: "Влажность",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Уравнение теплового баланса",
-    type: "custom",
     data: {
-      title: "Уравнение теплового баланса",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Внешние источники теплоты. Теплопотери.",
-    type: "custom",
     data: {
-      title: "Внешние источники теплоты. Теплопотери.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Теплопроводность. Закон Ньютона-Рихмана.",
-    type: "custom",
     data: {
-      title: "Теплопроводность. Закон Ньютона-Рихмана.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Термодинамика, 8 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Термодинамика, 8 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Длина свободного пробега",
-    type: "custom",
     data: {
-      title: "Длина свободного пробега",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Уравнение Клапейрона-Менделеева",
-    type: "custom",
     data: {
-      title: "Уравнение Клапейрона-Менделеева",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Работа, внутренняя энергия. Первое начало термодинамики.",
-    type: "custom",
     data: {
-      title: "Работа, внутренняя энергия. Первое начало термодинамики.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Адиабатический процесс",
-    type: "custom",
     data: {
-      title: "Адиабатический процесс",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Политропический процесс",
-    type: "custom",
     data: {
-      title: "Политропический процесс",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Термодинамические циклы",
-    type: "custom",
     data: {
-      title: "Термодинамические циклы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Второе начало термодинамики. Две формулировки.",
-    type: "custom",
     data: {
-      title: "Второе начало термодинамики. Две формулировки.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Цикл Карно",
-    type: "custom",
     data: {
-      title: "Цикл Карно",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Теоремы Карно",
-    type: "custom",
     data: {
-      title: "Теоремы Карно",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Неравенство Клаузиуса",
-    type: "custom",
     data: {
-      title: "Неравенство Клаузиуса",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Энтропия",
-    type: "custom",
     data: {
-      title: "Энтропия",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Влажный воздух",
-    type: "custom",
     data: {
-      title: "Влажный воздух",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Уравнение Клапейрона-Клаузиуса",
-    type: "custom",
     data: {
-      title: "Уравнение Клапейрона-Клаузиуса",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Неидеальные газы",
-    type: "custom",
     data: {
-      title: "Неидеальные газы",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Тур. Термодинамика, 10 класс.",
-    type: "custom",
     data: {
-      title: "Тур. Термодинамика, 10 класс.",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Поверхностное натяжение",
-    type: "custom",
     data: {
-      title: "Поверхностное натяжение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   },
   {
     id: "Равновесное тепловое излучение",
-    type: "custom",
     data: {
-      title: "Равновесное тепловое излучение",
       section: "",
-      grade: 0,
-      completed: false
+      grade: 0
     }
   }
 ];

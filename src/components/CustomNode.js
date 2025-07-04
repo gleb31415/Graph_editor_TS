@@ -30,7 +30,7 @@ const NodeTitle = styled.div`
   margin-bottom: 4px;
 `;
 
-export default function CustomNode({ data }) {
+export default function CustomNode({ id, data }) {
   return (
     <CustomNodeWrap sectionColor={data.sectionColor}>
       <CustomHandle
@@ -38,7 +38,7 @@ export default function CustomNode({ data }) {
         position={Position.Left}
       />
       <NodeContent>
-        <NodeTitle>{data.title}</NodeTitle>
+        <NodeTitle>{id}</NodeTitle>
       </NodeContent>
       <CustomHandle
         type="source"
