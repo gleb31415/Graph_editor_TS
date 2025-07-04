@@ -12,6 +12,23 @@ export const lightTheme = {
     sans: 'var(--font-geist-sans)',
     mono: 'var(--font-geist-mono)',
   },
+  nodes: {
+    section: {
+        математика: '#ff0000',
+        термодинамика: '#ffa500',
+        механика: '#800080',
+        оптика: '#ffff00',
+        электромагнетизм: '#0000ff',
+    },
+    grade: {
+        7: '50%',
+        8: '60%',
+        9: '70%',
+        10: '80%',
+        11: '90%',
+        beyond: '100%',
+    }
+  }
 };
 
 export const darkTheme = {
@@ -28,4 +45,21 @@ export const darkTheme = {
     sans: 'var(--font-geist-sans)',
     mono: 'var(--font-geist-mono)',
   },
+  nodes: {
+    section: {
+        математика: '#ff0000',
+        термодинамика: '#ffa500',
+        механика: '#800080',
+        оптика: '#ffff00',
+        электромагнетизм: '#0000ff',
+    },
+    grade: {
+        7: '50%',
+        8: '60%',
+        9: '70%',
+        10: '80%',
+        11: '90%',
+        beyond: '100%',
+    }
+  }
 };
