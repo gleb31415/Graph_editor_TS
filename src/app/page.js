@@ -8,7 +8,7 @@ import ReactFlow, {
   applyEdgeChanges,
 } from "reactflow";
 import dagre from "dagre";
-import CustomNode from "../components/CustomNode/CustomNode";
+import CustomNode from "../components/CustomNode";
 import "reactflow/dist/style.css";
 import { rawNodes, rawEdges } from "../_lib/graphContent";
 

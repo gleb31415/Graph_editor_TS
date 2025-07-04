@@ -6,7 +6,7 @@ const CustomNodeWrap = styled.div`
     padding: 10px;
     border: 2px solid #0066ff;
     border-radius: 8px;
-    background: #e6f0ff;
+    background: ${(props) => props.sectionColor ?? "#" };
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -32,7 +32,7 @@ const NodeTitle = styled.div`
 
 export default function CustomNode({ data }) {
   return (
-    <CustomNodeWrap>
+    <CustomNodeWrap sectionColor={data.sectionColor}>
       <CustomHandle
         type="target"
         position={Position.Left}
