@@ -3,1162 +3,1162 @@ export const rawNodes = [
     id: "TS",
     data: {
       section: "",
-      grade: 0
+      grade: "beyond"
     }
   },
   {
     id: "Равномерное прямолинейное движение",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Плотность",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Работа с графиками",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Электрический заряд. Закон Кулона.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Температура. Связь температуры с кинетической энергией движения молекул.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Тень. Полутень.",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Средняя скорость. Относительное движение.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Кинематические связи. Блоки.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Закон Гука. Системы пружин.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Сила. Третий закон Ньютона.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Сила тяжести",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Моменты",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Работа. Мощность. КПД",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Системы блоков. Статика со связями.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Давление. Сообщающиеся сосуды",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Сила Архимеда",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Механика, 7 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Энергия",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Движение со связями",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Равноускоренное движение",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Конус Маха",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Упругие столкновения с тяжёлой стенкой",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Метод виртуальных перемещений",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Бернулли",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Устойчивость равновесия",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Мгновенный центр вращения",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Теорема Кёнига",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Динамика. Второй закон Ньютона.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Равномерное движение по окружности",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Баллистика. Координатный метод.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Баллистика. Векторный метод.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Баллистика, 9 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Центростремительное ускорение",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Неравномерное движение по окружности",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Всемирное тяготение. Космические скорости.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Неинерциальные системы отсчёта",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Вращательные НеИСО",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Сухое трение",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Импульс",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Реактивная сила",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Вязкое трение",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Статика",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Столкновения",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Законы сохранения, 9 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Динамика, 9 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Момент импульса",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Момент инерции",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Гравитация. Законы Кеплера.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Механика, 11 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Гармонические колебания",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Энергия в гармонических колебаниях",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Затухающие колебания",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Резонанс",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Сложение колебаний. Биения.",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Колебания, 11 класс",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Механические волны",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Постулаты специальной теории относительности",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Эффект Доплера",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Парадоксы и эффекты",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Релятивистская динамика",
     data: {
-      section: "",
-      grade: 0
+      section: "механика",
+      grade: "beyond"
     }
   },
   {
     id: "Тригонометрия",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Свойства тригонометрических функций",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Векторы",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Дифференцирование",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Интегрирование",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Работа с малыми величинами",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Логарифмы, показательные функции",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Телесный угол",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Векторное произведение",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Дифференциальные уравнения. Уравнения колебаний.",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Ряды",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Комплексные числа",
     data: {
-      section: "",
-      grade: 0
+      section: "математика",
+      grade: "beyond"
     }
   },
   {
     id: "Отражение света. Зеркала.",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Преломление света. Закон Снеллиуса.",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Пластины, призмы",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Полное внутреннее отражение",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Линза, построение изображений",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Формула тонкой линзы",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Увеличение",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Оптические системы",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Оптика, 10 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Дисперсия",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Интерференция света. Когерентные источники.",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Интерференция света. Временная когерентность.",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Дифракция Фраунгофера",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Дифракция Френеля",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Дифракционная решётка",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Поляризация света",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Волновая оптика, 11 класс",
     data: {
-      section: "",
-      grade: 0
+      section: "оптика",
+      grade: "beyond"
     }
   },
   {
     id: "Напряжённость электрического поля, потенциал",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Сила тока, напряжение. Закон Ома.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Мощность электрического тока",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Электричество, 8 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Удельное сопротивление",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Параллельное и последовательное соединения резисторов",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Правила Кирхгофа",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Симметричные цепи",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Метод наложения токов",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Источники тока",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Метод эквивалентного источника",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Измерительные приборы",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Вольтамперная характеристика",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Мостовые схемы",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Преобразование звезда-треугольник",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Поток электрического поля. Закон Гаусса.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Рассчёт электрического поля и потенциала",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Принцип суперпозиции",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Проводники в электростатическом поле",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Теорема о единственности",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Метод электростатических изображений",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Энергия систем зарядов",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Диэлектрики в электростатическом поле",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Электростатика, 10 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Конденсаторы",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Соединение конденсаторов. Энергия конденсатора.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Объёмная плотность энергии электрического поля",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "RC-цепи",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Ток в различных средах",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Электростатика, 11 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Магнитное поле. Сила Лоренца.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Сила Ампера. Момент силы Ампера.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Закон Био-Савара-Лапласа",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Теорема Гаусса для магнитного поля",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Теорема о циркуляции магнитного поля",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Закон электромагнитной индукции Фарадея",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Движущийся проводник в магнитном поле",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Магнитная гидродинамика",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Эффект Холла",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Самоиндукция",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Энергия магнитного поля",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Электромагнетизм, 11 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Электромагнитные волны",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Интерференция и дифракция ЭМ волн",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Дисперсия",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Импульс и энергия фотонов",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Фотоэффект",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Корпускулярно-волновой дуализм",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Соотношение неопределённостей Гейзенберга",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Переменный ток. Импеданс.",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Резонанс. Мощность переменного тока",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Переменный ток, 11 класc",
     data: {
-      section: "",
-      grade: 0
+      section: "электромагнетизм",
+      grade: "beyond"
     }
   },
   {
     id: "Тепловое расширение",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Количество теплоты, внутренняя энергия",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Влажность",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Уравнение теплового баланса",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Внешние источники теплоты. Теплопотери.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Теплопроводность. Закон Ньютона-Рихмана.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Термодинамика, 8 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Длина свободного пробега",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Уравнение Клапейрона-Менделеева",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Работа, внутренняя энергия. Первое начало термодинамики.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Адиабатический процесс",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Политропический процесс",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Термодинамические циклы",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Второе начало термодинамики. Две формулировки.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Цикл Карно",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Теоремы Карно",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Неравенство Клаузиуса",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Энтропия",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Влажный воздух",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Уравнение Клапейрона-Клаузиуса",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Неидеальные газы",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Тур. Термодинамика, 10 класс.",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Поверхностное натяжение",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   },
   {
     id: "Равновесное тепловое излучение",
     data: {
-      section: "",
-      grade: 0
+      section: "термодинамика",
+      grade: "beyond"
     }
   }
 ];
