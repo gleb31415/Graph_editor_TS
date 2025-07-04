@@ -15,10 +15,29 @@ import { lightTheme } from "../theme/theme";
 import "reactflow/dist/style.css";
 import { rawNodes, rawEdges } from "../_lib/graphContent";
 import { MINIMAL_DELTA } from "../constants/movement";
+import { saveNodeChanges, applyStoredChanges, exportUpdatedGraphContent } from "../utils/persistence";
 
 const FlowContainer = styled.div`
   width: 100vw;
   height: 100vh;
+`;
+
+const ExportButton = styled.button`
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  
+  &:hover {
+    background: #0052cc;
+  }
 `;
 
 const dagreGraph = new dagre.graphlib.Graph();
@@ -43,12 +62,12 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
     return {
       ...n,
       type: 'custom',
-      position: {
+      position: n.position || {
         x: x - nodeWidth / 2,
         y: y - nodeHeight / 2,
       },
-      width: Math.round(nodeWidth / MINIMAL_DELTA) * MINIMAL_DELTA,
-      height: Math.round(nodeHeight / MINIMAL_DELTA) * MINIMAL_DELTA,
+      width: n.width || Math.round(nodeWidth / MINIMAL_DELTA) * MINIMAL_DELTA,
+      height: n.height || Math.round(nodeHeight / MINIMAL_DELTA) * MINIMAL_DELTA,
     };
   });
 
@@ -64,9 +83,10 @@ export default function LectureTree() {
     edges: [],
   });
 
-  // один раз расставляем по dagre
+  // один раз расставляем по dagre с применением сохраненных изменений
   useEffect(() => {
-    const { nodes: ln, edges: le } = getLayoutedElements(rawNodes, rawEdges);
+    const nodesWithStoredChanges = applyStoredChanges(rawNodes);
+    const { nodes: ln, edges: le } = getLayoutedElements(nodesWithStoredChanges, rawEdges);
     setLayout({ nodes: ln, edges: le });
   }, []);
 
@@ -114,7 +134,11 @@ export default function LectureTree() {
       return change;
     });
     
-    setNodes((nds) => applyNodeChanges(quantizedChanges, nds));
+    const updatedNodes = applyNodeChanges(quantizedChanges, nodes);
+    setNodes(updatedNodes);
+    
+    // Сохраняем изменения в localStorage
+    saveNodeChanges(updatedNodes);
   }, [snapToGrid, snapSizeToGrid, nodes]);
 
   const onEdgesChange = useCallback(
@@ -122,9 +146,32 @@ export default function LectureTree() {
     []
   );
 
+  const handleExportGraph = useCallback(() => {
+    const exportedContent = exportUpdatedGraphContent(nodes);
+    console.log('Updated graph content:');
+    console.log(exportedContent);
+    
+    // Копируем в буфер обмена
+    navigator.clipboard.writeText(exportedContent).then(() => {
+      alert('Graph content copied to clipboard!');
+    }).catch(() => {
+      // Fallback для старых браузеров
+      const textArea = document.createElement('textarea');
+      textArea.value = exportedContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('Graph content copied to clipboard!');
+    });
+  }, [nodes]);
+
   return (
     <ThemeProvider theme={lightTheme}>
       <FlowContainer>
+        <ExportButton onClick={handleExportGraph}>
+          Export Graph
+        </ExportButton>
         <ReactFlow
           panOnScroll={true}
           zoomOnScroll={false}
