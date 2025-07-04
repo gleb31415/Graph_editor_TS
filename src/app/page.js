@@ -14,6 +14,7 @@ import { ThemeProvider } from "../contexts/ThemeContext";
 import { lightTheme } from "../theme/theme";
 import "reactflow/dist/style.css";
 import { rawNodes, rawEdges } from "../_lib/graphContent";
+import { saveNodePosition, loadNodePositions, saveAllNodePositions } from "../_lib/positionPersistence";
 
 const FlowContainer = styled.div`
   width: 100vw;
@@ -27,7 +28,7 @@ const nodeWidth = 172;
 const nodeHeight = 80;
 
 // layout-функция
-function getLayoutedElements(nodes, edges, direction = "LR") {
+function getLayoutedElements(nodes, edges, direction = "LR", savedPositions = {}) {
   dagreGraph.setGraph({ rankdir: direction, nodesep: 50, ranksep: 200 });
 
   nodes.forEach((n) =>
@@ -38,14 +39,23 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
   dagre.layout(dagreGraph);
 
   const laidOutNodes = nodes.map((n) => {
-    const { x, y } = dagreGraph.node(n.id);
+    const dagreNode = dagreGraph.node(n.id);
+    const savedPosition = savedPositions[n.id];
+    
     return {
       ...n,
       type: 'custom',
-      position: {
-        x: x - nodeWidth / 2,
-        y: y - nodeHeight / 2,
+      position: savedPosition || {
+        x: dagreNode.x - nodeWidth / 2,
+        y: dagreNode.y - nodeHeight / 2,
       },
+      data: {
+        ...n.data,
+        position: savedPosition || {
+          x: dagreNode.x - nodeWidth / 2,
+          y: dagreNode.y - nodeHeight / 2,
+        }
+      }
     };
   });
 
@@ -61,9 +71,10 @@ export default function LectureTree() {
     edges: [],
   });
 
-  // один раз расставляем по dagre
+  // один раз расставляем по dagre с учетом сохраненных позиций
   useEffect(() => {
-    const { nodes: ln, edges: le } = getLayoutedElements(rawNodes, rawEdges);
+    const savedPositions = loadNodePositions();
+    const { nodes: ln, edges: le } = getLayoutedElements(rawNodes, rawEdges, "LR", savedPositions);
     setLayout({ nodes: ln, edges: le });
   }, []);
 
@@ -77,9 +88,35 @@ export default function LectureTree() {
   }, [initNodes, initEdges]);
 
   const onNodesChange = useCallback(
-    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
+    (changes) => {
+      setNodes((nds) => {
+        const updatedNodes = applyNodeChanges(changes, nds);
+        
+        // Save positions when nodes are moved
+        changes.forEach(change => {
+          if (change.type === 'position' && change.position) {
+            saveNodePosition(change.id, change.position);
+            
+            // Update the node's data.position as well
+            const nodeIndex = updatedNodes.findIndex(node => node.id === change.id);
+            if (nodeIndex !== -1) {
+              updatedNodes[nodeIndex] = {
+                ...updatedNodes[nodeIndex],
+                data: {
+                  ...updatedNodes[nodeIndex].data,
+                  position: change.position
+                }
+              };
+            }
+          }
+        });
+        
+        return updatedNodes;
+      });
+    },
     []
   );
+
   const onEdgesChange = useCallback(
     (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
     []
@@ -97,7 +134,7 @@ export default function LectureTree() {
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           fitView
-          nodesDraggable={false}
+          nodesDraggable={true}
           nodeTypes={nodeTypes}
         >
           <Controls />
