@@ -69,7 +69,7 @@ const TheSolutionHandle = styled(Handle)`
 const NodeContent = styled.div`
   flex: 1;
   text-align: left;
-  padding: 0 10px;
+  padding: 0 0px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
