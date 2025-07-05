@@ -1,37 +1,38 @@
 import React from "react";
-import { Handle, Position, NodeResizer } from "reactflow";
+import { Handle, Position } from "reactflow";
 import styled from "styled-components";
 import { useTheme } from "../contexts/ThemeContext";
-import { MINIMAL_DELTA } from "../constants/movement";
 
 const CustomNodeWrap = styled.div`
-  padding: 10px;
+  padding: 16px;
   border: 2px solid ${(props) => props.borderColor};
   border-radius: 8px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
   opacity: ${(props) => props.opacity};
-  width: 100%;
-  height: 100%;
-  min-width: ${MINIMAL_DELTA * 4}px;
-  min-height: ${MINIMAL_DELTA * 2}px;
+  width: 320px;
+  height: 160px;
+  box-sizing: border-box;
+  overflow: hidden;
 `;
 
 const TheSolutionNodeWrap = styled.div`
-  padding: 200px;
+  padding: 60px;
   border: 4px solid ${(props) => props.theme.colors.abbey[200]};
   border-radius: 64px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   align-items: center;
-  font-size: 240px;
+  justify-content: center;
+  font-size: 48px;
   opacity: ${(props) => props.opacity};
-  width: 100%;
-  height: 100%;
-  min-width: ${MINIMAL_DELTA * 4}px;
-  min-height: ${MINIMAL_DELTA * 2}px;
+  width: 600px;
+  height: 400px;
+  box-sizing: border-box;
+  overflow: hidden;
 `;
 
 const CustomHandle = styled(Handle)`
@@ -68,23 +69,34 @@ const TheSolutionHandle = styled(Handle)`
 
 const NodeContent = styled.div`
   flex: 1;
-  text-align: left;
-  padding: 0 0px;
+  text-align: center;
+  padding: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `;
 
 const NodeTitle = styled.div`
   font-weight: bold;
-  line-height: 1.2;
-  white-space: pre-wrap;
+  line-height: 1.3;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  max-width: 100%;
 `;
 
 const TheSolutionTitle = styled.div`
   font-weight: bold;
   line-height: 1.2;
-  white-space: pre-wrap;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  max-width: 100%;
   font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
   background: linear-gradient(
     110deg,
@@ -96,7 +108,7 @@ const TheSolutionTitle = styled.div`
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 10s linear infinite;
+  animation: shimmer 2s linear infinite;
 
   @keyframes shimmer {
     0% {
@@ -138,22 +150,6 @@ export default function CustomNode({ id, data, selected }) {
 
   return (
     <>
-      <NodeResizer
-        minWidth={MINIMAL_DELTA * 4}
-        minHeight={MINIMAL_DELTA * 2}
-        isVisible={selected}
-        lineStyle={{
-          borderColor: "#0066ff",
-          borderWidth: 2,
-        }}
-        handleStyle={{
-          backgroundColor: "#0066ff",
-          width: 8,
-          height: 8,
-          borderRadius: "50%",
-          border: "1px solid #fff",
-        }}
-      />
       <NodeWrapper
         backgroundColor={backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}

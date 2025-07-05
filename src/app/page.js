@@ -48,32 +48,40 @@ const ExportButton = styled.button`
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
 
-const nodeWidth = 172;
-const nodeHeight = 80;
+const nodeWidth = 320;
+const nodeHeight = 160;
+const theSolutionWidth = 600;
+const theSolutionHeight = 400;
 
 // layout-функция
 function getLayoutedElements(nodes, edges, direction = "LR") {
-  dagreGraph.setGraph({ rankdir: direction, nodesep: 50, ranksep: 200 });
+  dagreGraph.setGraph({ rankdir: direction, nodesep: 80, ranksep: 250 });
 
-  nodes.forEach((n) =>
-    dagreGraph.setNode(n.id, { width: nodeWidth, height: nodeHeight })
-  );
+  nodes.forEach((n) => {
+    const isTheSolution = n.id === "TheSolution";
+    const width = isTheSolution ? theSolutionWidth : nodeWidth;
+    const height = isTheSolution ? theSolutionHeight : nodeHeight;
+    dagreGraph.setNode(n.id, { width, height });
+  });
   edges.forEach((e) => dagreGraph.setEdge(e.source, e.target));
 
   dagre.layout(dagreGraph);
 
   const laidOutNodes = nodes.map((n) => {
     const { x, y } = dagreGraph.node(n.id);
+    const isTheSolution = n.id === "TheSolution";
+    const width = isTheSolution ? theSolutionWidth : nodeWidth;
+    const height = isTheSolution ? theSolutionHeight : nodeHeight;
+
     return {
       ...n,
       type: "custom",
-      position: n.position || {
-        x: x - nodeWidth / 2,
-        y: y - nodeHeight / 2,
+      position: {
+        x: x - width / 2,
+        y: y - height / 2,
       },
-      width: n.width || Math.round(nodeWidth / MINIMAL_DELTA) * MINIMAL_DELTA,
-      height:
-        n.height || Math.round(nodeHeight / MINIMAL_DELTA) * MINIMAL_DELTA,
+      width,
+      height,
     };
   });
 
@@ -132,20 +140,18 @@ export default function LectureTree() {
       if (theSolutionNode) {
         setTimeout(() => {
           // Calculate appropriate zoom level for TheSolution node
-          const nodeWidth = 800; // Approximate width with 200px padding
-          const nodeHeight = 600; // Approximate height with 200px padding
           const viewportWidth = window.innerWidth;
           const viewportHeight = window.innerHeight;
 
           // Calculate zoom to fit with some margin
-          const zoomX = (viewportWidth * 0.8) / nodeWidth;
-          const zoomY = (viewportHeight * 0.8) / nodeHeight;
+          const zoomX = (viewportWidth * 0.8) / theSolutionWidth;
+          const zoomY = (viewportHeight * 0.8) / theSolutionHeight;
           const zoom = Math.min(zoomX, zoomY, 1); // Don't zoom in more than 100%
 
           const { setCenter } = reactFlowRef.current;
           setCenter(
-            theSolutionNode.position.x + nodeWidth / 2,
-            theSolutionNode.position.y + nodeHeight / 2,
+            theSolutionNode.position.x + theSolutionWidth / 2,
+            theSolutionNode.position.y + theSolutionHeight / 2,
             { zoom, duration: 1000 }
           );
         }, 100);
@@ -160,10 +166,18 @@ export default function LectureTree() {
     };
   }, []);
 
-  const snapSizeToGrid = useCallback((width, height) => {
+  const snapSizeToGrid = useCallback((width, height, nodeId) => {
+    // Enforce fixed dimensions
+    const isTheSolution = nodeId === "TheSolution";
+    if (isTheSolution) {
+      return {
+        width: theSolutionWidth,
+        height: theSolutionHeight,
+      };
+    }
     return {
-      width: Math.round(width / MINIMAL_DELTA) * MINIMAL_DELTA,
-      height: Math.round(height / MINIMAL_DELTA) * MINIMAL_DELTA,
+      width: nodeWidth,
+      height: nodeHeight,
     };
   }, []);
 
@@ -184,7 +198,8 @@ export default function LectureTree() {
           if (node && change.dimensions) {
             const snappedSize = snapSizeToGrid(
               change.dimensions.width,
-              change.dimensions.height
+              change.dimensions.height,
+              change.id
             );
             return {
               ...change,
