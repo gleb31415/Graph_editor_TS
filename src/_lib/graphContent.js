@@ -1,6 +1,6 @@
 export const rawNodes = [
   {
-    id: "TS",
+    id: "TheSolution",
     data: {
       section: "",
       grade: "beyond"
@@ -1166,32 +1166,32 @@ export const rawNodes = [
 export const rawEdges = [
   {
     id: "e0",
-    source: "TS",
+    source: "TheSolution",
     target: "Равномерное прямолинейное движение"
   },
   {
     id: "e1",
-    source: "TS",
+    source: "TheSolution",
     target: "Плотность"
   },
   {
     id: "e2",
-    source: "TS",
+    source: "TheSolution",
     target: "Работа с графиками"
   },
   {
     id: "e3",
-    source: "TS",
+    source: "TheSolution",
     target: "Электрический заряд. Закон Кулона."
   },
   {
     id: "e4",
-    source: "TS",
+    source: "TheSolution",
     target: "Температура. Связь температуры с кинетической энергией движения молекул."
   },
   {
     id: "e5",
-    source: "TS",
+    source: "TheSolution",
     target: "Тень. Полутень."
   },
   {

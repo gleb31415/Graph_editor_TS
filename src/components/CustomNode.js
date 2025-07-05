@@ -5,13 +5,13 @@ import { useTheme } from "../contexts/ThemeContext";
 import { MINIMAL_DELTA } from "../constants/movement";
 
 const CustomNodeWrap = styled.div`
-  padding: 10px;
+  padding: ${(props) => (props.isTheSolution ? "200px" : "10px")};
   border: 2px solid ${(props) => props.borderColor};
   border-radius: 8px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: ${(props) => (props.isTheSolution ? "240px" : "12px")};
   opacity: ${(props) => props.opacity};
   width: 100%;
   height: 100%;
@@ -20,11 +20,19 @@ const CustomNodeWrap = styled.div`
 `;
 
 const CustomHandle = styled(Handle)`
-  width: 32px;
-  height: 32px;
-  background: transparent;
-  border: 1px solid ${props => props.theme.colors.abbey[800]};
+  width: 16px;
+  height: 16px;
+  background: ${(props) => props.backgroundColor};
+  border: 2px solid ${(props) => props.borderColor};
   border-radius: 50%;
+
+  &.react-flow__handle-left {
+    left: -8px; /* Half of handle width to center it on the border */
+  }
+
+  &.react-flow__handle-right {
+    right: -8px; /* Half of handle width to center it on the border */
+  }
 `;
 
 const NodeContent = styled.div`
@@ -40,10 +48,15 @@ const NodeTitle = styled.div`
   font-weight: bold;
   line-height: 1.2;
   white-space: pre-wrap;
+  font-family: ${(props) =>
+    props.isTheSolution
+      ? "HelveticaNeueCyr-Bold, Helvetica, Arial, sans-serif"
+      : "inherit"};
 `;
 
 export default function CustomNode({ id, data, selected }) {
   const theme = useTheme();
+  const isTheSolution = id === "TheSolution";
 
   const getSectionColor = (section) => {
     return theme.nodes.section[section] || "#ff0000";
@@ -57,8 +70,12 @@ export default function CustomNode({ id, data, selected }) {
     return theme.nodes.grade[grade] || "50%";
   };
 
-  const backgroundColor = getSectionColor(data?.section);
-  const borderColor = getSectionBorderColor(data?.section);
+  const backgroundColor = isTheSolution
+    ? "#ffffff"
+    : getSectionColor(data?.section);
+  const borderColor = isTheSolution
+    ? "#ffffff"
+    : getSectionBorderColor(data?.section);
   const opacity = getGradeOpacity(data?.grade);
 
   return (
@@ -83,12 +100,28 @@ export default function CustomNode({ id, data, selected }) {
         backgroundColor={backgroundColor}
         borderColor={borderColor}
         opacity={opacity}
+        isTheSolution={isTheSolution}
       >
-        <CustomHandle type="target" position={Position.Left} />
+        <CustomHandle
+          type="target"
+          position={Position.Left}
+          backgroundColor={backgroundColor}
+          borderColor={borderColor}
+        />
         <NodeContent>
-          <NodeTitle>{id}</NodeTitle>
+          <NodeTitle
+            isTheSolution={isTheSolution}
+            className={isTheSolution ? "shiny-text" : ""}
+          >
+            {id}
+          </NodeTitle>
         </NodeContent>
-        <CustomHandle type="source" position={Position.Right} />
+        <CustomHandle
+          type="source"
+          position={Position.Right}
+          backgroundColor={backgroundColor}
+          borderColor={borderColor}
+        />
       </CustomNodeWrap>
     </>
   );

@@ -53,6 +53,7 @@ export default function CustomEdge({
         style={{
           stroke: needsGradient ? `url(#${gradientId})` : sourceColor,
           strokeWidth: 8,
+          strokeLinecap: 'round',
           fill: 'none',
         }}
         className="react-flow__edge-path"

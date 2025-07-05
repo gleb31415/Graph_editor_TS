@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import ReactFlow, {
   Controls,
   Background,
@@ -95,6 +95,7 @@ const nodeTypes = { custom: CustomNode };
 const edgeTypes = { custom: CustomEdge };
 
 export default function LectureTree() {
+  const reactFlowRef = useRef();
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
     edges: [],
@@ -115,6 +116,23 @@ export default function LectureTree() {
     setNodes(initNodes);
     setEdges(initEdges);
   }, [initNodes, initEdges]);
+
+  // Focus on TheSolution node when nodes are loaded
+  useEffect(() => {
+    if (nodes.length > 0 && reactFlowRef.current) {
+      const theSolutionNode = nodes.find(node => node.id === "TheSolution");
+      if (theSolutionNode) {
+        const { fitView } = reactFlowRef.current;
+        setTimeout(() => {
+          fitView({
+            nodes: [theSolutionNode],
+            padding: 0.5,
+            duration: 800,
+          });
+        }, 100);
+      }
+    }
+  }, [nodes]);
 
   const snapToGrid = useCallback((position) => {
     return {
@@ -190,6 +208,7 @@ export default function LectureTree() {
           Export Graph
         </ExportButton>
         <ReactFlow
+          ref={reactFlowRef}
           panOnScroll={true}
           zoomOnScroll={false}
           preventScrolling={true}
@@ -197,7 +216,6 @@ export default function LectureTree() {
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
-          fitView
           nodesDraggable={true}
           nodesConnectable={false}
           nodeTypes={nodeTypes}
