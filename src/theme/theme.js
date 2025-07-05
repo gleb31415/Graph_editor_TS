@@ -91,6 +91,7 @@ export const lightTheme = {
     grayAlpha100: "rgba(0, 0, 0, 0.05)",
     buttonPrimaryHover: "#383838",
     buttonSecondaryHover: "#f2f2f2",
+    ...colors,
   },
   fonts: {
     sans: "var(--font-geist-sans)",
@@ -116,6 +117,13 @@ export const lightTheme = {
       механика: colors.green["300"],
       оптика: colors["light-blue"]["300"],
       электромагнетизм: colors.purple["300"],
+    },
+    edge: {
+      математика: colors.red["400"],
+      термодинамика: colors.yellow["500"],
+      механика: colors.green["400"],
+      оптика: colors["light-blue"]["400"],
+      электромагнетизм: colors.purple["400"],
     },
     grade: {
       7: "50%",
@@ -137,6 +145,7 @@ export const darkTheme = {
     grayAlpha100: "rgba(255, 255, 255, 0.06)",
     buttonPrimaryHover: "#ccc",
     buttonSecondaryHover: "#1a1a1a",
+    ...colors,
   },
   fonts: {
     sans: "var(--font-geist-sans)",
@@ -162,6 +171,13 @@ export const darkTheme = {
       механика: colors.green["300"],
       оптика: colors["light-blue"]["300"],
       электромагнетизм: colors.purple["300"],
+    },
+    edge: {
+      математика: colors.red["400"],
+      термодинамика: colors.yellow["500"],
+      механика: colors.green["400"],
+      оптика: colors["light-blue"]["400"],
+      электромагнетизм: colors.purple["400"],
     },
     grade: {
       7: "50%",

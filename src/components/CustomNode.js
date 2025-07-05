@@ -20,9 +20,10 @@ const CustomNodeWrap = styled.div`
 `;
 
 const CustomHandle = styled(Handle)`
-  width: 8px;
-  height: 8px;
-  background: #0066ff;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid ${props => props.theme.colors.abbey[800]};
   border-radius: 50%;
 `;
 

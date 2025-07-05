@@ -10,6 +10,7 @@ import ReactFlow, {
 import dagre from "dagre";
 import styled from 'styled-components';
 import CustomNode from "../components/CustomNode";
+import CustomEdge from "../components/CustomEdge";
 import { ThemeProvider } from "../contexts/ThemeContext";
 import { lightTheme } from "../theme/theme";
 import "reactflow/dist/style.css";
@@ -71,11 +72,27 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
     };
   });
 
-  return { nodes: laidOutNodes, edges };
+  // Add node data to edges for custom styling
+  const laidOutEdges = edges.map((edge) => {
+    const sourceNode = laidOutNodes.find(n => n.id === edge.source);
+    const targetNode = laidOutNodes.find(n => n.id === edge.target);
+    
+    return {
+      ...edge,
+      type: 'custom',
+      data: {
+        sourceNode,
+        targetNode
+      }
+    };
+  });
+
+  return { nodes: laidOutNodes, edges: laidOutEdges };
 }
 
-// кастомный тип нода
+// кастомный тип нода и edge
 const nodeTypes = { custom: CustomNode };
+const edgeTypes = { custom: CustomEdge };
 
 export default function LectureTree() {
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
@@ -184,6 +201,7 @@ export default function LectureTree() {
           nodesDraggable={true}
           nodesConnectable={false}
           nodeTypes={nodeTypes}
+          edgeTypes={edgeTypes}
         >
           <Controls />
           <Background />
