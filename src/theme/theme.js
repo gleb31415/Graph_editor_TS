@@ -1,80 +1,86 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Gibson Regular';
-    src: url('/fonts/Gibson Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Gibson Book';
-    src: url('/fonts/Gibson Book.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Gibson Medium';
-    src: url('/fonts/Gibson Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Gibson Bold';
-    src: url('/fonts/Gibson Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
-  html,
-  body {
-    max-width: 100vw;
-    overflow-x: hidden;
-    font-family: 'Gibson Book', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    background-color: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.foreground};
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Gibson Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-
-  .gibson-regular {
-    font-family: 'Gibson Regular', sans-serif;
-  }
-
-  .gibson-book {
-    font-family: 'Gibson Book', sans-serif;
-  }
-
-  .gibson-medium {
-    font-family: 'Gibson Medium', sans-serif;
-  }
-
-  .gibson-bold {
-    font-family: 'Gibson Bold', sans-serif;
-  }
-`;
+// Design system color primitives
+export const colors = {
+  abbey: {
+    50: "#f5f6f6",
+    100: "#e5e7e8",
+    200: "#ced1d3",
+    300: "#acb0b4",
+    400: "#82878e",
+    500: "#676c73",
+    600: "#585c62",
+    700: "#4e5156",
+    800: "#424448",
+    900: "#3a3c3f",
+    950: "#242528",
+  },
+  red: {
+    50: "#fff1f2",
+    100: "#ffe0e1",
+    200: "#ffc7ca",
+    300: "#ffa0a4",
+    400: "#ff6970",
+    500: "#f93a43",
+    600: "#e8262f",
+    700: "#c2131b",
+    800: "#a1131a",
+    900: "#85171c",
+    950: "#490609",
+  },
+  yellow: {
+    50: "#ffffea",
+    100: "#fffcc5",
+    200: "#fffa85",
+    300: "#fff146",
+    400: "#ffe31b",
+    500: "#ffc505",
+    600: "#e29800",
+    700: "#bb6c02",
+    800: "#985308",
+    900: "#7c440b",
+    950: "#482300",
+  },
+  green: {
+    50: "#eefff6",
+    100: "#d7ffec",
+    200: "#b2ffdb",
+    300: "#76ffc1",
+    400: "#33f59e",
+    500: "#09de7f",
+    600: "#00c86f",
+    700: "#049153",
+    800: "#0a7144",
+    900: "#0a5d3a",
+    950: "#00341f",
+  },
+  "light-blue": {
+    50: "#effcfc",
+    100: "#d5f4f8",
+    200: "#b0e9f1",
+    300: "#81d9e7",
+    400: "#3dbcd3",
+    500: "#21a0b9",
+    600: "#1e809c",
+    700: "#1f687f",
+    800: "#225668",
+    900: "#204859",
+    950: "#102f3c",
+  },
+  purple: {
+    50: "#ecefff",
+    100: "#dde2ff",
+    200: "#c2c9ff",
+    300: "#9ca5ff",
+    400: "#7575ff",
+    500: "#5d50ff",
+    600: "#5336f5",
+    700: "#482ad8",
+    800: "#3a25ae",
+    900: "#322689",
+    950: "#201650",
+  },
+};
 
 export const lightTheme = {
   colors: {
@@ -89,20 +95,20 @@ export const lightTheme = {
   fonts: {
     sans: "var(--font-geist-sans)",
     mono: "var(--font-geist-mono)",
-    gibson: {
-      regular: "'Gibson Regular', sans-serif",
-      book: "'Gibson Book', sans-serif",
-      medium: "'Gibson Medium', sans-serif",
-      bold: "'Gibson Bold', sans-serif",
+    helvetica: {
+      regular: "'Helvetica', Arial, sans-serif",
+      roman: "'Helvetica', Arial, sans-serif",
+      medium: "'Helvetica Medium', Arial, sans-serif",
+      bold: "'Helvetica Bold', Arial, sans-serif",
     },
   },
   nodes: {
     section: {
-      математика: "#ff0000",
-      термодинамика: "#ffa500",
-      механика: "#800080",
-      оптика: "#ffff00",
-      электромагнетизм: "#0000ff",
+      математика: colors.red["200"],
+      термодинамика: colors.yellow["200"],
+      механика: colors.green["200"],
+      оптика: colors["light-blue"]["200"],
+      электромагнетизм: colors.purple["200"],
     },
     grade: {
       7: "50%",
@@ -128,20 +134,20 @@ export const darkTheme = {
   fonts: {
     sans: "var(--font-geist-sans)",
     mono: "var(--font-geist-mono)",
-    gibson: {
-      regular: "'Gibson Regular', sans-serif",
-      book: "'Gibson Book', sans-serif",
-      medium: "'Gibson Medium', sans-serif",
-      bold: "'Gibson Bold', sans-serif",
+    helvetica: {
+      regular: "'Helvetica', Arial, sans-serif",
+      roman: "'Helvetica', Arial, sans-serif",
+      medium: "'Helvetica Medium', Arial, sans-serif",
+      bold: "'Helvetica Bold', Arial, sans-serif",
     },
   },
   nodes: {
     section: {
-      математика: "#ff0000",
-      термодинамика: "#ffa500",
-      механика: "#800080",
-      оптика: "#ffff00",
-      электромагнетизм: "#0000ff",
+      математика: colors.red["200"],
+      термодинамика: colors.yellow["200"],
+      механика: colors.green["200"],
+      оптика: colors["light-blue"]["200"],
+      электромагнетизм: colors.purple["200"],
     },
     grade: {
       7: "50%",
@@ -153,3 +159,47 @@ export const darkTheme = {
     },
   },
 };
+
+export const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Helvetica', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.foreground};
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Medium', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .helvetica-regular {
+    font-family: 'Helvetica', Arial, sans-serif;
+  }
+
+  .helvetica-roman {
+    font-family: 'Helvetica', Arial, sans-serif;
+  }
+
+  .helvetica-medium {
+    font-family: 'Helvetica Medium', Arial, sans-serif;
+  }
+
+  .helvetica-bold {
+    font-family: 'Helvetica Bold', Arial, sans-serif;
+  }
+`;
