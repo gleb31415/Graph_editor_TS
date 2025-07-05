@@ -21,8 +21,8 @@ const CustomNodeWrap = styled.div`
 
 const TheSolutionNodeWrap = styled.div`
   padding: 200px;
-  border: 2px solid ${(props) => props.borderColor};
-  border-radius: 8px;
+  border: 4px solid ${(props) => props.theme.colors.abbey[200]};
+  border-radius: 64px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   align-items: center;
@@ -39,6 +39,22 @@ const CustomHandle = styled(Handle)`
   height: 16px;
   background: ${(props) => props.backgroundColor};
   border: 2px solid ${(props) => props.borderColor};
+  border-radius: 50%;
+
+  &.react-flow__handle-left {
+    left: -8px; /* Half of handle width to center it on the border */
+  }
+
+  &.react-flow__handle-right {
+    right: -8px; /* Half of handle width to center it on the border */
+  }
+`;
+
+const TheSolutionHandle = styled(Handle)`
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 50%;
 
   &.react-flow__handle-left {
@@ -70,6 +86,21 @@ const TheSolutionTitle = styled.div`
   line-height: 1.2;
   white-space: pre-wrap;
   font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
+  background: linear-gradient(110deg, #000000 45%, #ffffff 50%, #000000 55%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
 `;
 
 export default function CustomNode({ id, data, selected }) {
@@ -98,6 +129,7 @@ export default function CustomNode({ id, data, selected }) {
 
   const NodeWrapper = isTheSolution ? TheSolutionNodeWrap : CustomNodeWrap;
   const TitleComponent = isTheSolution ? TheSolutionTitle : NodeTitle;
+  const HandleComponent = isTheSolution ? TheSolutionHandle : CustomHandle;
 
   return (
     <>
@@ -119,25 +151,23 @@ export default function CustomNode({ id, data, selected }) {
       />
       <NodeWrapper
         backgroundColor={backgroundColor}
-        borderColor={borderColor}
+        borderColor={isTheSolution ? undefined : borderColor}
         opacity={opacity}
       >
-        <CustomHandle
+        <HandleComponent
           type="target"
           position={Position.Left}
-          backgroundColor={backgroundColor}
-          borderColor={borderColor}
+          backgroundColor={isTheSolution ? undefined : backgroundColor}
+          borderColor={isTheSolution ? undefined : borderColor}
         />
         <NodeContent>
-          <TitleComponent className={isTheSolution ? "shiny-text" : ""}>
-            {id}
-          </TitleComponent>
+          <TitleComponent>{id}</TitleComponent>
         </NodeContent>
-        <CustomHandle
+        <HandleComponent
           type="source"
           position={Position.Right}
-          backgroundColor={backgroundColor}
-          borderColor={borderColor}
+          backgroundColor={isTheSolution ? undefined : backgroundColor}
+          borderColor={isTheSolution ? undefined : borderColor}
         />
       </NodeWrapper>
     </>

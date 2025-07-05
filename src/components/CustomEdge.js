@@ -23,18 +23,25 @@ export default function CustomEdge({
     targetPosition,
   });
 
-  const getEdgeColor = (section) => {
+  const getEdgeColor = (section, nodeId) => {
+    // Special handling for TheSolution node
+    if (nodeId === "TheSolution") {
+      return "#ffffff"; // White color for TheSolution connections
+    }
     return theme.nodes.edge[section] || theme.nodes.edge.математика;
   };
 
   const sourceNode = data?.sourceNode;
   const targetNode = data?.targetNode;
 
-  const sourceColor = getEdgeColor(sourceNode?.data?.section);
-  const targetColor = getEdgeColor(targetNode?.data?.section);
+  const sourceColor = getEdgeColor(sourceNode?.data?.section, sourceNode?.id);
+  const targetColor = getEdgeColor(targetNode?.data?.section, targetNode?.id);
 
-  // Check if source and target have different sections
-  const needsGradient = sourceNode?.data?.section !== targetNode?.data?.section;
+  // Check if source and target have different sections or one is TheSolution
+  const needsGradient =
+    sourceNode?.data?.section !== targetNode?.data?.section ||
+    sourceNode?.id === "TheSolution" ||
+    targetNode?.id === "TheSolution";
 
   const gradientId = `gradient-${id}`;
 
