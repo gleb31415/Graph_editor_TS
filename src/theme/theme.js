@@ -110,6 +110,13 @@ export const lightTheme = {
       оптика: colors["light-blue"]["200"],
       электромагнетизм: colors.purple["200"],
     },
+    border: {
+      математика: colors.red["300"],
+      термодинамика: colors.yellow["300"],
+      механика: colors.green["300"],
+      оптика: colors["light-blue"]["300"],
+      электромагнетизм: colors.purple["300"],
+    },
     grade: {
       7: "50%",
       8: "60%",
@@ -148,6 +155,13 @@ export const darkTheme = {
       механика: colors.green["200"],
       оптика: colors["light-blue"]["200"],
       электромагнетизм: colors.purple["200"],
+    },
+    border: {
+      математика: colors.red["300"],
+      термодинамика: colors.yellow["300"],
+      механика: colors.green["300"],
+      оптика: colors["light-blue"]["300"],
+      электромагнетизм: colors.purple["300"],
     },
     grade: {
       7: "50%",
