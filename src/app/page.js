@@ -66,20 +66,24 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
   edges.forEach((e) => dagreGraph.setEdge(e.source, e.target));
 
   dagre.layout(dagreGraph);
-
   const laidOutNodes = nodes.map((n) => {
     const { x, y } = dagreGraph.node(n.id);
     const isTheSolution = n.id === "TheSolution";
     const width = isTheSolution ? theSolutionWidth : nodeWidth;
     const height = isTheSolution ? theSolutionHeight : nodeHeight;
 
+    // Use existing position if available, otherwise use Dagre calculated position
+    const position = n.position
+      ? n.position
+      : {
+          x: x - width / 2,
+          y: y - height / 2,
+        };
+
     return {
       ...n,
       type: "custom",
-      position: {
-        x: x - width / 2,
-        y: y - height / 2,
-      },
+      position,
       width,
       height,
     };
