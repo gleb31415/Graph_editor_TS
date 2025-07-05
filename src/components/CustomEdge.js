@@ -23,10 +23,18 @@ export default function CustomEdge({
     targetPosition,
   });
 
-  const getEdgeColor = (section, nodeId) => {
-    // Special handling for TheSolution node
+  const getEdgeColor = (section, nodeId, isSource = false) => {
+    // Special handling for TheSolution node connections
     if (nodeId === "TheSolution") {
-      return "#ffffff"; // White color for TheSolution connections
+      // If TheSolution is the source, we need to look at the target node's section
+      // If TheSolution is the target, we need to look at the source node's section
+      const otherNode = isSource ? targetNode : sourceNode;
+      const otherSection = otherNode?.data?.section;
+
+      if (otherSection && theme.nodes.edge[otherSection]) {
+        return theme.nodes.edge[otherSection]; // Use the edge color for the other node's section
+      }
+      return "#ffffff"; // Fallback to white
     }
     return theme.nodes.edge[section] || theme.nodes.edge.математика;
   };
@@ -34,8 +42,16 @@ export default function CustomEdge({
   const sourceNode = data?.sourceNode;
   const targetNode = data?.targetNode;
 
-  const sourceColor = getEdgeColor(sourceNode?.data?.section, sourceNode?.id);
-  const targetColor = getEdgeColor(targetNode?.data?.section, targetNode?.id);
+  const sourceColor = getEdgeColor(
+    sourceNode?.data?.section,
+    sourceNode?.id,
+    true
+  );
+  const targetColor = getEdgeColor(
+    targetNode?.data?.section,
+    targetNode?.id,
+    false
+  );
 
   // Check if source and target have different sections or one is TheSolution
   const needsGradient =

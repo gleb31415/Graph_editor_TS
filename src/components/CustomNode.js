@@ -9,10 +9,9 @@ const CustomNodeWrap = styled.div`
   border-radius: 8px;
   background: ${(props) => props.backgroundColor};
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   font-size: 12px;
-  opacity: ${(props) => props.opacity};
   width: 320px;
   height: 160px;
   box-sizing: border-box;
@@ -28,7 +27,6 @@ const TheSolutionNodeWrap = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 48px;
-  opacity: ${(props) => props.opacity};
   width: 600px;
   height: 400px;
   box-sizing: border-box;
@@ -69,15 +67,15 @@ const TheSolutionHandle = styled(Handle)`
 
 const NodeContent = styled.div`
   flex: 1;
-  text-align: center;
+  text-align: left;
   padding: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
   line-height: 1.3;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   height: 100%;
 `;
 
@@ -86,7 +84,7 @@ const NodeTitle = styled.div`
   line-height: 1.3;
   white-space: normal;
   word-break: break-word;
-  text-align: center;
+  text-align: left;
   max-width: 100%;
 `;
 
@@ -132,17 +130,12 @@ export default function CustomNode({ id, data, selected }) {
     return theme.nodes.border[section] || "#ff0000";
   };
 
-  const getGradeOpacity = (grade) => {
-    return theme.nodes.grade[grade] || "50%";
-  };
-
   const backgroundColor = isTheSolution
     ? "#ffffff"
     : getSectionColor(data?.section);
   const borderColor = isTheSolution
     ? "#ffffff"
     : getSectionBorderColor(data?.section);
-  const opacity = getGradeOpacity(data?.grade);
 
   const NodeWrapper = isTheSolution ? TheSolutionNodeWrap : CustomNodeWrap;
   const TitleComponent = isTheSolution ? TheSolutionTitle : NodeTitle;
@@ -153,7 +146,6 @@ export default function CustomNode({ id, data, selected }) {
       <NodeWrapper
         backgroundColor={backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}
-        opacity={opacity}
       >
         <HandleComponent
           type="target"
