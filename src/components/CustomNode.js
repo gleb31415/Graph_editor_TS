@@ -86,12 +86,17 @@ const TheSolutionTitle = styled.div`
   line-height: 1.2;
   white-space: pre-wrap;
   font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
-  background: linear-gradient(110deg, #000000 45%, #ffffff 50%, #000000 55%);
+  background: linear-gradient(
+    110deg,
+    rgb(131, 131, 131) 45%,
+    rgb(218, 218, 218) 50%,
+    rgb(131, 131, 131) 55%
+  );
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 2s linear infinite;
+  animation: shimmer 10s linear infinite;
 
   @keyframes shimmer {
     0% {
