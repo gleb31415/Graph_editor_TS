@@ -5,13 +5,28 @@ import { useTheme } from "../contexts/ThemeContext";
 import { MINIMAL_DELTA } from "../constants/movement";
 
 const CustomNodeWrap = styled.div`
-  padding: ${(props) => (props.isTheSolution ? "200px" : "10px")};
+  padding: 10px;
   border: 2px solid ${(props) => props.borderColor};
   border-radius: 8px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   align-items: center;
-  font-size: ${(props) => (props.isTheSolution ? "240px" : "12px")};
+  font-size: 12px;
+  opacity: ${(props) => props.opacity};
+  width: 100%;
+  height: 100%;
+  min-width: ${MINIMAL_DELTA * 4}px;
+  min-height: ${MINIMAL_DELTA * 2}px;
+`;
+
+const TheSolutionNodeWrap = styled.div`
+  padding: 200px;
+  border: 2px solid ${(props) => props.borderColor};
+  border-radius: 8px;
+  background: ${(props) => props.backgroundColor};
+  display: flex;
+  align-items: center;
+  font-size: 240px;
   opacity: ${(props) => props.opacity};
   width: 100%;
   height: 100%;
@@ -48,10 +63,13 @@ const NodeTitle = styled.div`
   font-weight: bold;
   line-height: 1.2;
   white-space: pre-wrap;
-  font-family: ${(props) =>
-    props.isTheSolution
-      ? "HelveticaNeueCyr-Bold, Helvetica, Arial, sans-serif"
-      : "inherit"};
+`;
+
+const TheSolutionTitle = styled.div`
+  font-weight: bold;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
 `;
 
 export default function CustomNode({ id, data, selected }) {
@@ -78,6 +96,9 @@ export default function CustomNode({ id, data, selected }) {
     : getSectionBorderColor(data?.section);
   const opacity = getGradeOpacity(data?.grade);
 
+  const NodeWrapper = isTheSolution ? TheSolutionNodeWrap : CustomNodeWrap;
+  const TitleComponent = isTheSolution ? TheSolutionTitle : NodeTitle;
+
   return (
     <>
       <NodeResizer
@@ -96,11 +117,10 @@ export default function CustomNode({ id, data, selected }) {
           border: "1px solid #fff",
         }}
       />
-      <CustomNodeWrap
+      <NodeWrapper
         backgroundColor={backgroundColor}
         borderColor={borderColor}
         opacity={opacity}
-        isTheSolution={isTheSolution}
       >
         <CustomHandle
           type="target"
@@ -109,12 +129,9 @@ export default function CustomNode({ id, data, selected }) {
           borderColor={borderColor}
         />
         <NodeContent>
-          <NodeTitle
-            isTheSolution={isTheSolution}
-            className={isTheSolution ? "shiny-text" : ""}
-          >
+          <TitleComponent className={isTheSolution ? "shiny-text" : ""}>
             {id}
-          </NodeTitle>
+          </TitleComponent>
         </NodeContent>
         <CustomHandle
           type="source"
@@ -122,7 +139,7 @@ export default function CustomNode({ id, data, selected }) {
           backgroundColor={backgroundColor}
           borderColor={borderColor}
         />
-      </CustomNodeWrap>
+      </NodeWrapper>
     </>
   );
 }

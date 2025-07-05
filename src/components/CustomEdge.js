@@ -1,6 +1,6 @@
-import React from 'react';
-import { getBezierPath, getStraightPath } from 'reactflow';
-import { useTheme } from '../contexts/ThemeContext';
+import React from "react";
+import { getBezierPath, getStraightPath } from "reactflow";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function CustomEdge({
   id,
@@ -10,10 +10,10 @@ export default function CustomEdge({
   targetY,
   sourcePosition,
   targetPosition,
-  data
+  data,
 }) {
   const theme = useTheme();
-  
+
   const [edgePath] = getBezierPath({
     sourceX,
     sourceY,
@@ -29,15 +29,15 @@ export default function CustomEdge({
 
   const sourceNode = data?.sourceNode;
   const targetNode = data?.targetNode;
-  
+
   const sourceColor = getEdgeColor(sourceNode?.data?.section);
   const targetColor = getEdgeColor(targetNode?.data?.section);
-  
+
   // Check if source and target have different sections
   const needsGradient = sourceNode?.data?.section !== targetNode?.data?.section;
-  
+
   const gradientId = `gradient-${id}`;
-  
+
   return (
     <>
       {needsGradient && (
@@ -53,8 +53,8 @@ export default function CustomEdge({
         style={{
           stroke: needsGradient ? `url(#${gradientId})` : sourceColor,
           strokeWidth: 8,
-          strokeLinecap: 'round',
-          fill: 'none',
+          strokeLinecap: "round",
+          fill: "none",
         }}
         className="react-flow__edge-path"
         d={edgePath}
