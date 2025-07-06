@@ -283,16 +283,10 @@ export default function LectureTree() {
 
   const onNodeClick = useCallback((event, node) => {
     setSelectedNodes((prev) => {
-      if (event.shiftKey) {
-        // Toggle selection
-        if (prev.includes(node.id)) {
-          return prev.filter((id) => id !== node.id);
-        } else {
-          return [...prev, node.id];
-        }
+      if (prev.includes(node.id)) {
+        return prev.filter((id) => id !== node.id);
       } else {
-        // Select only this node
-        return [node.id];
+        return [...prev, node.id];
       }
     });
   }, []);
@@ -395,10 +389,10 @@ export default function LectureTree() {
       // Only handle if at least two nodes are selected
       if (selectedNodes.length < 2) return;
 
-      if (e.shiftKey && e.key === "V") {
+      if (e.key === "V") {
         alignSelectedNodes("verticalGap");
         e.preventDefault();
-      } else if (e.shiftKey && e.key === "H") {
+      } else if (e.key === "H") {
         alignSelectedNodes("horizontalGap");
         e.preventDefault();
       } else if (e.altKey && e.key === "V") {
@@ -442,7 +436,7 @@ export default function LectureTree() {
           panOnDrag={[1, 2]}
           onMove={(_evt, viewport) => setViewport(viewport)}
           selectionOnDrag={true}
-          multiSelectionKeyCode={['Shift']}
+          selectionMode="partial"
         >
           <Controls />
           <SquareBackground />
