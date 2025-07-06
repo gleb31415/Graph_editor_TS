@@ -5,9 +5,9 @@ import { useTheme } from "../contexts/ThemeContext";
 
 const CustomNodeWrap = styled.div`
   padding: 20px;
-  border: 2px solid ${({ theme }) => theme.colors.abbey["100"]};
+  border: 2px solid ${({ theme, selected }) => selected ? (theme.colors.primary?.[100] || '#3399ff') : theme.colors.abbey["100"]};
   border-radius: 100px;
-  background: #fff;
+  background: ${({ selected, theme }) => selected ? (theme.colors.primary?.[100] || '#e6f0ff') : '#fff'};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,9 +24,9 @@ const CustomNodeWrap = styled.div`
 
 const TheSolutionNodeWrap = styled.div`
   padding: 20px;
-  border: 4px solid ${(props) => props.theme.colors.abbey[200]};
+  border: 4px solid ${({ theme, selected }) => selected ? (theme.colors.primary?.[100] || '#3399ff') : theme.colors.abbey[200]};
   border-radius: 20px;
-  background: ${(props) => props.backgroundColor};
+  background: ${({ selected, backgroundColor, theme }) => selected ? (theme.colors.primary?.[100] || '#e6f0ff') : backgroundColor};
   display: flex;
   text-align: center;
   align-items: center;
@@ -36,6 +36,7 @@ const TheSolutionNodeWrap = styled.div`
   box-sizing: border-box;
   overflow: hidden;
 `;
+
 
 const CustomHandle = styled(Handle)`
   width: 16px;
