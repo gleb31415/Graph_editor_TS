@@ -71,8 +71,8 @@ export const rawNodes = [
       grade: "10",
     },
     position: {
-      x: 12610,
-      y: 600,
+      x: 12240,
+      y: 560,
     },
     width: 320,
     height: 300,
