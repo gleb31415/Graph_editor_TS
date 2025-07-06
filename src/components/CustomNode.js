@@ -11,9 +11,7 @@ const CustomNodeWrap = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  font-size: 12px;
-  width: 320px;
-  height: 160px;
+  font-size: 16px;
   box-sizing: border-box;
   overflow: hidden;
 `;
@@ -80,7 +78,7 @@ const NodeContent = styled.div`
 `;
 
 const NodeTitle = styled.div`
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1.3;
   white-space: normal;
   word-break: break-word;
