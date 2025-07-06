@@ -20,10 +20,7 @@ import {
   saveNodeChanges,
   applyStoredChanges,
   exportUpdatedGraphContent,
-  saveEdgeChanges,
-  applyStoredEdgeChanges,
 } from "../utils/persistence";
-import { useState as useReactState } from "react";
 
 const FlowContainer = styled.div`
   width: 100vw;
@@ -99,16 +96,25 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
   });
 
   const laidOutNodes = nodes.map((n) => {
-    const { x, y } = dagreGraph.node(n.id);
     const isTheSolution = n.id === "TheSolution";
     const width = isTheSolution ? theSolutionWidth : nodeWidth;
     const height = isTheSolution ? theSolutionHeight : nodeHeight;
 
-    // Always use Dagre calculated position (ignore manual positions for debugging)
-    const position = {
-      x: x - width / 2,
-      y: y - height / 2,
-    };
+    // Use manual position if present, otherwise use Dagre
+    let position;
+    if (
+      n.position &&
+      typeof n.position.x === "number" &&
+      typeof n.position.y === "number"
+    ) {
+      position = n.position;
+    } else {
+      const { x, y } = dagreGraph.node(n.id);
+      position = {
+        x: x - width / 2,
+        y: y - height / 2,
+      };
+    }
 
     return {
       ...n,
@@ -156,61 +162,19 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
 const nodeTypes = { custom: CustomNode };
 const edgeTypes = { custom: CustomEdge };
 
-// Edge property panel (inline for now)
-function EdgePropertiesPanel({ edge, onUpdate, onClose }) {
-  const [label, setLabel] = useReactState(edge.data?.label || "");
-  const [color, setColor] = useReactState(edge.data?.color || "#888888");
-  return (
-    <div
-      style={{
-        position: "fixed",
-        top: 80,
-        right: 20,
-        background: "#fff",
-        padding: 16,
-        border: "1px solid #ccc",
-        zIndex: 2000,
-      }}
-    >
-      <div>
-        <label>Label:</label>
-        <input value={label} onChange={(e) => setLabel(e.target.value)} />
-      </div>
-      <div>
-        <label>Color:</label>
-        <input
-          type="color"
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-        />
-      </div>
-      <button
-        onClick={() => {
-          onUpdate(edge.id, { label, color });
-          onClose();
-        }}
-      >
-        Save
-      </button>
-      <button onClick={onClose}>Cancel</button>
-    </div>
-  );
-}
-
 export default function LectureTree() {
   const reactFlowRef = useRef();
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
     edges: [],
   });
-  const [selectedEdge, setSelectedEdge] = useState(null);
 
   // Always use Dagre layout, ignore manual positions for now
   useEffect(() => {
     // const nodesWithStoredChanges = applyStoredChanges(rawNodes);
     const { nodes: ln, edges: le } = getLayoutedElements(
       rawNodes, // Use raw nodes without stored changes
-      applyStoredEdgeChanges(rawEdges),
+      rawEdges,
       "TB"
     );
     setLayout({ nodes: ln, edges: le });
@@ -306,38 +270,10 @@ export default function LectureTree() {
     },
     [snapToGrid, snapSizeToGrid, nodes]
   );
-  const onEdgeClick = useCallback((event, edge) => {
-    event.stopPropagation();
-    setSelectedEdge(edge);
-  }, []);
-
-  const onEdgePropertyChange = useCallback((edgeId, newData) => {
-    setEdges((eds) => {
-      const updated = eds.map((e) =>
-        e.id === edgeId ? { ...e, data: { ...e.data, ...newData } } : e
-      );
-      saveEdgeChanges(updated);
-      return updated;
-    });
-  }, []);
-  const onEdgesChange = useCallback((changes) => {
-    setEdges((eds) => {
-      const updated = applyEdgeChanges(changes, eds);
-      saveEdgeChanges(updated);
-      return updated;
-    });
-  }, []);
-
-  // Add this callback to update control point
-  const onControlPointChange = useCallback((edgeId, point) => {
-    setEdges((eds) => {
-      const updated = eds.map((e) =>
-        e.id === edgeId ? { ...e, data: { ...e.data, controlPoint: point } } : e
-      );
-      saveEdgeChanges(updated);
-      return updated;
-    });
-  }, []);
+  const onEdgesChange = useCallback(
+    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    []
+  );
 
   const handleResetLayout = useCallback(() => {
     // Clear localStorage and force re-layout
@@ -369,14 +305,7 @@ export default function LectureTree() {
           zoomOnScroll={false}
           preventScrolling={true}
           nodes={nodes}
-          edges={edges.map((e) => ({
-            ...e,
-            data: {
-              ...e.data,
-              onEdgeClick: (event) => onEdgeClick(event, e),
-              onControlPointChange,
-            },
-          }))}
+          edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodesDraggable={true}
@@ -389,13 +318,6 @@ export default function LectureTree() {
           <Controls />
           <Background />
         </ReactFlow>
-        {selectedEdge && (
-          <EdgePropertiesPanel
-            edge={selectedEdge}
-            onUpdate={onEdgePropertyChange}
-            onClose={() => setSelectedEdge(null)}
-          />
-        )}
       </FlowContainer>
     </ThemeProvider>
   );

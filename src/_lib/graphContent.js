@@ -5,6 +5,10 @@ export const rawNodes = [
       section: "",
       grade: "11",
     },
+    position: {
+      x: 8560,
+      y: -460,
+    },
     width: 600,
     height: 400,
   },
@@ -14,8 +18,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4320,
+      y: 600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Плотность",
@@ -23,8 +31,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 6480,
+      y: 600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Работа с графиками",
@@ -32,8 +44,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Электрический заряд. Закон Кулона.",
@@ -41,8 +57,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 8640,
+      y: 600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Температура. Связь температуры с кинетической энергией движения молекул.",
@@ -50,8 +70,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "10",
     },
+    position: {
+      x: 12610,
+      y: 600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тень. Полутень.",
@@ -59,8 +83,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "7",
     },
+    position: {
+      x: 15700,
+      y: 620,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Средняя скорость. Относительное движение.",
@@ -68,8 +96,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4320,
+      y: 1100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Кинематические связи. Блоки.",
@@ -77,8 +109,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4320,
+      y: 1600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Закон Гука. Системы пружин.",
@@ -86,8 +122,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4330,
+      y: 2100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сила. Третий закон Ньютона.",
@@ -95,8 +135,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 6480,
+      y: 1100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сила тяжести",
@@ -104,8 +148,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 6480,
+      y: 1600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Моменты",
@@ -113,8 +161,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3970,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Работа. Мощность. КПД",
@@ -122,8 +174,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4690,
+      y: 3100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Системы блоков. Статика со связями.",
@@ -131,8 +187,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3970,
+      y: 3100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Давление. Сообщающиеся сосуды",
@@ -140,8 +200,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 6490,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сила Архимеда",
@@ -149,8 +213,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 6490,
+      y: 3100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Механика, 7 класс.",
@@ -158,8 +226,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4690,
+      y: 3600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Энергия",
@@ -167,8 +239,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 960,
+      y: 4260,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Движение со связями",
@@ -176,8 +252,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3085,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Равноускоренное движение",
@@ -185,8 +265,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4690,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Конус Маха",
@@ -194,8 +278,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5410,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Упругие столкновения с тяжёлой стенкой",
@@ -203,8 +291,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 6130,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Метод виртуальных перемещений",
@@ -212,8 +304,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: -240,
+      y: 5060,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Бернулли",
@@ -221,8 +317,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 460,
+      y: 5080,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Устойчивость равновесия",
@@ -230,8 +330,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 5080,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Мгновенный центр вращения",
@@ -239,8 +343,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3085,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Теорема Кёнига",
@@ -248,8 +356,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3080,
+      y: 5100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Динамика. Второй закон Ньютона.",
@@ -257,8 +369,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3960,
+      y: 6100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Равномерное движение по окружности",
@@ -266,8 +382,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4330,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Баллистика. Координатный метод.",
@@ -275,8 +395,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5410,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Баллистика. Векторный метод.",
@@ -284,8 +408,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5410,
+      y: 5100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Баллистика, 9 класс.",
@@ -293,8 +421,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5410,
+      y: 5600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Центростремительное ускорение",
@@ -302,8 +434,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4330,
+      y: 5100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Неравномерное движение по окружности",
@@ -311,8 +447,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4330,
+      y: 5600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Всемирное тяготение. Космические скорости.",
@@ -320,8 +460,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 2060,
+      y: 6800,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Неинерциальные системы отсчёта",
@@ -329,8 +473,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3240,
+      y: 6600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Вращательные НеИСО",
@@ -338,8 +486,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3240,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сухое трение",
@@ -347,8 +499,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4330,
+      y: 6600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Импульс",
@@ -356,8 +512,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5770,
+      y: 6600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Реактивная сила",
@@ -365,8 +525,12 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
+    position: {
+      x: 5410,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Вязкое трение",
@@ -374,8 +538,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3970,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Статика",
@@ -383,8 +551,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4690,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Столкновения",
@@ -392,8 +564,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 6130,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Законы сохранения, 9 класс.",
@@ -401,8 +577,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5770,
+      y: 7600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Динамика, 9 класс.",
@@ -410,8 +590,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3600,
+      y: 7600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Момент импульса",
@@ -419,8 +603,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4320,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Момент инерции",
@@ -428,8 +616,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 3620,
+      y: 8620,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Гравитация. Законы Кеплера.",
@@ -437,8 +629,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 5000,
+      y: 8640,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Механика, 11 класс.",
@@ -446,8 +642,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 4320,
+      y: 9100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Гармонические колебания",
@@ -455,8 +655,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 5600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Энергия в гармонических колебаниях",
@@ -464,8 +668,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 6060,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Затухающие колебания",
@@ -473,8 +681,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 6580,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Резонанс",
@@ -482,8 +694,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сложение колебаний. Биения.",
@@ -491,8 +707,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 7600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Колебания, 11 класс",
@@ -500,8 +720,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 340,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Механические волны",
@@ -509,8 +733,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Постулаты специальной теории относительности",
@@ -518,8 +746,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1800,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Эффект Доплера",
@@ -527,8 +759,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1080,
+      y: 8600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Парадоксы и эффекты",
@@ -536,8 +772,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1800,
+      y: 8600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Релятивистская динамика",
@@ -545,8 +785,12 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
+    position: {
+      x: 1800,
+      y: 9120,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тригонометрия",
@@ -554,8 +798,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 1100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Свойства тригонометрических функций",
@@ -563,8 +811,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 1600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Векторы",
@@ -572,8 +824,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 2100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дифференцирование",
@@ -581,8 +837,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Интегрирование",
@@ -590,8 +850,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 3100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Работа с малыми величинами",
@@ -599,8 +863,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 3600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Логарифмы, показательные функции",
@@ -608,8 +876,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Телесный угол",
@@ -617,8 +889,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Векторное произведение",
@@ -626,8 +902,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 5100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дифференциальные уравнения. Уравнения колебаний.",
@@ -635,8 +915,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 5600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Ряды",
@@ -644,8 +928,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 6100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Комплексные числа",
@@ -653,8 +941,12 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
+    position: {
+      x: 7210,
+      y: 6600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Отражение света. Зеркала.",
@@ -662,8 +954,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 1040,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Преломление света. Закон Снеллиуса.",
@@ -671,8 +967,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 1560,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Пластины, призмы",
@@ -680,8 +980,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 2080,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Полное внутреннее отражение",
@@ -689,8 +993,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 15700,
+      y: 2560,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Линза, построение изображений",
@@ -698,8 +1006,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 3020,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Формула тонкой линзы",
@@ -707,8 +1019,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 15700,
+      y: 3460,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Увеличение",
@@ -716,8 +1032,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 3980,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Оптические системы",
@@ -725,8 +1045,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 4480,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Оптика, 10 класс.",
@@ -734,8 +1058,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 15700,
+      y: 20080,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дисперсия",
@@ -743,8 +1071,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 12060,
+      y: 21300,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Интерференция света. Когерентные источники.",
@@ -752,8 +1084,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 12060,
+      y: 21680,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Интерференция света. Временная когерентность.",
@@ -761,8 +1097,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 12060,
+      y: 22060,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дифракция Фраунгофера",
@@ -770,8 +1110,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 12060,
+      y: 22440,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дифракция Френеля",
@@ -779,8 +1123,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 12060,
+      y: 22800,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дифракционная решётка",
@@ -788,8 +1136,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 12060,
+      y: 23160,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Поляризация света",
@@ -797,8 +1149,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
+    position: {
+      x: 12060,
+      y: 23540,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Волновая оптика, 11 класс",
@@ -806,8 +1162,12 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
+    position: {
+      x: 12060,
+      y: 23920,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Напряжённость электрического поля, потенциал",
@@ -815,8 +1175,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 8640,
+      y: 1100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сила тока, напряжение. Закон Ома.",
@@ -824,8 +1188,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 8640,
+      y: 1600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Мощность электрического тока",
@@ -833,8 +1201,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 7930,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Электричество, 8 класс.",
@@ -842,8 +1214,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 5100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Удельное сопротивление",
@@ -851,8 +1227,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 8650,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Параллельное и последовательное соединения резисторов",
@@ -860,8 +1240,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10440,
+      y: 2100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Правила Кирхгофа",
@@ -869,8 +1253,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10440,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Симметричные цепи",
@@ -878,8 +1266,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 9370,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Метод наложения токов",
@@ -887,8 +1279,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 9370,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Источники тока",
@@ -896,8 +1292,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10800,
+      y: 3100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Метод эквивалентного источника",
@@ -905,8 +1305,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10090,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Измерительные приборы",
@@ -914,8 +1318,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 11160,
+      y: 3600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Вольтамперная характеристика",
@@ -923,8 +1331,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10810,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Мостовые схемы",
@@ -932,8 +1344,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 11530,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Преобразование звезда-треугольник",
@@ -941,8 +1357,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 11530,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Поток электрического поля. Закон Гаусса.",
@@ -950,8 +1370,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 5600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Рассчёт электрического поля и потенциала",
@@ -959,8 +1383,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 6100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Принцип суперпозиции",
@@ -968,8 +1396,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 6600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Проводники в электростатическом поле",
@@ -977,8 +1409,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "10",
     },
+    position: {
+      x: 10080,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Теорема о единственности",
@@ -986,8 +1422,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 7600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Метод электростатических изображений",
@@ -995,8 +1435,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Энергия систем зарядов",
@@ -1004,8 +1448,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 8600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Диэлектрики в электростатическом поле",
@@ -1013,8 +1461,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "10",
     },
+    position: {
+      x: 10080,
+      y: 9100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Электростатика, 10 класс.",
@@ -1022,8 +1474,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 9600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Конденсаторы",
@@ -1031,8 +1487,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 10100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Соединение конденсаторов. Энергия конденсатора.",
@@ -1040,8 +1500,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 10600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Объёмная плотность энергии электрического поля",
@@ -1049,8 +1513,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 11100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "RC-цепи",
@@ -1058,8 +1526,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 11600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Ток в различных средах",
@@ -1067,8 +1539,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 12100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Электростатика, 11 класс.",
@@ -1076,8 +1552,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 12600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Магнитное поле. Сила Лоренца.",
@@ -1085,8 +1565,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 13100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Сила Ампера. Момент силы Ампера.",
@@ -1094,8 +1578,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 13600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Закон Био-Савара-Лапласа",
@@ -1103,8 +1591,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 14100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Теорема Гаусса для магнитного поля",
@@ -1112,8 +1604,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 14600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Теорема о циркуляции магнитного поля",
@@ -1121,8 +1617,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 15100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Закон электромагнитной индукции Фарадея",
@@ -1130,8 +1630,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 15600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Движущийся проводник в магнитном поле",
@@ -1139,8 +1643,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 16100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Магнитная гидродинамика",
@@ -1148,8 +1656,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 16600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Эффект Холла",
@@ -1157,8 +1669,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 17100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Самоиндукция",
@@ -1166,8 +1682,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "11",
     },
+    position: {
+      x: 10080,
+      y: 17600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Энергия магнитного поля",
@@ -1175,8 +1695,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 18100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Электромагнетизм, 11 класс.",
@@ -1184,8 +1708,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 10080,
+      y: 18600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Электромагнитные волны",
@@ -1193,8 +1721,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 9720,
+      y: 19100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Интерференция и дифракция ЭМ волн",
@@ -1202,8 +1734,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 9720,
+      y: 19600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Дисперсия",
@@ -1211,8 +1747,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 12060,
+      y: 21300,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Импульс и энергия фотонов",
@@ -1220,8 +1760,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "11",
     },
+    position: {
+      x: 9360,
+      y: 20100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Фотоэффект",
@@ -1229,8 +1773,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "11",
     },
+    position: {
+      x: 9360,
+      y: 20600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Корпускулярно-волновой дуализм",
@@ -1238,8 +1786,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 9360,
+      y: 21100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Соотношение неопределённостей Гейзенберга",
@@ -1247,8 +1799,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 9360,
+      y: 21600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Переменный ток. Импеданс.",
@@ -1256,8 +1812,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 12060,
+      y: 19180,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Резонанс. Мощность переменного тока",
@@ -1265,8 +1825,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 12065,
+      y: 19600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Переменный ток, 11 класc",
@@ -1274,8 +1838,12 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
+    position: {
+      x: 12060,
+      y: 20040,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тепловое расширение",
@@ -1283,8 +1851,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12240,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Количество теплоты, внутренняя энергия",
@@ -1292,8 +1864,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12970,
+      y: 1100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Влажность",
@@ -1301,8 +1877,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Уравнение теплового баланса",
@@ -1310,8 +1890,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 13680,
+      y: 1600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Внешние источники теплоты. Теплопотери.",
@@ -1319,8 +1903,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 13680,
+      y: 2100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Теплопроводность. Закон Ньютона-Рихмана.",
@@ -1328,8 +1916,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 13680,
+      y: 2600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Термодинамика, 8 класс.",
@@ -1337,8 +1929,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 3100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Длина свободного пробега",
@@ -1346,8 +1942,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 3600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Уравнение Клапейрона-Менделеева",
@@ -1355,8 +1955,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 4100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Работа, внутренняя энергия. Первое начало термодинамики.",
@@ -1364,8 +1968,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 4600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Адиабатический процесс",
@@ -1373,8 +1981,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 5100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Политропический процесс",
@@ -1382,8 +1994,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 5600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Термодинамические циклы",
@@ -1391,8 +2007,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 6100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Второе начало термодинамики. Две формулировки.",
@@ -1400,8 +2020,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 6600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Цикл Карно",
@@ -1409,8 +2033,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 7100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Теоремы Карно",
@@ -1418,8 +2046,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 7600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Неравенство Клаузиуса",
@@ -1427,8 +2059,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12620,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Энтропия",
@@ -1436,8 +2072,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12620,
+      y: 9100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Влажный воздух",
@@ -1445,8 +2085,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 13320,
+      y: 8100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Уравнение Клапейрона-Клаузиуса",
@@ -1454,8 +2098,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 13320,
+      y: 8600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Неидеальные газы",
@@ -1463,8 +2111,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "10",
     },
+    position: {
+      x: 13320,
+      y: 9100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Тур. Термодинамика, 10 класс.",
@@ -1472,8 +2124,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 9600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Поверхностное натяжение",
@@ -1481,8 +2137,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 10100,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
   {
     id: "Равновесное тепловое излучение",
@@ -1490,8 +2150,12 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
+    position: {
+      x: 12960,
+      y: 10600,
+    },
     width: 320,
-    height: 160,
+    height: 300,
   },
 ];
 
