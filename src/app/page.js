@@ -20,7 +20,10 @@ import {
   saveNodeChanges,
   applyStoredChanges,
   exportUpdatedGraphContent,
+  saveEdgeChanges,
+  applyStoredEdgeChanges,
 } from "../utils/persistence";
+import { useState as useReactState } from "react";
 
 const FlowContainer = styled.div`
   width: 100vw;
@@ -76,7 +79,7 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
   console.log("=== LAYOUT DEBUG ===");
   console.log("Layout direction:", direction);
 
-  dagreGraph.setGraph({ rankdir: direction, nodesep: 200, ranksep: 400 });
+  dagreGraph.setGraph({ rankdir: direction, nodesep: 400, ranksep: 200 });
   console.log("Dagre graph settings:", dagreGraph.graph());
 
   nodes.forEach((n) => {
@@ -153,19 +156,61 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
 const nodeTypes = { custom: CustomNode };
 const edgeTypes = { custom: CustomEdge };
 
+// Edge property panel (inline for now)
+function EdgePropertiesPanel({ edge, onUpdate, onClose }) {
+  const [label, setLabel] = useReactState(edge.data?.label || "");
+  const [color, setColor] = useReactState(edge.data?.color || "#888888");
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: 80,
+        right: 20,
+        background: "#fff",
+        padding: 16,
+        border: "1px solid #ccc",
+        zIndex: 2000,
+      }}
+    >
+      <div>
+        <label>Label:</label>
+        <input value={label} onChange={(e) => setLabel(e.target.value)} />
+      </div>
+      <div>
+        <label>Color:</label>
+        <input
+          type="color"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+        />
+      </div>
+      <button
+        onClick={() => {
+          onUpdate(edge.id, { label, color });
+          onClose();
+        }}
+      >
+        Save
+      </button>
+      <button onClick={onClose}>Cancel</button>
+    </div>
+  );
+}
+
 export default function LectureTree() {
   const reactFlowRef = useRef();
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
     edges: [],
   });
+  const [selectedEdge, setSelectedEdge] = useState(null);
 
   // Always use Dagre layout, ignore manual positions for now
   useEffect(() => {
     // const nodesWithStoredChanges = applyStoredChanges(rawNodes);
     const { nodes: ln, edges: le } = getLayoutedElements(
       rawNodes, // Use raw nodes without stored changes
-      rawEdges,
+      applyStoredEdgeChanges(rawEdges),
       "TB"
     );
     setLayout({ nodes: ln, edges: le });
@@ -261,10 +306,38 @@ export default function LectureTree() {
     },
     [snapToGrid, snapSizeToGrid, nodes]
   );
-  const onEdgesChange = useCallback(
-    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
-    []
-  );
+  const onEdgeClick = useCallback((event, edge) => {
+    event.stopPropagation();
+    setSelectedEdge(edge);
+  }, []);
+
+  const onEdgePropertyChange = useCallback((edgeId, newData) => {
+    setEdges((eds) => {
+      const updated = eds.map((e) =>
+        e.id === edgeId ? { ...e, data: { ...e.data, ...newData } } : e
+      );
+      saveEdgeChanges(updated);
+      return updated;
+    });
+  }, []);
+  const onEdgesChange = useCallback((changes) => {
+    setEdges((eds) => {
+      const updated = applyEdgeChanges(changes, eds);
+      saveEdgeChanges(updated);
+      return updated;
+    });
+  }, []);
+
+  // Add this callback to update control point
+  const onControlPointChange = useCallback((edgeId, point) => {
+    setEdges((eds) => {
+      const updated = eds.map((e) =>
+        e.id === edgeId ? { ...e, data: { ...e.data, controlPoint: point } } : e
+      );
+      saveEdgeChanges(updated);
+      return updated;
+    });
+  }, []);
 
   const handleResetLayout = useCallback(() => {
     // Clear localStorage and force re-layout
@@ -296,7 +369,14 @@ export default function LectureTree() {
           zoomOnScroll={false}
           preventScrolling={true}
           nodes={nodes}
-          edges={edges}
+          edges={edges.map((e) => ({
+            ...e,
+            data: {
+              ...e.data,
+              onEdgeClick: (event) => onEdgeClick(event, e),
+              onControlPointChange,
+            },
+          }))}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodesDraggable={true}
@@ -309,6 +389,13 @@ export default function LectureTree() {
           <Controls />
           <Background />
         </ReactFlow>
+        {selectedEdge && (
+          <EdgePropertiesPanel
+            edge={selectedEdge}
+            onUpdate={onEdgePropertyChange}
+            onClose={() => setSelectedEdge(null)}
+          />
+        )}
       </FlowContainer>
     </ThemeProvider>
   );

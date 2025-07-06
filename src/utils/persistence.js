@@ -1,4 +1,5 @@
 const STORAGE_KEY = 'graph_node_changes';
+const EDGE_STORAGE_KEY = 'graph_edge_changes';
 
 export const saveNodeChanges = (nodes) => {
   const changes = {};
@@ -50,4 +51,41 @@ export const exportUpdatedGraphContent = (nodes) => {
   }));
   
   return `export const rawNodes = ${JSON.stringify(updatedNodes, null, 2)};`;
+};
+
+export const saveEdgeChanges = (edges) => {
+  const changes = {};
+  edges.forEach(edge => {
+    changes[edge.id] = {
+      ...edge.data,
+    };
+  });
+  localStorage.setItem(EDGE_STORAGE_KEY, JSON.stringify(changes));
+};
+
+export const loadEdgeChanges = () => {
+  try {
+    const stored = localStorage.getItem(EDGE_STORAGE_KEY);
+    return stored ? JSON.parse(stored) : {};
+  } catch (error) {
+    console.error('Failed to load edge changes:', error);
+    return {};
+  }
+};
+
+export const applyStoredEdgeChanges = (edges) => {
+  const storedChanges = loadEdgeChanges();
+  return edges.map(edge => {
+    const changes = storedChanges[edge.id];
+    if (changes) {
+      return {
+        ...edge,
+        data: {
+          ...edge.data,
+          ...changes,
+        },
+      };
+    }
+    return edge;
+  });
 };
