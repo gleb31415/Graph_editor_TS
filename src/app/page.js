@@ -3,11 +3,34 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import ReactFlow, {
   Controls,
-  Background,
   applyNodeChanges,
   applyEdgeChanges,
 } from "reactflow";
 import dagre from "dagre";
+import { useTheme } from "../contexts/ThemeContext";
+
+// Custom background with squares
+function CustomBackground() {
+  const theme = useTheme();
+  const abbey200 = theme.colors.abbey["200"] || "#ced1d3";
+  const abbey800 = theme.colors.abbey["800"] || "#424448";
+  const size = 32;
+  const square = 4;
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none", background: abbey200 }}
+    >
+      <defs>
+        <pattern id="squares" width={size} height={size} patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width={square} height={square} fill={abbey800} />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#squares)" />
+    </svg>
+  );
+}
 import styled from "styled-components";
 import CustomNode from "../components/CustomNode";
 import CustomEdge from "../components/CustomEdge";
@@ -436,7 +459,7 @@ export default function LectureTree() {
           panOnDrag={[1, 2]}
         >
           <Controls />
-          <Background />
+          <CustomBackground />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>
