@@ -5,10 +5,6 @@ export const rawNodes = [
       section: "",
       grade: "11",
     },
-    position: {
-      x: -1560,
-      y: 2440,
-    },
     width: 600,
     height: 400,
   },
@@ -17,10 +13,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 850,
-      y: 1440,
     },
     width: 320,
     height: 160,
@@ -31,10 +23,6 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
-    position: {
-      x: 850,
-      y: 2160,
-    },
     width: 320,
     height: 160,
   },
@@ -43,10 +31,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 850,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -57,10 +41,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 840,
-      y: 2640,
-    },
     width: 320,
     height: 160,
   },
@@ -69,10 +49,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "10",
-    },
-    position: {
-      x: 840,
-      y: 4080,
     },
     width: 320,
     height: 160,
@@ -83,10 +59,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "7",
     },
-    position: {
-      x: 880,
-      y: 5760,
-    },
     width: 320,
     height: 160,
   },
@@ -95,10 +67,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 1420,
-      y: 1440,
     },
     width: 320,
     height: 160,
@@ -109,10 +77,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 1980,
-      y: 1440,
-    },
     width: 320,
     height: 160,
   },
@@ -121,10 +85,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 2620,
-      y: 1580,
     },
     width: 320,
     height: 160,
@@ -135,10 +95,6 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
-    position: {
-      x: 1420,
-      y: 2160,
-    },
     width: 320,
     height: 160,
   },
@@ -147,10 +103,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "7",
-    },
-    position: {
-      x: 1990,
-      y: 2160,
     },
     width: 320,
     height: 160,
@@ -161,10 +113,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 3120,
-      y: 1220,
-    },
     width: 320,
     height: 160,
   },
@@ -173,10 +121,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 3700,
-      y: 1570,
     },
     width: 320,
     height: 160,
@@ -187,10 +131,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 3660,
-      y: 1220,
-    },
     width: 320,
     height: 160,
   },
@@ -199,10 +139,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "7",
-    },
-    position: {
-      x: 3130,
-      y: 2170,
     },
     width: 320,
     height: 160,
@@ -213,10 +149,6 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
-    position: {
-      x: 3700,
-      y: 2170,
-    },
     width: 320,
     height: 160,
   },
@@ -225,10 +157,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 4270,
-      y: 1570,
     },
     width: 320,
     height: 160,
@@ -239,10 +167,6 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
-    position: {
-      x: 4880,
-      y: 300,
-    },
     width: 320,
     height: 160,
   },
@@ -251,10 +175,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 4840,
-      y: 1040,
     },
     width: 320,
     height: 160,
@@ -265,10 +185,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 4840,
-      y: 1460,
-    },
     width: 320,
     height: 160,
   },
@@ -277,10 +193,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 4840,
-      y: 1810,
     },
     width: 320,
     height: 160,
@@ -291,10 +203,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 4840,
-      y: 2050,
-    },
     width: 320,
     height: 160,
   },
@@ -303,10 +211,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 6440,
-      y: -140,
     },
     width: 320,
     height: 160,
@@ -317,10 +221,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 6440,
-      y: 200,
-    },
     width: 320,
     height: 160,
   },
@@ -329,10 +229,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 6440,
-      y: 520,
     },
     width: 320,
     height: 160,
@@ -343,10 +239,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 5410,
-      y: 1045,
-    },
     width: 320,
     height: 160,
   },
@@ -355,10 +247,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 5980,
-      y: 895,
     },
     width: 320,
     height: 160,
@@ -369,10 +257,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 6900,
-      y: 880,
-    },
     width: 320,
     height: 160,
   },
@@ -381,10 +265,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 5410,
-      y: 1450,
     },
     width: 320,
     height: 160,
@@ -395,10 +275,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 5410,
-      y: 1810,
-    },
     width: 320,
     height: 160,
   },
@@ -407,10 +283,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 5980,
-      y: 1810,
     },
     width: 320,
     height: 160,
@@ -421,10 +293,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 6550,
-      y: 1810,
-    },
     width: 320,
     height: 160,
   },
@@ -433,10 +301,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 5980,
-      y: 1450,
     },
     width: 320,
     height: 160,
@@ -447,10 +311,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 6550,
-      y: 1450,
-    },
     width: 320,
     height: 160,
   },
@@ -459,10 +319,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 8260,
-      y: 1080,
     },
     width: 320,
     height: 160,
@@ -473,10 +329,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 7680,
-      y: 780,
-    },
     width: 320,
     height: 160,
   },
@@ -485,10 +337,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 8260,
-      y: 780,
     },
     width: 320,
     height: 160,
@@ -499,10 +347,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 7690,
-      y: 1450,
-    },
     width: 320,
     height: 160,
   },
@@ -511,10 +355,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 7690,
-      y: 1930,
     },
     width: 320,
     height: 160,
@@ -525,10 +365,6 @@ export const rawNodes = [
       section: "механика",
       grade: "7",
     },
-    position: {
-      x: 8260,
-      y: 1810,
-    },
     width: 320,
     height: 160,
   },
@@ -537,10 +373,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 8260,
-      y: 1330,
     },
     width: 320,
     height: 160,
@@ -551,10 +383,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 8260,
-      y: 1570,
-    },
     width: 320,
     height: 160,
   },
@@ -563,10 +391,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 8260,
-      y: 2050,
     },
     width: 320,
     height: 160,
@@ -577,10 +401,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 8830,
-      y: 1930,
-    },
     width: 320,
     height: 160,
   },
@@ -589,10 +409,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 8830,
-      y: 1200,
     },
     width: 320,
     height: 160,
@@ -603,10 +419,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 9400,
-      y: 1440,
-    },
     width: 320,
     height: 160,
   },
@@ -615,10 +427,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 9960,
-      y: 1180,
     },
     width: 320,
     height: 160,
@@ -629,10 +437,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 9960,
-      y: 1920,
-    },
     width: 320,
     height: 160,
   },
@@ -641,10 +445,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 10540,
-      y: 1440,
     },
     width: 320,
     height: 160,
@@ -655,10 +455,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 6940,
-      y: 280,
-    },
     width: 320,
     height: 160,
   },
@@ -667,10 +463,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 7440,
-      y: 180,
     },
     width: 320,
     height: 160,
@@ -681,10 +473,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 7880,
-      y: 180,
-    },
     width: 320,
     height: 160,
   },
@@ -693,10 +481,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 8380,
-      y: 260,
     },
     width: 320,
     height: 160,
@@ -707,10 +491,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 8830,
-      y: 480,
-    },
     width: 320,
     height: 160,
   },
@@ -719,10 +499,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 9400,
-      y: 240,
     },
     width: 320,
     height: 160,
@@ -733,10 +509,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 9400,
-      y: 480,
-    },
     width: 320,
     height: 160,
   },
@@ -745,10 +517,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 9400,
-      y: 720,
     },
     width: 320,
     height: 160,
@@ -759,10 +527,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 9970,
-      y: 480,
-    },
     width: 320,
     height: 160,
   },
@@ -771,10 +535,6 @@ export const rawNodes = [
     data: {
       section: "механика",
       grade: "9",
-    },
-    position: {
-      x: 9970,
-      y: 720,
     },
     width: 320,
     height: 160,
@@ -785,10 +545,6 @@ export const rawNodes = [
       section: "механика",
       grade: "9",
     },
-    position: {
-      x: 10540,
-      y: 720,
-    },
     width: 320,
     height: 160,
   },
@@ -797,10 +553,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 1420,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -811,10 +563,6 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
-    position: {
-      x: 1990,
-      y: 2410,
-    },
     width: 320,
     height: 160,
   },
@@ -823,10 +571,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 2560,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -837,10 +581,6 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
-    position: {
-      x: 3130,
-      y: 2410,
-    },
     width: 320,
     height: 160,
   },
@@ -849,10 +589,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 3700,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -863,10 +599,6 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
-    position: {
-      x: 4270,
-      y: 2410,
-    },
     width: 320,
     height: 160,
   },
@@ -875,10 +607,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 4840,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -889,10 +617,6 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
-    position: {
-      x: 5410,
-      y: 2410,
-    },
     width: 320,
     height: 160,
   },
@@ -901,10 +625,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 5980,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -915,10 +635,6 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
-    position: {
-      x: 6550,
-      y: 2410,
-    },
     width: 320,
     height: 160,
   },
@@ -927,10 +643,6 @@ export const rawNodes = [
     data: {
       section: "математика",
       grade: "7",
-    },
-    position: {
-      x: 7120,
-      y: 2410,
     },
     width: 320,
     height: 160,
@@ -941,10 +653,6 @@ export const rawNodes = [
       section: "математика",
       grade: "7",
     },
-    position: {
-      x: 7690,
-      y: 2410,
-    },
     width: 320,
     height: 160,
   },
@@ -953,10 +661,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "8",
-    },
-    position: {
-      x: 1720,
-      y: 5760,
     },
     width: 320,
     height: 160,
@@ -967,10 +671,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
-    position: {
-      x: 2280,
-      y: 5760,
-    },
     width: 320,
     height: 160,
   },
@@ -979,10 +679,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "8",
-    },
-    position: {
-      x: 2940,
-      y: 5760,
     },
     width: 320,
     height: 160,
@@ -993,10 +689,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
-    position: {
-      x: 16360,
-      y: 5820,
-    },
     width: 320,
     height: 160,
   },
@@ -1005,10 +697,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "8",
-    },
-    position: {
-      x: 16880,
-      y: 5820,
     },
     width: 320,
     height: 160,
@@ -1019,10 +707,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
-    position: {
-      x: 18440,
-      y: 5620,
-    },
     width: 320,
     height: 160,
   },
@@ -1031,10 +715,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "8",
-    },
-    position: {
-      x: 21370,
-      y: 4690,
     },
     width: 320,
     height: 160,
@@ -1045,10 +725,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
-    position: {
-      x: 21940,
-      y: 4690,
-    },
     width: 320,
     height: 160,
   },
@@ -1058,10 +734,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
-    position: {
-      x: 22510,
-      y: 4690,
-    },
     width: 320,
     height: 160,
   },
@@ -1070,10 +742,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "8",
-    },
-    position: {
-      x: 23080,
-      y: 3785,
     },
     width: 320,
     height: 160,
@@ -1084,10 +752,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
-    position: {
-      x: 23650,
-      y: 3785,
-    },
     width: 320,
     height: 160,
   },
@@ -1096,10 +760,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "11",
-    },
-    position: {
-      x: 24220,
-      y: 3785,
     },
     width: 320,
     height: 160,
@@ -1110,10 +770,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
-    position: {
-      x: 24790,
-      y: 3785,
-    },
     width: 320,
     height: 160,
   },
@@ -1122,10 +778,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "11",
-    },
-    position: {
-      x: 25360,
-      y: 3785,
     },
     width: 320,
     height: 160,
@@ -1136,10 +788,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "11",
     },
-    position: {
-      x: 25930,
-      y: 3785,
-    },
     width: 320,
     height: 160,
   },
@@ -1148,10 +796,6 @@ export const rawNodes = [
     data: {
       section: "оптика",
       grade: "11",
-    },
-    position: {
-      x: 26500,
-      y: 3785,
     },
     width: 320,
     height: 160,
@@ -1162,10 +806,6 @@ export const rawNodes = [
       section: "оптика",
       grade: "8",
     },
-    position: {
-      x: 27070,
-      y: 3785,
-    },
     width: 320,
     height: 160,
   },
@@ -1174,10 +814,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 1420,
-      y: 2640,
     },
     width: 320,
     height: 160,
@@ -1188,10 +824,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 2000,
-      y: 2640,
-    },
     width: 320,
     height: 160,
   },
@@ -1200,10 +832,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 5410,
-      y: 2650,
     },
     width: 320,
     height: 160,
@@ -1214,10 +842,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 6560,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1226,10 +850,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 5410,
-      y: 2890,
     },
     width: 320,
     height: 160,
@@ -1240,10 +860,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 2600,
-      y: 3140,
-    },
     width: 320,
     height: 160,
   },
@@ -1252,10 +868,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 3100,
-      y: 3140,
     },
     width: 320,
     height: 160,
@@ -1266,10 +878,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 4840,
-      y: 3130,
-    },
     width: 320,
     height: 160,
   },
@@ -1278,10 +886,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 5410,
-      y: 3130,
     },
     width: 320,
     height: 160,
@@ -1292,10 +896,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 3720,
-      y: 3380,
-    },
     width: 320,
     height: 160,
   },
@@ -1304,10 +904,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 5410,
-      y: 3370,
     },
     width: 320,
     height: 160,
@@ -1318,10 +914,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 4280,
-      y: 3600,
-    },
     width: 320,
     height: 160,
   },
@@ -1330,10 +922,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 5410,
-      y: 3610,
     },
     width: 320,
     height: 160,
@@ -1344,10 +932,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 4840,
-      y: 3850,
-    },
     width: 320,
     height: 160,
   },
@@ -1356,10 +940,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 5410,
-      y: 3850,
     },
     width: 320,
     height: 160,
@@ -1370,10 +950,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 7120,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1382,10 +958,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 7680,
-      y: 3320,
     },
     width: 320,
     height: 160,
@@ -1396,10 +968,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 8240,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1408,10 +976,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "10",
-    },
-    position: {
-      x: 8820,
-      y: 3320,
     },
     width: 320,
     height: 160,
@@ -1422,10 +986,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 9360,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1434,10 +994,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 9960,
-      y: 3320,
     },
     width: 320,
     height: 160,
@@ -1448,10 +1004,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 10540,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1460,10 +1012,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "10",
-    },
-    position: {
-      x: 11100,
-      y: 3320,
     },
     width: 320,
     height: 160,
@@ -1474,10 +1022,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 11660,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1486,10 +1030,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 12260,
-      y: 3320,
     },
     width: 320,
     height: 160,
@@ -1500,10 +1040,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 12840,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1512,10 +1048,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 13360,
-      y: 3320,
     },
     width: 320,
     height: 160,
@@ -1526,10 +1058,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 13940,
-      y: 3320,
-    },
     width: 320,
     height: 160,
   },
@@ -1538,10 +1066,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 14840,
-      y: 2940,
     },
     width: 320,
     height: 160,
@@ -1552,10 +1076,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 14530,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1564,10 +1084,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 15100,
-      y: 3360,
     },
     width: 320,
     height: 160,
@@ -1578,10 +1094,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 15670,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1590,10 +1102,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 16240,
-      y: 3360,
     },
     width: 320,
     height: 160,
@@ -1604,10 +1112,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 16810,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1616,10 +1120,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 17380,
-      y: 3360,
     },
     width: 320,
     height: 160,
@@ -1630,10 +1130,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 17950,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1642,10 +1138,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 18520,
-      y: 3360,
     },
     width: 320,
     height: 160,
@@ -1656,10 +1148,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 19090,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1668,10 +1156,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 19660,
-      y: 3360,
     },
     width: 320,
     height: 160,
@@ -1682,10 +1166,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "11",
     },
-    position: {
-      x: 20230,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1694,10 +1174,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 20800,
-      y: 3360,
     },
     width: 320,
     height: 160,
@@ -1708,10 +1184,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 21370,
-      y: 3360,
-    },
     width: 320,
     height: 160,
   },
@@ -1720,10 +1192,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 21940,
-      y: 3240,
     },
     width: 320,
     height: 160,
@@ -1734,10 +1202,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 22510,
-      y: 3240,
-    },
     width: 320,
     height: 160,
   },
@@ -1746,10 +1210,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 23080,
-      y: 3785,
     },
     width: 320,
     height: 160,
@@ -1760,10 +1220,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "11",
     },
-    position: {
-      x: 23080,
-      y: 3120,
-    },
     width: 320,
     height: 160,
   },
@@ -1772,10 +1228,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "11",
-    },
-    position: {
-      x: 23650,
-      y: 3120,
     },
     width: 320,
     height: 160,
@@ -1786,10 +1238,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 24220,
-      y: 3120,
-    },
     width: 320,
     height: 160,
   },
@@ -1798,10 +1246,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 27040,
-      y: 3120,
     },
     width: 320,
     height: 160,
@@ -1812,10 +1256,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 21780,
-      y: 2780,
-    },
     width: 320,
     height: 160,
   },
@@ -1824,10 +1264,6 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
-    },
-    position: {
-      x: 22300,
-      y: 2740,
     },
     width: 320,
     height: 160,
@@ -1838,10 +1274,6 @@ export const rawNodes = [
       section: "электромагнетизм",
       grade: "8",
     },
-    position: {
-      x: 22920,
-      y: 2560,
-    },
     width: 320,
     height: 160,
   },
@@ -1850,10 +1282,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 3130,
-      y: 4080,
     },
     width: 320,
     height: 160,
@@ -1864,10 +1292,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 1420,
-      y: 4330,
-    },
     width: 320,
     height: 160,
   },
@@ -1876,10 +1300,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 3130,
-      y: 4320,
     },
     width: 320,
     height: 160,
@@ -1890,10 +1310,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 1990,
-      y: 4560,
-    },
     width: 320,
     height: 160,
   },
@@ -1902,10 +1318,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 2560,
-      y: 4560,
     },
     width: 320,
     height: 160,
@@ -1916,10 +1328,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 3130,
-      y: 4560,
-    },
     width: 320,
     height: 160,
   },
@@ -1928,10 +1336,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 3700,
-      y: 4320,
     },
     width: 320,
     height: 160,
@@ -1942,10 +1346,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 4270,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -1954,10 +1354,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 4840,
-      y: 4320,
     },
     width: 320,
     height: 160,
@@ -1968,10 +1364,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 5410,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -1980,10 +1372,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 5980,
-      y: 4320,
     },
     width: 320,
     height: 160,
@@ -1994,10 +1382,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 6550,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -2006,10 +1390,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 7120,
-      y: 4320,
     },
     width: 320,
     height: 160,
@@ -2020,10 +1400,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 7690,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -2032,10 +1408,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 8260,
-      y: 4320,
     },
     width: 320,
     height: 160,
@@ -2046,10 +1418,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 8830,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -2058,10 +1426,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 9970,
-      y: 3970,
     },
     width: 320,
     height: 160,
@@ -2072,10 +1436,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 10540,
-      y: 3970,
-    },
     width: 320,
     height: 160,
   },
@@ -2084,10 +1444,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 9400,
-      y: 4440,
     },
     width: 320,
     height: 160,
@@ -2098,10 +1454,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 9970,
-      y: 4440,
-    },
     width: 320,
     height: 160,
   },
@@ -2110,10 +1462,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "10",
-    },
-    position: {
-      x: 10540,
-      y: 4440,
     },
     width: 320,
     height: 160,
@@ -2124,10 +1472,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 11110,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -2137,10 +1481,6 @@ export const rawNodes = [
       section: "термодинамика",
       grade: "8",
     },
-    position: {
-      x: 11680,
-      y: 4320,
-    },
     width: 320,
     height: 160,
   },
@@ -2149,10 +1489,6 @@ export const rawNodes = [
     data: {
       section: "термодинамика",
       grade: "8",
-    },
-    position: {
-      x: 12250,
-      y: 4320,
     },
     width: 320,
     height: 160,

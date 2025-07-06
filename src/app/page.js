@@ -45,17 +45,39 @@ const ExportButton = styled.button`
   }
 `;
 
+const ResetButton = styled.button`
+  position: fixed;
+  top: 20px;
+  right: 160px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: #c82333;
+  }
+`;
+
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
 
 const nodeWidth = 320;
-const nodeHeight = 160;
+const nodeHeight = 300; // Increased to make vertical layout more obvious
 const theSolutionWidth = 600;
 const theSolutionHeight = 400;
 
 // layout-функция
 function getLayoutedElements(nodes, edges, direction = "TB") {
-  dagreGraph.setGraph({ rankdir: direction, nodesep: 80, ranksep: 250 });
+  console.log("=== LAYOUT DEBUG ===");
+  console.log("Layout direction:", direction);
+
+  dagreGraph.setGraph({ rankdir: direction, nodesep: 120, ranksep: 400 });
+  console.log("Dagre graph settings:", dagreGraph.graph());
 
   nodes.forEach((n) => {
     const isTheSolution = n.id === "TheSolution";
@@ -66,19 +88,24 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
   edges.forEach((e) => dagreGraph.setEdge(e.source, e.target));
 
   dagre.layout(dagreGraph);
+
+  console.log("Raw Dagre positions (first 5 nodes):");
+  nodes.slice(0, 5).forEach((n) => {
+    const dagreNode = dagreGraph.node(n.id);
+    console.log(`${n.id}: x=${dagreNode.x}, y=${dagreNode.y}`);
+  });
+
   const laidOutNodes = nodes.map((n) => {
     const { x, y } = dagreGraph.node(n.id);
     const isTheSolution = n.id === "TheSolution";
     const width = isTheSolution ? theSolutionWidth : nodeWidth;
     const height = isTheSolution ? theSolutionHeight : nodeHeight;
 
-    // Use existing position if available, otherwise use Dagre calculated position
-    const position = n.position
-      ? n.position
-      : {
-          x: x - width / 2,
-          y: y - height / 2,
-        };
+    // Always use Dagre calculated position (ignore manual positions for debugging)
+    const position = {
+      x: x - width / 2,
+      y: y - height / 2,
+    };
 
     return {
       ...n,
@@ -88,6 +115,21 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
       height,
     };
   });
+
+  console.log("Final node positions (first 5 nodes):");
+  laidOutNodes.slice(0, 5).forEach((n) => {
+    console.log(
+      `${n.id}: x=${n.position.x}, y=${
+        n.position.y
+      }, hasManualPos=${!!n.position}`
+    );
+  });
+
+  // Find TheSolution and show its position
+  const theSolutionNode = laidOutNodes.find((n) => n.id === "TheSolution");
+  if (theSolutionNode) {
+    console.log("TheSolution position:", theSolutionNode.position);
+  }
 
   // Add node data to edges for custom styling
   const laidOutEdges = edges.map((edge) => {
@@ -104,6 +146,7 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
     };
   });
 
+  console.log("=== END LAYOUT DEBUG ===");
   return { nodes: laidOutNodes, edges: laidOutEdges };
 }
 
@@ -117,11 +160,11 @@ export default function LectureTree() {
     edges: [],
   });
 
-  // Always use Dagre layout, but allow manual positioning to override
+  // Always use Dagre layout, ignore manual positions for now
   useEffect(() => {
-    const nodesWithStoredChanges = applyStoredChanges(rawNodes);
+    // const nodesWithStoredChanges = applyStoredChanges(rawNodes);
     const { nodes: ln, edges: le } = getLayoutedElements(
-      nodesWithStoredChanges,
+      rawNodes, // Use raw nodes without stored changes
       rawEdges,
       "TB"
     );
@@ -143,13 +186,14 @@ export default function LectureTree() {
         setTimeout(() => {
           const viewportWidth = window.innerWidth;
           const viewportHeight = window.innerHeight;
-          const zoomX = (viewportWidth * 0.8) / theSolutionWidth;
-          const zoomY = (viewportHeight * 0.8) / theSolutionHeight;
-          const zoom = Math.min(zoomX, zoomY, 1);
+
+          // Set zoom to show more of the vertical layout
+          const zoom = 0.6; // Lower zoom to see more nodes
+
           const { setCenter } = reactFlowRef.current;
           setCenter(
             theSolutionNode.position.x + theSolutionWidth / 2,
-            theSolutionNode.position.y + theSolutionHeight / 2,
+            theSolutionNode.position.y + theSolutionHeight / 2 + 200, // Offset down a bit
             { zoom, duration: 1000 }
           );
         }, 100);
@@ -222,6 +266,18 @@ export default function LectureTree() {
     []
   );
 
+  const handleResetLayout = useCallback(() => {
+    // Clear localStorage and force re-layout
+    localStorage.removeItem("graph-node-changes");
+    const { nodes: ln, edges: le } = getLayoutedElements(
+      rawNodes,
+      rawEdges,
+      "TB"
+    );
+    setLayout({ nodes: ln, edges: le });
+    console.log("Layout reset - cleared manual positions");
+  }, []);
+
   const handleExportGraph = useCallback(() => {
     const exportedContent = exportUpdatedGraphContent(nodes);
     navigator.clipboard.writeText(exportedContent).then(() => {
@@ -233,6 +289,7 @@ export default function LectureTree() {
     <ThemeProvider theme={lightTheme}>
       <FlowContainer>
         <ExportButton onClick={handleExportGraph}>Export Graph</ExportButton>
+        <ResetButton onClick={handleResetLayout}>Reset Layout</ResetButton>
         <ReactFlow
           ref={reactFlowRef}
           panOnScroll={true}

@@ -12,6 +12,8 @@ const CustomNodeWrap = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   font-size: 16px;
+  width: 320px;
+  height: 300px;
   box-sizing: border-box;
   overflow: hidden;
 `;
