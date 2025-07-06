@@ -25,6 +25,7 @@ import {
   exportUpdatedGraphContent,
 } from "../utils/persistence";
 
+import SquareBackground from "../components/SquareBackground";
 const FlowContainer = styled.div`
   width: 100vw;
   height: 100vh;
@@ -442,7 +443,7 @@ export default function LectureTree() {
           onMove={(_evt, viewport) => setViewport(viewport)}
         >
           <Controls />
-          <Background />
+          <SquareBackground />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>

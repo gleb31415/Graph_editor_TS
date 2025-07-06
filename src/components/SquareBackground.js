@@ -10,7 +10,7 @@ const SquareBackground = ({
 }) => {
   const theme = useTheme();
   // Use defaults if props are not provided
-  const squareSize = size !== undefined ? size : 700;
+  const squareSize = size !== undefined ? size : 20;
   const squareGap = gap !== undefined ? gap : 400;
   const squareColor = color || (theme?.colors?.abbey?.["400"] ?? '#b2b2bb');
   const backgroundColor = bgColor || (theme?.colors?.abbey?.["100"] ?? '#f3f4f6');
