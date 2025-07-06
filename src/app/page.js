@@ -441,6 +441,8 @@ export default function LectureTree() {
           edgeTypes={edgeTypes}
           panOnDrag={[1, 2]}
           onMove={(_evt, viewport) => setViewport(viewport)}
+          selectionOnDrag={true}
+          multiSelectionKeyCode={['Shift']}
         >
           <Controls />
           <SquareBackground />
