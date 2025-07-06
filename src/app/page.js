@@ -335,7 +335,7 @@ export default function LectureTree() {
         const avgX = positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
         newPositions = sortedByY.map((node, index) => ({
           id: node.id,
-          position: { x: avgX, y: minY + index * 40 },
+          position: { x: avgX, y: minY + index * 200 },
         }));
         break;
       case "horizontalGap":
@@ -347,7 +347,7 @@ export default function LectureTree() {
         const avgY = positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
         newPositions = sortedByX.map((node, index) => ({
           id: node.id,
-          position: { x: minX + index * 40, y: avgY },
+          position: { x: minX + index * 500, y: avgY },
         }));
         break;
       case "strictVertical":
