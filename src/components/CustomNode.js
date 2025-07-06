@@ -5,9 +5,9 @@ import { useTheme } from "../contexts/ThemeContext";
 
 const CustomNodeWrap = styled.div`
   padding: 20px;
-  border: 2px solid ${(props) => props.borderColor};
-  border-radius: 30px;
-  background: ${(props) => props.backgroundColor};
+  border: 2px solid ${({ theme }) => theme.colors.abbey["100"]};
+  border-radius: 100px;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,12 +17,15 @@ const CustomNodeWrap = styled.div`
   height: 100px;
   box-sizing: border-box;
   overflow: hidden;
+  box-shadow:
+    0px 1px 2px -2px rgba(38, 38, 38, 0.06),
+    0px 2px 2px -1px rgba(38, 38, 38, 0.08);
 `;
 
 const TheSolutionNodeWrap = styled.div`
   padding: 20px;
   border: 4px solid ${(props) => props.theme.colors.abbey[200]};
-  border-radius: 60px;
+  border-radius: 20px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   text-align: center;
