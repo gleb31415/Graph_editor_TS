@@ -54,7 +54,7 @@ const theSolutionWidth = 600;
 const theSolutionHeight = 400;
 
 // layout-функция
-function getLayoutedElements(nodes, edges, direction = "LR") {
+function getLayoutedElements(nodes, edges, direction = "TB") {
   dagreGraph.setGraph({ rankdir: direction, nodesep: 80, ranksep: 250 });
 
   nodes.forEach((n) => {
@@ -107,7 +107,6 @@ function getLayoutedElements(nodes, edges, direction = "LR") {
   return { nodes: laidOutNodes, edges: laidOutEdges };
 }
 
-// кастомный тип нода и edge
 const nodeTypes = { custom: CustomNode };
 const edgeTypes = { custom: CustomEdge };
 
@@ -118,12 +117,13 @@ export default function LectureTree() {
     edges: [],
   });
 
-  // один раз расставляем по dagre с применением сохраненных изменений
+  // Always use Dagre layout, but allow manual positioning to override
   useEffect(() => {
     const nodesWithStoredChanges = applyStoredChanges(rawNodes);
     const { nodes: ln, edges: le } = getLayoutedElements(
       nodesWithStoredChanges,
-      rawEdges
+      rawEdges,
+      "TB"
     );
     setLayout({ nodes: ln, edges: le });
   }, []);
@@ -131,27 +131,21 @@ export default function LectureTree() {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
 
-  // после layout заливаем в state, чтобы включить drag
   useEffect(() => {
     setNodes(initNodes);
     setEdges(initEdges);
   }, [initNodes, initEdges]);
 
-  // Focus on TheSolution node when nodes are loaded
   useEffect(() => {
     if (nodes.length > 0 && reactFlowRef.current) {
       const theSolutionNode = nodes.find((node) => node.id === "TheSolution");
       if (theSolutionNode) {
         setTimeout(() => {
-          // Calculate appropriate zoom level for TheSolution node
           const viewportWidth = window.innerWidth;
           const viewportHeight = window.innerHeight;
-
-          // Calculate zoom to fit with some margin
           const zoomX = (viewportWidth * 0.8) / theSolutionWidth;
           const zoomY = (viewportHeight * 0.8) / theSolutionHeight;
-          const zoom = Math.min(zoomX, zoomY, 1); // Don't zoom in more than 100%
-
+          const zoom = Math.min(zoomX, zoomY, 1);
           const { setCenter } = reactFlowRef.current;
           setCenter(
             theSolutionNode.position.x + theSolutionWidth / 2,
@@ -185,6 +179,7 @@ export default function LectureTree() {
     };
   }, []);
 
+  // Handle node changes including position updates
   const onNodesChange = useCallback(
     (changes) => {
       const quantizedChanges = changes.map((change) => {
@@ -217,12 +212,11 @@ export default function LectureTree() {
       const updatedNodes = applyNodeChanges(quantizedChanges, nodes);
       setNodes(updatedNodes);
 
-      // Сохраняем изменения в localStorage
+      // Save changes to localStorage
       saveNodeChanges(updatedNodes);
     },
     [snapToGrid, snapSizeToGrid, nodes]
   );
-
   const onEdgesChange = useCallback(
     (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
     []
@@ -230,25 +224,9 @@ export default function LectureTree() {
 
   const handleExportGraph = useCallback(() => {
     const exportedContent = exportUpdatedGraphContent(nodes);
-    console.log("Updated graph content:");
-    console.log(exportedContent);
-
-    // Копируем в буфер обмена
-    navigator.clipboard
-      .writeText(exportedContent)
-      .then(() => {
-        alert("Graph content copied to clipboard!");
-      })
-      .catch(() => {
-        // Fallback для старых браузеров
-        const textArea = document.createElement("textarea");
-        textArea.value = exportedContent;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-        alert("Graph content copied to clipboard!");
-      });
+    navigator.clipboard.writeText(exportedContent).then(() => {
+      alert("Graph content copied to clipboard!");
+    });
   }, [nodes]);
 
   return (
@@ -268,6 +246,8 @@ export default function LectureTree() {
           nodesConnectable={false}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
+          selectionOnDrag={true}
+          panOnDrag={[1, 2]}
         >
           <Controls />
           <Background />

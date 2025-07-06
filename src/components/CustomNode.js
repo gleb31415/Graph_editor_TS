@@ -38,12 +38,12 @@ const CustomHandle = styled(Handle)`
   border: 2px solid ${(props) => props.borderColor};
   border-radius: 50%;
 
-  &.react-flow__handle-left {
-    left: -8px; /* Half of handle width to center it on the border */
+  &.react-flow__handle-top {
+    top: -8px; /* Half of handle height to center it on the border */
   }
 
-  &.react-flow__handle-right {
-    right: -8px; /* Half of handle width to center it on the border */
+  &.react-flow__handle-bottom {
+    bottom: -8px; /* Half of handle height to center it on the border */
   }
 `;
 
@@ -54,12 +54,12 @@ const TheSolutionHandle = styled(Handle)`
   border: 2px solid #ffffff;
   border-radius: 50%;
 
-  &.react-flow__handle-left {
-    left: -8px; /* Half of handle width to center it on the border */
+  &.react-flow__handle-top {
+    top: -8px; /* Half of handle height to center it on the border */
   }
 
-  &.react-flow__handle-right {
-    right: -8px; /* Half of handle width to center it on the border */
+  &.react-flow__handle-bottom {
+    bottom: -8px; /* Half of handle height to center it on the border */
   }
 `;
 
@@ -147,7 +147,7 @@ export default function CustomNode({ id, data, selected }) {
       >
         <HandleComponent
           type="target"
-          position={Position.Left}
+          position={Position.Top}
           backgroundColor={isTheSolution ? undefined : backgroundColor}
           borderColor={isTheSolution ? undefined : borderColor}
         />
@@ -156,7 +156,7 @@ export default function CustomNode({ id, data, selected }) {
         </NodeContent>
         <HandleComponent
           type="source"
-          position={Position.Right}
+          position={Position.Bottom}
           backgroundColor={isTheSolution ? undefined : backgroundColor}
           borderColor={isTheSolution ? undefined : borderColor}
         />
