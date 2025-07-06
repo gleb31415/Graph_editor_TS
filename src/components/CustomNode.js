@@ -4,16 +4,17 @@ import styled from "styled-components";
 import { useTheme } from "../contexts/ThemeContext";
 
 const CustomNodeWrap = styled.div`
-  padding: 16px;
+  padding: 20px;
   border: 2px solid ${(props) => props.borderColor};
-  border-radius: 8px;
+  border-radius: 30px;
   background: ${(props) => props.backgroundColor};
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-size: 16px;
-  width: 320px;
-  height: 300px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 20px;
+  width: 400px;
+  height: 100px;
   box-sizing: border-box;
   overflow: hidden;
 `;
@@ -24,11 +25,11 @@ const TheSolutionNodeWrap = styled.div`
   border-radius: 64px;
   background: ${(props) => props.backgroundColor};
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
-  width: 600px;
-  height: 400px;
+  font-size: 72px;
+  padding: 72px;
   box-sizing: border-box;
   overflow: hidden;
 `;
@@ -74,18 +75,22 @@ const NodeContent = styled.div`
   hyphens: auto;
   line-height: 1.3;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 `;
 
 const NodeTitle = styled.div`
   font-weight: 500;
   line-height: 1.3;
-  white-space: normal;
-  word-break: break-word;
-  text-align: left;
+  text-align: center;
   max-width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 `;
 
 const TheSolutionTitle = styled.div`

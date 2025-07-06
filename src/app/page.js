@@ -76,7 +76,7 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
   console.log("=== LAYOUT DEBUG ===");
   console.log("Layout direction:", direction);
 
-  dagreGraph.setGraph({ rankdir: direction, nodesep: 120, ranksep: 400 });
+  dagreGraph.setGraph({ rankdir: direction, nodesep: 200, ranksep: 400 });
   console.log("Dagre graph settings:", dagreGraph.graph());
 
   nodes.forEach((n) => {
