@@ -28,14 +28,12 @@ const TheSolutionNodeWrap = styled.div`
   border-radius: 20px;
   background: ${({ selected, backgroundColor, theme }) => selected ? (theme.colors.primary?.[100] || '#e6f0ff') : backgroundColor};
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 400px;
-  padding: 72px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 `;
+
 
 
 const CustomHandle = styled(Handle)`
@@ -110,11 +108,10 @@ const FontFaceGibson = styled.style`
 
 const TheSolutionTitle = styled.div`
   font-weight: bold;
-  line-height: 1.2;
-  white-space: normal;
-  word-break: break-word;
+  line-height: 1;
+  white-space: nowrap;
   text-align: center;
-  max-width: 100%;
+  font-size: 400px;
   font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
   background: linear-gradient(
     110deg,
@@ -137,6 +134,7 @@ const TheSolutionTitle = styled.div`
     }
   }
 `;
+
 
 export default function CustomNode({ id, data, selected }) {
   // Ensure Gibson Medium font-face is loaded
