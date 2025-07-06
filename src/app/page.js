@@ -3,46 +3,14 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import ReactFlow, {
   Controls,
+  Background,
   applyNodeChanges,
   applyEdgeChanges,
 } from "reactflow";
 import dagre from "dagre";
 import { useTheme } from "../contexts/ThemeContext";
 
-// Custom background with squares
-function CustomBackground({ offsetX = 0, offsetY = 0, zoom = 1 }) {
-  const theme = useTheme();
-  const abbey200 = theme.colors.abbey["200"] || "#ced1d3";
-  const abbey800 = theme.colors.abbey["800"] || "#424448";
-  // Increase pattern size and gap by 4x
-  const size = 128;
-  const square = 4;
-
-  // Reverse zoom logic: scale pattern with zoom (not 1/zoom)
-  // So zoom in -> squares get larger, zoom out -> squares get smaller
-  const patternTransform = `translate(${-offsetX}, ${-offsetY}) scale(${zoom})`;
-
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none", background: abbey200 }}
-    >
-      <defs>
-        <pattern
-          id="squares"
-          width={size}
-          height={size}
-          patternUnits="userSpaceOnUse"
-          patternTransform={patternTransform}
-        >
-          <rect x="0" y="0" width={square} height={square} fill={abbey800} />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#squares)" />
-    </svg>
-  );
-}
+// Custom background removed - using default ReactFlow Background component
 import styled from "styled-components";
 import CustomNode from "../components/CustomNode";
 import CustomEdge from "../components/CustomEdge";
@@ -474,7 +442,7 @@ export default function LectureTree() {
           onMove={(_evt, viewport) => setViewport(viewport)}
         >
           <Controls />
-          <CustomBackground offsetX={viewport.x} offsetY={viewport.y} zoom={viewport.zoom} />
+          <Background />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>
