@@ -314,6 +314,100 @@ export default function LectureTree() {
     });
   }, [nodes]);
 
+  const alignSelectedNodes = useCallback((alignmentType) => {
+    if (selectedNodes.length < 2) return;
+
+    const selectedNodeObjects = nodes.filter((node) =>
+      selectedNodes.includes(node.id)
+    );
+    const nodeIds = selectedNodeObjects.map((node) => node.id);
+    const positions = selectedNodeObjects.map((node) => node.position);
+
+    let newPositions = [];
+
+    switch (alignmentType) {
+      case "verticalGap":
+        // Sort by current y
+        const sortedByY = [...selectedNodeObjects].sort(
+          (a, b) => a.position.y - b.position.y
+        );
+        const minY = sortedByY[0].position.y;
+        const avgX = positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
+        newPositions = sortedByY.map((node, index) => ({
+          id: node.id,
+          position: { x: avgX, y: minY + index * 40 },
+        }));
+        break;
+      case "horizontalGap":
+        // Sort by current x
+        const sortedByX = [...selectedNodeObjects].sort(
+          (a, b) => a.position.x - b.position.x
+        );
+        const minX = sortedByX[0].position.x;
+        const avgY = positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
+        newPositions = sortedByX.map((node, index) => ({
+          id: node.id,
+          position: { x: minX + index * 40, y: avgY },
+        }));
+        break;
+      case "strictVertical":
+        const strictAvgX = positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
+        newPositions = selectedNodeObjects.map((node) => ({
+          id: node.id,
+          position: { ...node.position, x: strictAvgX },
+        }));
+        break;
+      case "strictHorizontal":
+        const strictAvgY = positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
+        newPositions = selectedNodeObjects.map((node) => ({
+          id: node.id,
+          position: { ...node.position, y: strictAvgY },
+        }));
+        break;
+      default:
+        return;
+    }
+
+    // Update the nodes
+    const updatedNodes = nodes.map((node) => {
+      const newPos = newPositions.find((p) => p.id === node.id);
+      if (newPos) {
+        return {
+          ...node,
+          position: newPos.position,
+        };
+      }
+      return node;
+    });
+
+    setNodes(updatedNodes);
+    saveNodeChanges(updatedNodes);
+  }, [selectedNodes, nodes, setNodes]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Only handle if at least two nodes are selected
+      if (selectedNodes.length < 2) return;
+
+      if (e.shiftKey && e.key === "V") {
+        alignSelectedNodes("verticalGap");
+        e.preventDefault();
+      } else if (e.shiftKey && e.key === "H") {
+        alignSelectedNodes("horizontalGap");
+        e.preventDefault();
+      } else if (e.altKey && e.key === "V") {
+        alignSelectedNodes("strictVertical");
+        e.preventDefault();
+      } else if (e.altKey && e.key === "H") {
+        alignSelectedNodes("strictHorizontal");
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedNodes, nodes, setNodes]);
+
   const nodesWithSelection = nodes.map((node) => ({
     ...node,
     selected: selectedNodes.includes(node.id),
