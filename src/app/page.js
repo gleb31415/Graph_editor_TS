@@ -14,13 +14,13 @@ function CustomBackground({ offsetX = 0, offsetY = 0, zoom = 1 }) {
   const theme = useTheme();
   const abbey200 = theme.colors.abbey["200"] || "#ced1d3";
   const abbey800 = theme.colors.abbey["800"] || "#424448";
-  const size = 32;
+  // Increase pattern size and gap by 4x
+  const size = 128;
   const square = 4;
 
-  // Adjust pattern position and size based on pan/zoom
-  // patternTransform: scale(zoom) translate(x, y)
-  // We use the inverse transform so the pattern appears fixed relative to the content
-  const patternTransform = `translate(${-offsetX / zoom}, ${-offsetY / zoom}) scale(${1 / zoom})`;
+  // Reverse zoom logic: scale pattern with zoom (not 1/zoom)
+  // So zoom in -> squares get larger, zoom out -> squares get smaller
+  const patternTransform = `translate(${-offsetX}, ${-offsetY}) scale(${zoom})`;
 
   return (
     <svg
