@@ -81,6 +81,7 @@ const NodeContent = styled.div`
 `;
 
 const NodeTitle = styled.div`
+  font-family: 'Gibson Book', 'Arial', sans-serif;
   font-weight: 500;
   line-height: 1.3;
   text-align: center;
@@ -93,6 +94,16 @@ const NodeTitle = styled.div`
   word-break: break-word;
 `;
 
+// Add Gibson Book font-face
+const FontFaceGibson = styled.style`
+  @font-face {
+    font-family: 'Gibson Book';
+    src: url('/fonts/gibson-book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+`;
+
 const TheSolutionTitle = styled.div`
   font-weight: bold;
   line-height: 1.2;
@@ -103,15 +114,15 @@ const TheSolutionTitle = styled.div`
   font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
   background: linear-gradient(
     110deg,
-    rgb(131, 131, 131) 45%,
-    rgb(218, 218, 218) 50%,
-    rgb(131, 131, 131) 55%
+    rgb(0, 0, 0) 30%,
+    rgb(172, 172, 172) 50%,
+    rgb(0, 0, 0) 60%
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 2s linear infinite;
+  animation: shimmer 6s linear infinite;
 
   @keyframes shimmer {
     0% {
@@ -124,6 +135,8 @@ const TheSolutionTitle = styled.div`
 `;
 
 export default function CustomNode({ id, data, selected }) {
+  // Ensure Gibson Medium font-face is loaded
+
   const theme = useTheme();
   const isTheSolution = id === "TheSolution";
 
@@ -150,6 +163,7 @@ export default function CustomNode({ id, data, selected }) {
 
   return (
     <>
+      <FontFaceGibson />
       <NodeWrapper
         backgroundColor={backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}
