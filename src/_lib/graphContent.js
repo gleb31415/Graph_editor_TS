@@ -6,8 +6,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 7860,
-      "y": -760
+      "x": 7460,
+      "y": -660
     },
     "width": 600,
     "height": 400
@@ -45,8 +45,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 540
+      "x": 7620,
+      "y": 560
     },
     "width": 320,
     "height": 300
@@ -58,8 +58,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9700,
-      "y": 660
+      "x": 8480,
+      "y": 560
     },
     "width": 320,
     "height": 300
@@ -71,7 +71,7 @@ export const rawNodes = [
       "grade": "10"
     },
     "position": {
-      "x": 13180,
+      "x": 10460,
       "y": 540
     },
     "width": 320,
@@ -84,8 +84,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 11660,
-      "y": 480
+      "x": 9440,
+      "y": 560
     },
     "width": 320,
     "height": 300
@@ -799,8 +799,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 740
+      "x": 7620,
+      "y": 760
     },
     "width": 320,
     "height": 300
@@ -812,8 +812,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 940
+      "x": 7620,
+      "y": 960
     },
     "width": 320,
     "height": 300
@@ -825,8 +825,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 1140
+      "x": 7620,
+      "y": 1160
     },
     "width": 320,
     "height": 300
@@ -838,8 +838,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 1340
+      "x": 7620,
+      "y": 1360
     },
     "width": 320,
     "height": 300
@@ -851,8 +851,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 1540
+      "x": 7620,
+      "y": 1560
     },
     "width": 320,
     "height": 300
@@ -864,8 +864,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 1740
+      "x": 7620,
+      "y": 1760
     },
     "width": 320,
     "height": 300
@@ -877,8 +877,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 1940
+      "x": 7620,
+      "y": 1960
     },
     "width": 320,
     "height": 300
@@ -890,8 +890,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 2140
+      "x": 7620,
+      "y": 2160
     },
     "width": 320,
     "height": 300
@@ -903,8 +903,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 2340
+      "x": 7620,
+      "y": 2360
     },
     "width": 320,
     "height": 300
@@ -916,8 +916,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 2540
+      "x": 7620,
+      "y": 2560
     },
     "width": 320,
     "height": 300
@@ -929,8 +929,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 2740
+      "x": 7620,
+      "y": 2760
     },
     "width": 320,
     "height": 300
@@ -942,8 +942,8 @@ export const rawNodes = [
       "grade": "7"
     },
     "position": {
-      "x": 7720,
-      "y": 2940
+      "x": 7620,
+      "y": 2960
     },
     "width": 320,
     "height": 300
@@ -955,8 +955,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 680
+      "x": 9440,
+      "y": 760
     },
     "width": 320,
     "height": 300
@@ -968,8 +968,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 880
+      "x": 9440,
+      "y": 960
     },
     "width": 320,
     "height": 300
@@ -981,8 +981,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 1080
+      "x": 9440,
+      "y": 1160
     },
     "width": 320,
     "height": 300
@@ -994,8 +994,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 11660,
-      "y": 1280
+      "x": 9440,
+      "y": 1360
     },
     "width": 320,
     "height": 300
@@ -1007,8 +1007,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 1480
+      "x": 9440,
+      "y": 1560
     },
     "width": 320,
     "height": 300
@@ -1020,8 +1020,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 11660,
-      "y": 1680
+      "x": 9440,
+      "y": 1760
     },
     "width": 320,
     "height": 300
@@ -1033,8 +1033,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 1880
+      "x": 9440,
+      "y": 1960
     },
     "width": 320,
     "height": 300
@@ -1046,8 +1046,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 2080
+      "x": 9440,
+      "y": 2160
     },
     "width": 320,
     "height": 300
@@ -1059,8 +1059,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 11660,
-      "y": 10040
+      "x": 9420,
+      "y": 11260
     },
     "width": 320,
     "height": 300
@@ -1072,8 +1072,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 11080
+      "x": 8460,
+      "y": 11860
     },
     "width": 320,
     "height": 300
@@ -1085,8 +1085,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 11280
+      "x": 8460,
+      "y": 12060
     },
     "width": 320,
     "height": 300
@@ -1098,8 +1098,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 11480
+      "x": 8460,
+      "y": 12260
     },
     "width": 320,
     "height": 300
@@ -1111,8 +1111,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 11680
+      "x": 8460,
+      "y": 12460
     },
     "width": 320,
     "height": 300
@@ -1124,8 +1124,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 11880
+      "x": 8460,
+      "y": 12660
     },
     "width": 320,
     "height": 300
@@ -1137,8 +1137,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 12080
+      "x": 8460,
+      "y": 13060
     },
     "width": 320,
     "height": 300
@@ -1150,8 +1150,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 12280
+      "x": 8460,
+      "y": 12860
     },
     "width": 320,
     "height": 300
@@ -1163,8 +1163,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 12480
+      "x": 8460,
+      "y": 13260
     },
     "width": 320,
     "height": 300
@@ -1176,8 +1176,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9700,
-      "y": 860
+      "x": 8480,
+      "y": 780
     },
     "width": 320,
     "height": 300
@@ -1189,8 +1189,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9700,
-      "y": 1080
+      "x": 8480,
+      "y": 980
     },
     "width": 320,
     "height": 300
@@ -1202,8 +1202,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 10120,
-      "y": 2480
+      "x": 8940,
+      "y": 3160
     },
     "width": 320,
     "height": 300
@@ -1215,8 +1215,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 4480
+      "x": 8460,
+      "y": 5260
     },
     "width": 320,
     "height": 300
@@ -1228,8 +1228,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 10380,
-      "y": 2640
+      "x": 9160,
+      "y": 3320
     },
     "width": 320,
     "height": 300
@@ -1241,8 +1241,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9700,
-      "y": 2180
+      "x": 8480,
+      "y": 2940
     },
     "width": 320,
     "height": 300
@@ -1254,8 +1254,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9700,
-      "y": 2380
+      "x": 8480,
+      "y": 3160
     },
     "width": 320,
     "height": 300
@@ -1267,8 +1267,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9900,
-      "y": 2640
+      "x": 8680,
+      "y": 3420
     },
     "width": 320,
     "height": 300
@@ -1280,8 +1280,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9900,
-      "y": 2880
+      "x": 8680,
+      "y": 3660
     },
     "width": 320,
     "height": 300
@@ -1293,8 +1293,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9460,
-      "y": 2640
+      "x": 8240,
+      "y": 3420
     },
     "width": 320,
     "height": 300
@@ -1306,8 +1306,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9460,
-      "y": 2880
+      "x": 8240,
+      "y": 3660
     },
     "width": 320,
     "height": 300
@@ -1319,8 +1319,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 8940,
-      "y": 2880
+      "x": 7720,
+      "y": 3660
     },
     "width": 320,
     "height": 300
@@ -1332,8 +1332,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 8940,
-      "y": 3420
+      "x": 7720,
+      "y": 4200
     },
     "width": 320,
     "height": 300
@@ -1345,8 +1345,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9180,
-      "y": 3080
+      "x": 7960,
+      "y": 3860
     },
     "width": 320,
     "height": 300
@@ -1358,8 +1358,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9180,
-      "y": 3280
+      "x": 7960,
+      "y": 4060
     },
     "width": 320,
     "height": 300
@@ -1371,8 +1371,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 4680
+      "x": 8460,
+      "y": 5460
     },
     "width": 320,
     "height": 300
@@ -1384,8 +1384,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 4880
+      "x": 8460,
+      "y": 5660
     },
     "width": 320,
     "height": 300
@@ -1397,8 +1397,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 5080
+      "x": 8460,
+      "y": 5860
     },
     "width": 320,
     "height": 300
@@ -1410,8 +1410,8 @@ export const rawNodes = [
       "grade": "10"
     },
     "position": {
-      "x": 9680,
-      "y": 5280
+      "x": 8460,
+      "y": 6060
     },
     "width": 320,
     "height": 300
@@ -1423,8 +1423,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 5480
+      "x": 8460,
+      "y": 6260
     },
     "width": 320,
     "height": 300
@@ -1436,8 +1436,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 5680
+      "x": 8460,
+      "y": 6460
     },
     "width": 320,
     "height": 300
@@ -1449,8 +1449,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 5880
+      "x": 8460,
+      "y": 6660
     },
     "width": 320,
     "height": 300
@@ -1462,8 +1462,8 @@ export const rawNodes = [
       "grade": "10"
     },
     "position": {
-      "x": 9680,
-      "y": 6080
+      "x": 8460,
+      "y": 6860
     },
     "width": 320,
     "height": 300
@@ -1475,8 +1475,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 6280
+      "x": 8460,
+      "y": 7060
     },
     "width": 320,
     "height": 300
@@ -1488,8 +1488,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 6480
+      "x": 8460,
+      "y": 7260
     },
     "width": 320,
     "height": 300
@@ -1501,8 +1501,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 6680
+      "x": 8460,
+      "y": 7460
     },
     "width": 320,
     "height": 300
@@ -1514,8 +1514,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 6880
+      "x": 8460,
+      "y": 7660
     },
     "width": 320,
     "height": 300
@@ -1527,8 +1527,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 7080
+      "x": 8460,
+      "y": 7860
     },
     "width": 320,
     "height": 300
@@ -1540,8 +1540,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 7280
+      "x": 8460,
+      "y": 8060
     },
     "width": 320,
     "height": 300
@@ -1553,8 +1553,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 7480
+      "x": 8460,
+      "y": 8260
     },
     "width": 320,
     "height": 300
@@ -1566,8 +1566,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 7680
+      "x": 8460,
+      "y": 8460
     },
     "width": 320,
     "height": 300
@@ -1579,8 +1579,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 7880
+      "x": 8460,
+      "y": 8660
     },
     "width": 320,
     "height": 300
@@ -1592,8 +1592,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 8080
+      "x": 8460,
+      "y": 8860
     },
     "width": 320,
     "height": 300
@@ -1605,8 +1605,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 8280
+      "x": 8460,
+      "y": 9060
     },
     "width": 320,
     "height": 300
@@ -1618,8 +1618,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 8480
+      "x": 8460,
+      "y": 9260
     },
     "width": 320,
     "height": 300
@@ -1631,8 +1631,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 8680
+      "x": 8460,
+      "y": 9460
     },
     "width": 320,
     "height": 300
@@ -1644,8 +1644,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 8880
+      "x": 8460,
+      "y": 9660
     },
     "width": 320,
     "height": 300
@@ -1657,8 +1657,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 9080
+      "x": 8460,
+      "y": 9860
     },
     "width": 320,
     "height": 300
@@ -1670,8 +1670,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 9280
+      "x": 8460,
+      "y": 10060
     },
     "width": 320,
     "height": 300
@@ -1683,8 +1683,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 9680,
-      "y": 9480
+      "x": 8460,
+      "y": 10260
     },
     "width": 320,
     "height": 300
@@ -1696,8 +1696,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 9680
+      "x": 8460,
+      "y": 10460
     },
     "width": 320,
     "height": 300
@@ -1709,8 +1709,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 9880
+      "x": 8460,
+      "y": 10660
     },
     "width": 320,
     "height": 300
@@ -1722,8 +1722,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9200,
-      "y": 10080
+      "x": 7980,
+      "y": 10860
     },
     "width": 320,
     "height": 300
@@ -1735,8 +1735,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9200,
-      "y": 10280
+      "x": 7980,
+      "y": 11060
     },
     "width": 320,
     "height": 300
@@ -1748,8 +1748,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 11080
+      "x": 8460,
+      "y": 11860
     },
     "width": 320,
     "height": 300
@@ -1761,8 +1761,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 8940,
-      "y": 11080
+      "x": 7720,
+      "y": 11860
     },
     "width": 320,
     "height": 300
@@ -1774,8 +1774,8 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 8940,
-      "y": 11280
+      "x": 7720,
+      "y": 12060
     },
     "width": 320,
     "height": 300
@@ -1787,8 +1787,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 8940,
-      "y": 11480
+      "x": 7720,
+      "y": 12260
     },
     "width": 320,
     "height": 300
@@ -1800,8 +1800,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 8940,
-      "y": 11680
+      "x": 7720,
+      "y": 12460
     },
     "width": 320,
     "height": 300
@@ -1813,8 +1813,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 10080
+      "x": 8460,
+      "y": 10860
     },
     "width": 320,
     "height": 300
@@ -1826,8 +1826,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 10280
+      "x": 8460,
+      "y": 11060
     },
     "width": 320,
     "height": 300
@@ -1839,8 +1839,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 9680,
-      "y": 10480
+      "x": 8460,
+      "y": 11260
     },
     "width": 320,
     "height": 300
@@ -1852,8 +1852,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 12680,
-      "y": 1220
+      "x": 9960,
+      "y": 1140
     },
     "width": 320,
     "height": 300
@@ -1865,8 +1865,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 1020
+      "x": 10460,
+      "y": 940
     },
     "width": 320,
     "height": 300
@@ -1878,8 +1878,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 1220
+      "x": 10460,
+      "y": 1140
     },
     "width": 320,
     "height": 300
@@ -1891,8 +1891,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13680,
-      "y": 1220
+      "x": 10960,
+      "y": 1140
     },
     "width": 320,
     "height": 300
@@ -1904,8 +1904,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13680,
-      "y": 1400
+      "x": 10960,
+      "y": 1320
     },
     "width": 320,
     "height": 300
@@ -1917,8 +1917,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13680,
-      "y": 1600
+      "x": 10960,
+      "y": 1520
     },
     "width": 320,
     "height": 300
@@ -1930,8 +1930,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 2000
+      "x": 10460,
+      "y": 1920
     },
     "width": 320,
     "height": 300
@@ -1943,8 +1943,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 2200
+      "x": 10460,
+      "y": 2120
     },
     "width": 320,
     "height": 300
@@ -1956,8 +1956,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 2400
+      "x": 10460,
+      "y": 2320
     },
     "width": 320,
     "height": 300
@@ -1969,8 +1969,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 2600
+      "x": 10460,
+      "y": 2520
     },
     "width": 320,
     "height": 300
@@ -1982,8 +1982,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 2800
+      "x": 10460,
+      "y": 2720
     },
     "width": 320,
     "height": 300
@@ -1995,8 +1995,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 3000
+      "x": 10460,
+      "y": 2920
     },
     "width": 320,
     "height": 300
@@ -2008,8 +2008,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 3200
+      "x": 10460,
+      "y": 3120
     },
     "width": 320,
     "height": 300
@@ -2021,8 +2021,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 3400
+      "x": 10460,
+      "y": 3320
     },
     "width": 320,
     "height": 300
@@ -2034,8 +2034,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 3600
+      "x": 10460,
+      "y": 3520
     },
     "width": 320,
     "height": 300
@@ -2047,8 +2047,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 3800
+      "x": 10460,
+      "y": 3720
     },
     "width": 320,
     "height": 300
@@ -2060,8 +2060,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 12820,
-      "y": 4280
+      "x": 10100,
+      "y": 4200
     },
     "width": 320,
     "height": 300
@@ -2073,8 +2073,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 12820,
-      "y": 4680
+      "x": 10100,
+      "y": 4600
     },
     "width": 320,
     "height": 300
@@ -2086,8 +2086,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13520,
-      "y": 4280
+      "x": 10800,
+      "y": 4200
     },
     "width": 320,
     "height": 300
@@ -2099,8 +2099,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13520,
-      "y": 4480
+      "x": 10800,
+      "y": 4400
     },
     "width": 320,
     "height": 300
@@ -2112,8 +2112,8 @@ export const rawNodes = [
       "grade": "10"
     },
     "position": {
-      "x": 13520,
-      "y": 4680
+      "x": 10800,
+      "y": 4600
     },
     "width": 320,
     "height": 300
@@ -2125,8 +2125,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 5180
+      "x": 10460,
+      "y": 5100
     },
     "width": 320,
     "height": 300
@@ -2138,8 +2138,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 5380
+      "x": 10460,
+      "y": 5300
     },
     "width": 320,
     "height": 300
@@ -2151,8 +2151,8 @@ export const rawNodes = [
       "grade": "8"
     },
     "position": {
-      "x": 13180,
-      "y": 5580
+      "x": 10460,
+      "y": 5500
     },
     "width": 320,
     "height": 300
