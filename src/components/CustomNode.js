@@ -20,15 +20,15 @@ const CustomNodeWrap = styled.div`
 `;
 
 const TheSolutionNodeWrap = styled.div`
-  padding: 60px;
+  padding: 20px;
   border: 4px solid ${(props) => props.theme.colors.abbey[200]};
-  border-radius: 64px;
+  border-radius: 60px;
   background: ${(props) => props.backgroundColor};
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: 72px;
+  font-size: 400px;
   padding: 72px;
   box-sizing: border-box;
   overflow: hidden;

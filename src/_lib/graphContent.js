@@ -6,8 +6,8 @@ export const rawNodes = [
       grade: "11",
     },
     position: {
-      x: 8560,
-      y: -460,
+      x: 7620,
+      y: -1980,
     },
     width: 600,
     height: 400,
@@ -175,7 +175,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 4690,
+      x: 4680,
       y: 3100,
     },
     width: 320,
@@ -305,8 +305,8 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: -240,
-      y: 5060,
+      x: -280,
+      y: 5080,
     },
     width: 320,
     height: 300,
@@ -318,7 +318,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 460,
+      x: 320,
       y: 5080,
     },
     width: 320,
@@ -331,7 +331,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 5080,
     },
     width: 320,
@@ -604,8 +604,8 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 4320,
-      y: 8100,
+      x: 4760,
+      y: 8120,
     },
     width: 320,
     height: 300,
@@ -617,7 +617,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 3620,
+      x: 4180,
       y: 8620,
     },
     width: 320,
@@ -630,8 +630,8 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 5000,
-      y: 8640,
+      x: 5300,
+      y: 8600,
     },
     width: 320,
     height: 300,
@@ -643,8 +643,8 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 4320,
-      y: 9100,
+      x: 4760,
+      y: 9080,
     },
     width: 320,
     height: 300,
@@ -656,7 +656,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 5600,
     },
     width: 320,
@@ -669,8 +669,8 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
-      y: 6060,
+      x: 960,
+      y: 6080,
     },
     width: 320,
     height: 300,
@@ -682,7 +682,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 6580,
     },
     width: 320,
@@ -695,7 +695,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 7100,
     },
     width: 320,
@@ -708,7 +708,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 7600,
     },
     width: 320,
@@ -721,7 +721,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 340,
+      x: 320,
       y: 8100,
     },
     width: 320,
@@ -734,7 +734,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 8100,
     },
     width: 320,
@@ -747,7 +747,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1800,
+      x: 1700,
       y: 8100,
     },
     width: 320,
@@ -760,7 +760,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1080,
+      x: 960,
       y: 8600,
     },
     width: 320,
@@ -773,7 +773,7 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1800,
+      x: 1700,
       y: 8600,
     },
     width: 320,
@@ -786,8 +786,8 @@ export const rawNodes = [
       grade: "9",
     },
     position: {
-      x: 1800,
-      y: 9120,
+      x: 1700,
+      y: 9100,
     },
     width: 320,
     height: 300,
@@ -2158,7 +2158,6 @@ export const rawNodes = [
     height: 300,
   },
 ];
-
 export const rawEdges = [
   {
     id: "e0",
