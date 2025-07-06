@@ -135,9 +135,11 @@ export default function CustomNode({ id, data, selected }) {
     return theme.nodes.border[section] || "#ff0000";
   };
 
-  const backgroundColor = isTheSolution
-    ? "#ffffff"
-    : getSectionColor(data?.section);
+  const backgroundColor = selected
+    ? "#e6f0ff" // light blue for selected
+    : (isTheSolution
+        ? "#ffffff"
+        : getSectionColor(data?.section));
   const borderColor = isTheSolution
     ? "#ffffff"
     : getSectionBorderColor(data?.section);

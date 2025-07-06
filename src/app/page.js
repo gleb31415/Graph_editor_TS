@@ -170,6 +170,7 @@ export default function LectureTree() {
   });
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
+  const [selectedNodes, setSelectedNodes] = useState([]);
 
   // Always use Dagre layout, ignore manual positions for now
   useEffect(() => {
@@ -274,6 +275,26 @@ export default function LectureTree() {
     []
   );
 
+  const onNodeClick = useCallback((event, node) => {
+    setSelectedNodes((prev) => {
+      if (event.shiftKey) {
+        // Toggle selection
+        if (prev.includes(node.id)) {
+          return prev.filter((id) => id !== node.id);
+        } else {
+          return [...prev, node.id];
+        }
+      } else {
+        // Select only this node
+        return [node.id];
+      }
+    });
+  }, []);
+
+  const onPaneClick = useCallback(() => {
+    setSelectedNodes([]);
+  }, []);
+
   const handleResetLayout = useCallback(() => {
     // Clear localStorage and force re-layout
     localStorage.removeItem("graph-node-changes");
@@ -293,6 +314,11 @@ export default function LectureTree() {
     });
   }, [nodes]);
 
+  const nodesWithSelection = nodes.map((node) => ({
+    ...node,
+    selected: selectedNodes.includes(node.id),
+  }));
+
   return (
     <ThemeProvider theme={lightTheme}>
       <FlowContainer>
@@ -303,10 +329,12 @@ export default function LectureTree() {
           panOnScroll={true}
           zoomOnScroll={false}
           preventScrolling={true}
-          nodes={nodes}
+          nodes={nodesWithSelection}
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
+          onNodeClick={onNodeClick}
+          onPaneClick={onPaneClick}
           nodesDraggable={true}
           nodesConnectable={false}
           nodeTypes={nodeTypes}
