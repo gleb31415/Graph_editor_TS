@@ -6,7 +6,7 @@ export const rawNodes = [
       "grade": "11"
     },
     "position": {
-      "x": 7460,
+      "x": 7500,
       "y": -660
     },
     "width": 600,
