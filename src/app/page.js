@@ -168,6 +168,7 @@ export default function LectureTree() {
     nodes: [],
     edges: [],
   });
+  const [selectedNodes, setSelectedNodes] = useState([]);
 
   // Always use Dagre layout, ignore manual positions for now
   useEffect(() => {
@@ -294,6 +295,73 @@ export default function LectureTree() {
     });
   }, [nodes]);
 
+  // Track selected nodes
+  const onSelectionChange = useCallback(({ nodes: selNodes }) => {
+    setSelectedNodes(selNodes);
+  }, []);
+
+  // Alignment shortcuts
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (!selectedNodes || selectedNodes.length < 2) return;
+      // Get selected node ids
+      const ids = selectedNodes.map((n) => n.id);
+      // Get selected node objects
+      const selObjs = nodes.filter((n) => ids.includes(n.id));
+      if (e.shiftKey && (e.key === "v" || e.key === "V")) {
+        // Align vertically with 40px gap
+        const minX = Math.min(...selObjs.map((n) => n.position.x));
+        const minY = Math.min(...selObjs.map((n) => n.position.y));
+        selObjs.sort((a, b) => a.position.y - b.position.y);
+        let y = minY;
+        const updated = nodes.map((n) => {
+          if (ids.includes(n.id)) {
+            const newNode = { ...n, position: { x: minX, y } };
+            y += n.height + 40;
+            return newNode;
+          }
+          return n;
+        });
+        setNodes(updated);
+        saveNodeChanges(updated);
+      } else if (e.shiftKey && (e.key === "h" || e.key === "H")) {
+        // Align horizontally with 40px gap
+        const minX = Math.min(...selObjs.map((n) => n.position.x));
+        const minY = Math.min(...selObjs.map((n) => n.position.y));
+        selObjs.sort((a, b) => a.position.x - b.position.x);
+        let x = minX;
+        const updated = nodes.map((n) => {
+          if (ids.includes(n.id)) {
+            const newNode = { ...n, position: { x, y: minY } };
+            x += n.width + 40;
+            return newNode;
+          }
+          return n;
+        });
+        setNodes(updated);
+        saveNodeChanges(updated);
+      } else if (e.altKey && (e.key === "v" || e.key === "V")) {
+        // Strict vertical align (same x)
+        const minX = Math.min(...selObjs.map((n) => n.position.x));
+        const updated = nodes.map((n) =>
+          ids.includes(n.id) ? { ...n, position: { ...n.position, x: minX } } : n
+        );
+        setNodes(updated);
+        saveNodeChanges(updated);
+      } else if (e.altKey && (e.key === "h" || e.key === "H")) {
+        // Strict horizontal align (same y)
+        const minY = Math.min(...selObjs.map((n) => n.position.y));
+        const updated = nodes.map((n) =>
+          ids.includes(n.id) ? { ...n, position: { ...n.position, y: minY } } : n
+        );
+        setNodes(updated);
+        saveNodeChanges(updated);
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedNodes, nodes]);
+
   return (
     <ThemeProvider theme={lightTheme}>
       <FlowContainer>
@@ -313,6 +381,9 @@ export default function LectureTree() {
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           selectionOnDrag={true}
+          onSelectionChange={onSelectionChange}
+          multiSelectionKeyCode={"Control"}
+          selectionKeyCode={"Shift"}
           panOnDrag={[1, 2]}
         >
           <Controls />
