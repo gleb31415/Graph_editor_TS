@@ -10,12 +10,18 @@ import dagre from "dagre";
 import { useTheme } from "../contexts/ThemeContext";
 
 // Custom background with squares
-function CustomBackground() {
+function CustomBackground({ offsetX = 0, offsetY = 0, zoom = 1 }) {
   const theme = useTheme();
   const abbey200 = theme.colors.abbey["200"] || "#ced1d3";
   const abbey800 = theme.colors.abbey["800"] || "#424448";
   const size = 32;
   const square = 4;
+
+  // Adjust pattern position and size based on pan/zoom
+  // patternTransform: scale(zoom) translate(x, y)
+  // We use the inverse transform so the pattern appears fixed relative to the content
+  const patternTransform = `translate(${-offsetX / zoom}, ${-offsetY / zoom}) scale(${1 / zoom})`;
+
   return (
     <svg
       width="100%"
@@ -23,7 +29,13 @@ function CustomBackground() {
       style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none", background: abbey200 }}
     >
       <defs>
-        <pattern id="squares" width={size} height={size} patternUnits="userSpaceOnUse">
+        <pattern
+          id="squares"
+          width={size}
+          height={size}
+          patternUnits="userSpaceOnUse"
+          patternTransform={patternTransform}
+        >
           <rect x="0" y="0" width={square} height={square} fill={abbey800} />
         </pattern>
       </defs>
@@ -186,6 +198,8 @@ const nodeTypes = { custom: CustomNode };
 const edgeTypes = { custom: CustomEdge };
 
 export default function LectureTree() {
+  // Track ReactFlow viewport transform
+  const [viewport, setViewport] = useState({ x: 0, y: 0, zoom: 1 });
   const reactFlowRef = useRef();
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
@@ -457,9 +471,10 @@ export default function LectureTree() {
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           panOnDrag={[1, 2]}
+          onMove={(_evt, viewport) => setViewport(viewport)}
         >
           <Controls />
-          <CustomBackground />
+          <CustomBackground offsetX={viewport.x} offsetY={viewport.y} zoom={viewport.zoom} />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>
