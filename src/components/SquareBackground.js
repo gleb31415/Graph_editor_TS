@@ -1,46 +1,17 @@
-import { useStore } from 'reactflow';
+import React from 'react';
 
-import { useTheme } from '../contexts/ThemeContext';
-
-const SquareBackground = ({
-  size,
-  gap,
-  color,
-  bgColor
-}) => {
-  const theme = useTheme();
-  // Use defaults if props are not provided
-  const squareSize = size !== undefined ? size : 10;
-  const squareGap = gap !== undefined ? gap : 200;
-  const squareColor = color || (theme?.colors?.abbey?.["400"] ?? '#b2b2bb');
-  const backgroundColor = bgColor || (theme?.colors?.abbey?.["100"] ?? '#f3f4f6');
-  const transform = useStore(state => state.transform);
-  
+const SquareBackground = () => {
   return (
-    <svg
-      className="react-flow__background"
+    <div
       style={{
         position: 'absolute',
+        top: 0,
+        left: 0,
         width: '100%',
         height: '100%',
-        top: 0,
-        left: 0
+        backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' fill='%23DDCBAF'/></svg>")`,
       }}
-    >
-      <defs>
-        <pattern
-          id="square-pattern"
-          width={squareGap}
-          height={squareGap}
-          patternUnits="userSpaceOnUse"
-          patternTransform={`translate(${transform[0]}, ${transform[1]}) scale(${transform[2]})`}
-        >
-          <rect width={squareSize} height={squareSize} fill={squareColor} />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill={backgroundColor} />
-      <rect width="100%" height="100%" fill="url(#square-pattern)" />
-    </svg>
+    />
   );
 };
 
