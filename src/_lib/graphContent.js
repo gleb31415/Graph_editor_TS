@@ -1,2162 +1,2162 @@
 export const rawNodes = [
   {
-    "id": "TheSolution",
-    "data": {
-      "section": "",
-      "grade": "11"
+    id: "TheSolution",
+    data: {
+      section: "",
+      grade: "11",
     },
-    "position": {
-      "x": 7500,
-      "y": -660
+    position: {
+      x: 8020,
+      y: -120,
     },
-    "width": 600,
-    "height": 400
+    width: 600,
+    height: 400,
   },
   {
-    "id": "Равномерное прямолинейное движение",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Равномерное прямолинейное движение",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 560
+    position: {
+      x: 6880,
+      y: 560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Плотность",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Плотность",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 7360,
-      "y": 560
+    position: {
+      x: 7360,
+      y: 560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Работа с графиками",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Работа с графиками",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 560
+    position: {
+      x: 7920,
+      y: 560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Электрический заряд. Закон Кулона.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Электрический заряд. Закон Кулона.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8480,
-      "y": 560
+    position: {
+      x: 8480,
+      y: 560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Температура. Связь температуры с кинетической энергией движения молекул.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "10"
+    id: "Температура. Связь температуры с кинетической энергией движения молекул.",
+    data: {
+      section: "термодинамика",
+      grade: "10",
     },
-    "position": {
-      "x": 10460,
-      "y": 540
+    position: {
+      x: 10460,
+      y: 540,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тень. Полутень.",
-    "data": {
-      "section": "оптика",
-      "grade": "7"
+    id: "Тень. Полутень.",
+    data: {
+      section: "оптика",
+      grade: "7",
     },
-    "position": {
-      "x": 9440,
-      "y": 560
+    position: {
+      x: 9440,
+      y: 560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Средняя скорость. Относительное движение.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Средняя скорость. Относительное движение.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 780
+    position: {
+      x: 6880,
+      y: 780,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Кинематические связи. Блоки.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Кинематические связи. Блоки.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 1020
+    position: {
+      x: 6880,
+      y: 1020,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Закон Гука. Системы пружин.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Закон Гука. Системы пружин.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 1280
+    position: {
+      x: 6880,
+      y: 1280,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сила. Третий закон Ньютона.",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Сила. Третий закон Ньютона.",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 7360,
-      "y": 780
+    position: {
+      x: 7360,
+      y: 780,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сила тяжести",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Сила тяжести",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 7360,
-      "y": 1020
+    position: {
+      x: 7360,
+      y: 1020,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Моменты",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Моменты",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6360,
-      "y": 1600
+    position: {
+      x: 6360,
+      y: 1600,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Работа. Мощность. КПД",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Работа. Мощность. КПД",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 1600
+    position: {
+      x: 6880,
+      y: 1600,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Системы блоков. Статика со связями.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Системы блоков. Статика со связями.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6360,
-      "y": 1820
+    position: {
+      x: 6360,
+      y: 1820,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Давление. Сообщающиеся сосуды",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Давление. Сообщающиеся сосуды",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 7360,
-      "y": 1380
+    position: {
+      x: 7360,
+      y: 1380,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сила Архимеда",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Сила Архимеда",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 7360,
-      "y": 1600
+    position: {
+      x: 7360,
+      y: 1600,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Механика, 7 класс.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Тур. Механика, 7 класс.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 2060
+    position: {
+      x: 6880,
+      y: 2060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Энергия",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Энергия",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 6320,
-      "y": 2980
+    position: {
+      x: 6320,
+      y: 2980,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Движение со связями",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Движение со связями",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5820,
-      "y": 2780
+    position: {
+      x: 5820,
+      y: 2780,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Равноускоренное движение",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Равноускоренное движение",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7340,
-      "y": 2880
+    position: {
+      x: 7340,
+      y: 2880,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Конус Маха",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Конус Маха",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6880,
-      "y": 2660
+    position: {
+      x: 6880,
+      y: 2660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Упругие столкновения с тяжёлой стенкой",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Упругие столкновения с тяжёлой стенкой",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7340,
-      "y": 2340
+    position: {
+      x: 7340,
+      y: 2340,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Метод виртуальных перемещений",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Метод виртуальных перемещений",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6580,
-      "y": 3220
+    position: {
+      x: 6580,
+      y: 3220,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Бернулли",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Бернулли",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5860,
-      "y": 3920
+    position: {
+      x: 5860,
+      y: 3920,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Устойчивость равновесия",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Устойчивость равновесия",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 3520
+    position: {
+      x: 6320,
+      y: 3520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Мгновенный центр вращения",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Мгновенный центр вращения",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5820,
-      "y": 2980
+    position: {
+      x: 5820,
+      y: 2980,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Теорема Кёнига",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Теорема Кёнига",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5820,
-      "y": 3200
+    position: {
+      x: 5820,
+      y: 3200,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Динамика. Второй закон Ньютона.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Динамика. Второй закон Ньютона.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6900,
-      "y": 4020
+    position: {
+      x: 6900,
+      y: 4020,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Равномерное движение по окружности",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Равномерное движение по окружности",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6900,
-      "y": 3120
+    position: {
+      x: 6900,
+      y: 3120,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Баллистика. Координатный метод.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Баллистика. Координатный метод.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7340,
-      "y": 3120
+    position: {
+      x: 7340,
+      y: 3120,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Баллистика. Векторный метод.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Баллистика. Векторный метод.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7340,
-      "y": 3320
+    position: {
+      x: 7340,
+      y: 3320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Баллистика, 9 класс.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Тур. Баллистика, 9 класс.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7340,
-      "y": 3540
+    position: {
+      x: 7340,
+      y: 3540,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Центростремительное ускорение",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Центростремительное ускорение",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6900,
-      "y": 3320
+    position: {
+      x: 6900,
+      y: 3320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Неравномерное движение по окружности",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Неравномерное движение по окружности",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6900,
-      "y": 3520
+    position: {
+      x: 6900,
+      y: 3520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Всемирное тяготение. Космические скорости.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Всемирное тяготение. Космические скорости.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7000,
-      "y": 4840
+    position: {
+      x: 7000,
+      y: 4840,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Неинерциальные системы отсчёта",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Неинерциальные системы отсчёта",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7260,
-      "y": 5060
+    position: {
+      x: 7260,
+      y: 5060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Вращательные НеИСО",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Вращательные НеИСО",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7260,
-      "y": 5360
+    position: {
+      x: 7260,
+      y: 5360,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сухое трение",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Сухое трение",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6740,
-      "y": 4520
+    position: {
+      x: 6740,
+      y: 4520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Импульс",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Импульс",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7580,
-      "y": 4600
+    position: {
+      x: 7580,
+      y: 4600,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Реактивная сила",
-    "data": {
-      "section": "механика",
-      "grade": "7"
+    id: "Реактивная сила",
+    data: {
+      section: "механика",
+      grade: "7",
     },
-    "position": {
-      "x": 7580,
-      "y": 4900
+    position: {
+      x: 7580,
+      y: 4900,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Вязкое трение",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Вязкое трение",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6540,
-      "y": 4760
+    position: {
+      x: 6540,
+      y: 4760,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Статика",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Статика",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6740,
-      "y": 5060
+    position: {
+      x: 6740,
+      y: 5060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Столкновения",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Столкновения",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 8020,
-      "y": 4900
+    position: {
+      x: 8020,
+      y: 4900,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Законы сохранения, 9 класс.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Тур. Законы сохранения, 9 класс.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7840,
-      "y": 5240
+    position: {
+      x: 7840,
+      y: 5240,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Динамика, 9 класс.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Тур. Динамика, 9 класс.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7000,
-      "y": 5660
+    position: {
+      x: 7000,
+      y: 5660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Момент импульса",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Момент импульса",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7840,
-      "y": 5940
+    position: {
+      x: 7840,
+      y: 5940,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Момент инерции",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Момент инерции",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7600,
-      "y": 6180
+    position: {
+      x: 7600,
+      y: 6180,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Гравитация. Законы Кеплера.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Гравитация. Законы Кеплера.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7840,
-      "y": 6400
+    position: {
+      x: 7840,
+      y: 6400,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Механика, 11 класс.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Тур. Механика, 11 класс.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 7600,
-      "y": 6640
+    position: {
+      x: 7600,
+      y: 6640,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Гармонические колебания",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Гармонические колебания",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 3720
+    position: {
+      x: 6320,
+      y: 3720,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Энергия в гармонических колебаниях",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Энергия в гармонических колебаниях",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 3920
+    position: {
+      x: 6320,
+      y: 3920,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Затухающие колебания",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Затухающие колебания",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 4120
+    position: {
+      x: 6320,
+      y: 4120,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Резонанс",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Резонанс",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 4320
+    position: {
+      x: 6320,
+      y: 4320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сложение колебаний. Биения.",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Сложение колебаний. Биения.",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 4520
+    position: {
+      x: 6320,
+      y: 4520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Колебания, 11 класс",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Тур. Колебания, 11 класс",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5920,
-      "y": 5060
+    position: {
+      x: 5920,
+      y: 5060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Механические волны",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Механические волны",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5720,
-      "y": 4740
+    position: {
+      x: 5720,
+      y: 4740,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Постулаты специальной теории относительности",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Постулаты специальной теории относительности",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 4960
+    position: {
+      x: 6320,
+      y: 4960,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Эффект Доплера",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Эффект Доплера",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 5720,
-      "y": 5460
+    position: {
+      x: 5720,
+      y: 5460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Парадоксы и эффекты",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Парадоксы и эффекты",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 5160
+    position: {
+      x: 6320,
+      y: 5160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Релятивистская динамика",
-    "data": {
-      "section": "механика",
-      "grade": "9"
+    id: "Релятивистская динамика",
+    data: {
+      section: "механика",
+      grade: "9",
     },
-    "position": {
-      "x": 6320,
-      "y": 5360
+    position: {
+      x: 6320,
+      y: 5360,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тригонометрия",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Тригонометрия",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 760
+    position: {
+      x: 7920,
+      y: 760,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Свойства тригонометрических функций",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Свойства тригонометрических функций",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 960
+    position: {
+      x: 7920,
+      y: 960,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Векторы",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Векторы",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 1160
+    position: {
+      x: 7920,
+      y: 1160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дифференцирование",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Дифференцирование",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 1360
+    position: {
+      x: 7920,
+      y: 1360,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Интегрирование",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Интегрирование",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 1560
+    position: {
+      x: 7920,
+      y: 1560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Работа с малыми величинами",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Работа с малыми величинами",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 1760
+    position: {
+      x: 7920,
+      y: 1760,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Логарифмы, показательные функции",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Логарифмы, показательные функции",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 1960
+    position: {
+      x: 7920,
+      y: 1960,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Телесный угол",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Телесный угол",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 2160
+    position: {
+      x: 7920,
+      y: 2160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Векторное произведение",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Векторное произведение",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 2360
+    position: {
+      x: 7920,
+      y: 2360,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дифференциальные уравнения. Уравнения колебаний.",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Дифференциальные уравнения. Уравнения колебаний.",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 2560
+    position: {
+      x: 7920,
+      y: 2560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Ряды",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Ряды",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 2760
+    position: {
+      x: 7920,
+      y: 2760,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Комплексные числа",
-    "data": {
-      "section": "математика",
-      "grade": "7"
+    id: "Комплексные числа",
+    data: {
+      section: "математика",
+      grade: "7",
     },
-    "position": {
-      "x": 7920,
-      "y": 2960
+    position: {
+      x: 7920,
+      y: 2960,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Отражение света. Зеркала.",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Отражение света. Зеркала.",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9440,
-      "y": 760
+    position: {
+      x: 9440,
+      y: 760,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Преломление света. Закон Снеллиуса.",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Преломление света. Закон Снеллиуса.",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9440,
-      "y": 960
+    position: {
+      x: 9440,
+      y: 960,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Пластины, призмы",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Пластины, призмы",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9440,
-      "y": 1160
+    position: {
+      x: 9440,
+      y: 1160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Полное внутреннее отражение",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Полное внутреннее отражение",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 9440,
-      "y": 1360
+    position: {
+      x: 9440,
+      y: 1360,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Линза, построение изображений",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Линза, построение изображений",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9440,
-      "y": 1560
+    position: {
+      x: 9440,
+      y: 1560,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Формула тонкой линзы",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Формула тонкой линзы",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 9440,
-      "y": 1760
+    position: {
+      x: 9440,
+      y: 1760,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Увеличение",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Увеличение",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9440,
-      "y": 1960
+    position: {
+      x: 9440,
+      y: 1960,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Оптические системы",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Оптические системы",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9440,
-      "y": 2160
+    position: {
+      x: 9440,
+      y: 2160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Оптика, 10 класс.",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Тур. Оптика, 10 класс.",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 9420,
-      "y": 11260
+    position: {
+      x: 9420,
+      y: 11260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дисперсия",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Дисперсия",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 11860
+    position: {
+      x: 8460,
+      y: 11860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Интерференция света. Когерентные источники.",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Интерференция света. Когерентные источники.",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 12060
+    position: {
+      x: 8460,
+      y: 12060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Интерференция света. Временная когерентность.",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Интерференция света. Временная когерентность.",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 12260
+    position: {
+      x: 8460,
+      y: 12260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дифракция Фраунгофера",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Дифракция Фраунгофера",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 12460
+    position: {
+      x: 8460,
+      y: 12460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дифракция Френеля",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Дифракция Френеля",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 12660
+    position: {
+      x: 8460,
+      y: 12660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дифракционная решётка",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Дифракционная решётка",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 13060
+    position: {
+      x: 8460,
+      y: 13060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Поляризация света",
-    "data": {
-      "section": "оптика",
-      "grade": "11"
+    id: "Поляризация света",
+    data: {
+      section: "оптика",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 12860
+    position: {
+      x: 8460,
+      y: 12860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Волновая оптика, 11 класс",
-    "data": {
-      "section": "оптика",
-      "grade": "8"
+    id: "Тур. Волновая оптика, 11 класс",
+    data: {
+      section: "оптика",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 13260
+    position: {
+      x: 8460,
+      y: 13260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Напряжённость электрического поля, потенциал",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Напряжённость электрического поля, потенциал",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8480,
-      "y": 780
+    position: {
+      x: 8480,
+      y: 780,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сила тока, напряжение. Закон Ома.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Сила тока, напряжение. Закон Ома.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8480,
-      "y": 980
+    position: {
+      x: 8480,
+      y: 980,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Мощность электрического тока",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Мощность электрического тока",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8940,
-      "y": 3160
+    position: {
+      x: 8940,
+      y: 3160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Электричество, 8 класс.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Тур. Электричество, 8 класс.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 5260
+    position: {
+      x: 8460,
+      y: 5260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Удельное сопротивление",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Удельное сопротивление",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 9160,
-      "y": 3320
+    position: {
+      x: 9160,
+      y: 3320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Параллельное и последовательное соединения резисторов",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Параллельное и последовательное соединения резисторов",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8480,
-      "y": 2940
+    position: {
+      x: 8480,
+      y: 2940,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Правила Кирхгофа",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Правила Кирхгофа",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8480,
-      "y": 3160
+    position: {
+      x: 8480,
+      y: 3160,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Симметричные цепи",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Симметричные цепи",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8680,
-      "y": 3420
+    position: {
+      x: 8680,
+      y: 3420,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Метод наложения токов",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Метод наложения токов",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8680,
-      "y": 3660
+    position: {
+      x: 8680,
+      y: 3660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Источники тока",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Источники тока",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8240,
-      "y": 3420
+    position: {
+      x: 8240,
+      y: 3420,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Метод эквивалентного источника",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Метод эквивалентного источника",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8240,
-      "y": 3660
+    position: {
+      x: 8240,
+      y: 3660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Измерительные приборы",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Измерительные приборы",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7720,
-      "y": 3660
+    position: {
+      x: 7720,
+      y: 3660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Вольтамперная характеристика",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Вольтамперная характеристика",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7720,
-      "y": 4200
+    position: {
+      x: 7720,
+      y: 4200,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Мостовые схемы",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Мостовые схемы",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7960,
-      "y": 3860
+    position: {
+      x: 7960,
+      y: 3860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Преобразование звезда-треугольник",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Преобразование звезда-треугольник",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7960,
-      "y": 4060
+    position: {
+      x: 7960,
+      y: 4060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Поток электрического поля. Закон Гаусса.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Поток электрического поля. Закон Гаусса.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 5460
+    position: {
+      x: 8460,
+      y: 5460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Рассчёт электрического поля и потенциала",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Рассчёт электрического поля и потенциала",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 5660
+    position: {
+      x: 8460,
+      y: 5660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Принцип суперпозиции",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Принцип суперпозиции",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 5860
+    position: {
+      x: 8460,
+      y: 5860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Проводники в электростатическом поле",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "10"
+    id: "Проводники в электростатическом поле",
+    data: {
+      section: "электромагнетизм",
+      grade: "10",
     },
-    "position": {
-      "x": 8460,
-      "y": 6060
+    position: {
+      x: 8460,
+      y: 6060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Теорема о единственности",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Теорема о единственности",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 6260
+    position: {
+      x: 8460,
+      y: 6260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Метод электростатических изображений",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Метод электростатических изображений",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 6460
+    position: {
+      x: 8460,
+      y: 6460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Энергия систем зарядов",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Энергия систем зарядов",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 6660
+    position: {
+      x: 8460,
+      y: 6660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Диэлектрики в электростатическом поле",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "10"
+    id: "Диэлектрики в электростатическом поле",
+    data: {
+      section: "электромагнетизм",
+      grade: "10",
     },
-    "position": {
-      "x": 8460,
-      "y": 6860
+    position: {
+      x: 8460,
+      y: 6860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Электростатика, 10 класс.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Тур. Электростатика, 10 класс.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 7060
+    position: {
+      x: 8460,
+      y: 7060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Конденсаторы",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Конденсаторы",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 7260
+    position: {
+      x: 8460,
+      y: 7260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Соединение конденсаторов. Энергия конденсатора.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Соединение конденсаторов. Энергия конденсатора.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 7460
+    position: {
+      x: 8460,
+      y: 7460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Объёмная плотность энергии электрического поля",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Объёмная плотность энергии электрического поля",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 7660
+    position: {
+      x: 8460,
+      y: 7660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "RC-цепи",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "RC-цепи",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 7860
+    position: {
+      x: 8460,
+      y: 7860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Ток в различных средах",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Ток в различных средах",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 8060
+    position: {
+      x: 8460,
+      y: 8060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Электростатика, 11 класс.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Тур. Электростатика, 11 класс.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 8260
+    position: {
+      x: 8460,
+      y: 8260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Магнитное поле. Сила Лоренца.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Магнитное поле. Сила Лоренца.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 8460
+    position: {
+      x: 8460,
+      y: 8460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Сила Ампера. Момент силы Ампера.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Сила Ампера. Момент силы Ампера.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 8660
+    position: {
+      x: 8460,
+      y: 8660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Закон Био-Савара-Лапласа",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Закон Био-Савара-Лапласа",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 8860
+    position: {
+      x: 8460,
+      y: 8860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Теорема Гаусса для магнитного поля",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Теорема Гаусса для магнитного поля",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 9060
+    position: {
+      x: 8460,
+      y: 9060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Теорема о циркуляции магнитного поля",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Теорема о циркуляции магнитного поля",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 9260
+    position: {
+      x: 8460,
+      y: 9260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Закон электромагнитной индукции Фарадея",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Закон электромагнитной индукции Фарадея",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 9460
+    position: {
+      x: 8460,
+      y: 9460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Движущийся проводник в магнитном поле",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Движущийся проводник в магнитном поле",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 9660
+    position: {
+      x: 8460,
+      y: 9660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Магнитная гидродинамика",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Магнитная гидродинамика",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 9860
+    position: {
+      x: 8460,
+      y: 9860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Эффект Холла",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Эффект Холла",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 10060
+    position: {
+      x: 8460,
+      y: 10060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Самоиндукция",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "11"
+    id: "Самоиндукция",
+    data: {
+      section: "электромагнетизм",
+      grade: "11",
     },
-    "position": {
-      "x": 8460,
-      "y": 10260
+    position: {
+      x: 8460,
+      y: 10260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Энергия магнитного поля",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Энергия магнитного поля",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 10460
+    position: {
+      x: 8460,
+      y: 10460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Электромагнетизм, 11 класс.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Тур. Электромагнетизм, 11 класс.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 10660
+    position: {
+      x: 8460,
+      y: 10660,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Электромагнитные волны",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Электромагнитные волны",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7980,
-      "y": 10860
+    position: {
+      x: 7980,
+      y: 10860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Интерференция и дифракция ЭМ волн",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Интерференция и дифракция ЭМ волн",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7980,
-      "y": 11060
+    position: {
+      x: 7980,
+      y: 11060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Дисперсия",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Дисперсия",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 11860
+    position: {
+      x: 8460,
+      y: 11860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Импульс и энергия фотонов",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "11"
+    id: "Импульс и энергия фотонов",
+    data: {
+      section: "электромагнетизм",
+      grade: "11",
     },
-    "position": {
-      "x": 7720,
-      "y": 11860
+    position: {
+      x: 7720,
+      y: 11860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Фотоэффект",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "11"
+    id: "Фотоэффект",
+    data: {
+      section: "электромагнетизм",
+      grade: "11",
     },
-    "position": {
-      "x": 7720,
-      "y": 12060
+    position: {
+      x: 7720,
+      y: 12060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Корпускулярно-волновой дуализм",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Корпускулярно-волновой дуализм",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7720,
-      "y": 12260
+    position: {
+      x: 7720,
+      y: 12260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Соотношение неопределённостей Гейзенберга",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Соотношение неопределённостей Гейзенберга",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 7720,
-      "y": 12460
+    position: {
+      x: 7720,
+      y: 12460,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Переменный ток. Импеданс.",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Переменный ток. Импеданс.",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 10860
+    position: {
+      x: 8460,
+      y: 10860,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Резонанс. Мощность переменного тока",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Резонанс. Мощность переменного тока",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 11060
+    position: {
+      x: 8460,
+      y: 11060,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Переменный ток, 11 класc",
-    "data": {
-      "section": "электромагнетизм",
-      "grade": "8"
+    id: "Тур. Переменный ток, 11 класc",
+    data: {
+      section: "электромагнетизм",
+      grade: "8",
     },
-    "position": {
-      "x": 8460,
-      "y": 11260
+    position: {
+      x: 8460,
+      y: 11260,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тепловое расширение",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Тепловое расширение",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 9960,
-      "y": 1140
+    position: {
+      x: 9960,
+      y: 1140,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Количество теплоты, внутренняя энергия",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Количество теплоты, внутренняя энергия",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 940
+    position: {
+      x: 10460,
+      y: 940,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Влажность",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Влажность",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 1140
+    position: {
+      x: 10460,
+      y: 1140,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Уравнение теплового баланса",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Уравнение теплового баланса",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10960,
-      "y": 1140
+    position: {
+      x: 10960,
+      y: 1140,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Внешние источники теплоты. Теплопотери.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Внешние источники теплоты. Теплопотери.",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10960,
-      "y": 1320
+    position: {
+      x: 10960,
+      y: 1320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Теплопроводность. Закон Ньютона-Рихмана.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Теплопроводность. Закон Ньютона-Рихмана.",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10960,
-      "y": 1520
+    position: {
+      x: 10960,
+      y: 1520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Термодинамика, 8 класс.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Тур. Термодинамика, 8 класс.",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 1920
+    position: {
+      x: 10460,
+      y: 1920,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Длина свободного пробега",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Длина свободного пробега",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 2120
+    position: {
+      x: 10460,
+      y: 2120,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Уравнение Клапейрона-Менделеева",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Уравнение Клапейрона-Менделеева",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 2320
+    position: {
+      x: 10460,
+      y: 2320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Работа, внутренняя энергия. Первое начало термодинамики.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Работа, внутренняя энергия. Первое начало термодинамики.",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 2520
+    position: {
+      x: 10460,
+      y: 2520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Адиабатический процесс",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Адиабатический процесс",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 2720
+    position: {
+      x: 10460,
+      y: 2720,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Политропический процесс",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Политропический процесс",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 2920
+    position: {
+      x: 10460,
+      y: 2920,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Термодинамические циклы",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Термодинамические циклы",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 3120
+    position: {
+      x: 10460,
+      y: 3120,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Второе начало термодинамики. Две формулировки.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Второе начало термодинамики. Две формулировки.",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 3320
+    position: {
+      x: 10460,
+      y: 3320,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Цикл Карно",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Цикл Карно",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 3520
+    position: {
+      x: 10460,
+      y: 3520,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Теоремы Карно",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Теоремы Карно",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 3720
+    position: {
+      x: 10460,
+      y: 3720,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Неравенство Клаузиуса",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Неравенство Клаузиуса",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10100,
-      "y": 4200
+    position: {
+      x: 10100,
+      y: 4200,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Энтропия",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Энтропия",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10100,
-      "y": 4600
+    position: {
+      x: 10100,
+      y: 4600,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Влажный воздух",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Влажный воздух",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10800,
-      "y": 4200
+    position: {
+      x: 10800,
+      y: 4200,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Уравнение Клапейрона-Клаузиуса",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Уравнение Клапейрона-Клаузиуса",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10800,
-      "y": 4400
+    position: {
+      x: 10800,
+      y: 4400,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Неидеальные газы",
-    "data": {
-      "section": "термодинамика",
-      "grade": "10"
+    id: "Неидеальные газы",
+    data: {
+      section: "термодинамика",
+      grade: "10",
     },
-    "position": {
-      "x": 10800,
-      "y": 4600
+    position: {
+      x: 10800,
+      y: 4600,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Тур. Термодинамика, 10 класс.",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Тур. Термодинамика, 10 класс.",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 5100
+    position: {
+      x: 10460,
+      y: 5100,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Поверхностное натяжение",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Поверхностное натяжение",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 5300
+    position: {
+      x: 10460,
+      y: 5300,
     },
-    "width": 320,
-    "height": 300
+    width: 320,
+    height: 300,
   },
   {
-    "id": "Равновесное тепловое излучение",
-    "data": {
-      "section": "термодинамика",
-      "grade": "8"
+    id: "Равновесное тепловое излучение",
+    data: {
+      section: "термодинамика",
+      grade: "8",
     },
-    "position": {
-      "x": 10460,
-      "y": 5500
+    position: {
+      x: 10460,
+      y: 5500,
     },
-    "width": 320,
-    "height": 300
-  }
+    width: 320,
+    height: 300,
+  },
 ];
 export const rawEdges = [
   {

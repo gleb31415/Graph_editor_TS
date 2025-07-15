@@ -443,7 +443,11 @@ export default function LectureTree() {
           panOnDrag={[1, 2]}
         >
           <Controls />
-          <Background />
+          <Background
+            variant="dots"
+            bgColor="transparent"
+            color="transparent"
+          />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>
