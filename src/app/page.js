@@ -441,13 +441,10 @@ export default function LectureTree() {
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           panOnDrag={[1, 2]}
+          style={{ backgroundColor: "#EAEAE8" }}
         >
           <Controls />
-          <Background
-            variant="dots"
-            bgColor="transparent"
-            color="transparent"
-          />
+          <Background variant="dots" bgColor="red" color="transparent" />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>
