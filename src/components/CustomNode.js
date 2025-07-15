@@ -5,9 +5,14 @@ import { useTheme } from "../contexts/ThemeContext";
 
 const CustomNodeWrap = styled.div`
   padding: 20px;
-  border: 2px solid ${({ theme, selected }) => selected ? (theme.colors.primary?.[100] || '#3399ff') : theme.colors.abbey["100"]};
+  border: 2px solid
+    ${({ theme, selected }) =>
+      selected
+        ? theme.colors.primary?.[100] || "#3399ff"
+        : theme.colors.abbey["100"]};
   border-radius: 100px;
-  background: ${({ selected, theme }) => selected ? (theme.colors.primary?.[100] || '#e6f0ff') : '#fff'};
+  background: ${({ selected, theme }) =>
+    selected ? theme.colors.primary?.[100] || "#e6f0ff" : "#fff"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,24 +22,26 @@ const CustomNodeWrap = styled.div`
   height: 100px;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow:
-    0px 1px 2px -2px rgba(38, 38, 38, 0.06),
+  box-shadow: 0px 1px 2px -2px rgba(38, 38, 38, 0.06),
     0px 2px 2px -1px rgba(38, 38, 38, 0.08);
 `;
 
 const TheSolutionNodeWrap = styled.div`
   padding: 20px;
-  border: 4px solid ${({ theme, selected }) => selected ? (theme.colors.primary?.[100] || '#3399ff') : theme.colors.abbey[200]};
+  border: 4px solid
+    ${({ theme, selected }) =>
+      selected
+        ? theme.colors.primary?.[100] || "#3399ff"
+        : theme.colors.abbey[200]};
   border-radius: 20px;
-  background: ${({ selected, backgroundColor, theme }) => selected ? (theme.colors.primary?.[100] || '#e6f0ff') : backgroundColor};
+  background: ${({ selected, backgroundColor, theme }) =>
+    selected ? theme.colors.primary?.[100] || "#e6f0ff" : backgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   overflow: visible;
 `;
-
-
 
 const CustomHandle = styled(Handle)`
   width: 16px;
@@ -83,7 +90,7 @@ const NodeContent = styled.div`
 `;
 
 const NodeTitle = styled.div`
-  font-family: 'Gibson Book', 'Arial', sans-serif;
+  font-family: "Inter Tight", Arial, sans-serif;
   font-weight: 500;
   line-height: 1.3;
   text-align: center;
@@ -96,49 +103,21 @@ const NodeTitle = styled.div`
   word-break: break-word;
 `;
 
-// Add Gibson Book font-face
-const FontFaceGibson = styled.style`
-  @font-face {
-    font-family: 'Gibson Book';
-    src: url('/fonts/gibson-book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-`;
-
 const TheSolutionTitle = styled.div`
-  font-weight: bold;
+  font-family: "Inter Tight", Arial, sans-serif;
+  font-weight: 800;
   line-height: 1;
   white-space: nowrap;
   text-align: center;
   font-size: 400px;
-  font-family: "HelveticaNeueCyr-Bold", "Helvetica", Arial, sans-serif;
-  background: linear-gradient(
-    110deg,
-    rgb(0, 0, 0) 30%,
-    rgb(172, 172, 172) 50%,
-    rgb(0, 0, 0) 60%
-  );
+  background-color: black;
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 6s linear infinite;
-
-  @keyframes shimmer {
-    0% {
-      background-position: -200% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
 `;
 
-
 export default function CustomNode({ id, data, selected }) {
-  // Ensure Gibson Medium font-face is loaded
-
   const theme = useTheme();
   const isTheSolution = id === "TheSolution";
 
@@ -152,9 +131,9 @@ export default function CustomNode({ id, data, selected }) {
 
   const backgroundColor = selected
     ? "#e6f0ff" // light blue for selected
-    : (isTheSolution
-        ? "#ffffff"
-        : getSectionColor(data?.section));
+    : isTheSolution
+    ? "#ffffff"
+    : getSectionColor(data?.section);
   const borderColor = isTheSolution
     ? "#ffffff"
     : getSectionBorderColor(data?.section);
@@ -164,28 +143,25 @@ export default function CustomNode({ id, data, selected }) {
   const HandleComponent = isTheSolution ? TheSolutionHandle : CustomHandle;
 
   return (
-    <>
-      <FontFaceGibson />
-      <NodeWrapper
-        backgroundColor={backgroundColor}
+    <NodeWrapper
+      backgroundColor={backgroundColor}
+      borderColor={isTheSolution ? undefined : borderColor}
+    >
+      <HandleComponent
+        type="target"
+        position={Position.Top}
+        backgroundColor={isTheSolution ? undefined : backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}
-      >
-        <HandleComponent
-          type="target"
-          position={Position.Top}
-          backgroundColor={isTheSolution ? undefined : backgroundColor}
-          borderColor={isTheSolution ? undefined : borderColor}
-        />
-        <NodeContent>
-          <TitleComponent>{id}</TitleComponent>
-        </NodeContent>
-        <HandleComponent
-          type="source"
-          position={Position.Bottom}
-          backgroundColor={isTheSolution ? undefined : backgroundColor}
-          borderColor={isTheSolution ? undefined : borderColor}
-        />
-      </NodeWrapper>
-    </>
+      />
+      <NodeContent>
+        <TitleComponent>{id}</TitleComponent>
+      </NodeContent>
+      <HandleComponent
+        type="source"
+        position={Position.Bottom}
+        backgroundColor={isTheSolution ? undefined : backgroundColor}
+        borderColor={isTheSolution ? undefined : borderColor}
+      />
+    </NodeWrapper>
   );
 }
