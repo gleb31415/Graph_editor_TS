@@ -27,13 +27,13 @@ const CustomNodeWrap = styled.div`
 `;
 
 const TheSolutionNodeWrap = styled.div`
-  padding: 20px;
+  padding: 20px 80px;
   border: 4px solid
     ${({ theme, selected }) =>
       selected
-        ? theme.colors.primary?.[100] || "#3399ff"
+        ? theme.colors.primary?.[100] || "#33ff70ff"
         : theme.colors.abbey[200]};
-  border-radius: 20px;
+  border-radius: 200px;
   background: ${({ selected, backgroundColor, theme }) =>
     selected ? theme.colors.primary?.[100] || "#e6f0ff" : backgroundColor};
   display: flex;
@@ -109,7 +109,7 @@ const TheSolutionTitle = styled.div`
   line-height: 1;
   white-space: nowrap;
   text-align: center;
-  font-size: 400px;
+  font-size: 200px;
   background-color: black;
   background-size: 200% 100%;
   -webkit-background-clip: text;

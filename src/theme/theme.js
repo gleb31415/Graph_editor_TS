@@ -16,7 +16,7 @@ export const colors = {
     950: "#242528",
   },
   red: {
-    50: "#fff1f2",
+    50: "#fef4f2",
     100: "#ffe0e1",
     200: "#ffc7ca",
     300: "#ffa0a4",
@@ -54,19 +54,6 @@ export const colors = {
     900: "#0a5d3a",
     950: "#00341f",
   },
-  "light-blue": {
-    50: "#effcfc",
-    100: "#d5f4f8",
-    200: "#b0e9f1",
-    300: "#81d9e7",
-    400: "#3dbcd3",
-    500: "#21a0b9",
-    600: "#1e809c",
-    700: "#1f687f",
-    800: "#225668",
-    900: "#204859",
-    950: "#102f3c",
-  },
   purple: {
     50: "#ecefff",
     100: "#dde2ff",
@@ -79,6 +66,9 @@ export const colors = {
     800: "#3a25ae",
     900: "#322689",
     950: "#201650",
+  },
+  "light-blue": {
+    // FIXME: define light-blue palette values
   },
 };
 
@@ -105,25 +95,25 @@ export const lightTheme = {
   },
   nodes: {
     section: {
-      математика: colors.red["200"],
-      термодинамика: colors.yellow["200"],
-      механика: colors.green["200"],
-      оптика: colors["light-blue"]["200"],
-      электромагнетизм: colors.purple["200"],
+      математика: colors.red[200],
+      термодинамика: colors.yellow[200],
+      механика: colors.green[200],
+      оптика: colors["light-blue"][200],
+      электромагнетизм: colors.purple[200],
     },
     border: {
-      математика: colors.red["300"],
-      термодинамика: colors.yellow["300"],
-      механика: colors.green["300"],
-      оптика: colors["light-blue"]["300"],
-      электромагнетизм: colors.purple["300"],
+      математика: colors.red[300],
+      термодинамика: colors.yellow[300],
+      механика: colors.green[300],
+      оптика: colors["light-blue"][300],
+      электромагнетизм: colors.purple[300],
     },
     edge: {
-      математика: colors.red["400"],
-      термодинамика: colors.yellow["500"],
-      механика: colors.green["400"],
-      оптика: colors["light-blue"]["400"],
-      электромагнетизм: colors.purple["400"],
+      математика: colors.red[400],
+      термодинамика: colors.yellow[500],
+      механика: colors.green[400],
+      оптика: colors["light-blue"][400],
+      электромагнетизм: colors.purple[400],
     },
     grade: {
       7: "50%",
@@ -147,47 +137,8 @@ export const darkTheme = {
     buttonSecondaryHover: "#1a1a1a",
     ...colors,
   },
-  fonts: {
-    sans: "var(--font-geist-sans)",
-    mono: "var(--font-geist-mono)",
-    helvetica: {
-      regular: "'Helvetica', Arial, sans-serif",
-      roman: "'Helvetica', Arial, sans-serif",
-      medium: "'Helvetica Medium', Arial, sans-serif",
-      bold: "'Helvetica Bold', Arial, sans-serif",
-    },
-  },
-  nodes: {
-    section: {
-      математика: colors.red["200"],
-      термодинамика: colors.yellow["200"],
-      механика: colors.green["200"],
-      оптика: colors["light-blue"]["200"],
-      электромагнетизм: colors.purple["200"],
-    },
-    border: {
-      математика: colors.red["300"],
-      термодинамика: colors.yellow["300"],
-      механика: colors.green["300"],
-      оптика: colors["light-blue"]["300"],
-      электромагнетизм: colors.purple["300"],
-    },
-    edge: {
-      математика: colors.red["400"],
-      термодинамика: colors.yellow["500"],
-      механика: colors.green["400"],
-      оптика: colors["light-blue"]["400"],
-      электромагнетизм: colors.purple["400"],
-    },
-    grade: {
-      7: "50%",
-      8: "60%",
-      9: "70%",
-      10: "80%",
-      11: "90%",
-      beyond: "100%",
-    },
-  },
+  fonts: lightTheme.fonts,
+  nodes: lightTheme.nodes,
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -217,21 +168,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Helvetica Medium', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
-  .helvetica-regular {
-    font-family: 'Helvetica', Arial, sans-serif;
-  }
-
-  .helvetica-roman {
-    font-family: 'Helvetica', Arial, sans-serif;
-  }
-
-  .helvetica-medium {
-    font-family: 'Helvetica Medium', Arial, sans-serif;
-  }
-
-  .helvetica-bold {
-    font-family: 'Helvetica Bold', Arial, sans-serif;
-  }
+  .helvetica-regular { font-family: 'Helvetica', Arial, sans-serif; }
+  .helvetica-roman   { font-family: 'Helvetica', Arial, sans-serif; }
+  .helvetica-medium  { font-family: 'Helvetica Medium', Arial, sans-serif; }
+  .helvetica-bold    { font-family: 'Helvetica Bold', Arial, sans-serif; }
 
   .shiny-text {
     color: #b5b5b5a4;
@@ -249,15 +189,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @keyframes shine {
-    0% {
-      background-position: 100%;
-    }
-    100% {
-      background-position: -100%;
-    }
+    0% { background-position: 100%; }
+    100% { background-position: -100%; }
   }
 
-  .shiny-text.disabled {
-    animation: none;
-  }
+  .shiny-text.disabled { animation: none; }
 `;
