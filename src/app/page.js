@@ -8,9 +8,6 @@ import ReactFlow, {
   applyEdgeChanges,
 } from "reactflow";
 import dagre from "dagre";
-import { useTheme } from "../contexts/ThemeContext";
-
-// Custom background removed - using default ReactFlow Background component
 import styled from "styled-components";
 import CustomNode from "../components/CustomNode";
 import CustomEdge from "../components/CustomEdge";
@@ -25,7 +22,6 @@ import {
   exportUpdatedGraphContent,
 } from "../utils/persistence";
 
-import SquareBackground from "../components/SquareBackground";
 const FlowContainer = styled.div`
   width: 100vw;
   height: 100vh;
@@ -167,8 +163,6 @@ const nodeTypes = { custom: CustomNode };
 const edgeTypes = { custom: CustomEdge };
 
 export default function LectureTree() {
-  // Track ReactFlow viewport transform
-  const [viewport, setViewport] = useState({ x: 0, y: 0, zoom: 1 });
   const reactFlowRef = useRef();
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
@@ -283,10 +277,16 @@ export default function LectureTree() {
 
   const onNodeClick = useCallback((event, node) => {
     setSelectedNodes((prev) => {
-      if (prev.includes(node.id)) {
-        return prev.filter((id) => id !== node.id);
+      if (event.shiftKey) {
+        // Toggle selection
+        if (prev.includes(node.id)) {
+          return prev.filter((id) => id !== node.id);
+        } else {
+          return [...prev, node.id];
+        }
       } else {
-        return [...prev, node.id];
+        // Select only this node
+        return [node.id];
       }
     });
   }, []);
@@ -314,85 +314,92 @@ export default function LectureTree() {
     });
   }, [nodes]);
 
-  const alignSelectedNodes = useCallback((alignmentType) => {
-    if (selectedNodes.length < 2) return;
+  const alignSelectedNodes = useCallback(
+    (alignmentType) => {
+      if (selectedNodes.length < 2) return;
 
-    const selectedNodeObjects = nodes.filter((node) =>
-      selectedNodes.includes(node.id)
-    );
-    const nodeIds = selectedNodeObjects.map((node) => node.id);
-    const positions = selectedNodeObjects.map((node) => node.position);
+      const selectedNodeObjects = nodes.filter((node) =>
+        selectedNodes.includes(node.id)
+      );
+      const nodeIds = selectedNodeObjects.map((node) => node.id);
+      const positions = selectedNodeObjects.map((node) => node.position);
 
-    let newPositions = [];
+      let newPositions = [];
 
-    switch (alignmentType) {
-      case "verticalGap":
-        // Sort by current y
-        const sortedByY = [...selectedNodeObjects].sort(
-          (a, b) => a.position.y - b.position.y
-        );
-        const minY = sortedByY[0].position.y;
-        const avgX = positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
-        newPositions = sortedByY.map((node, index) => ({
-          id: node.id,
-          position: { x: avgX, y: minY + index * 200 },
-        }));
-        break;
-      case "horizontalGap":
-        // Sort by current x
-        const sortedByX = [...selectedNodeObjects].sort(
-          (a, b) => a.position.x - b.position.x
-        );
-        const minX = sortedByX[0].position.x;
-        const avgY = positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
-        newPositions = sortedByX.map((node, index) => ({
-          id: node.id,
-          position: { x: minX + index * 500, y: avgY },
-        }));
-        break;
-      case "strictVertical":
-        const strictAvgX = positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
-        newPositions = selectedNodeObjects.map((node) => ({
-          id: node.id,
-          position: { ...node.position, x: strictAvgX },
-        }));
-        break;
-      case "strictHorizontal":
-        const strictAvgY = positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
-        newPositions = selectedNodeObjects.map((node) => ({
-          id: node.id,
-          position: { ...node.position, y: strictAvgY },
-        }));
-        break;
-      default:
-        return;
-    }
-
-    // Update the nodes
-    const updatedNodes = nodes.map((node) => {
-      const newPos = newPositions.find((p) => p.id === node.id);
-      if (newPos) {
-        return {
-          ...node,
-          position: newPos.position,
-        };
+      switch (alignmentType) {
+        case "verticalGap":
+          // Sort by current y
+          const sortedByY = [...selectedNodeObjects].sort(
+            (a, b) => a.position.y - b.position.y
+          );
+          const minY = sortedByY[0].position.y;
+          const avgX =
+            positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
+          newPositions = sortedByY.map((node, index) => ({
+            id: node.id,
+            position: { x: avgX, y: minY + index * 200 },
+          }));
+          break;
+        case "horizontalGap":
+          // Sort by current x
+          const sortedByX = [...selectedNodeObjects].sort(
+            (a, b) => a.position.x - b.position.x
+          );
+          const minX = sortedByX[0].position.x;
+          const avgY =
+            positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
+          newPositions = sortedByX.map((node, index) => ({
+            id: node.id,
+            position: { x: minX + index * 500, y: avgY },
+          }));
+          break;
+        case "strictVertical":
+          const strictAvgX =
+            positions.reduce((sum, pos) => sum + pos.x, 0) / positions.length;
+          newPositions = selectedNodeObjects.map((node) => ({
+            id: node.id,
+            position: { ...node.position, x: strictAvgX },
+          }));
+          break;
+        case "strictHorizontal":
+          const strictAvgY =
+            positions.reduce((sum, pos) => sum + pos.y, 0) / positions.length;
+          newPositions = selectedNodeObjects.map((node) => ({
+            id: node.id,
+            position: { ...node.position, y: strictAvgY },
+          }));
+          break;
+        default:
+          return;
       }
-      return node;
-    });
 
-    setNodes(updatedNodes);
-    saveNodeChanges(updatedNodes);
-  }, [selectedNodes, nodes, setNodes]);
+      // Update the nodes
+      const updatedNodes = nodes.map((node) => {
+        const newPos = newPositions.find((p) => p.id === node.id);
+        if (newPos) {
+          return {
+            ...node,
+            position: newPos.position,
+          };
+        }
+        return node;
+      });
+
+      setNodes(updatedNodes);
+      saveNodeChanges(updatedNodes);
+    },
+    [selectedNodes, nodes, setNodes]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       // Only handle if at least two nodes are selected
       if (selectedNodes.length < 2) return;
 
-      if (e.key === "V") {
+      if (e.shiftKey && e.key === "V") {
         alignSelectedNodes("verticalGap");
         e.preventDefault();
-      } else if (e.key === "H") {
+      } else if (e.shiftKey && e.key === "H") {
         alignSelectedNodes("horizontalGap");
         e.preventDefault();
       } else if (e.altKey && e.key === "V") {
@@ -434,12 +441,9 @@ export default function LectureTree() {
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
           panOnDrag={[1, 2]}
-          onMove={(_evt, viewport) => setViewport(viewport)}
-          selectionOnDrag={true}
-          selectionMode="partial"
         >
           <Controls />
-          <SquareBackground />
+          <Background />
         </ReactFlow>
       </FlowContainer>
     </ThemeProvider>

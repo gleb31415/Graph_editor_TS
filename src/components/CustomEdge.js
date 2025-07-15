@@ -1,5 +1,5 @@
 import React from "react";
-import { getSmoothStepPath } from "reactflow";
+import { getBezierPath } from "reactflow";
 import { useTheme } from "../contexts/ThemeContext";
 
 export default function CustomEdge({
@@ -14,7 +14,7 @@ export default function CustomEdge({
 }) {
   const theme = useTheme();
 
-  const [edgePath] = getSmoothStepPath({
+  const [edgePath] = getBezierPath({
     sourceX,
     sourceY,
     sourcePosition,

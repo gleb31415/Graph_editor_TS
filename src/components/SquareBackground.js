@@ -1,30 +1,25 @@
-import { useStore } from 'reactflow';
+import { useStore } from "reactflow";
 
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from "../contexts/ThemeContext";
 
-const SquareBackground = ({
-  size,
-  gap,
-  color,
-  bgColor
-}) => {
+const SquareBackground = ({ size, gap, color, bgColor }) => {
   const theme = useTheme();
   // Use defaults if props are not provided
   const squareSize = size !== undefined ? size : 10;
   const squareGap = gap !== undefined ? gap : 200;
-  const squareColor = '#F4F4F4';
-  const backgroundColor = '#F4F4F4';
-  const transform = useStore(state => state.transform);
-  
+  const squareColor = "#EAEAE8";
+  const backgroundColor = "#EAEAE8";
+  const transform = useStore((state) => state.transform);
+
   return (
     <svg
       className="react-flow__background"
       style={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
+        position: "absolute",
+        width: "100%",
+        height: "100%",
         top: 0,
-        left: 0
+        left: 0,
       }}
     >
       <defs>
