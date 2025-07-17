@@ -117,6 +117,25 @@ const TheSolutionTitle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
+const DropSVG = ({ style, className }) => (
+  <svg
+    width="24"
+    height="40"
+    viewBox="0 0 24 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style={style}
+    className={className}
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M8 26.1455C8 24.45 6.89 22.9919 5.46846 22.0679C2.17711 19.9285 0 16.2182 0 12C0 5.37305 5.37109 -5.24537e-07 12 -5.24537e-07C18.6289 -5.24537e-07 24 5.37305 24 12C24 16.2182 21.8229 19.9285 18.5315 22.0679C17.11 22.9919 16 24.45 16 26.1455L16 32C16 36.418 19.582 40 24 40L16 40L8 40L0 40C4.41797 40 8 36.418 8 32L8 26.1455Z"
+      fill="white"
+    />
+  </svg>
+);
+
 export default function CustomNode({ id, data, selected }) {
   const theme = useTheme();
   const isTheSolution = id === "TheSolution";
@@ -142,6 +161,32 @@ export default function CustomNode({ id, data, selected }) {
   const TitleComponent = isTheSolution ? TheSolutionTitle : NodeTitle;
   const HandleComponent = isTheSolution ? TheSolutionHandle : CustomHandle;
 
+  // Don't add drops to solution node
+  if (data.type === "solution") {
+    return (
+      <NodeWrapper
+        backgroundColor={backgroundColor}
+        borderColor={isTheSolution ? undefined : borderColor}
+      >
+        <HandleComponent
+          type="target"
+          position={Position.Top}
+          backgroundColor={isTheSolution ? undefined : backgroundColor}
+          borderColor={isTheSolution ? undefined : borderColor}
+        />
+        <NodeContent>
+          <TitleComponent>{id}</TitleComponent>
+        </NodeContent>
+        <HandleComponent
+          type="source"
+          position={Position.Bottom}
+          backgroundColor={isTheSolution ? undefined : backgroundColor}
+          borderColor={isTheSolution ? undefined : borderColor}
+        />
+      </NodeWrapper>
+    );
+  }
+
   return (
     <NodeWrapper
       backgroundColor={backgroundColor}
@@ -162,6 +207,30 @@ export default function CustomNode({ id, data, selected }) {
         backgroundColor={isTheSolution ? undefined : backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}
       />
+      {/* Top Drop SVG */}
+      <div
+        style={{
+          position: "absolute",
+          top: -40,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 2,
+        }}
+      >
+        <DropSVG />
+      </div>
+      {/* Bottom Drop SVG (rotated 180deg) */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: -40,
+          left: "50%",
+          transform: "translateX(-50%) rotate(180deg)",
+          zIndex: 2,
+        }}
+      >
+        <DropSVG />
+      </div>
     </NodeWrapper>
   );
 }
