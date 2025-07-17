@@ -27,12 +27,11 @@ const CustomNodeWrap = styled.div`
 `;
 
 const TheSolutionNodeWrap = styled.div`
-  padding: 20px 80px;
-  border: 4px solid
-    ${({ theme, selected }) =>
-      selected
-        ? theme.colors.primary?.[100] || "#33ff70ff"
-        : theme.colors.abbey[200]};
+  padding: 40px 80px;
+  ${({ theme, selected }) =>
+    selected
+      ? theme.colors.primary?.[100] || "#33ff70ff"
+      : theme.colors.abbey[200]};
   border-radius: 200px;
   background: ${({ selected, backgroundColor, theme }) =>
     selected ? theme.colors.primary?.[100] || "#e6f0ff" : backgroundColor};
@@ -43,20 +42,37 @@ const TheSolutionNodeWrap = styled.div`
   overflow: visible;
 `;
 
+const NodeWrapper = styled.div`
+  overflow: visible;
+  position: relative;
+`;
+
+const DropSvg = styled.svg.attrs((props) => ({
+  viewBox: "0 0 24 40",
+  width: props.isSolution ? "48px" : "24px",
+  height: props.isSolution ? "80px" : "40px",
+}))`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
+    ${(props) => (props.position === "bottom" ? "rotate(180deg)" : "")};
+  ${(props) => props.position === "top" && "top: -40px;"}
+  ${(props) =>
+    props.position === "bottom" &&
+    `bottom: ${props.isSolution ? "-80px" : "-40px"};`}
+  color: #DFDFDF;
+  z-index: -1;
+`;
+
 const CustomHandle = styled(Handle)`
+  background: #f5f5f5;
+  border: 1px solid #dfdfdf;
   width: 16px;
   height: 16px;
-  background: ${(props) => props.backgroundColor};
-  border: 2px solid ${(props) => props.borderColor};
   border-radius: 50%;
-
-  &.react-flow__handle-top {
-    top: -8px; /* Half of handle height to center it on the border */
-  }
-
-  &.react-flow__handle-bottom {
-    bottom: -8px; /* Half of handle height to center it on the border */
-  }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 const TheSolutionHandle = styled(Handle)`
@@ -109,7 +125,7 @@ const TheSolutionTitle = styled.div`
   line-height: 1;
   white-space: nowrap;
   text-align: center;
-  font-size: 200px;
+  font-size: 120px;
   background-color: black;
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -117,39 +133,22 @@ const TheSolutionTitle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
-const DropSVG = ({ style, className }) => (
-  <svg
-    width="24"
-    height="40"
-    viewBox="0 0 24 40"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    style={style}
-    className={className}
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M8 26.1455C8 24.45 6.89 22.9919 5.46846 22.0679C2.17711 19.9285 0 16.2182 0 12C0 5.37305 5.37109 -5.24537e-07 12 -5.24537e-07C18.6289 -5.24537e-07 24 5.37305 24 12C24 16.2182 21.8229 19.9285 18.5315 22.0679C17.11 22.9919 16 24.45 16 26.1455L16 32C16 36.418 19.582 40 24 40L16 40L8 40L0 40C4.41797 40 8 36.418 8 32L8 26.1455Z"
-      fill="white"
-    />
-  </svg>
-);
-
-export default function CustomNode({ id, data, selected }) {
+const getSectionColor = (section) => {
   const theme = useTheme();
+  return theme.nodes.section[section] || "#ff0000";
+};
+
+const getSectionBorderColor = (section) => {
+  const theme = useTheme();
+  return theme.nodes.border[section] || "#ff0000";
+};
+
+const CustomNode = ({ id, data, selected }) => {
   const isTheSolution = id === "TheSolution";
-
-  const getSectionColor = (section) => {
-    return theme.nodes.section[section] || "#ff0000";
-  };
-
-  const getSectionBorderColor = (section) => {
-    return theme.nodes.border[section] || "#ff0000";
-  };
+  const isSolution = data?.type === "solution";
 
   const backgroundColor = selected
-    ? "#e6f0ff" // light blue for selected
+    ? "#e6f0ff"
     : isTheSolution
     ? "#ffffff"
     : getSectionColor(data?.section);
@@ -157,95 +156,53 @@ export default function CustomNode({ id, data, selected }) {
     ? "#ffffff"
     : getSectionBorderColor(data?.section);
 
-  const NodeWrapper = isTheSolution ? TheSolutionNodeWrap : CustomNodeWrap;
+  const NodeWrapperComponent = isTheSolution
+    ? TheSolutionNodeWrap
+    : CustomNodeWrap;
   const TitleComponent = isTheSolution ? TheSolutionTitle : NodeTitle;
   const HandleComponent = isTheSolution ? TheSolutionHandle : CustomHandle;
 
-  // Don't add drops to solution node
-  if (data.type === "solution") {
-    return (
-      <NodeWrapper
-        backgroundColor={backgroundColor}
-        borderColor={isTheSolution ? undefined : borderColor}
-      >
-        <HandleComponent
-          type="target"
-          position={Position.Top}
-          backgroundColor={isTheSolution ? undefined : backgroundColor}
-          borderColor={isTheSolution ? undefined : borderColor}
-        />
-        <NodeContent>
-          <TitleComponent>{id}</TitleComponent>
-        </NodeContent>
-        <HandleComponent
-          type="source"
-          position={Position.Bottom}
-          backgroundColor={isTheSolution ? undefined : backgroundColor}
-          borderColor={isTheSolution ? undefined : borderColor}
-        />
-      </NodeWrapper>
-    );
-  }
-
   return (
-    <NodeWrapper
+    <NodeWrapperComponent
       backgroundColor={backgroundColor}
       borderColor={isTheSolution ? undefined : borderColor}
       style={{ position: "relative" }}
     >
-      <HandleComponent
-        type="target"
-        position={Position.Top}
-        backgroundColor={isTheSolution ? undefined : backgroundColor}
-        borderColor={isTheSolution ? undefined : borderColor}
-        style={{
-          position: "absolute",
-          top: -36,
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 200,
-        }}
-      />
+      {/* Top elements only for non-solution nodes */}
+      {!isSolution && (
+        <>
+          <DropSvg position="top" isSolution={false} />
+          <HandleComponent
+            type="target"
+            position={Position.Top}
+            style={{ top: "-16px" }}
+          />
+        </>
+      )}
+
       <NodeContent>
         <TitleComponent>{id}</TitleComponent>
       </NodeContent>
+
+      {/* Bottom handle for all nodes */}
       <HandleComponent
         type="source"
         position={Position.Bottom}
-        backgroundColor={isTheSolution ? undefined : backgroundColor}
-        borderColor={isTheSolution ? undefined : borderColor}
-        style={{
-          position: "absolute",
-          bottom: -36,
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 200,
-        }}
+        style={{ bottom: "-16px" }}
       />
-      {/* Top Drop SVG */}
-      <div
-        style={{
-          position: "absolute",
-          top: -40,
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 2,
-        }}
-      >
-        <DropSVG />
-      </div>
-      {/* Bottom Drop SVG (rotated 180deg) */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: -40,
-          left: "50%",
-          transform: "translateX(-50%) rotate(180deg)",
-          zIndex: 2,
-        }}
-      >
-        <DropSVG />
-      </div>
-    </NodeWrapper>
+
+      {/* Bottom drop SVG - special treatment for solution nodes */}
+      {isSolution ? (
+        <DropSvg
+          position="bottom"
+          isSolution={true}
+          style={{ bottom: "-80px" }}
+        />
+      ) : (
+        <DropSvg position="bottom" isSolution={false} />
+      )}
+    </NodeWrapperComponent>
   );
-}
+};
+
+export default CustomNode;
