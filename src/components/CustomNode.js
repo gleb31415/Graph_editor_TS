@@ -21,7 +21,7 @@ const CustomNodeWrap = styled.div`
   width: 400px;
   height: 100px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0px 1px 2px -2px rgba(38, 38, 38, 0.06),
     0px 2px 2px -1px rgba(38, 38, 38, 0.08);
 `;
@@ -191,12 +191,20 @@ export default function CustomNode({ id, data, selected }) {
     <NodeWrapper
       backgroundColor={backgroundColor}
       borderColor={isTheSolution ? undefined : borderColor}
+      style={{ position: "relative" }}
     >
       <HandleComponent
         type="target"
         position={Position.Top}
         backgroundColor={isTheSolution ? undefined : backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}
+        style={{
+          position: "absolute",
+          top: -36,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 200,
+        }}
       />
       <NodeContent>
         <TitleComponent>{id}</TitleComponent>
@@ -206,6 +214,13 @@ export default function CustomNode({ id, data, selected }) {
         position={Position.Bottom}
         backgroundColor={isTheSolution ? undefined : backgroundColor}
         borderColor={isTheSolution ? undefined : borderColor}
+        style={{
+          position: "absolute",
+          bottom: -36,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 200,
+        }}
       />
       {/* Top Drop SVG */}
       <div
