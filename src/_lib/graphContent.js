@@ -1252,6 +1252,7 @@ export const rawNodes = [
     data: {
       section: "электромагнетизм",
       grade: "8",
+
     },
     position: {
       x: 8480,
