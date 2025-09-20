@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-  "build:export": "next build",
-  "build:gh": "NEXT_PUBLIC_BASE_PATH=\"${NEXT_PUBLIC_BASE_PATH:-}\" next build && cp out/index.html out/404.html && touch out/.nojekyll && rm -rf docs && cp -R out docs",
+    "build:export": "next build",
+    "build:gh": "REPO=$(basename -s .git `git config --get remote.origin.url`); NEXT_PUBLIC_BASE_PATH=\"${NEXT_PUBLIC_BASE_PATH:-/$REPO}\" next build && cp out/index.html out/404.html && touch out/.nojekyll && rm -rf docs && cp -R out docs",
+  "deploy": "REPO=$(basename -s .git `git config --get remote.origin.url`); NEXT_PUBLIC_BASE_PATH=\"/${REPO}\" next build && cp out/index.html out/404.html && touch out/.nojekyll && gh-pages -d out -t true",
     "start": "next start",
     "lint": "next lint",
     "update-graph": "node scripts/updateGraphContent.js"
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.3.4"
+    "eslint-config-next": "15.3.4",
+    "gh-pages": "^6.3.0"
   }
 }
