@@ -446,7 +446,7 @@ export default function LectureTree() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedNodes, nodes, setNodes]);
+  }, [selectedNodes, nodes, setNodes, alignSelectedNodes]);
 
   const nodesWithSelection = nodes.map((node) => ({
     ...node,

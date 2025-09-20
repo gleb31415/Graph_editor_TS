@@ -141,17 +141,16 @@ const TheSolutionTitle = styled.div`
   -webkit-text-fill-color: transparent;
 `;
 
-const getSectionColor = (section) => {
-  const theme = useTheme();
+const getSectionColor = (theme, section) => {
   return theme.nodes.section[section] || "#ff0000";
 };
 
-const getSectionBorderColor = (section) => {
-  const theme = useTheme();
+const getSectionBorderColor = (theme, section) => {
   return theme.nodes.border[section] || "#ff0000";
 };
 
 const CustomNode = ({ id, data, selected }) => {
+  const theme = useTheme();
   const isTheSolution = id === "TheSolution";
   const isSolution = data?.type === "solution";
 
@@ -159,10 +158,10 @@ const CustomNode = ({ id, data, selected }) => {
     ? "#e6f0ff"
     : isTheSolution
     ? "#ffffff"
-    : getSectionColor(data?.section);
+    : getSectionColor(theme, data?.section);
   const borderColor = isTheSolution
     ? "#ffffff"
-    : getSectionBorderColor(data?.section);
+    : getSectionBorderColor(theme, data?.section);
 
   const NodeWrapperComponent = isTheSolution
     ? TheSolutionNodeWrap
