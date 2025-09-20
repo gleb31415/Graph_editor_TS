@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+  "build:export": "next build",
+  "build:gh": "NEXT_PUBLIC_BASE_PATH=\"${NEXT_PUBLIC_BASE_PATH:-}\" next build && cp out/index.html out/404.html && touch out/.nojekyll && rm -rf docs && cp -R out docs",
     "start": "next start",
     "lint": "next lint",
     "update-graph": "node scripts/updateGraphContent.js"
