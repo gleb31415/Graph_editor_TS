@@ -164,6 +164,8 @@ const edgeTypes = { custom: CustomEdge };
 
 export default function LectureTree() {
   const reactFlowRef = useRef();
+  const reactFlowInstanceRef = useRef(null);
+  const containerRef = useRef(null);
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
     edges: [],
@@ -171,6 +173,38 @@ export default function LectureTree() {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
   const [selectedNodes, setSelectedNodes] = useState([]);
+  const [isNodeDragging, setIsNodeDragging] = useState(false);
+  const hasCenteredRef = useRef(false);
+
+  const handleBlockWhileDragging = useCallback((e) => {
+    if (isNodeDragging) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, [isNodeDragging]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const blocker = (e) => {
+      if (isNodeDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+    const opts = { passive: false, capture: true };
+    el.addEventListener('wheel', blocker, opts);
+    el.addEventListener('touchmove', blocker, opts);
+    // Safari-specific pinch events
+    el.addEventListener('gesturestart', blocker, opts);
+    el.addEventListener('gesturechange', blocker, opts);
+    return () => {
+      el.removeEventListener('wheel', blocker, opts);
+      el.removeEventListener('touchmove', blocker, opts);
+      el.removeEventListener('gesturestart', blocker, opts);
+      el.removeEventListener('gesturechange', blocker, opts);
+    };
+  }, [isNodeDragging]);
 
   // Always use Dagre layout, ignore manual positions for now
   useEffect(() => {
@@ -189,22 +223,20 @@ export default function LectureTree() {
   }, [initNodes, initEdges]);
 
   useEffect(() => {
-    if (nodes.length > 0 && reactFlowRef.current) {
+    if (!hasCenteredRef.current && nodes.length > 0 && reactFlowInstanceRef.current) {
       const theSolutionNode = nodes.find((node) => node.id === "TheSolution");
       if (theSolutionNode) {
         setTimeout(() => {
-          const viewportWidth = window.innerWidth;
-          const viewportHeight = window.innerHeight;
-
           // Set zoom to show more of the vertical layout
           const zoom = 0.6; // Lower zoom to see more nodes
 
-          const { setCenter } = reactFlowRef.current;
+          const { setCenter } = reactFlowInstanceRef.current;
           setCenter(
             theSolutionNode.position.x + theSolutionWidth / 2,
             theSolutionNode.position.y + theSolutionHeight / 2 + 200, // Offset down a bit
             { zoom, duration: 1000 }
           );
+          hasCenteredRef.current = true;
         }, 100);
       }
     }
@@ -298,6 +330,7 @@ export default function LectureTree() {
   const handleResetLayout = useCallback(() => {
     // Clear localStorage and force re-layout
     localStorage.removeItem("graph-node-changes");
+    hasCenteredRef.current = false;
     const { nodes: ln, edges: le } = getLayoutedElements(
       rawNodes,
       rawEdges,
@@ -422,25 +455,40 @@ export default function LectureTree() {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      <FlowContainer>
+      <FlowContainer
+        ref={containerRef}
+        onWheelCapture={handleBlockWhileDragging}
+        onTouchMoveCapture={handleBlockWhileDragging}
+      >
         <ExportButton onClick={handleExportGraph}>Export Graph</ExportButton>
         <ResetButton onClick={handleResetLayout}>Reset Layout</ResetButton>
         <ReactFlow
           ref={reactFlowRef}
-          panOnScroll={true}
-          zoomOnScroll={false}
+          onInit={(instance) => {
+            reactFlowInstanceRef.current = instance;
+          }}
+          panOnScroll={false}
+          zoomOnScroll={!isNodeDragging}
+          zoomOnPinch={!isNodeDragging}
+          zoomOnDoubleClick={false}
           preventScrolling={true}
           nodes={nodesWithSelection}
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
+          onNodeDragStart={() => setIsNodeDragging(true)}
+          onNodeDragStop={() => setIsNodeDragging(false)}
           onNodeClick={onNodeClick}
           onPaneClick={onPaneClick}
           nodesDraggable={true}
           nodesConnectable={false}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
-          panOnDrag={[1, 2]}
+          panOnDrag={!isNodeDragging}
+          autoPanOnNodeDrag={false}
+          selectionOnDrag={false}
+          minZoom={0.1}
+          maxZoom={2}
           style={{ backgroundColor: "#EAEAE8" }}
         >
           <Controls />

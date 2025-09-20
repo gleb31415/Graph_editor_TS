@@ -6,13 +6,13 @@ import { useTheme } from "../contexts/ThemeContext";
 const CustomNodeWrap = styled.div`
   padding: 20px;
   border: 2px solid
-    ${({ theme, selected }) =>
-      selected
+    ${({ theme, $selected }) =>
+      $selected
         ? theme.colors.primary?.[100] || "#3399ff"
         : theme.colors.abbey["100"]};
   border-radius: 100px;
-  background: ${({ selected, theme }) =>
-    selected ? theme.colors.primary?.[100] || "#e6f0ff" : "#fff"};
+  background: ${({ $selected, theme }) =>
+    $selected ? theme.colors.primary?.[100] || "#e6f0ff" : "#fff"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,13 +28,14 @@ const CustomNodeWrap = styled.div`
 
 const TheSolutionNodeWrap = styled.div`
   padding: 40px 80px;
-  ${({ theme, selected }) =>
-    selected
-      ? theme.colors.primary?.[100] || "#33ff70ff"
-      : theme.colors.abbey[200]};
+  border: 4px solid
+    ${({ theme, $selected }) =>
+      $selected
+        ? theme.colors.primary?.[100] || "#33ff70ff"
+        : theme.colors.abbey[200]};
   border-radius: 200px;
-  background: ${({ selected, backgroundColor, theme }) =>
-    selected ? theme.colors.primary?.[100] || "#e6f0ff" : backgroundColor};
+  background: ${({ $selected, $backgroundColor, theme }) =>
+    $selected ? theme.colors.primary?.[100] || "#e6f0ff" : $backgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,9 +71,16 @@ const CustomHandle = styled(Handle)`
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  &.react-flow__handle-top {
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.react-flow__handle-bottom {
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 const TheSolutionHandle = styled(Handle)`
@@ -164,19 +172,15 @@ const CustomNode = ({ id, data, selected }) => {
 
   return (
     <NodeWrapperComponent
-      backgroundColor={backgroundColor}
-      borderColor={isTheSolution ? undefined : borderColor}
+      $backgroundColor={backgroundColor}
+      $selected={selected}
       style={{ position: "relative" }}
     >
       {/* Top elements only for non-solution nodes */}
       {!isSolution && (
         <>
           <DropSvg position="top" isSolution={false} />
-          <HandleComponent
-            type="target"
-            position={Position.Top}
-            style={{ top: "-16px" }}
-          />
+          <HandleComponent type="target" position={Position.Top} />
         </>
       )}
 
@@ -185,11 +189,7 @@ const CustomNode = ({ id, data, selected }) => {
       </NodeContent>
 
       {/* Bottom handle for all nodes */}
-      <HandleComponent
-        type="source"
-        position={Position.Bottom}
-        style={{ bottom: "-16px" }}
-      />
+      <HandleComponent type="source" position={Position.Bottom} />
 
       {/* Bottom drop SVG - special treatment for solution nodes */}
       {isSolution ? (
