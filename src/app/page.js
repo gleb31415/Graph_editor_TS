@@ -99,6 +99,7 @@ const UndoButton = styled.button`
   }
 `;
 
+
 const ModalBackdrop = styled.div`
   position: fixed;
   inset: 0;
@@ -272,6 +273,23 @@ export default function LectureTree() {
   const [edges, setEdges] = useState([]);
   const [selectedNodes, setSelectedNodes] = useState([]);
   const [isNodeDragging, setIsNodeDragging] = useState(false);
+  const [isSelectMode, setIsSelectMode] = useState(false);
+
+  // Hold-to-select with Shift
+  useEffect(() => {
+    const down = (e) => {
+      if (e.key === "Shift") setIsSelectMode(true);
+    };
+    const up = (e) => {
+      if (e.key === "Shift") setIsSelectMode(false);
+    };
+    window.addEventListener("keydown", down);
+    window.addEventListener("keyup", up);
+    return () => {
+      window.removeEventListener("keydown", down);
+      window.removeEventListener("keyup", up);
+    };
+  }, []);
   const hasCenteredRef = useRef(false);
   const [showImport, setShowImport] = useState(false);
   const [importText, setImportText] = useState(`[
@@ -455,23 +473,23 @@ export default function LectureTree() {
 
   const onNodeClick = useCallback((event, node) => {
     setSelectedNodes((prev) => {
-      if (event.shiftKey) {
+      const multi = isSelectMode || event.shiftKey;
+      if (multi) {
         // Toggle selection
         if (prev.includes(node.id)) {
           return prev.filter((id) => id !== node.id);
         } else {
           return [...prev, node.id];
         }
-      } else {
-        // Select only this node
-        return [node.id];
       }
+      // Select only this node
+      return [node.id];
     });
-  }, []);
+  }, [isSelectMode]);
 
   const onPaneClick = useCallback(() => {
-    setSelectedNodes([]);
-  }, []);
+    if (!isSelectMode) setSelectedNodes([]);
+  }, [isSelectMode]);
 
   const handleResetLayout = useCallback(() => {
     pushHistorySnapshot();
@@ -576,27 +594,57 @@ export default function LectureTree() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // Only handle if at least two nodes are selected
-      if (selectedNodes.length < 2) return;
+      // alignment shortcuts for 2+ selected
+      if (selectedNodes.length >= 2) {
+        if (e.shiftKey && e.key === "V") {
+          alignSelectedNodes("verticalGap");
+          e.preventDefault();
+          return;
+        } else if (e.shiftKey && e.key === "H") {
+          alignSelectedNodes("horizontalGap");
+          e.preventDefault();
+          return;
+        } else if (e.altKey && e.key === "V") {
+          alignSelectedNodes("strictVertical");
+          e.preventDefault();
+          return;
+        } else if (e.altKey && e.key === "H") {
+          alignSelectedNodes("strictHorizontal");
+          e.preventDefault();
+          return;
+        }
+      }
 
-      if (e.shiftKey && e.key === "V") {
-        alignSelectedNodes("verticalGap");
-        e.preventDefault();
-      } else if (e.shiftKey && e.key === "H") {
-        alignSelectedNodes("horizontalGap");
-        e.preventDefault();
-      } else if (e.altKey && e.key === "V") {
-        alignSelectedNodes("strictVertical");
-        e.preventDefault();
-      } else if (e.altKey && e.key === "H") {
-        alignSelectedNodes("strictHorizontal");
-        e.preventDefault();
+      // arrow-key nudging for 1+ selected
+      if (selectedNodes.length >= 1) {
+        const step = e.shiftKey ? MINIMAL_DELTA * 5 : MINIMAL_DELTA;
+        let dx = 0,
+          dy = 0;
+        if (e.key === "ArrowUp") dy = -step;
+        else if (e.key === "ArrowDown") dy = step;
+        else if (e.key === "ArrowLeft") dx = -step;
+        else if (e.key === "ArrowRight") dx = step;
+        if (dx !== 0 || dy !== 0) {
+          e.preventDefault();
+          // Save snapshot for undo
+          pushHistorySnapshot();
+          const updated = nodes.map((n) => {
+            if (!selectedNodes.includes(n.id)) return n;
+            const newPos = snapToGrid({
+              x: (n.position?.x ?? 0) + dx,
+              y: (n.position?.y ?? 0) + dy,
+            });
+            return { ...n, position: newPos };
+          });
+          setNodes(updated);
+          saveNodeChanges(updated);
+        }
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedNodes, nodes, setNodes, alignSelectedNodes]);
+  }, [selectedNodes, nodes, setNodes, alignSelectedNodes, pushHistorySnapshot, snapToGrid]);
 
   const nodesWithSelection = nodes.map((node) => ({
     ...node,
@@ -743,7 +791,7 @@ export default function LectureTree() {
           nodesConnectable={false}
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
-          panOnDrag={!isNodeDragging}
+          panOnDrag={true}
           autoPanOnNodeDrag={false}
           selectionOnDrag={false}
           minZoom={0.1}
