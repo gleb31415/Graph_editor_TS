@@ -63,6 +63,103 @@ const ResetButton = styled.button`
   }
 `;
 
+const ImportButton = styled.button`
+  position: fixed;
+  top: 20px;
+  right: 300px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: #138496;
+  }
+`;
+
+const UndoButton = styled.button`
+  position: fixed;
+  top: 20px;
+  right: 460px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: #5a6268;
+  }
+`;
+
+const ModalBackdrop = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+`;
+
+const ModalCard = styled.div`
+  width: min(900px, 92vw);
+  max-height: 80vh;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+`;
+
+const ModalTitle = styled.h3`
+  margin-bottom: 12px;
+`;
+
+const ModalTextarea = styled.textarea`
+  width: 100%;
+  height: 320px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: vertical;
+`;
+
+const ModalActions = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  justify-content: flex-end;
+`;
+
+const Primary = styled.button`
+  background: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  &:hover { background: #0052cc; }
+`;
+
+const Secondary = styled.button`
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+`;
+
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
 
@@ -72,7 +169,7 @@ const theSolutionWidth = 600;
 const theSolutionHeight = 400;
 
 // layout-функция
-function getLayoutedElements(nodes, edges, direction = "TB") {
+function getLayoutedElements(nodes, edges, direction = "TB", ignoreManualPositions = false) {
   console.log("=== LAYOUT DEBUG ===");
   console.log("Layout direction:", direction);
 
@@ -102,7 +199,7 @@ function getLayoutedElements(nodes, edges, direction = "TB") {
 
     // Use manual position if present, otherwise use Dagre
     let position;
-    if (
+    if (!ignoreManualPositions &&
       n.position &&
       typeof n.position.x === "number" &&
       typeof n.position.y === "number"
@@ -166,6 +263,7 @@ export default function LectureTree() {
   const reactFlowRef = useRef();
   const reactFlowInstanceRef = useRef(null);
   const containerRef = useRef(null);
+  const historyRef = useRef([]); // stack of {nodes, edges}
   const [{ nodes: initNodes, edges: initEdges }, setLayout] = useState({
     nodes: [],
     edges: [],
@@ -175,6 +273,45 @@ export default function LectureTree() {
   const [selectedNodes, setSelectedNodes] = useState([]);
   const [isNodeDragging, setIsNodeDragging] = useState(false);
   const hasCenteredRef = useRef(false);
+  const [showImport, setShowImport] = useState(false);
+  const [importText, setImportText] = useState(`[
+    {
+      "id": "A",
+      "data": { "section": "demo", "grade": "7", "number": 1, "problems": [] },
+      "position": { "x": 0, "y": 0 },
+      "width": 320,
+      "height": 300
+    },
+    {
+      "id": "B",
+      "data": { "section": "demo", "grade": "7", "number": 2, "problems": [] },
+      "position": { "x": 500, "y": 300 },
+      "width": 320,
+      "height": 300
+    }
+  ]`);
+  const [importError, setImportError] = useState("");
+  const prevNodesBeforeDragRef = useRef(null);
+
+  // Compute graph bounds (min/max extents) based on node positions and sizes
+  const computeGraphBounds = useCallback((ns) => {
+    if (!ns || ns.length === 0) return null;
+    let minX = Infinity,
+      minY = Infinity,
+      maxX = -Infinity,
+      maxY = -Infinity;
+    ns.forEach((n) => {
+      const x1 = n.position.x;
+      const y1 = n.position.y;
+      const x2 = n.position.x + (n.width || nodeWidth);
+      const y2 = n.position.y + (n.height || nodeHeight);
+      if (x1 < minX) minX = x1;
+      if (y1 < minY) minY = y1;
+      if (x2 > maxX) maxX = x2;
+      if (y2 > maxY) maxY = y2;
+    });
+    return { minX, minY, maxX, maxY, cx: (minX + maxX) / 2, cy: (minY + maxY) / 2 };
+  }, []);
 
   const handleBlockWhileDragging = useCallback((e) => {
     if (isNodeDragging) {
@@ -224,23 +361,32 @@ export default function LectureTree() {
 
   useEffect(() => {
     if (!hasCenteredRef.current && nodes.length > 0 && reactFlowInstanceRef.current) {
-      const theSolutionNode = nodes.find((node) => node.id === "TheSolution");
-      if (theSolutionNode) {
-        setTimeout(() => {
-          // Set zoom to show more of the vertical layout
-          const zoom = 0.6; // Lower zoom to see more nodes
-
-          const { setCenter } = reactFlowInstanceRef.current;
-          setCenter(
-            theSolutionNode.position.x + theSolutionWidth / 2,
-            theSolutionNode.position.y + theSolutionHeight / 2 + 200, // Offset down a bit
-            { zoom, duration: 1000 }
-          );
-          hasCenteredRef.current = true;
-        }, 100);
-      }
+      // Use fitView to ensure the whole graph is visible even with large coordinates
+      requestAnimationFrame(() => {
+        try {
+          reactFlowInstanceRef.current.fitView({ padding: 0.2, duration: 800, includeHiddenNodes: true });
+          // Optionally zoom out a bit more for a "far away" start
+          const current = reactFlowInstanceRef.current.getZoom?.() ?? 1;
+          const target = Math.max(0.3, current * 0.9);
+          if (target < current && reactFlowInstanceRef.current.zoomTo) {
+            reactFlowInstanceRef.current.zoomTo(target, { duration: 400 });
+          }
+        } catch (e) {
+          // fallback: do nothing
+        }
+        hasCenteredRef.current = true;
+      });
     }
   }, [nodes]);
+
+  const pushHistorySnapshot = useCallback(() => {
+    if (!nodes || nodes.length === 0) return;
+    const snapshot = {
+      nodes: JSON.parse(JSON.stringify(nodes)),
+      edges: JSON.parse(JSON.stringify(edges)),
+    };
+    historyRef.current.push(snapshot);
+  }, [nodes, edges]);
 
   const snapToGrid = useCallback((position) => {
     return {
@@ -328,6 +474,7 @@ export default function LectureTree() {
   }, []);
 
   const handleResetLayout = useCallback(() => {
+    pushHistorySnapshot();
     // Clear localStorage and force re-layout
     localStorage.removeItem("graph-node-changes");
     hasCenteredRef.current = false;
@@ -338,7 +485,7 @@ export default function LectureTree() {
     );
     setLayout({ nodes: ln, edges: le });
     console.log("Layout reset - cleared manual positions");
-  }, []);
+  }, [pushHistorySnapshot]);
 
   const handleExportGraph = useCallback(() => {
     const exportedContent = exportUpdatedGraphContent(nodes);
@@ -356,6 +503,9 @@ export default function LectureTree() {
       );
       const nodeIds = selectedNodeObjects.map((node) => node.id);
       const positions = selectedNodeObjects.map((node) => node.position);
+
+      // Save snapshot before applying alignment
+      pushHistorySnapshot();
 
       let newPositions = [];
 
@@ -421,7 +571,7 @@ export default function LectureTree() {
       setNodes(updatedNodes);
       saveNodeChanges(updatedNodes);
     },
-    [selectedNodes, nodes, setNodes]
+    [selectedNodes, nodes, setNodes, pushHistorySnapshot]
   );
 
   useEffect(() => {
@@ -453,6 +603,113 @@ export default function LectureTree() {
     selected: selectedNodes.includes(node.id),
   }));
 
+  // Handle drag snapshots
+  const onNodeDragStart = useCallback(() => {
+    prevNodesBeforeDragRef.current = JSON.parse(JSON.stringify(nodes));
+    setIsNodeDragging(true);
+  }, [nodes]);
+
+  const onNodeDragStop = useCallback(() => {
+    setIsNodeDragging(false);
+    if (prevNodesBeforeDragRef.current) {
+      historyRef.current.push({
+        nodes: prevNodesBeforeDragRef.current,
+        edges: JSON.parse(JSON.stringify(edges)),
+      });
+      prevNodesBeforeDragRef.current = null;
+    }
+  }, [edges]);
+
+  const handleOpenImport = useCallback(() => {
+    setImportError("");
+    setShowImport(true);
+  }, []);
+
+  const handleCancelImport = useCallback(() => {
+    setShowImport(false);
+  }, []);
+
+  const sanitizeIncomingNodes = useCallback((arr) => {
+    return arr
+      .filter((n) => n && typeof n.id === "string" && n.id.trim().length > 0)
+      .map((n) => {
+        const isTheSolution = n.id === "TheSolution";
+        const width = n.width ?? (isTheSolution ? theSolutionWidth : nodeWidth);
+        const height = n.height ?? (isTheSolution ? theSolutionHeight : nodeHeight);
+        const position = n.position && typeof n.position.x === "number" && typeof n.position.y === "number"
+          ? n.position
+          : { x: 0, y: 0 };
+        return {
+          id: n.id,
+          data: n.data ?? { section: "", grade: "", number: 0, problems: [] },
+          position,
+          width,
+          height,
+          type: "custom",
+        };
+      });
+  }, []);
+
+  const handleApplyImport = useCallback(() => {
+    try {
+      setImportError("");
+
+      // Accept either a plain JSON array or the exact output from Export Graph:
+      //   export const rawNodes = [...];
+      const text = importText.trim();
+      let parsed;
+      try {
+        parsed = JSON.parse(text);
+      } catch {
+        const match = text.match(/export\s+const\s+rawNodes\s*=\s*(\[[\s\S]*\]);?/);
+        if (match && match[1]) {
+          parsed = JSON.parse(match[1]);
+        }
+      }
+
+      if (!Array.isArray(parsed) || parsed.length === 0) {
+        setImportError(
+          "Ожидается непустой JSON-массив или строка вида `export const rawNodes = [...]`"
+        );
+        return;
+      }
+
+      const newRawNodes = sanitizeIncomingNodes(parsed);
+      if (newRawNodes.length === 0) {
+        setImportError("После валидации не осталось корректных узлов");
+        return;
+      }
+      // filter edges to only those whose nodes exist
+      const allowed = new Set(newRawNodes.map((n) => n.id));
+      const filteredEdges = rawEdges.filter(
+        (e) => allowed.has(e.source) && allowed.has(e.target)
+      );
+
+      // Save snapshot before replacing layout
+      pushHistorySnapshot();
+
+      const { nodes: ln, edges: le } = getLayoutedElements(
+        newRawNodes,
+        filteredEdges,
+        "TB"
+      );
+      hasCenteredRef.current = false; // trigger recenter on next render
+      setSelectedNodes([]);
+      setLayout({ nodes: ln, edges: le });
+      setShowImport(false);
+    } catch (err) {
+      setImportError(`Ошибка парсинга: ${err.message}`);
+    }
+  }, [importText, sanitizeIncomingNodes, pushHistorySnapshot]);
+
+  const handleUndo = useCallback(() => {
+    const prev = historyRef.current.pop();
+    if (!prev) return;
+    hasCenteredRef.current = false;
+    setSelectedNodes([]);
+    setLayout({ nodes: prev.nodes, edges: prev.edges });
+  }, []);
+
   return (
     <ThemeProvider theme={lightTheme}>
       <FlowContainer
@@ -460,6 +717,8 @@ export default function LectureTree() {
         onWheelCapture={handleBlockWhileDragging}
         onTouchMoveCapture={handleBlockWhileDragging}
       >
+        <UndoButton onClick={handleUndo}>Undo</UndoButton>
+        <ImportButton onClick={handleOpenImport}>Import Nodes</ImportButton>
         <ExportButton onClick={handleExportGraph}>Export Graph</ExportButton>
         <ResetButton onClick={handleResetLayout}>Reset Layout</ResetButton>
         <ReactFlow
@@ -467,17 +726,17 @@ export default function LectureTree() {
           onInit={(instance) => {
             reactFlowInstanceRef.current = instance;
           }}
+          nodes={nodesWithSelection}
+          edges={edges}
           panOnScroll={false}
           zoomOnScroll={!isNodeDragging}
           zoomOnPinch={!isNodeDragging}
           zoomOnDoubleClick={false}
           preventScrolling={true}
-          nodes={nodesWithSelection}
-          edges={edges}
+          onNodeDragStart={onNodeDragStart}
+          onNodeDragStop={onNodeDragStop}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
-          onNodeDragStart={() => setIsNodeDragging(true)}
-          onNodeDragStop={() => setIsNodeDragging(false)}
           onNodeClick={onNodeClick}
           onPaneClick={onPaneClick}
           nodesDraggable={true}
@@ -494,6 +753,25 @@ export default function LectureTree() {
           <Controls />
           <Background variant="dots" bgColor="red" color="transparent" />
         </ReactFlow>
+        {showImport && (
+          <ModalBackdrop onClick={handleCancelImport}>
+            <ModalCard onClick={(e) => e.stopPropagation()}>
+              <ModalTitle>Вставьте JSON-массив rawNodes или строку вида: export const rawNodes = [...];</ModalTitle>
+              <ModalTextarea
+                value={importText}
+                onChange={(e) => setImportText(e.target.value)}
+                spellCheck={false}
+              />
+              {importError && (
+                <div style={{ color: "#b91c1c", marginTop: 8 }}>{importError}</div>
+              )}
+              <ModalActions>
+                <Secondary onClick={handleCancelImport}>Отмена</Secondary>
+                <Primary onClick={handleApplyImport}>Импортировать</Primary>
+              </ModalActions>
+            </ModalCard>
+          </ModalBackdrop>
+        )}
       </FlowContainer>
     </ThemeProvider>
   );
