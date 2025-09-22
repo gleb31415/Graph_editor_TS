@@ -1,0 +1,35 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{graphicx}
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+\onehalfspacing
+
+\begin{document}
+
+\subsubsection*{Теплопроводность}
+
+\textit{Закон Фурье}:
+\[
+\frac{Q}{t} = \kappa A\frac{T_1 - T_2}{l},
+\quad
+\frac{dQ}{dt} = -\kappa A\frac{dT}{dx}.
+\]
+
+\subsubsection*{Закон Ньютона-Рихмана}
+
+\[
+\frac{dQ}{dt} = \alpha A\bigl(T_{\text{тело}} - T_{\text{окр}}\bigr).
+\]
+
+\textbf{Пример:} Стена из двух слоёв:
+\[
+\frac{Q}{t} = A\,(T_{\text{внутр}} - T_{\text{наруж}})\Bigl(\frac{l_1}{\kappa_1} + \frac{l_2}{\kappa_2}\Bigr)^{-1}.
+\]
+
+\end{document}

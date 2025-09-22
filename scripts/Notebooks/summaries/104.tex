@@ -1,0 +1,51 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Понятие ВАХ}
+
+\textit{Вольт–амперная характеристика (ВАХ)} — график зависимости тока $I$ от напряжения $U$.
+
+\subsubsection*{Последовательное соединение}
+
+\[
+U = U_1 + U_2, \quad I = f_1(U_1) = f_2(U_2).
+\]
+
+\subsubsection*{Параллельное соединение}
+
+\[
+I = I_1 + I_2 = f_1(U) + f_2(U).
+\]
+
+\subsubsection*{Нагрузочная прямая}
+
+Для источника ЭДС $\mathscr{E}$ с внутренним сопротивлением $R$:
+
+\[
+U = \mathscr{E} - IR, \quad I = \frac{\mathscr{E} - U}{R}.
+\]
+
+Рабочая точка определяется решением системы
+
+\[
+\begin{cases}
+I = I_{\rm эл}(U), \\
+U = \mathscr{E} - IR.
+\end{cases}
+\]
+
+\subsubsection*{Диоды}
+
+Идеальный диод: ток в прямом направлении без падения напряжения, в обратном — блокировка.
+
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Вязкое трение}
+\[
+\vec F_{\rm вяз} = 
+\begin{cases}
+-k_1 \vec v, & \text{ламинарный режим},\\
+-k_2 v \vec v, & \text{турбулентный режим},
+\end{cases}
+\]
+
+\subsubsection*{Режимы обтекания и закон Стокса}
+\[
+\mathrm{Re} = \frac{\rho v L}{\eta}, \quad
+\vec F_{\rm Стокса} = -6\pi \eta R \vec v.
+\]
+
+\subsubsection*{Движение под действием линейного сопротивления}
+\[
+m \frac{dv}{dt} = -k_1 v, \quad v(t) = v_0 e^{-\frac{k_1}{m} t}.
+\]
+
+\subsubsection*{Движение под действием квадратичного сопротивления}
+\[
+m \frac{dv}{dt} = -k_2 v^2, \quad v(t) = \frac{v_0}{1 + \frac{k_2}{m} v_0 t}.
+\]
+
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Пример бесконечной цепи}
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{8inf1.png}
+\end{center}
+
+\subsubsection*{Вычисление сопротивления бесконечной цепи}
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{8inf2.png}
+\end{center}
+
+\[
+R_{\rm ветвь} = \Bigl(\frac1R + \frac1{R_{\infty}}\Bigr)^{-1}, \quad
+R_{\infty} = R + R_{\rm ветвь} = R + \Bigl(\frac1R + \frac1{R_{\infty}}\Bigr)^{-1}.
+\]
+
+\[
+R_\infty = \frac{R\,(1 + \sqrt5)}{2}.
+\]
+
+\end{document}

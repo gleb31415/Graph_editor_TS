@@ -1,0 +1,56 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\subsubsection*{Первообразная и неопределённый интеграл}
+\[
+F'(x)=f(x).
+\]
+\[
+\int f(x)\,dx = F(x) + C,
+\]
+
+\subsubsection*{Определённый интеграл}
+\[
+\int_{a}^{b} f(x)\,dx = F(b) - F(a).
+\]
+
+\subsubsection*{Свойства интегралов}
+\[
+\int_a^b c\,f(x)\,dx = c\int_a^b f(x)\,dx,
+\quad
+\int_{a}^{b} \bigl(f(x)+g(x)\bigr)\,dx = \int_{a}^{b} f(x)\,dx + \int_{a}^{b} g(x)\,dx.
+\]
+
+\subsubsection*{Основные интегралы}
+\[
+\int x^n\,dx = \frac{x^{n+1}}{n+1} + C,\quad n\neq -1,
+\quad
+\int \sin x\,dx = -\cos x + C.
+\]
+
+\subsubsection*{Экспонента}
+\[
+\frac{d}{dx}e^x = e^x,
+\quad
+\int \frac{dx}{x} = \ln x + C.
+\]
+
+\subsubsection*{Интегрирование по частям}
+\[
+\frac{d}{dx}(uv)=u'v+uv',
+\quad
+\int u'v\,dx = uv - \int uv'\,dx.
+\]
+
+\end{document}

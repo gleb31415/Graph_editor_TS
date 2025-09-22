@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import ReactFlow, {
   Controls,
   Background,
@@ -25,6 +25,65 @@ import {
 const FlowContainer = styled.div`
   width: 100vw;
   height: 100vh;
+`;
+
+// Search UI
+const SearchBarWrapper = styled.div`
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(540px, 90vw);
+`;
+
+const SearchInput = styled.input`
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.06);
+  &:focus { border-color: #0066ff; box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15); }
+`;
+
+const SearchDropdown = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+const SearchResultsContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.18);
+  padding: 6px 0;
+  max-height: 260px;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar { display: none; width: 0; height: 0; }
+`;
+
+const SearchResultItem = styled.button`
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111827;
+  &:hover { background: #f2f4f7; }
 `;
 
 const ExportButton = styled.button`
@@ -274,6 +333,8 @@ export default function LectureTree() {
   const [selectedNodes, setSelectedNodes] = useState([]);
   const [isNodeDragging, setIsNodeDragging] = useState(false);
   const [isSelectMode, setIsSelectMode] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   // Hold-to-select with Shift
   useEffect(() => {
@@ -395,6 +456,55 @@ export default function LectureTree() {
         hasCenteredRef.current = true;
       });
     }
+  }, [nodes]);
+
+  // Compute search results and dimming
+  const searchResults = useMemo(() => {
+    const q = (searchTerm || "").trim().toLowerCase();
+    if (!q) return [];
+    return nodes
+      .filter((n) => {
+        const idTxt = n.id?.toLowerCase?.() || "";
+        const secTxt = (n.data?.section || "").toLowerCase();
+        return idTxt.includes(q) || secTxt.includes(q);
+      })
+      .slice(0, 20);
+  }, [nodes, searchTerm]);
+
+  const dimmedNodes = useMemo(() => {
+    const q = (searchTerm || "").trim().toLowerCase();
+    const hasSearch = q.length > 0;
+    return nodes.map((n) => {
+      const idMatch = n.id?.toLowerCase?.().includes(q);
+      const sectionMatch = (n.data?.section || "").toLowerCase().includes(q);
+      const matches = !hasSearch || idMatch || sectionMatch;
+      const opacity = hasSearch && !matches ? 0.6 : 1;
+      return { ...n, style: { ...(n.style || {}), opacity, transition: "opacity 0.2s ease" } };
+    });
+  }, [nodes, searchTerm]);
+
+  const dimmedEdges = useMemo(() => {
+    const opacities = new Map(dimmedNodes.map((n) => [n.id, n.style?.opacity ?? 1]));
+    const hasSearch = (searchTerm || "").trim().length > 0;
+    return edges.map((e) => {
+      const so = opacities.get(e.source) ?? 1;
+      const to = opacities.get(e.target) ?? 1;
+      const dim = hasSearch && (so < 1 || to < 1);
+      return { ...e, style: { ...(e.style || {}), opacity: dim ? 0.6 : 1 } };
+    });
+  }, [edges, dimmedNodes, searchTerm]);
+
+  const centerOnNode = useCallback((id) => {
+    const inst = reactFlowInstanceRef.current;
+    if (!inst || !id) return;
+    try {
+      const rfNode = inst.getNode?.(id);
+      const n = rfNode || nodes.find((x) => x.id === id);
+      if (!n) return;
+      const cx = n.position.x + (n.width || nodeWidth) / 2;
+      const cy = n.position.y + (n.height || nodeHeight) / 2;
+      inst.setCenter?.(cx, cy, { zoom: 1.0, duration: 600 });
+    } catch (_) {}
   }, [nodes]);
 
   const pushHistorySnapshot = useCallback(() => {
@@ -651,6 +761,14 @@ export default function LectureTree() {
     selected: selectedNodes.includes(node.id),
   }));
 
+  const displayNodesWithSelection = useMemo(() => {
+    const byId = new Map(dimmedNodes.map((n) => [n.id, n]));
+    return nodesWithSelection.map((n) => {
+      const dimmed = byId.get(n.id) || n;
+      return { ...dimmed, selected: n.selected };
+    });
+  }, [nodesWithSelection, dimmedNodes]);
+
   // Handle drag snapshots
   const onNodeDragStart = useCallback(() => {
     prevNodesBeforeDragRef.current = JSON.parse(JSON.stringify(nodes));
@@ -766,6 +884,37 @@ export default function LectureTree() {
         onTouchMoveCapture={handleBlockWhileDragging}
       >
         <UndoButton onClick={handleUndo}>Undo</UndoButton>
+        {/* Search UI */}
+        <SearchBarWrapper>
+          <SearchInput
+            placeholder="Поиск узлов..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onFocus={() => setIsSearchFocused(true)}
+            onBlur={() => setTimeout(() => setIsSearchFocused(false), 150)}
+          />
+          {isSearchFocused && searchTerm.trim() && (
+            <SearchDropdown>
+              <SearchResultsContainer>
+                {searchResults.length > 0 ? (
+                  searchResults.map((n) => (
+                    <SearchResultItem key={n.id} onMouseDown={() => centerOnNode(n.id)}>
+                      {n.id}
+                      {n.data?.section ? (
+                        <span style={{ color: "#475467" }}>
+                          {"  ·  "}
+                          {n.data.section}
+                        </span>
+                      ) : null}
+                    </SearchResultItem>
+                  ))
+                ) : (
+                  <div style={{ padding: "8px 12px", color: "#475467" }}>Ничего не найдено</div>
+                )}
+              </SearchResultsContainer>
+            </SearchDropdown>
+          )}
+        </SearchBarWrapper>
         <ImportButton onClick={handleOpenImport}>Import Nodes</ImportButton>
         <ExportButton onClick={handleExportGraph}>Export Graph</ExportButton>
         <ResetButton onClick={handleResetLayout}>Reset Layout</ResetButton>
@@ -774,8 +923,8 @@ export default function LectureTree() {
           onInit={(instance) => {
             reactFlowInstanceRef.current = instance;
           }}
-          nodes={nodesWithSelection}
-          edges={edges}
+          nodes={displayNodesWithSelection}
+          edges={dimmedEdges}
           panOnScroll={false}
           zoomOnScroll={!isNodeDragging}
           zoomOnPinch={!isNodeDragging}

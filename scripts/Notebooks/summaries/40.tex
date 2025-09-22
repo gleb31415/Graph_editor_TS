@@ -1,0 +1,46 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Движение во вращательной СО}
+
+\[
+\vec{v} = \vec{v_0}+ [\vec{\omega} \times\vec{R}]+\vec{v_r},
+\quad
+\frac{d}{dt} \vec{v} = \vec{a_0} + [\vec{\varepsilon} \times\vec{R}] + [\vec{\omega} \times[\vec{\omega} \times\vec{R}]] + 2[\vec{\omega} \times\vec{v_r}]+\frac{d_r}{dt}\vec{v_r}
+\]
+
+\[
+\vec{F_{\text{и}}} = -m\vec{a_0}, \quad
+\vec{F_{\text{пв}}} = -m[\vec{\varepsilon} \times\vec{R}], \quad
+\vec{F_\text{к}} = -2m[\vec{\omega} \times\vec{v_r}], \quad
+\vec{F_{o}} = -m[\vec{\omega} \times[\vec{\omega} \times\vec{R}]]
+\]
+
+\subsubsection*{Гидродинамика во вращающихся сосудах}
+
+\[
+\vec F_{\rm цб} = m\omega^2\vec r, \quad
+\vec g_\text{eff} = \vec{g} +\omega^2\vec r,
+\quad
+\tan\alpha = \frac{\omega^2r}{g}
+\]
+
+\[
+\frac{dz}{dr} = \frac{\omega^2r}{g} \implies z(r) = \frac{\omega^2}{2g}r^2 + C
+\]
+
+\[
+\vec F_A = -\rho V\vec g_{\rm eff}
+\]
+
+\end{document}

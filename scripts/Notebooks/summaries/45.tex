@@ -1,0 +1,50 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{geometry}
+\onehalfspacing
+\setlength\parindent{0pt}
+\geometry{top=2cm,bottom=2cm,left=1.5cm,right=1.5cm}
+
+\begin{document}
+
+\subsubsection*{Столкновения}
+
+\[
+\sum \vec p_i = \text{const}
+\]
+
+\subsubsection*{Абсолютно упругий удар}
+
+\[
+m_1\vec v_{1}+m_2\vec v_{2}=m_1\vec v_{1}'+m_2\vec v_{2}',
+\quad
+\frac12m_1v_{1}^2+\frac12m_2v_{2}^2
+=\frac12m_1{v_{1}'}^2+\frac12m_2{v_{2}'}^2.
+\]
+
+Для прямолинейного удара:
+
+\[
+v_{1}'=\frac{m_1-m_2}{m_1+m_2}v_{1}+\frac{2m_2}{m_1+m_2}v_{2}, 
+\quad
+v_{2}'=\frac{2m_1}{m_1+m_2}v_{1}+\frac{m_2-m_1}{m_1+m_2}v_{2}.
+\]
+
+\subsubsection*{Абсолютно неупругий удар}
+
+\[
+\vec v_c=\frac{m_1\vec v_{1}+m_2\vec v_{2}}{m_1+m_2}.
+\]
+
+\subsubsection*{Система отсчёта центра масс}
+
+\[
+\vec p^{(C)} = \sum_i m_i(\vec v_i - \vec v_C) = 0.
+\]
+
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Деформация пружин}
+
+\[
+\Delta x = L - L_0,
+\quad
+F = -k\,\Delta x.
+\]
+
+\subsubsection*{Системы пружин: параллельное соединение}
+
+\[
+F = (k_1 + k_2)\,\Delta x,
+\quad
+k_{\rm eq}^{\rm (пар)} = k_1 + k_2.
+\]
+
+\subsubsection*{Системы пружин: последовательное соединение}
+
+\[
+\frac1{k_{\rm eq}^{\rm (посл)}} = \frac1{k_1} + \frac1{k_2},
+\quad
+k_{\rm eq}^{\rm (посл)} = \frac{k_1\,k_2}{k_1 + k_2}.
+\]
+
+\end{document}
