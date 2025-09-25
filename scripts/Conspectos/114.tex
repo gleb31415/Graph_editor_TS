@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Поляризация}
+Диэлектрическая проницаемость $\varepsilon$ — это число, показывающее, во сколько раз материал ослабляет электрическое поле из-за \textit{поляризации} (ориентация молекул с неравномерным распределением заряда под действием поля, эквивалентная появлению связанных зарядов на границах образца). При включении внешнего поля молекулы (или их электронные оболочки) слегка смещаются: на гранях образца появляются связанные заряды $\pm\sigma_{\text{св}}$, создающие встречное поле и уменьшающие результирующее $E$ внутри. Для линейных материалов величина связанных зарядов пропорциональна полю:
+\[
+\sigma_{\text{св}} = (\varepsilon-1)\,\varepsilon_0\,E.
+\]
+Здесь коэффициент $(\varepsilon-1)$ — просто численная мера «наводимости» полярных молекул в веществе. Поэтому в вакууме $\varepsilon = 1$ --- молекул нет.
+
+\subsubsection*{Граничное условие}
+
+\begin{center}
+\includegraphics[width=0.22\linewidth]{10epsilon1.png}
+\label{fig:mpr}
+\end{center}
+
+Пусть две пластины несут свободные заряды $\pm\sigma$ и зазор полностью заполнен однородным диэлектриком. В вакууме
+\[
+E_{\text{вак}}=\frac{\sigma}{\varepsilon_0}.
+\]
+В диэлектрике внутреннее поле создаётся \emph{итоговой} поверхностной плотностью на гранях зазора: свободная $\sigma$ и связанная на гранях диэлектрика $-\sigma_{\text{св}}$. Тогда
+\[
+E=\frac{\sigma-\sigma_{\text{св}}}{\varepsilon_0}=\frac{\sigma-(\varepsilon-1)\varepsilon_0 E}{\varepsilon_0}
+\quad\Longrightarrow\quad
+\varepsilon\,E=\frac{\sigma}{\varepsilon_0}.
+\]
+Отсюда немедленно следует
+\[
+\boxed{\,E=\frac{E_{\text{вак}}}{\varepsilon}.\,}
+\]
+То есть при тех же свободных зарядах на электродах поле внутри однородного диэлектрика в $\varepsilon$ раз меньше, чем в вакууме; напряжение между пластинами уменьшается в $\varepsilon$ раз. Если формулировать более общий факт, то если заполнить кусок пространства (вакуума) диэлектриком проницаемости $\varepsilon$ не меняя распределение свободных зарядов в пространстве, напряжённость поля внутри диэлектрика уменьшится в $\varepsilon$ раз.
+
+
+
+\end{document}

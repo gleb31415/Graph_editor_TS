@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{top=2cm,bottom=2cm,left=1.5cm,right=1.5cm}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\subsubsection*{Малые величины и порядок малости}
+\[
+f(\varepsilon)=O(\varepsilon^k), \quad f(\varepsilon)=o(\varepsilon^k).
+\]
+
+\subsubsection*{Линейные аппроксимации}
+\[
+f(x+dx)\approx f(x)+f'(x)\,dx, \quad (1+x)^n \approx 1+n x, \quad \sin x\approx x.
+\]
+
+\subsubsection*{Ряд Тейлора}
+\[
+f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2+\dots
+\]
+
+\subsubsection*{Короткая шпаргалка рядов для малых}
+\[
+e^{x}=1+x+\frac{x^{2}}{2}+O(x^{3}), \quad \ln(1+x)=x-\frac{x^{2}}{2}+O(x^{3}),
+\]
+\[
+\sin x=x-\frac{x^{3}}{6}+O(x^{5}), \quad \cos x=1-\frac{x^{2}}{2}+O(x^{4}).
+\]
+
+\textbf{Пример 1.}
+\[
+\frac{dS}{S}\approx \frac{da}{a}+\frac{db}{b}.
+\]
+
+\textbf{Пример 2.}
+\[
+\frac{dE_k}{E_k}\approx \frac{dm}{m}+2\frac{dv}{v}.
+\]
+
+\[
+\frac{du}{u} = a\frac{dx}{x}+b\frac{dy}{y}.
+\]
+
+\textbf{Пример 3.}
+\[
+\boxed{\sqrt{1+\sin x}\approx 1+\frac12 x \quad (|x|\ll1).}
+\]
+
+\textbf{Пример 4.}
+\[
+\boxed{\tan x \approx x + \frac{x^3}{3} \quad (|x|\ll 1).}
+\]
+
+\end{document}

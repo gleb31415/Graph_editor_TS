@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Постановка задачи}
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{10ftl1.jpeg}
+\label{fig:mpr}
+\end{center} 
+
+Рассмотрим собирающую тонкую линзу с фокусным расстоянием $f$. Пусть предмет высоты $y$ расположен на расстоянии $a>f$ слева от линзы; изображение высоты $y'$ получается справа на расстоянии $b$. Возьмём два стандартных луча от вершины предмета:
+\begin{itemize}
+  \item луч $1$ идёт параллельно главной оси и после линзы проходит через правый фокус $F$;
+  \item луч $2$ проходит через оптический центр линзы $O$ и не отклоняется.
+\end{itemize}
+Точку пересечения этих лучей справа от линзы и будем называть вершиной изображения.
+
+\subsubsection*{Вывод формулы}
+
+\begin{center}
+\includegraphics[width=0.67\linewidth]{10ftl2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Из луча $2$ получаем отношение высот и расстояний (треугольники $AOB$ и $A'OB'$ подобны):
+\[
+\frac{y'}{b}=-\,\frac{y}{a}\quad\Longrightarrow\quad \frac{|y'|}{y}=\frac{b}{a}.
+\]
+Из луча $1$ получаем второе подобие: прямоугольные треугольники с катетами по оси и по высоте (между точкой на линзе на высоте $y$ и точками $F$ и $B'$) дают
+\[
+\frac{y}{f}=\frac{|y'|}{\,b-f\,}.
+\]
+Подставляя \(|y'|=y\,\dfrac{b}{a}\), получаем
+\[
+\frac{y}{f}=\frac{y\,\dfrac{b}{a}}{\,b-f\,}
+\quad\Longrightarrow\quad
+\frac{1}{f}=\frac{b}{a\,(b-f)}
+\quad\Longrightarrow\quad
+\frac{1}{a}+\frac{1}{b}=\frac{1}{f}.
+\]
+Это и есть \textit{формула тонкой линзы} для собирающей линзы при $a>f$.
+
+\subsubsection*{Общий вид}
+
+\begin{center}
+\includegraphics[width=0.64\linewidth]{10ftl3.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Удобная знаковая конвенция: свет идёт слева направо, расстояния считаем алгебраически от центра линзы $O$ вдоль оси; для собирающей линзы $f>0$, для рассеивающей $f<0$; действительное изображение справа имеет $b>0$, мнимое слева имеет $b<0$; реальный предмет слева имеет $a>0$, мнимый справа имеет $a<0$. Тогда в общем виде:
+\[
+\boxed{\ \frac{1}{a}+\frac{1}{b}=\frac{1}{f}\ }
+\]
+Все остальные случаи (предмет в фокусе, предмет ближе фокуса, рассеивающая линза,
+мнимые предметы и т.д.) выводятся аналогично теми же двумя лучами 
+и подобиями треугольников, только меняются знаки $a,b,f$ согласно конвенции. Рекомендуем самостоятельно проверить пару других случаев,  чтобы лучше понимать, как работает формула.
+
+
+
+\end{document}

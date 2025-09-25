@@ -1,0 +1,98 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Левая и правая ветви}
+Рассмотрим легкий блок — жесткое колесо радиуса \(R\), закреплённое на неподвижной оси. 
+Через блок перекинута нить, к концам которой прикреплены грузы или действуют внешние силы. 
+Введём обозначения: \(T_1\) и \(T_2\) — силы натяжения в левой и правой ветвях нити. 
+
+\begin{center}
+\includegraphics[width=0.3\linewidth]{7statblock1.png}
+\label{fig:mpr}
+\end{center}
+
+Поскольку блок легкий (его масса пренебрежимо мала) и трения нет, равновесие блока требует, чтобы сумма моментов сил относительно центра блока была равна нулю:
+
+\[
+T_1R - T_2R = 0
+\quad\Longrightarrow\quad
+T_1 = T_2 = T.
+\]
+Таким образом, натяжение нити сохраняется по обе стороны блока и равно \(T\).
+Важно понимать, что мы рассматриваем равновесие системы, указанной на рисунке (блок и кусок нити, перекинутый через него). 
+
+
+\subsubsection*{Центральная и боковые нити}
+
+Теперь найдём силу натяжения $T_0$ нити, на которой подвешен блок. На блок вверх направлена $T_0$, вниз — две силы натяжения \(T\) в ветвях:
+
+\begin{center}
+\includegraphics[width=0.17\linewidth]{7statblock2.png}
+\label{fig:mpr}
+\end{center}
+
+
+Баланс вертикальных сил даёт
+\[
+T_0 - 2T = 0
+\quad\Longrightarrow\quad
+T_0 = 2T.
+\]
+
+
+\textbf{Пример.} 
+
+Груз массы \(m\) поддерживается одним подвижным блоком без трения.
+
+\begin{center}
+\includegraphics[width=0.17\linewidth]{7statblock.png}
+\label{fig:mpr}
+\end{center}
+
+
+
+На груз действует $T_0$ и $mg$, поэтому
+\[
+T_0 = mg.
+\]
+\[
+T = \frac{T_0}{2} = \frac{mg}{2}.
+\]
+
+
+
+
+\end{document}

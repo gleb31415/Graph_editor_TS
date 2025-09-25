@@ -1,0 +1,105 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Деформация пружин}
+
+\textit{Деформация} – это изменение формы или размера тела под действием внешних сил. 
+Для пружины деформацией называют удлинение или сжатие, которое обозначим через $\Delta x$. Если пружина в ненагруженном состоянии имеет длину $L_0$, а под нагрузкой – длину $L$, то абсолютная деформация равна
+\[
+\Delta x = L - L_0.
+\]
+
+\textit{Закон Гука}  формулируется так: сила упругости $F$ пропорциональна деформации $\Delta x$ и направлена противоположно внешней силе:
+\[
+F = -k\,\Delta x,
+\]
+где $k$ называется \textit{жёсткостью пружины} (или коэффициентом упругости), измеряется в ньютонах на метр (Н/м). Чем больше $k$, тем более «жёсткая» пружина.
+
+\subsubsection*{Системы пружин: параллельное соединение}
+
+Рассмотрим теперь системы из двух пружин с жёсткостями $k_1$ и $k_2$.  
+
+Параллельное соединение означает, что пружины составляют «пакет» и к ним приложена одна и та же сила $F$, 
+а общая деформация у обеих пружин одинаковая, $\Delta x$ (рис.). 
+
+\begin{center}
+\includegraphics[width=0.36\linewidth]{7springs1.png}
+\label{fig:mpr}
+\end{center}
+
+По закону Гука для каждой пружины:
+\[
+F_1 = k_1\,\Delta x,\qquad F_2 = k_2\,\Delta x.
+\]
+Полная сила равна сумме: 
+\[
+F = F_1 + F_2 = (k_1 + k_2)\,\Delta x.
+\]
+Следовательно, система ведёт себя как одна пружина с эквивалентной жёсткостью
+\[
+k_{\rm eq}^{\rm (пар)} = k_1 + k_2.
+\]
+
+\subsubsection*{Системы пружин: последовательное соединение}
+
+Последовательное соединение означает, что пружины соединены «цепочкой», к одной концу приложена сила $F$, а общий прогиб $\Delta x$ складывается из прогибов каждой пружины: 
+\begin{center}
+\includegraphics[width=0.2\linewidth]{7springs2.png}
+\label{fig:mpr}
+\end{center}
+\[
+\Delta x = \Delta x_1 + \Delta x_2,
+\]
+где по закону Гука
+\[
+F = k_1\,\Delta x_1,\qquad F = k_2\,\Delta x_2.
+\]
+Из этих равенств
+\[
+\Delta x_1 = \frac{F}{k_1},\qquad \Delta x_2 = \frac{F}{k_2},
+\]
+поэтому
+\[
+\Delta x = F\,\Bigl(\frac1{k_1} + \frac1{k_2}\Bigr).
+\]
+Если систему заменить одной пружиной с жёсткостью $k_{\rm eq}^{\rm (посл)}$, то $F = k_{\rm eq}^{\rm (посл)}\,\Delta x$, и сравнивая с предыдущим выражением получаем
+\[
+\frac1{k_{\rm eq}^{\rm (посл)}} = \frac1{k_1} + \frac1{k_2},
+\qquad
+k_{\rm eq}^{\rm (посл)} = \frac{k_1\,k_2}{k_1 + k_2}.
+\]
+
+\end{document}

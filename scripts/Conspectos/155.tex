@@ -1,0 +1,101 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Политропический процесс}
+\textit{Молярная теплоёмкость} газа определяется как
+\[
+C=\frac{1}{\nu}\frac{dQ}{dT}.
+\]
+\textit{Политропический процесс} — это процесс, в котором теплоёмкость газа остаётся постоянной. Рассмотрим такой процесс с теплоёмкостью \(C\) для \(\nu\) молей идеального газа с \(i\) степенями свободы.
+
+\subsubsection*{ПНТ в дифференциальной форме}
+Первое начало термодинамики: 
+\[
+dQ=dU+p\,dV.
+\]
+Для идеального газа \(U=\dfrac{i}{2}\,\nu R T\), поэтому \(dU=\dfrac{i}{2}\,\nu R\,dT\). Так как теплоёмкость в процессе постоянна, то \(dQ=\nu C\,dT\). Следовательно
+\[
+\nu C\,dT=\frac{i}{2}\,\nu R\,dT+p\,dV,
+\]
+или, в эквивалентной форме,
+\[
+p\,dV=\nu\bigl(C-\frac{i}{2}R\bigr)\,dT.
+\]
+Эта запись и есть ПНТ, специализированное к политропическому процессу с постоянной молярной теплоёмкостью \(C\).
+
+
+\subsubsection*{Инварианты \(p,V,T\) для политропы}
+Из уравнения состояния \(pV=\nu R T\) имеем \(dT=\dfrac{1}{\nu R}(V\,dp+p\,dV)\). Подставляя в предыдущий результат:
+\[
+p\,dV=\nu(C-C_V)\cdot\frac{1}{\nu R}\,(V\,dp+p\,dV)
+\]
+\[
+\Longrightarrow\quad
+(C-C_V)\,V\,dp+(C-C_p)\,p\,dV=0,
+\]
+где \(C_p=C_V+R\). Делим на \(pV\):
+\[
+(C-C_V)\frac{dp}{p}+(C-C_p)\frac{dV}{V}=0.
+\]
+Вводя показатель политропы
+\[
+n=\frac{C-C_p}{C-C_V},
+\]
+получаем
+\[
+\frac{dp}{p}+n\,\frac{dV}{V}=0
+\quad\Longrightarrow\quad
+d\bigl(\ln(pV^{\,n})\bigr)=0
+\quad\Longrightarrow\quad
+\,p\,V^{n}=\text{const}.
+\]
+Из \(pV=\nu R T\) следуют ещё два инварианта:
+\[
+T\,V^{\,n-1}=\text{const},\qquad
+p^{\,1-n}\,T^{\,n}=\text{const}.
+\]
+Проверка частных случаев: при \(C=C_p\) имеем \(n=0\Rightarrow p=\text{const}\) (изобара), при \(C\to\infty\) получаем \(n\to1\Rightarrow pV=\text{const}\) (изотерма), при \(C=C_V\) знаменатель обращается в ноль и получается \(V=\text{const}\) (изохора), при адиабате \(C=0\Rightarrow n=\dfrac{C_p}{C_V}=\gamma\Rightarrow pV^{\gamma}=\text{const}\).
+
+
+
+
+
+
+
+
+\end{document}

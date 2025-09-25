@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Вязкое трение}
+
+\subsection*{Основные режимы}
+Сила вязкого сопротивления в двух режимах:
+\[
+\begin{cases}
+\vec F_{\rm вяз} = -k_1\vec v, & \text{ламинарный режим}\\
+\vec F_{\rm вяз} = -k_2v\vec v, & \text{турбулентный режим}
+\end{cases}
+\]
+
+Число Рейнольдса определяет режим течения:
+\[ \mathrm{Re} = \frac{\rho v L}{\eta} \]
+
+Закон Стокса для малого шара в ламинарном режиме:
+\[ \vec F_{\rm Стокса} = -6\pi \eta R\,\vec v \]
+
+\subsection*{Движение с линейным сопротивлением}
+Скорость и координата со временем:
+\[ v(t) = v_0e^{-\tfrac{k_1}{m}t} \]
+\[ x(t) = \frac{m}{k_1}\,v_0(1 - e^{-\tfrac{k_1}{m}t}) \]
+
+\subsection*{Движение с квадратичным сопротивлением}
+Скорость и координата со временем:
+\[ v(t) = \frac{v_0}{1 + \tfrac{k_2}{m}v_0\,t} \]
+\[ x(t) = \frac{m}{k_2}\,\ln\,\!(1 + \tfrac{k_2}{m}v_0\,t) \]
+
+\end{document}

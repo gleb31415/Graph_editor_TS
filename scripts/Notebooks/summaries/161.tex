@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Ввод энтропии для квазистатического процесса}
+
+\[
+dS = \frac{\delta Q_{\text{кв.ст.}}}{T}, \quad S_1 - S_0 = \int\limits_{0 \rightarrow 1} \frac{\delta Q}{T}
+\]
+
+\subsubsection*{Ограничения для энтропии}
+
+\[
+\int\limits_{1\rightarrow2}^{\mathrm{I}} \frac{\delta Q}{T} \le \int\limits_{1\rightarrow2}^{\mathrm{II}} \frac{\delta Q_{\text{кв.ст.}}}{T} = S_2 - S_1, \quad S_2 \ge S_1
+\]
+
+\subsubsection*{Энтропия идеального газа}
+
+\[
+\Delta S = \nu C_V \ln\left(\frac{T}{T_0}\right) + \nu R \ln\left(\frac{V}{V_0}\right)
+\]
+
+\subsubsection*{Извлечение максимальной работы}
+
+\[
+A = C \left(\sqrt{T_{20}} - \sqrt{T_{10}}\right)^2, \quad T_1 T_2 = T_{10} T_{20}
+\]
+
+\subsubsection*{Координаты $TS$}
+
+\[
+Q = \int \delta Q = \int T dS
+\]
+
+Для цикла Карно:
+
+\[
+\eta = \frac{A}{Q_+} = \frac{T_2 - T_1}{T_2}
+\]
+
+\textbf{Пример 1. КПД цикла}
+
+\[
+\eta = \frac{C_P (T_3 - T_2) - C_V (T_3 - T_1)}{C_P (T_3 - T_2)}
+\]
+
+\textbf{Пример 2. Фазовый переход на $TS$ диаграмме}
+
+\begin{itemize}
+\item $1 \rightarrow 2$ – фазовый переход жидкость–газ
+\item $2 \rightarrow 3$ – изотерма (газ)
+\item $3 \rightarrow 4$ – изобара (газ)
+\item $4 \rightarrow 5$ – конденсация
+\item $5 \rightarrow 6$ – изохора (жидкость)
+\item $6 \rightarrow 1$ – изотерма (жидкость)
+\end{itemize}
+
+\end{document}

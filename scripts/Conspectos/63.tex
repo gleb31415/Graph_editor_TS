@@ -1,0 +1,235 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам 
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+\subsubsection*{Связь косинуса и тангенса}
+Синус и косинус связаны соотношением  
+\[
+\sin^2\alpha + \cos^2\alpha = 1.
+\]
+Из него вытекает  
+\[
+\tan^2\alpha + 1 = \frac{\sin^2\alpha}{\cos^2\alpha} + 1 = \frac{\sin^2\alpha + \cos^2\alpha}{\cos^2\alpha} = \frac{1}{\cos^2\alpha}.
+\]
+
+Аналогично можно вывести
+
+\[
+\frac{1}{\sin^2\alpha} = \cot^2\alpha + 1
+\]
+
+\subsubsection*{Площадь треугольника}
+
+Мы знаем простую формулу площади треугольника через длину высоты и основания:
+
+\[
+S_\Delta = \frac{ah}{2}.
+\]
+
+Мы также можем выразить высоту $h$ треугольника через одну из сторон с помощью тригонометрических функций.
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{9trig1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+\[
+h = b\sin\alpha 
+\quad\Longrightarrow\quad
+S_\Delta = \frac{ab\sin\alpha}{2}
+\]
+
+Таким образом, мы получили формулу площади треугольника через две стороны и угол между ними. Понятно, что площадь параллелограмма аналогично можно выразить через его стороны и угол:
+
+\[
+S_\Delta = ab\sin\alpha.
+\]
+
+
+\subsubsection*{Формулы суммы и разности углов}
+Пусть у нас есть два угла $\alpha$ и $\beta$. Тогда, рассматривая поворот вектора на угол $\alpha$ а затем на $\beta$, получаем
+
+\[
+\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta.
+\]
+
+
+Докажем эту формулу. Для этого возьмём прямоугольник на рисунке, разбитый на $4$ 
+прямоугольных треугольника с гипотенузой $1$, два из которых с углом $\alpha$, два других
+--- с углом $\beta$, и $2$ прямоугольника со сторонами, выражающимияся через тригонометрические
+функции $\alpha$ и $\beta$:
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{9trig2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Тот же прямоугольник можно разбить на те же $4$ треугольника, расставленных иначе, 
+и ромб со стороной $1$ и углом $\alpha+\beta$:
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{9trig3.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Площадь ромба и сумма площадей двух прямоугольников с прошлого рисунка равны, то есть
+
+\[
+1\cdot 1\cdot\sin(\alpha+\beta) = \sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta,
+\]
+
+что и требовалось доказать. Чтобы получить косинус суммы углов, просто воспользуемся свойством $\sin(90^\circ-\alpha) = \cos\alpha$.
+
+
+\[
+\cos(\alpha + \beta) = \sin(90^\circ-\alpha-\beta) = \sin(90^\circ-\alpha)\cos(-\beta) + \cos(90^\circ-\alpha)\sin(-\beta) =  \cos\alpha\cos\beta - \sin\alpha\sin\beta,
+\]
+
+Для разности углов достаточно заменить $\beta$ на $-\beta$, учтя что $\cos(-\beta)=\cos\beta$ и $\sin(-\beta)=-\sin\beta$:
+\[
+\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta,
+\]
+\[
+\sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta.
+\]
+Отсюда напрямую вытекают обратные преобразования (формулы для произведения тригонометрических функций):
+\[
+\sin A \,\sin B = \tfrac{1}{2}\bigl[\cos(A - B) - \cos(A + B)\bigr],
+\]
+\[
+\cos A \,\cos B = \tfrac{1}{2}\bigl[\cos(A - B) + \cos(A + B)\bigr],
+\]
+\[
+\sin A \,\cos B = \tfrac{1}{2}\bigl[\sin(A + B) + \sin(A - B)\bigr],
+\]
+
+а также формулы преобразования суммы и разности тригонометрических функций:
+
+\[
+\sin \alpha + \sin \beta = 2 \sin\,\!\bigl(\tfrac{\alpha + \beta}{2}\bigr)\,\cos\,\!\bigl(\tfrac{\alpha - \beta}{2}\bigr),
+\]
+\[
+\sin \alpha - \sin \beta = 2 \cos\,\!\bigl(\tfrac{\alpha + \beta}{2}\bigr)\,\sin\,\!\bigl(\tfrac{\alpha - \beta}{2}\bigr),
+\]
+\[
+\cos \alpha + \cos \beta = 2 \cos\,\!\bigl(\tfrac{\alpha + \beta}{2}\bigr)\,\cos\,\!\bigl(\tfrac{\alpha - \beta}{2}\bigr),
+\]
+\[
+\cos \alpha - \cos \beta = -2 \sin\,\!\bigl(\tfrac{\alpha + \beta}{2}\bigr)\,\sin\,\!\bigl(\tfrac{\alpha - \beta}{2}\bigr).
+\]
+
+
+\subsubsection*{Формулы двойных и половинных углов}
+Двойные углы получаются из формул суммы при $\alpha=\beta$:
+\[
+\cos2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha,
+\]
+\[
+\sin2\alpha = 2\sin\alpha\cos\alpha.
+\]
+Половинные углы выводятся из формулы для $\cos2\alpha$, решая относительно $\alpha$:
+\[
+\cos^2\alpha = \frac{1 + \cos2\alpha}{2},\quad \sin^2\alpha = \frac{1 - \cos2\alpha}{2}.
+\]
+
+\subsubsection*{Обратные тригонометрические функции}
+Арксинус, арккосинус, арктангенс — обратные функции синуса, косинуса и тангенса. Например, если $\sin\varphi = x$ и $-1\le x\le1$, то
+\[
+\varphi = \arcsin x,\quad -\frac{\pi}{2}\le \varphi\le\frac{\pi}{2}.
+\]
+Аналогично $\varphi = \arccos x$ при $0\le\varphi\le\pi$ и $\varphi = \arctan x$ при $-\frac{\pi}{2}<\varphi<\frac{\pi}{2}$.
+
+\subsubsection*{Теорема синусов}
+В произвольном треугольнике \(ABC\) обозначим стороны \(a=BC\), \(b=CA\), \(c=AB\),
+а углы при вершинах соответственно \(A,B,C\).
+
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{9trig4.jpeg}
+\label{fig:mpr}
+\end{center}
+
+
+
+Площадь \(S\) этого треугольника можно выразить через любую пару сторон и синус угла между ними:
+\[
+S = \frac12 bc\sin A = \frac12 a c\sin B = \frac12 a b\sin C.
+\]
+Домножим каждое равенство на \(2/c\), \(2/a\), \(2/b\) и получим
+\[
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}.
+\]
+
+\subsubsection*{Теорема косинусов}
+В том же треугольнике опустим высоту из вершины \(C\) на сторону \(c=AB\). Пусть проекция \(A\)–\(C\) на \(AB\) делит \(c\) на части \(x\) и \(c-x\).
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{9trig5.jpeg}
+\label{fig:mpr}
+\end{center}
+
+
+
+По теореме Пифагора
+\[
+b^2 = h^2 + x^2,\quad a^2 = h^2 + (c-x)^2,
+\]
+где \(h\) — высота. Вычитая первое из второго:
+\[
+a^2 - b^2 = (c-x)^2 - x^2 = c^2 - 2cx,
+\]
+то есть \(x = \dfrac{c^2 + b^2 - a^2}{2c}\). Но также \(b\cos A = x\), следовательно
+\[
+b\cos A = \frac{b^2 + c^2 - a^2}{2c}
+\;\Longrightarrow\;
+a^2 = b^2 + c^2 - 2bc\cos A.
+\]
+Аналогично получаются формулы
+\[
+c^2 = a^2 + b^2 - 2ab\cos C,\quad
+b^2 = a^2 + c^2 - 2ac\cos B.
+\]
+
+
+
+
+
+
+
+
+
+
+\end{document}

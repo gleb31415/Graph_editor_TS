@@ -1,0 +1,135 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+\subsubsection*{Логарифм и его свойства}
+Определение \textit{логарифма} $b$ по основанию $a$ гласит: \(\log_a b = c\) тогда и только тогда, когда \(a^c = b\). Условия корректности: \(a>0\), \(a\ne1\), \(b>0\). Базовые правила:
+\[
+a^{\log_a(bc)} = bc = a^{\log_a b}\cdot a^{\log_a c} = a^{\log_a b+\log_a c} \quad\Longrightarrow\quad \log_a(bc)=\log_a b+\log_a c,
+\]
+\[
+a^{\log_a\!\left(\frac{b}{c}\right)} = \frac{b}{c} = \frac{a^{\log_a b}}{a^{\log_a c}} = a^{\log_a b-\log_a c} \quad\Longrightarrow\quad\log_a\!\left(\frac{b}{c}\right)=\log_a b-\log_a c,
+\]
+\[
+a^{\log_a b^r} = b^r = (a^{\log_a b})^r = a^{r\log_a b} \quad\Longrightarrow\quad \log_a b^r=r\log_a b,\]
+\[
+c^{\log_c a\cdot\log_a b} = b = c^{\log_c b} \quad\Longrightarrow\quad \log_a b=\frac{\log_c b}{\log_c a},
+\]
+\[
+a^{\log_c b} = c^{\log_c a\cdot\log_c b} = b^{\log_c a}.
+\]
+Из определения: если \(a^x=b\), то \(x=\log_a b\). 
+\subsubsection*{Производная \(a^x\). Выбор специального основания \(e\)}
+Начнем с определения производной для показательной функции
+\[
+\frac{d}{dx}a^x=\lim_{h\to0}\frac{a^{x+h}-a^x}{h}
+=a^x\cdot\underbrace{\lim_{h\to0}\frac{a^{h}-1}{h}}_{M(a)}.
+\]
+Предел \(M(a)\) не зависит от \(x\). Хотим найти такое \(a\), чтобы \(M(a)=1\), тогда \(\frac{d}{dx}a^x=a^x\), то есть решение уравнения \(f'_x=f\).
+Определим число Эйлера
+\[
+e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}\approx 2.71828.
+\]
+Покажем, что \(M(e)=1\). Для фиксированного рационального \(h=\dfrac{p}{q}\) возьмем \(n\) кратным \(q\), тогда \(m=nh\) целое, и по биному Ньютона
+\[
+\left(1+\frac{1}{n}\right)^{m}=1+\frac{m}{n}+\frac{m(m-1)}{2n^2}+O\!\left(\frac{1}{n^3}\right)
+=1+h+O\!\left(\frac{1}{n^2}\right).
+\]
+Значит
+\[
+\frac{\left(1+\frac{1}{n}\right)^{nh}-1}{h}=1+O\!\left(\frac{1}{n}\right)\quad \Longrightarrow\quad
+\lim_{n\to\infty}\frac{\left(1+\frac{1}{n}\right)^{nh}-1}{h}=1.
+\]
+Переходя к пределу по \(h\) получаем
+\[
+\lim_{h\to0}\frac{e^{h}-1}{h}=1,
+\]
+то есть \(M(e)=1\). Следовательно
+\[
+\frac{d}{dx}e^x=e^x.
+\]
+
+\subsubsection*{Натуральный логарифм и производные логарифмов}
+Определяем \(\ln x\) как функцию, обратную \(e^x\), то есть логарифм по основанию $e$: \(y=\ln x\) тогда и только тогда, когда \(e^{y}=x\) при \(x>0\). Дифференцируя тождество \(e^{\ln x}=x\),
+\[
+e^{\ln x}\cdot\frac{d}{dx}\ln x=1 \quad \Longrightarrow\quad \frac{d}{dx}\ln x=\frac{1}{x}.
+\]
+Для логарифма по произвольному основанию \(a>0,a\ne1\) используем смену основания:
+\[
+\log_a x=\frac{\ln x}{\ln a}\quad \Longrightarrow\quad \frac{d}{dx}\log_a x=\frac{1}{x\ln a}.
+\]
+
+\subsubsection*{Производные показательных и степенных функций}
+Из \(a^x=e^{x\ln a}\) следует
+\[
+\frac{d}{dx}a^x = \frac{d}{dx} e^{x\ln a} = (\ln a)\,e^{x\ln a} = \ln a\cdot a^x.
+\]
+Теперь наконец докажем формулу для производной степенной функции для любого вещественного значения степени $p$. Для степенной функции при всех вещественных \(p\) и \(x>0\) пишем \(x^p=e^{p\ln x}\), тогда
+\[
+\frac{d}{dx}x^p=\frac{d}{dx}e^{p\ln x}=e^{p\ln x}\cdot p\frac{1}{x}=p\,x^{p-1}.
+\]
+
+\subsubsection*{Примеры логарифмического дифференцирования}
+\textbf{Пример 1. } \(y=x^x\) при \(x>0\).
+
+Берем логарифм
+\[
+\ln y=\ln(x^x)=x\ln x.
+\]
+Дифференцируем
+\[
+\frac{y'}{y}=\ln x+1 \quad \Longrightarrow\quad \boxed{y'=x^x(\ln x+1).}
+\]
+
+\textbf{Пример 2. } \(y=(\sin x)^{\cos x}\) при \(0 < x < \pi\). 
+
+Логарифм
+\[
+\ln y=\cos x\cdot \ln(\sin x).
+\]
+Дифференцируем по правилу производной произведения и сложной функции
+\[
+\frac{y'}{y}=-\sin x\cdot \ln(\sin x)+\cos x\cdot \frac{\cos x}{\sin x}
+\]
+\[
+\Longrightarrow\quad
+\boxed{y'=(\sin x)^{\cos x}\left[-\sin x\cdot \ln(\sin x)+\frac{\cos^2 x}{\sin x}\right].}
+\]
+
+Эти примеры демонстрируют, что через запись \(f=e^{\ln f}\) удобно дифференцировать сложные степенно-показательные выражения.
+
+
+\end{document}

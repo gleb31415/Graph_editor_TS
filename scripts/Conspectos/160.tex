@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Постановка задачи}
+
+Пусть есть цикл, обменивающийся теплотой $Q_i$ с $N$ тепловыми резервуарами,
+в которых температуры $T_i$ поддерживаются постоянными при помощи машин Карно,
+подключённых к единому тепловому резервуару с температурой $T_0$
+(меняющейся пренебрежимо мало).
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{klau.jpeg}
+\label{fig:mpr}
+\end{center}
+
+\subsubsection*{Вывод неравенства}
+
+Из выражения для КПД цикла Карно: 
+
+\[\frac{Q_-}{Q_+}=\frac{T_{\text{х}}}{T_{\text{н}}}\]
+
+Работа, совершённая всей системой за этот цикл:
+
+\[ A=\left(Q_1+Q_2+\dots+ Q_N\right)+\left(Q_{01}+Q_1'\right)+\left(Q_{02}+Q_2'\right)+\dots+\left(Q_{0N}+Q_N'\right)\]
+
+
+
+
+Резервуары возвращаются в начальное состояние: \[Q_i+Q_i'=0\] Поскольку в системе изменяет своё состояние только большой резервуар: \[A=Q_{01}+Q_{02}+\dots+Q_{0N}\le0\](иначе в результате охлаждения большого резервуара была получена работа, и никаких других изменений в системе не произошло, что противоречит второму началу термодинамики).
+Поскольку $\dfrac{Q_{\text{н}}}{T_{\text{н}}}=\dfrac{Q_{\text{х}}}{T_{\text{х}}}$ \[\frac{Q_{0i}}{T_0}=-\frac{Q_i'}{T_i}=\frac{Q_i}{T_i}\]\[ Q_{0i}=\frac{Q_i}{T_i}T_0\]Подставляя в работу: \[T_0\left(\frac{Q_1}{T_1}+\frac{Q_2}{T_2}+\dots+\frac{Q_N}{T_N}\right)\le0\]\[ \sum\frac{Q_i}{T_i}\le0\]Мы получили \textit{неравенство Клаузиуса}.
+
+\subsubsection*{Общий случай}
+
+Если резервуары не дискретны, неравенство можно переписать в интегральном виде:
+\[\oint\frac{\delta Q}{T}\le0,\]
+где круговой интеграл --- сумма малых величин $\frac{\delta Q}{T}$ по всему циклу. Такой интеграл вводится когда суммирование идёт по замкнутому контуру (в данном случае --- циклу), то есть начальная и конечная точки совпадают.
+
+Для цикла, который можно провести в обе стороны (квазистатического)
+\[\oint\frac{\delta Q}{T}=0\]
+(иначе можно обратить цикл и неравенство Клаузиуса нарушится).
+
+\end{document}

@@ -1,0 +1,51 @@
+<latex>
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Формулировки ВНТ}
+
+\begin{itemize}
+  \item \textit{Формулировка Кельвина:} Невозможен циклический двигатель, полностью превращающий теплоту $Q_H$ одного источника в работу.
+  \item \textit{Формулировка Клаузиуса:} Невозможен процесс, единственным результатом которого является передача теплоты от холодного тела к горячему.
+\end{itemize}
+
+\subsubsection*{Клаузиус $\Rightarrow$ Кельвин}
+
+\[
+K:\quad Q_H \to W=Q_H, \quad \text{без других эффектов.}
+\]
+\[
+R:\quad W_R + Q_C \to Q_H^{(R)} = Q_C + W_R.
+\]
+При $W_R = W = Q_H$:
+\[
+\text{на } H: -Q_H + Q_H^{(R)} = 0, \quad \text{на } C: -Q_C, \quad \text{работа внешняя }=0.
+\]
+
+\subsubsection*{Кельвин $\Rightarrow$ Клаузиус}
+
+\[
+R:\quad Q \to Q, \quad W=0,
+\]
+\[
+K:\quad Q_H \to W_K, \quad Q_C, \quad Q_H = W_K + Q_C.
+\]
+При $Q_C = Q$:
+\[
+\text{на } C: +Q - Q_C = 0, \quad \text{на } H: -Q_H + Q_C = -W_K,
+\]
+внешняя работа: $W_K$.
+
+\end{document}
+</latex>

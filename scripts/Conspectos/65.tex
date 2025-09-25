@@ -1,0 +1,173 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Векторы}
+\textit{Вектор} --- направленный отрезок, то есть отрезок, для которого указано, какая из граниных точек 
+является концом, а какая --- началом. Любой вектор имеет величину (модуль) $|\vec a|$ и направление. Векторы применимы к физике, так как физические величины делятся на 
+\textit{скалярные} (время $t$, температура $T$, масса $m$ и т.д.) и \textit{векторные} (скорость $\vec{v}$, 
+ускорение $\vec{a}$, сила $\vec{F}$ и т.д.). С векторными величинами можно проводить разные операции, 
+которые применимы к векторам в геометрии.
+
+\subsubsection*{Проекции вектора}
+\textit{Проекции вектора} $\vec a$ в плоскости на оси $x$ и $y$ — это скалярные величины
+\[
+a_x = |\vec a|\cos\varphi,\quad a_y = |\vec a|\sin\varphi,
+\]
+где $\varphi$ — угол между $\vec a$ и осью $x$.
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{9vec1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+В координатной форме
+\[
+\vec a = (a_x,\,a_y).
+\]
+Если мы работаем в трёх измерениях, то, конечно, добавляется ещё третья проекция:
+
+\[
+\vec a = (a_x,\,a_y,\,a_z).
+\]
+
+\subsubsection*{Сложение векторов}
+Сумма двух векторов $\vec a$ и $\vec b$ — это вектор
+\[
+\vec c = \vec a + \vec b.
+\]
+Правило сложения векторов треугольником гласит, что чтобы получить $\vec c$, необходимо
+отложить $\vec b$ от конца $\vec a$, соединить начало $\vec a$ с концом $\vec b$:
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{9vec3.jpeg}
+\label{fig:mpr}
+\end{center}
+
+
+Также можно складывать вектора по правилу параллелограмма --- построить параллелограмм на 
+$\vec a$ и $\vec b$, диагональ — это $\vec c$:
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{9vec2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Проекция суммы равна сумме проекций:
+\[
+(\vec a + \vec b)_x = a_x + b_x,\quad (\vec a + \vec b)_y = a_y + b_y.
+\]
+
+\subsubsection*{Разность векторов}
+Разность $\vec a - \vec b$ — это вектор
+\[
+\vec d = \vec a - \vec b = \vec a + (-\vec b),
+\]
+где $-\vec b$ — вектор, равный по модулю $\vec b$ и противоположный по направлению.  
+Чтобы получить разность векторов, нужно просто сложить вектора $\vec a$ и $\vec -b$:
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{9vec4.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Проекция разности равна разности проекций:
+\[
+(\vec a - \vec b)_x = a_x - b_x,\quad (\vec a - \vec b)_y = a_y - b_y.
+\]
+
+\subsubsection*{Скалярное произведение }
+Скалярное произведение двух векторов — это скалярная величина, равная
+\[
+\vec a \cdot \vec b = |\vec a|\,|\vec b|\cos\theta,
+\]
+где $\theta$ — угол между $\vec a$ и $\vec b$.
+
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{9vec5.jpeg}
+\label{fig:mpr}
+\end{center}
+
+То есть \textit{скалярное произведение} --- произведение одного вектора на проекцию второго на первый. Поэтому, чтобы получить проекцию одного вектора на другой, нужно посчитать скалярное произведение первого вектора и единичного вектора вдоль второго:
+
+\[
+a_b = \frac{\vec a \cdot \vec b}{|\vec b|} = \vec a \cdot \vec e_b
+\]
+
+
+
+
+Когда векторы сонаправлены,
+скалярное произведение равно произведению модулей векторов ($\cos 0 ^\circ = 1$). Когда векторы перпендикулярны,
+скалярное произведение равно нулю ($\cos 90^\circ = 0$). Когда они противонаправлены, скалярное 
+произведение равно отрицательному произведению модулей векторов ($\cos 180^\circ = -1$). Операция скалярного произведения выносится за скобки:
+
+\[
+\vec a \cdot \vec b + \vec a \cdot \vec c = \vec a \cdot(\vec b+\vec c)
+\]
+
+Через проекции:
+\[
+\vec a \cdot \vec b = a_x b_x + a_y b_y + a_zb_z,
+\]
+
+Поэтому критерий перпендикулярности векторов можно записать как 
+\[
+a_x b_x + a_y b_y + a_zb_z = 0.
+\]
+
+
+\subsubsection*{Векторное произведение }
+\textit{Векторное произведение} — это векторная величина. Её модуль:
+\[
+|\vec a\times\vec b| = |\vec a|\,|\vec b|\sin\theta.
+\]
+Направление задаётся правилом правой руки: если ротировать первый вектор $\vec a$ к второму $\vec b$, большой палец правой руки укажет направление $\vec a\times\vec b$, перпендикулярно плоскости $(\vec a,\vec b)$:
+
+\begin{center}
+\includegraphics[width=0.4\linewidth]{9vec6.jpeg}
+\label{fig:mpr}
+\end{center}
+
+ Операция векторного произведения также выносится за скобки:
+
+\[
+\vec a \times \vec b + \vec a \times \vec c = \vec a \times(\vec b+\vec c).
+\]
+
+
+
+\end{document}

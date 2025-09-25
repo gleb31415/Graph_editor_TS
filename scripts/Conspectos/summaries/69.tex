@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Key Logarithm and Exponential Properties}
+
+\subsection*{Basic Logarithm Rules}
+Main definition: \(\log_a b = c \iff a^c = b\), where \(a>0\), \(a\ne1\), \(b>0\)
+\[ \log_a(bc) = \log_a b + \log_a c \quad \log_a b^r = r\log_a b \quad \log_a b = \frac{\log_c b}{\log_c a} \]
+
+\subsection*{Natural Exponential and Logarithm}
+Euler's number definition and its key derivative:
+\[ e = \lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n \quad \frac{d}{dx}e^x = e^x \]
+
+Key derivatives for logarithms and exponentials:
+\[ \frac{d}{dx}\ln x = \frac{1}{x} \quad \frac{d}{dx}\log_a x = \frac{1}{x\ln a} \quad \frac{d}{dx}a^x = (\ln a)a^x \]
+
+\subsection*{Logarithmic Differentiation}
+For complex expressions like \(y=x^x\), take \(\ln\) of both sides and differentiate:
+\[ \ln y = x\ln x \implies \frac{y'}{y} = \ln x + 1 \implies y' = x^x(\ln x + 1) \]
+
+\end{document}

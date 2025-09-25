@@ -1,0 +1,52 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Понятие телесного угла}
+\textit{Телесный угол} $\Omega$ — отношение площади $S$ участка на сфере радиуса $r$ к квадрату радиуса:
+\[
+\Omega=\frac{S}{r^2}.
+\]
+Полная сфера:
+\[
+\Omega_{\text{сфера}}=4\pi.
+\]
+
+\subsubsection*{Элемент телесного угла и сферические координаты}
+В сферических координатах:
+\[
+d\Omega=\sin\theta\,d\theta\,d\varphi.
+\]
+
+\subsubsection*{Конус и сферические сегменты}
+Телесный угол конуса с полууглом $\alpha$:
+\[
+\Omega_{\text{конус}}=2\pi\,(1-\cos\alpha).
+\]
+
+\subsubsection*{Практические формулы}
+Для удаленного малого объекта площадью $A$ и углом $\beta$:
+\[
+\Omega\approx \frac{A\cos\beta}{R^2}.
+\]
+
+Для круглого диска радиуса $a$ на оси на расстоянии $L$:
+\[
+\Omega_{\text{диск}}=2\pi\left(1-\frac{L}{\sqrt{L^2+a^2}}\right).
+\]
+
+Доля сферы:
+\[
+f=\frac{\Omega}{4\pi}.
+\]
+
+\end{document}

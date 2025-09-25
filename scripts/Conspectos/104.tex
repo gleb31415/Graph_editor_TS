@@ -1,0 +1,129 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Понятие ВАХ}
+
+\textit{Вольт–амперная характеристика (ВАХ)} элемента или цепи — это график зависимости силы тока $I$ от приложенного к нему напряжения $U$.
+Строят обычно график $I(U)$, а не $U(I),$ потому что напряжение обеспечивает электрическое поле, которое «толкает» заряды, и на графике
+по горизонтали откладывают именно это «толкающее» напряжение, а по вертикали — ответную токовую реакцию элемента,
+так как напряжение (разность потенциалов) является причиной возникновения тока. Рассмотрим методы построения ВАХ последовательного и параллельного соединения элементов, ВАХи которых нам известны. 
+
+\subsubsection*{Последовательное соединение}
+
+При последовательном соединении элементов через каждый течёт один и тот же ток $I$, а общее напряжение складывается: если у элементов ВАХи $I=f_1(U_1)$ и $I=f_2(U_2)$, то общий график определяется уравнением
+\[
+U = U_1 + U_2,
+\quad
+I = f_1(U_1)=f_2(U_2).
+\]
+Геометрически берём одну ВАХ и для всех токов $I$ складываем напряжения $U = U_1+U_2$. Пример:
+
+\begin{center}
+\includegraphics[width=0.63\linewidth]{8vah1.png}
+\label{fig:mpr}
+\end{center}
+
+\subsubsection*{Параллельное соединение}
+
+При параллельном соединении на все элементы подано одно и то же напряжение $U$, а общий ток равен сумме токов:
+\[
+I = I_1 + I_2 = f_1(U) + f_2(U).
+\]
+Здесь к каждой точке $U$ на оси напряжения просто складываем высоты (токи) двух ВАХ, получая новую кривую:
+
+\begin{center}
+\includegraphics[width=0.63\linewidth]{8vah2.png}
+\label{fig:mpr}
+\end{center}
+
+
+\subsubsection*{Нагрузочная прямая}
+
+\textit{Нагрузочная прямая} — это ВАХ внешней цепи, по которой «гуляет» ток при изменении напряжения на клеммах.
+
+
+\begin{center}
+\includegraphics[width=0.3\linewidth]{8vah3.png}
+\label{fig:mpr}
+\end{center}
+
+
+Для источника ЭДС $\mathscr{E}$ с внутренним сопротивлением $R$ при напряжении $U$ и силе тока $I$ на нагрузке имеем 
+\[
+U = \mathscr{E} - IR,
+\]
+или
+\[
+I = \frac{\mathscr{E}-U}{R}.
+\]
+Это прямая с точками пересечения $(I=0,U=\mathscr{E})$ и $(U=0,I=\mathscr{E}/R)$.
+
+\begin{center}
+\includegraphics[width=0.59\linewidth]{8vah4.png}
+\label{fig:mpr}
+\end{center}
+
+Чтобы найти рабочую точку нелинейного элемента с заданной ВАХ $I_{\rm эл}(U)$, на этот ВАХ наносят нагрузочную прямую $I=\dfrac{\mathscr{E}-U}{R}$. Пересечение двух кривых даёт решение системы
+
+\[
+\begin{cases}
+I = I_{\rm эл}(U) \\
+U = \mathscr{E}-IR
+\end{cases}
+\]
+
+\subsubsection*{Диоды}
+
+\textit{Диод} --- нелинейный элемент цепи, обычно используется чтобы регулировать пропускание тока только в одном направлении. 
+Идеальный диод пропускает ток в прямом направлении без падения напряжения и полностью блокирует его в обратном:
+
+\begin{center}
+\includegraphics[width=0.36\linewidth]{8vah5.png}
+\label{fig:mpr}
+\end{center}
+
+Более точная модель диода — ВАХ с горизонтальным участком $I=0$ до напряжения пробоя $U_0$, а при $U=U_0$ нагрузка «пробивается» 
+и ток может расти, удерживая напряжение на уровне $U_0$ (вертикальный участок):  
+
+\begin{center}
+\includegraphics[width=0.36\linewidth]{8vah6.png}
+\label{fig:mpr}
+\end{center}
+
+
+
+
+\end{document}

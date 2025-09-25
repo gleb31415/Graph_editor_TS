@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Напряжённость электрического поля}
+
+Электрическое поле вокруг заряда создаёт в каждой точке силу, действующую на пробный заряд (мысленно вводимый положительный точечный заряд). Если на пробный заряд действует сила $F$, то \textit{напряжённость поля} в этой точке определяется как отношение силы к величине пробного заряда:
+\[
+E = \frac{F}{q},
+\]
+где
+\begin{itemize}
+  \item $E$ — напряжённость электрического поля (Н/Кл или В/м);
+  \item $F$ — сила, действующая на пробный заряд (Н);
+  \item $q$ — величина пробного заряда (Кл).
+\end{itemize}
+Напряжённость показывает, какую силу испытал бы заряд $q_0 = 1$ Кл в данной точке. 
+
+\subsubsection*{Потенциал элкетрического поля}
+\textit{Потенциал поля} $\varphi$ в точке — это отношение потенциальной энергии $W$ взаимодействия пробного заряда в этой точке с остальными зарядами системы к самому заряду:
+\[
+\varphi = \frac{W}{q},
+\]
+где
+\begin{itemize}
+  \item $\varphi$ — электрический потенциал (Вольт);
+  \item $W$ — потенциальная энергия пробного заряда (Дж);
+  \item $q$ — пробный заряд (Кл).
+\end{itemize}
+Из определения понятно, что разность потенциалов между двумя точками 1 и 2 равна работе поля при перемещении пробного заряда из 
+точки 1 в точку 2, делённой на величину пробного заряда $q$:
+\[
+\varphi_2 - \varphi_1 = \frac{A_{1\to2}}{q}.
+\]
+
+\subsubsection*{Связь напряжённости и потенциала}
+Также из определений несложно понять, что $E = -\dfrac{\Delta \varphi}{\Delta x}$:
+
+\[
+E = \frac{F}{q} = \frac{1}{q} \cdot \bigl(-\frac{\Delta W}{\Delta x}\bigr) = -\frac{\Delta \varphi}{\Delta x}
+\]
+
+
+
+В однородном поле $E$ напряжённость и разность потенциалов связаны просто:
+\[
+\Delta\varphi = Ed.
+\]
+
+Для точечного заряда $Q$ в вакууме на расстоянии $r$ от него поле и потенциал выражаются просто:
+\[
+E = k \frac{Q}{r^2},
+\qquad
+\varphi = k \frac{Q}{r}.
+\]
+
+\textbf{Пример.}
+
+Разность потенциалов между точками $r_1$ и $r_2$ в поле $Q$:
+\[
+\Delta\varphi = \varphi(r_2) - \varphi(r_1)
+= k Q\Bigl(\frac{1}{r_2} - \frac{1}{r_1}\Bigr).
+\]
+
+
+
+
+\end{document}

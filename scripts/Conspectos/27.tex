@@ -1,0 +1,116 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+\subsubsection*{Определение равновесия}
+\textit{Точка равновесия} $x_0$ — это положение, в котором результирующая сила на тело равна нулю:
+\[
+F(x_0)=0.
+\]
+Если сила потенциальна, существует потенциальная энергия $U(x)$ такая, что
+\[
+F(x)=-\frac{dU}{dx},\quad \text{поэтому}\quad \left.\frac{dU}{dx}\right|_{x_0}=0.
+\]
+
+\subsubsection*{Энергетический критерий устойчивости}
+Рассмотрим малое смещение $\xi=x-x_0$ и разложим $U(x)$ в ряд Тейлора:
+\[
+U(x_0+\xi)=U(x_0)+U'(x_0)\,\xi+\frac12 U''(x_0)\,\xi^2+o(\xi^3) \approx U(x_0)+\frac12 U''(x_0)\,\xi^2.
+\]
+Устойчивость равновесия определяется тем, является ли значение напряжения
+$U(x_0)$ локальным минимумом, поскольку сила $F = -\dfrac{dU}{dx}$ толкает тело в точку с меньшей потенциальной энергией. 
+
+
+
+\begin{center}
+\includegraphics[width=0.44\linewidth]{10equil1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Отсюда:
+\[
+\text{устойчиво}\ \Leftrightarrow\ U''(x_0)>0\ \text{(минимум)};\quad
+\text{неустойчиво}\ \Leftrightarrow\ U''(x_0)<0\ \text{(максимум)}.
+\]
+
+\subsubsection*{Силовой критерий устойчивости}
+Линеаризуем силу около $x_0$:
+\[
+F(x_0+\xi)\approx F(x_0)+\xi\,F'(x_0)=\xi\,F'(x_0),\quad F'(x_0)=-U''(x_0).
+\]
+Если при малом смещении возникает \emph{возвращающая} сила ($F\approx -k\xi$, $k>0$), то тело возвращается в точку равновесия, то есть равновесие устойчиво. Значит
+\[
+\text{устойчиво}\ \Leftrightarrow\ F'(x_0)<0;\quad
+\text{неустойчиво}\ \Leftrightarrow\ F'(x_0)>0.
+\]
+
+
+\textbf{Пример 1. Шарик в чаше и на вершине холма.}
+
+\begin{center}
+\includegraphics[width=0.4\linewidth]{10equil2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Для шарика в чаше $U(y)$ имеет минимум внизу чаши, $U''>0$ — устойчивое равновесие: малое смещение увеличивает $U$, и сила возвращает шарик. На вершине холма $U$ имеет максимум, $U''<0$ — неустойчивое: малое смещение уменьшает $U$, и шарик уходит дальше от вершины.
+
+\textbf{Пример 2. Пружинный осциллятор.}
+
+\begin{center}
+\includegraphics[width=0.49\linewidth]{10equil3.jpeg}
+\label{fig:mpr}
+\end{center}
+
+\[U(x)=\frac12 kx^2.\] В равновесии $x_0=0$, $U''(0)=k>0$ — устойчиво. С точки зрения силового критерия, 
+\[
+F = -kx < 0,
+\]
+поэтому равновесие устойчивое.
+
+\textbf{Пример 3. Математический маятник.}
+
+\begin{center}
+\includegraphics[width=0.35\linewidth]{10equil4.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Для угла отклонения $\theta$ потенциал \[U(\theta)=mgl\,(1-\cos\theta).\]
+У нижнего положения $\theta=0$: $U''(0)=mgl>0$ — устойчиво.
+Для перевёрнутого маятника у $\theta=\pi$: $U''(\pi)=-mgl<0$ — неустойчиво.
+
+
+
+\end{document}

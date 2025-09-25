@@ -1,0 +1,40 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Постановка задачи}
+
+Пусть есть цикл, обменивающийся теплотой $Q_i$ с $N$ тепловыми резервуарами с температурами $T_i$.
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{klau.jpeg}
+\end{center}
+
+\subsubsection*{Вывод неравенства}
+
+\[
+\frac{Q_-}{Q_+}=\frac{T_{\text{х}}}{T_{\text{н}}}
+\]
+
+\[
+\sum \frac{Q_i}{T_i} \le 0
+\]
+
+\subsubsection*{Общий случай}
+
+\[
+\oint \frac{\delta Q}{T} \le 0
+\]
+
+\[
+\oint \frac{\delta Q}{T} = 0 \quad \text{(квазистатический цикл)}
+\]
+
+\end{document}

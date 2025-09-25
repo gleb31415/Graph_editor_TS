@@ -1,0 +1,130 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Системы резисторов}
+
+\textit{Резисторы} --- линейные элементы, поэтому любую систему резисторов можно заменить одним резистором с эквивалентным сопротивлением $R_0$, которое показывает, как вся
+цепь «ведёт себя» с точки зрения закона Ома. Подробное объяснение этого факта не рассматривается в рамках программы олимпиадной физики восьмого класса.
+
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{8equiv1.png}
+\label{fig:mpr}
+\end{center}
+
+При этом
+\[
+R_0 = \frac{U_{\rm общ}}{I_{\rm общ}},
+\]
+где
+\begin{itemize}
+  \item $U_{\rm общ}$ — общее напряжение на всей ветви цепи;
+  \item $I_{\rm общ}$ — общий ток, протекающий по этой ветви.
+\end{itemize}
+
+
+\subsubsection*{Последовательное соединение}
+
+Далее разберём, как рассчитывать $R_0$ при двух базовых способах соединения резисторов.
+
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{8equiv2.png}
+\label{fig:mpr}
+\end{center}
+
+При последовательном соединении резисторов их концы соединены «цепочкой», и через каждый резистор течёт один и тот же 
+ток $I_{\rm общ}$. 
+
+
+Общее напряжение равно сумме напряжений на каждом резисторе:
+\[
+U_{\rm общ} = U_1 + U_2 + \dots + U_n = I_{\rm общ}\,R_1 + I_{\rm общ}\,R_2 + \dots + I_{\rm общ}\,R_n = I_{\rm общ}\,(R_1 + R_2 + \dots + R_n).
+\]
+Сравнивая с $U_{\rm общ} = I_{\rm общ}\,R_0$, получаем
+\[
+R_0 = R_1 + R_2 + \dots + R_n.
+\]
+
+\subsubsection*{Параллельное соединение}
+
+При параллельном соединении «начала» всех резисторов соединены вместе, и «концы» тоже соединены вместе. 
+
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{8equiv3.png}
+\label{fig:mpr}
+\end{center}
+
+
+На каждом резисторе одно и то же напряжение $U_{\rm общ}$, а общий ток равен сумме токов через каждый:
+\[
+I_{\rm общ} = I_1 + I_2 + \dots + I_n = \frac{U_{\rm общ}}{R_1} + \frac{U_{\rm общ}}{R_2} + \dots + \frac{U_{\rm общ}}{R_n} = U_{\rm общ}\Bigl(\frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}\Bigr).
+\]
+С учётом $I_{\rm общ} = \dfrac{U_{\rm общ}}{R_0}$ имеем
+\[
+\frac{1}{R_0} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}.
+\]
+Для двух резисторов часто используют упрощённую формулу, которая выводится простым преобразованием общей:
+\[
+R_0 = \frac{R_1 R_2}{R_1 + R_2}.
+\]
+
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{8equiv4.png}
+\label{fig:mpr}
+\end{center}
+
+
+\textbf{Пример.} 
+
+Эквивалентное сопротивление цепи на картинке равно 
+\[
+R_0 = \frac{6R\cdot3R}{6R+3R}+R = 3R
+\]
+
+
+
+Поскольку система резисторов эквивалентна одному резистору с эквивалентным сопротивлением $R_0$, мощность, выделяемая на всей цепи суммарно равна
+\[
+\sum_i P_i = P_0  = U_{\rm общ}I_{\rm общ} = \frac{U_{\rm общ}^2}{R_0} = I_{\rm общ}^2R_0
+\]
+
+
+
+
+\end{document}

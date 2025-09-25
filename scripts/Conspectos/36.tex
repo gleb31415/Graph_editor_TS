@@ -1,0 +1,90 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Почему при равномерном движении есть ускорение}
+Даже если модуль скорости $v$ постоянен, направление меняется. За время $\Delta t$ точка смещается по дуге окружности, и вектор скорости поворачивается на небольшой угол $\Delta\varphi\neq0$, значит появляется изменение вектора скорости $\Delta\vec v\neq0$, то есть ускорение
+
+\[
+\vec a = \frac{\Delta\vec v}{\Delta t}.
+\]
+
+\subsubsection*{Центростремительное ускорение}
+Рассмотрим за малый отрезок времени $\Delta t$ два треугольника:
+\begin{itemize}
+  \item Треугольник перемещений: два радиус-вектора $\vec r$ к точкам на окружности и хорду $\Delta\vec r$.
+  \item Треугольник скоростей: два вектора скорости $\vec v$ в эти моменты и разность $\Delta\vec v$.
+\end{itemize}
+
+
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{9centripetal.jpeg}
+\label{fig:mpr}
+\end{center}
+
+
+Треугольники подобны, так как они равнобедренные и углы при вершинах равны (поворот на один и тот же угол $\Delta\varphi$). Их стороны связаны:
+\[
+\frac{|\Delta\vec v|}{|\Delta\vec r|}
+= \frac{|\vec v|}{|\vec r|}
+\quad\Longrightarrow\quad
+|\Delta\vec v| = \frac{v}{r}\,|\Delta\vec r|.
+\]
+Но за время $\Delta t$ точка проходит по окружности расстояние
+\[
+|\Delta\vec r| \approx v\,\Delta t,
+\]
+откуда
+\[
+|\Delta\vec v| = \frac{v}{r}\,(v\,\Delta t) = \frac{v^2}{r}\,\Delta t.
+\]
+
+Ускорение как отношение $\Delta\vec v$ к $\Delta t$ (без перехода к производной) даёт
+\[
+a \approx \frac{|\Delta\vec v|}{\Delta t} = \frac{v^2}{r} = \omega v = \omega^2 r.
+\]
+Так как в треугольнике скоростей сторона $\Delta\vec v$ перпендикулярна $\vec v$, а в
+треугольнике перемещений хорда $\Delta\vec r$ почти перпендикулярна радиусу, то вектор 
+$\Delta\vec v$ направлен к центру окружности. 
+
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{9alpha1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+
+\end{document}

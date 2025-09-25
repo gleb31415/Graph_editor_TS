@@ -1,0 +1,102 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Циклы}
+
+\textit{Цикл} --- процесс, в котором рабочее тело (газ) в итоге приходит в начальное состояние, а также совершает работу засчёт тепла, переданного ему. Почти всегда циклы нарисованы на $pV$-диаграмме, поскольку $dA = pdV$, значит при любом процессе работа газа --- площадь под графиком $p(V)$. Легко заметить, что работа за цикл --- площадь внутри цикла на графике (рис.).
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{10AU2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+За цикл рабочему телу передаёт $Q_+$ тепла нагреватель, и рабочее тело отдаёт $Q_-$ тепла холодильнику. По ЗСЭ имеем:
+
+\[
+A = Q_+-Q_-
+\]
+КПД цикла $\eta = \dfrac{A}{Q_+} = 1 - \dfrac{Q_-}{Q_+}$ --- величина, которую постоянно просят найти в задачах.
+
+\textbf{Пример.}
+
+
+Идеальный двухатомный газ совершает прямоугольный на $pV$-диаграмме цикл с вершинами
+$(p_0,V_0)\to(2p_0,V_0)\to(2p_0,2V_0)\to(p_0,2V_0)\to(p_0,V_0)$:
+две изохоры и две изобары. Найдём КПД цикла.
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{10cycle2.png}
+\label{fig:mpr}
+\end{center}
+
+
+Пусть в системе $n$ молей идеального газа. Температуры в вершинах по уравнению Клайперона:
+\[
+T_1=\frac{p_0V_0}{nR},\quad
+T_2=\frac{2p_0V_0}{nR},\quad
+T_3=\frac{4p_0V_0}{nR},\quad
+T_4=\frac{2p_0V_0}{nR}.
+\]
+Молярные теплоёмкости изохоры и изобары: \(C_V=\dfrac{i}{2}R\), \(C_P=C_V+R=\dfrac{i+2}{2}R\).
+
+Теплота, подводимая к газу, поступает на изохорном нагреве $1\to2$ и на изобарном расширении $2\to3$:
+\[
+Q_{12}=nC_V\,(T_2-T_1)=\frac{i}{2}\,p_0V_0,\qquad
+Q_{23}=nC_P\,(T_3-T_2)=(i+2)\,p_0V_0.
+\]
+Итак,
+\[
+Q_{+}=Q_{12}+Q_{23}=\Big(\frac{3i}{2}+2\Big)p_0V_0.
+\]
+Работа за цикл равна площади прямоугольника:
+\[
+A=(2p_0-p_0)(2V_0-V_0)=p_0V_0.
+\]
+Следовательно, КПД
+\[
+\eta=\frac{A}{Q_{+}}
+=\frac{p_0V_0}{\left(\dfrac{3i}{2}+2\right)p_0V_0}
+=\frac{2}{3i+4}.
+\]
+Для двухатомного газа $i=5$:
+\[
+\boxed{\,\eta=\frac{2}{3\cdot5+4}=\frac{2}{19}\approx0.105.\,}
+\]
+
+
+\end{document}

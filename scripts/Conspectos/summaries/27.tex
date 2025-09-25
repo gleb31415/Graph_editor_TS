@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Равновесие и устойчивость}
+
+\subsection*{Основные критерии}
+Точка равновесия $x_0$ определяется условием:
+\[F(x_0)=0 \quad \text{или} \quad \left.\frac{dU}{dx}\right|_{x_0}=0\]
+
+Энергетический критерий устойчивости: равновесие устойчиво при минимуме потенциальной энергии:
+\[
+\text{устойчиво}\ \Leftrightarrow\ U''(x_0)>0; \quad
+\text{неустойчиво}\ \Leftrightarrow\ U''(x_0)<0
+\]
+
+Силовой критерий: при линеаризации силы $F(x_0+\xi)\approx \xi F'(x_0)$:
+\[
+\text{устойчиво}\ \Leftrightarrow\ F'(x_0)<0; \quad
+\text{неустойчиво}\ \Leftrightarrow\ F'(x_0)>0
+\]
+
+\subsection*{Ключевые примеры}
+Пружинный осциллятор: $U(x)=\frac12 kx^2$, устойчив при $x_0=0$
+
+Математический маятник: $U(\theta)=mgl(1-\cos\theta)$
+Устойчив при $\theta=0$ (нижнее положение), неустойчив при $\theta=\pi$ (верхнее положение)
+
+\end{document}

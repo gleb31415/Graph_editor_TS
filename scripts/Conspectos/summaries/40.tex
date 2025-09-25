@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Движение во вращающейся системе отсчета}
+
+Скорость и ускорение в НеИСО с угловой скоростью $\vec{\omega}$:
+\[\vec{v} = \vec{v_0}+ [\vec{\omega} \times\vec{R}]+\vec{v_r}\]
+
+Основные силы инерции:
+\begin{itemize}
+\item Переносная: $\vec{F_{\text{и}}} = -m\vec{a_0}$
+\item Кориолиса: $\vec{F_\text{к}} = -2m[\vec{\omega} \times\vec{v_r}]$
+\item Осестремительная: $\vec{F_{o}} = -m[\vec{\omega} \times[\vec{\omega} \times\vec{R}]]$
+\end{itemize}
+
+\section*{Гидродинамика во вращающихся сосудах}
+
+Эффективное ускорение свободного падения при вращении:
+\[\vec g_\text{eff} = \vec{g} +\omega^2\vec r\]
+
+Форма поверхности жидкости - параболоид:
+\[z(r) = \frac{\omega^2}{2g}r^2+C\]
+
+Сила Архимеда во вращающейся жидкости:
+\[\vec F_A = -\rho V\vec g_{\rm eff}\]
+с модулем $\rho V\sqrt{g^2 + (\omega^2r)^2}$.
+
+\end{document}

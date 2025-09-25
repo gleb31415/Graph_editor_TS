@@ -1,0 +1,248 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+\subsubsection*{Предел и производная}
+\emph{Предел функции} $f(x)$ при $x\to x_0$ равен $L$, если для любых малых $\varepsilon>0$ найдётся $\delta>0$ такое, что при $|x-x_0|<\delta$ выполняется $|f(x)-L|<\varepsilon$. Простыми словами, предел --- значение, к которому стремится функция при стремлении аргумента $x$ к определённому значению $x_0$. 
+\emph{Производная} в точке $x$ определяется как
+\[
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
+\]
+
+
+
+Графически, производная --- наклон касательной к графику функции в заданной точке:
+
+\begin{center}
+\includegraphics[width=0.45\linewidth]{9derivative.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Физический смысл производной:
+\begin{itemize}
+  \item скорость $v(t)=x'(t)$ — производная координаты;
+  \item мощность $P(t)=A'(t)$ — производная работы.
+\end{itemize}
+
+
+\subsubsection*{Дифференциалы}
+Принимая в определении производной $h\to0$, вместо предела удобно вводить бесконечно малое приращение $dx\equiv h$. Тогда приращение функции
+\[
+\Delta f = f(x+dx)-f(x)
+\]
+раскладывается в
+\[
+\Delta f = f'(x)\,dx + o(dx),
+\]
+где $o(dx)/dx\to0$ при $dx\to0$.  
+Вводят \emph{дифференциал} функции:
+\[
+df \equiv f'(x)\,dx.
+\]
+Здесь 
+\[
+dx\ \text{— независимая бесконечно малая величина},\quad
+df\ \text{— линейная часть приращения } \Delta f.
+\]
+В этой записи уже не пишут пределы — достаточно помнить, что $df/dx=f'(x)$ и что высшие малые члены $o(dx)$ отброшены:
+
+
+\[
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \frac{df}{dx}.
+\]
+
+Пример подобной записи из физики:  
+\[
+v = \frac{dx}{dt},\quad
+a = \frac{dv}{dt} = \frac{d^2x}{dt^2}.
+\]
+
+
+\subsubsection*{Правила дифференцирования}
+
+
+
+
+\textbf{1. Производная константы.} Пусть $f(x)=C$.  
+\[
+f'(x)=\lim_{h\to0}\frac{C - C}{h}=0.
+\]
+
+\textbf{2. Правило суммы.} Для $h\to0$:
+\[
+\begin{split}
+(f+g)'(x)
+= \lim_{h\to0}\frac{[f(x+h)+g(x+h)]-[f(x)+g(x)]}{h}=
+\\
+= \lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+  +\lim_{h\to0}\frac{g(x+h)-g(x)}{h}
+  = f'(x)+g'(x).
+\end{split}
+\]
+
+
+\textbf{3. Правило множителя.} Для константы $c$:
+\[
+(cf)'(x)
+=\lim_{h\to0}\frac{c\,f(x+h)-c\,f(x)}{h}
+=c\,\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+=c\,f'(x).
+\]
+
+\textbf{4. Правило произведения.}  
+\[
+(fg)'(x)
+=\lim_{h\to0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h}.
+\]
+Добавим и вычтем $f(x)g(x+h)$:
+\[
+=f\!     \lim_{h\to0}\frac{g(x+h)-g(x)}{h}
++g\!     \lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+=f(x)\,g'(x) + g(x)\,f'(x).
+\]
+
+\textbf{5. Правило частного.} При $g(x)\neq0$:
+\[
+\Bigl(\frac fg\Bigr)'(x)
+=\lim_{h\to0}\frac{\frac{f(x+h)}{g(x+h)}-\frac{f(x)}{g(x)}}{h}
+=\lim_{h\to0}\frac{f(x+h)g(x)-f(x)g(x+h)}{h\,g(x)g(x+h)}
+\]
+\[
+=\frac{1}{g^2(x)}\Bigl[g(x)\,f'(x)-f(x)\,g'(x)\Bigr].
+\]
+
+\textbf{6. Правило сложной функции.} Пусть $y=f(u)$, $u=g(x)$. Тогда для сложной функции $f(g(x)) = f\circ g$
+\[
+(f\circ g)'(x)
+=\lim_{h\to0}\frac{f\bigl(g(x+h)\bigr)-f\bigl(g(x)\bigr)}{h}.
+\]
+Положим $\Delta u=g(x+h)-g(x)$, тогда при $h\to0$ $\Delta u\to0$ и
+\[
+\frac{f(g(x+h))-f(g(x))}{h}
+=\frac{f(g(x)+\Delta u)-f(g(x))}{\Delta u}\;\frac{\Delta u}{h}
+\;\longrightarrow\;f'(g(x))\;g'(x),
+\]
+
+
+где $f'(g(x))$ --- производная $f$ по внутренней функции $g$, для нахождения которой нужно выразить $f$ через $g$ и убрать из выражения $x$.
+
+
+
+\subsubsection*{Производная степенной функции $x^n$}
+Пока что выведем производную степенной функции только для натуральных степеней $n\in\mathbb N$. По определению:
+\[
+\frac{d}{dx}x^n
+=\lim_{h\to0}\frac{(x+h)^n-x^n}{h}.
+\]
+Раскладывая скобку по биному Ньютона,
+\[
+\frac{d}{dx}x^n=\lim_{h\to0}\frac{\sum_{k=0}^n\binom nkx^{\,n-k}h^k -x^n}{h}
+=\lim_{h\to0}\frac{nx^{n-1}h +O(h^2)}{h}
+=nx^{n-1}.
+\]
+На самом деле, формула \[\frac{d(x^p)}{dx} = px^{p-1}\] верна для любого вещественного $p$ (докажется позже через логарифмы).
+
+\subsubsection*{Производные тригонометрических функций}
+По определению через пределы:
+\[
+\frac{d}{dx}\sin x
+=\lim_{h\to0}\frac{\sin(x+h)-\sin x}{h}
+=\lim_{h\to0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}.
+\]
+
+При малых $h \to 0$
+\[
+\sin h \approx h, \quad \cos h = 1, 
+\]
+
+поэтому 
+
+\[
+\frac{d}{dx}\sin x
+= \lim_{h\to0}\frac{\sin x\cdot 1+\cos x\cdot h -\sin x}{h} = \cos x.
+\]
+
+Аналогично, 
+
+\[
+\frac{d}{dx}\cos x
+=\lim_{h\to0}\frac{\cos(x+h)-\cos x}{h}
+=\lim_{h\to0}\frac{\cos x\cos h-\sin x\sin h-\cos x}{h}
+=-\sin x.
+\]
+\[
+\frac{d}{dx}\tan x = \frac{d}{dx}\frac{\sin x}{\cos x}.
+
+\]
+Здесь мы можем воспользоваться формулой производной частного и получить
+
+\[
+\frac{d}{dx}\tan x = \frac{\sin^2 x+\cos^2 x}{\cos^2 x} = \frac{1}{\cos^2 x}.
+\]
+
+\subsubsection*{Анализ функций с помощью производных}
+Точка \(x_0\) называется \emph{критической}, если в ней \(f'(x_0)=0\) или производная не существует.  
+Для гладкой функции экстремум (минимум или максимум) достигается только в критической точке, то есть для экстремума необходимо условие $\dfrac{df}{dx} = 0$.  
+
+
+Если \(f\) дважды дифференцируема и в \(x_0\) \(f'(x_0)=0\), то
+\[
+\begin{cases}
+f''(x_0)>0 & \text{— строгий минимум в }x_0,\\
+f''(x_0)<0 & \text{— строгий максимум в }x_0.
+\end{cases}
+\]
+
+\textbf{Пример.}
+
+Для тела, брошенного с начальной скоростью $v_0$ под углом $\alpha$, дальность полёта (при равном уровне старта и приземления)  
+\[
+L(\alpha)=\frac{v_0^2}{g}\,\sin2\alpha.
+\]
+Найдём производную по углу:
+\[
+\frac{dL}{d\alpha}
+=\frac{v_0^2}{g}\,2\cos2\alpha.
+\]
+Приравниваем к нулю:
+\[
+2\cos2\alpha=0\quad\Longrightarrow\quad2\alpha=\frac\pi2\quad\Longrightarrow\quad\alpha=\frac\pi4.
+\]
+указывает на максимум при $\alpha=\pi/4 = 45^\circ$.
+
+
+
+\end{document}

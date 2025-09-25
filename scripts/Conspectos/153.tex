@@ -1,0 +1,115 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Введение}
+Целью этого конспекта является с нуля вывести давление идеального газа на неподвижную стенку из микроскопической картины удара молекул о поверхность. Знание этого вывода не считается обязательным в рамках школьной программы, однако мы считаем, что оно необходимо для фундаментального понимания основ термодинамики.
+
+Будем считать газ разреженным, столкновения молекул со стенкой упругими, направления скоростей изотропными, а скорости сгруппированными по модулям.
+
+\subsubsection*{Импульс одной молекулы при упругом отражении}
+Пусть \(\vec n\) — единичная нормаль к стенке, направленная в газ. Перед ударом нормальная компонента скорости равна \(-v_n \vec n\), после удара \(+v_n \vec n\). Приращение импульса молекулы (вдоль нормали) равно
+\[
+p_n = m(+v_n) - m(-v_n) = 2 m v_n.
+\]
+
+\subsubsection*{Количество молекул, попадающих на элемент площади}
+Возьмём группу молекул со скоростью модуля \(v_i\) и концентрацией \(n_i\).
+
+\begin{center}
+\includegraphics[width=0.32\linewidth]{10klapmend1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+За время \(\Delta t\) на площадку \(dS\) попадут молекулы, которые:
+
+\begin{enumerate}
+	\item летят в телесный угол \(d\Omega = 2\pi \sin\theta\, d\theta\) внутрь полупространства;
+	\item находятся в «трубке» длиной \(v_i \Delta t\) и сечением \(dS \cos\theta\) (проекция площадки на перпендикуляр к лучу).
+\end{enumerate}
+Доля направлений равна \(d\Omega/(4\pi)\), поэтому число попавших молекул:
+\[
+d(\Delta N_i) = n_i \frac{d\Omega}{4\pi} \bigl(v_i \Delta t\, dS \cos\theta\bigr)
+= \frac12 n_i v_i \Delta t\, dS\, \sin\theta \cos\theta\, d\theta.
+\]
+Интегральный поток этой группы на единицу площади за единицу времени:
+\[
+\frac{d}{dS}\left(\frac{dN_i}{dt}\right) = \int_{0}^{\pi/2} \frac12 n_i v_i \sin\theta \cos\theta\, d\theta
+= \frac14 n_i v_i.
+\]
+
+\subsubsection*{Давление на стенку}
+Каждая молекула из полосы углов передаёт стенке нормальный импульс \(2 m v_i \cos\theta\). Тогда
+\[
+d(\Delta p_{n(i)}) = 2 m v_i \cos\theta \cdot d(\Delta N_i)
+= m n_i v_i^2 \Delta t\, dS\, \sin\theta \cos^2\theta\, d\theta.
+\]
+Интегрируя по \(\theta\in[0,\pi/2]\),
+\[
+\Delta p_{n(i)} = m n_i v_i^2 \Delta t\, dS \int_{0}^{\pi/2} \sin\theta \cos^2\theta\, d\theta
+= \frac13 m n_i v_i^2 \Delta t\, dS.
+\]
+
+
+Суммируя по всем группам скоростей,
+\[
+\Delta p_n = \sum_i \Delta p_{n(i)} = \frac13 m \Delta t\, dS \sum_i n_i v_i^2
+= \frac13 m n \langle v^2 \rangle \Delta t\, dS.
+\]
+Давление как поток нормального импульса в единицу времени на единицу площади:
+\[
+p = \frac{\Delta p_n}{\Delta t\, dS} = \frac13 m n \langle v^2 \rangle = \frac13 \rho \langle v^2 \rangle,
+\]
+где \(\rho = m n\) —  плотность газа.
+
+\subsubsection*{Переход к уравнению Менделеева–Клапейрона}
+По определению температуры имеем
+\[
+\frac{m \langle v^2 \rangle}{2} = \frac{3}{2} k_B T \quad \Rightarrow \quad m \langle v^2 \rangle = 3 k_B T.
+\]
+Подставляя в формулу давления, получаем
+\[
+p = \frac13 n \bigl(3 k_B T\bigr) = n k_B T.
+\]
+Так как \(n = N/V\) и \(N k_B = \nu R\), приходим к
+\[
+p V = N k_B T = \nu R T,
+\]
+что называют \textit{уравнением Менделеева–Клапейрона}.
+
+
+\end{document}

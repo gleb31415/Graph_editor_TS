@@ -1,0 +1,102 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Задача двух тонких линз}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{10sys1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Пусть две тонкие линзы с фокусами \(F_1\) и \(F_2\) расположены на оси на 
+расстоянии \(x\) друг от друга.
+Предмет стоит слева от первой линзы на расстоянии \(a_1\) от её центра.
+
+Первая линза даёт изображение на расстоянии
+\[
+b_1=\frac{a_1F_1}{a_1-F_1}.
+\]
+Это изображение служит предметом для второй линзы; расстояние от второй линзы до этого предмета
+\[
+a_2=x-b_1.
+\]
+
+\subsubsection*{Положение итогового изображения}
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{10sys2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Для второй линзы
+\[
+\frac{1}{a_2}+\frac{1}{b_2}=\frac{1}{F_2}\quad\Rightarrow\quad b_2=\frac{a_2F_2}{a_2-F_2}.
+\]
+Подставляя \(a_2=x-\dfrac{a_1F_1}{a_1-F_1}\), получаем явную формулу для расстояния итогового изображения от второй линзы:
+\[
+b_2=\frac{\Bigl(x-\dfrac{a_1F_1}{a_1-F_1}\Bigr)F_2}{\Bigl(x-\dfrac{a_1F_1}{a_1-F_1}\Bigr)-F_2}.
+\]
+Координата изображения относительно первой линзы равна \(x+b_2\). Знак \(b_2>0\)
+означает действительное изображение справа от второй линзы, \(b_2<0\) — 
+мнимое изображение слева от неё. Если \(b_1 < x\), то \(a_2 > 0\) и для второй линзы предмет реальный; если \(b_1>x\), то \(a_2<0\) и предмет для второй линзы мнимый.
+
+\subsubsection*{Линзы в контакте: \(x=0\) и эквивалентный фокус}
+Рассмотрим входящий параллельный пучок (\(a_1\to\infty\)). Первая линза фокусирует его в точке на расстоянии \(F_1\) справа. При \(x=0\) эта точка лежит «перед» второй линзой на расстоянии \(|a_2|=F_1\), то есть для второй линзы предмет мнимый \(a_2=-F_1\). Тогда
+\[
+\frac{1}{a_2}+\frac{1}{b_2}=\frac{1}{F_2}
+\quad\Rightarrow\quad
+-\frac{1}{F_1}+\frac{1}{b_2}=\frac{1}{F_2}
+\quad\Rightarrow\quad
+\frac{1}{b_2}=\frac{1}{F_1}+\frac{1}{F_2}.
+\]
+Для параллельного входа расстояние \(b_2\) и есть фокусная длина эквивалентной линзы в контакте \(F\), поэтому
+\[
+\boxed{\ \frac{1}{F}=\frac{1}{F_1}+\frac{1}{F_2}\ }
+\]
+
+\subsubsection*{Оптическая сила }
+\textit{Оптическая сила} линзы (или другого элемента) \(D\) определяется как
+\[
+D=\frac{1}{F}\quad\text{(в СИ: диоптрии, м}^{-1}).
+\]
+Для близкого соединения тонких линз справедливо аддитивное правило
+\[
+D=D_1+D_2,\quad\text{то есть}\quad \frac{1}{F}=\frac{1}{F_1}+\frac{1}{F_2}.
+\]
+Это удобно для быстрой оценки эквивалентного фокуса очков, линзовых блоков и «склейки» линз.
+
+
+\end{document}

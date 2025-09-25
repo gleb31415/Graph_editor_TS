@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Пример бесконечной цепи}
+
+В ряде задач встречаются цепи, у которых элемент повторяется бесконечно долго. Разберём метод решения на примере, представленномна рисунке ниже:
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{8inf1.png}
+\label{fig:mpr}
+\end{center}
+
+\subsubsection*{Пример вычисления сопротивления бесконечной цепи}
+Поскольку сеть полностью повторяет саму себя, можно ввести эквивалентное сопротивление всей бесконечной цепи $R_{\infty}$ между 
+вводами $A$ и $B$ и записать саморазрешающееся уравнение. Оставляем одну ячейку и заменяем дальнейшую цепочку на то же эквивалентное сопротивление $R_\infty$ (рис.).
+
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{8inf2.png}
+\label{fig:mpr}
+\end{center}
+
+
+Эквивалент второго участка (параллельного соединения $R$ с $R_\infty$):
+\[
+R_{\rm ветвь} = \Bigl(\frac1R + \frac1{R_{\infty}}\Bigr)^{-1}.
+\]
+Значит между выводами $A$ и $B$ эквивалентное сопротивление
+\[
+R_{\infty} = R + R_{\rm ветвь} = R + \Bigl(\frac1R + \frac1{R_{\infty}}\Bigr)^{-1}.
+\]
+
+Умножим обе части на $(R + R_\infty)$:
+\[
+R_\infty\,(R + R_\infty)
+=
+R\,(R + R_\infty) + R\,R_\infty
+\quad\Longrightarrow\quad
+R_\infty^2 + R\,R_\infty = R^2 + R\,R_\infty + R\,R_\infty
+\]
+\[
+\Longrightarrow\quad
+R_\infty^2 + R\,R_\infty = R^2 + 2R\,R_\infty
+\quad\Longrightarrow\quad
+R_\infty^2 - R\,R_\infty - R^2 = 0.
+\]
+Это квадратное уравнение $x^2 - Rx - R^2 = 0$, корни которого
+\[
+R_\infty = \frac{R \pm \sqrt{R^2 + 4R^2}}{2} = R\frac{1 \pm \sqrt5}{2}.
+\]
+Поскольку сопротивление положительно, выбираем знак «+»:
+\[
+R_\infty = \frac{R\,(1 + \sqrt5)}{2}\approx1{,}618\,R.
+\]
+
+Подобным образом решаются все задачи на бесконечные цепи: выбирается ячейка, вся остальная цепь заменяется на эквивалентное сопротивление бесконечной цепи, и записывается одно рекуррентное уравнение,
+позволяющее найти это сопротивление.
+
+
+
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+\subsubsection*{Источники ЭДС}
+
+\textit{Источник электродвижущей силы} $\mathscr{E}$ — это элемент цепи, поддерживающий постоянную разность потенциалов между своими клеммами за счёт внутренних процессов (химических, термических и т. п.). 
+Реальный источник всегда имеет внутреннее сопротивление $r$.
+
+\begin{center}
+\includegraphics[width=0.25\linewidth]{8ist1.png}
+\label{fig:mpr}
+\end{center}
+
+
+В отличие от самой простой модели ($r = 0$), напряжение на внешних клеммах зависит от тока и равно 
+\[
+U = \mathscr{E} - Ir.
+\]
+
+\subsubsection*{Граничные точки}
+
+При $I=0$, то есть если ток через источник не течёт, $U(0)=\mathscr{E}$, а при замыкании клемм батарейки друг на друге начинает течь так называемый \textit{ток короткого замыкания}:
+\[
+I_{\rm к.з.} = \frac{\mathscr{E}}{r}.
+\]
+График вольт–амперной характеристики $I(U)$ — это прямая с наклоном $-\dfrac{1}{r}$, проходящая через точки $(0,\mathscr{E})$ и $(I_{\rm к.з.},0)$.
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{8ist2.png}
+\label{fig:mpr}
+\end{center}
+
+
+
+\textbf{Пример 1.}
+
+Если к клеммам источника подключить внешний потребитель с сопротивлением $R$, по цепи пойдёт ток $I$, и на внешних клеммах мы измерим «терминальное» напряжение $U$.
+Записывая закон Кирхгофа для всей цепи, получаем:
+\[
+I = \frac{\mathscr{E}}{R + r}
+\]
+
+\textbf{Пример 2.}
+
+Теперь рассмотрим конкретную одноконтурную цепь (см. рисунок).
+
+\begin{center}
+\includegraphics[width=0.28\linewidth]{8ist3.png}
+\label{fig:mpr}
+\end{center}
+
+
+По контуру течёт один и тот же ток $I$, и по закону Кирхгофа:
+\[
++2\mathscr{E} - I\cdot 3r
+- I\cdot 2r
+- \mathscr{E}
+- I\cdot r = 0.
+\]
+Сложим ЭДС и сопротивления:
+\[
+\mathscr{E} = I\,(3r + 2r + r) = I\cdot6r,
+\]
+откуда
+\[
+I = \frac{\mathscr{E}}{6r}
+\]
+
+
+
+\end{document}

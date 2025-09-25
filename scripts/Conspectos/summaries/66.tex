@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Key Calculus Concepts}
+
+\subsection*{Derivatives}
+Derivative is the rate of change of a function:
+\[f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h} = \frac{df}{dx}\]
+
+\subsection*{Basic Derivative Rules}
+Sum rule: $(f+g)'=f'+g'$
+
+Product rule: $(fg)'=f'g+fg'$
+
+Quotient rule: $\left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^2}$
+
+Chain rule: $(f\circ g)'(x)=f'(g(x))g'(x)$
+
+\subsection*{Common Derivatives}
+Power rule: $\frac{d}{dx}x^n=nx^{n-1}$
+
+Trigonometric:
+\[\frac{d}{dx}\sin x=\cos x \quad \frac{d}{dx}\cos x=-\sin x \quad \frac{d}{dx}\tan x=\sec^2 x\]
+
+\subsection*{Critical Points}
+For extrema, find where $f'(x)=0$. Then:
+\[
+\begin{cases}
+f''(x_0)>0 & \text{minimum at }x_0\\
+f''(x_0)<0 & \text{maximum at }x_0
+\end{cases}
+\]
+
+\end{document}

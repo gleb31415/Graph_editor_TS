@@ -1,0 +1,52 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Теорема о телесном угле}
+\[
+dE = k\,\frac{\sigma\,dS}{r^2}, \quad k=\frac{1}{4\pi\varepsilon_0},
+\quad dE_\perp = k\,\sigma\,d\Omega,
+\quad \boxed{E_\perp = k\,\sigma\,\Omega,}
+\]
+где $\Omega$ — телесный угол.
+
+\textbf{Пример. Бесконечная плоскость} 
+\[
+E_\perp = \frac{\sigma}{2\varepsilon_0}.
+\]
+
+\subsubsection*{Поток электрического поля}
+\[
+\Phi = \iint \vec E\cdot d\vec S,
+\quad \vec E\cdot d\vec S = E\,dS\,\cos\theta.
+\]
+
+\textbf{Пример. Сфера с зарядом $q$ в центре}
+\[
+\Phi_{\text{сфера}} = \frac{q}{\varepsilon_0}.
+\]
+
+\subsubsection*{Внешние заряды}
+\[
+E(r)=k\,\frac{q_{\text{out}}}{r^2}, \quad
+|d\Phi_1|=k\,q_{\text{out}}\,d\Omega, \quad
+d\Phi_1 + d\Phi_2 = 0.
+\]
+
+\subsubsection*{Теорема Гаусса}
+\[
+\boxed{
+\Phi = \iint_{\text{замк.}} \vec E\cdot d\vec S = \frac{1}{\varepsilon_0}\sum q_{\text{in}}.
+}
+\]
+
+\end{document}

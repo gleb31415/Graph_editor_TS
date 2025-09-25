@@ -1,0 +1,139 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Первообразная и неопределённый интеграл}
+Первообразной функции $f(x)$ называется такая функция $F(x)$, что
+\[
+F'(x)=f(x).
+\]
+\emph{Неопределённый интеграл} — семейство всех первообразных:
+\[
+\int f(x)\,dx = F(x) + C,
+\]
+где $C$ — произвольная константа (производная константы равна нулю).
+
+\subsubsection*{Определённый интеграл}
+\emph{Определённый интеграл} от $a$ до $b$ задаёт прирост первообразной:
+\[
+\int_{a}^{b} f(x)\,dx = F(b) - F(a).
+\]
+
+
+\begin{center}
+\includegraphics[width=0.43\linewidth]{9integral1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Графически это можно представить как сумма малых кусочков 
+
+\[ 
+dF = f(x)\,dx,
+\]
+то есть площадь под кривой $y=f(x)$ над осью $Ox$ между $x=a$ и $x=b$. Самым простым примером этого в физике является перемещение, являющееся интегралом скорости по времени.
+
+
+
+\subsubsection*{Свойства интегралов}
+\[
+\int_a^b c\,f(x)\,dx = c\int_a^b f(x)\,dx,
+\]
+\[
+\int_{a}^{b} \bigl(f(x)+g(x)\bigr)\,dx = \int_{a}^{b} f(x)\,dx + \int_{a}^{b} g(x)\,dx,
+\]
+\[
+\int_{a}^{b} c\,dx = c\,(b-a).
+\]
+
+\subsubsection*{Основные интегралы}
+Несложно построить связь между производными интегралами и для элементарных функций получить 
+\[
+\int x^n\,dx = \frac{x^{n+1}}{n+1} + C,\quad n\neq -1,
+\]
+\[
+\int \sin x\,dx = -\cos x + C,\quad
+\int \cos x\,dx = \sin x + C.
+\]
+
+\subsubsection*{Экспонента}
+Функция $e^x$ определяется как та, для которой
+\[
+\frac{d}{dx}f(x) = f(x).
+\]
+
+Численно, $e \approx 2.72$.
+Обратная экспоненциальной функция $\ln x$ (натуральный логарифм) по определению удовлетворяет
+\[
+e^{\ln x} = x.
+\]
+Возьмём производную фукнции $y(x) = \ln x$. Для этого запишем
+\[
+x = e^y.
+\]
+Дифференцируя обе части по $x$, получим
+\[
+1 = \frac{dy}{dx}\,e^y \quad \Rightarrow\quad\frac{dy}{dx} = \frac{1}{e^y} = \frac1x.
+\]
+
+поэтому
+\[
+\int \frac{dx}{x} = \ln x + C.
+\]
+Всё вышесказанное про экспоненциальные функции не необходимо в девятом классе, однако помогает разобраться в некоторых темах более детально.
+\subsubsection*{Интегрирование по частям}
+
+Важное правило интегрирования выводится из правила дифференцирования произведения:
+\[
+\frac{d}{dx}\bigl(u(x)v(x)\bigr)=u'(x)v(x)+u(x)v'(x).
+\]
+Интегрируя по $dx$, получаем
+\[
+\int u'v\,dx = uv - \int uv'\,dx.
+\]
+
+\textbf{Пример.}
+
+\[
+\int \ln x\, dx = \int u'v\,dx,
+\]
+где $v = \ln x$, $u = x$. Пользуясь формулой интегрирования по частям, получаем
+
+\[
+\int \ln x\, dx = \int u'v\,dx = uv - \int uv'\,dx = x\ln\,x-\int x\cdot\frac1x\,dx = x (\ln x-1)+C.
+\]
+
+\end{document}

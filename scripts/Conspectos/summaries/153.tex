@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Ideal Gas Pressure: Microscopic Derivation}
+
+\subsection*{Single Molecule Collision}
+For elastic collision with wall, momentum change along normal:
+\[
+p_n = 2mv_n
+\]
+
+\subsection*{Molecular Flux}
+Number of molecules hitting unit area per unit time for velocity group $v_i$:
+\[
+\frac{d}{dS}\left(\frac{dN_i}{dt}\right) = \frac{1}{4}n_iv_i
+\]
+
+\subsection*{Pressure Formula}
+Total pressure from all molecular collisions:
+\[
+p = \frac{1}{3}\rho\langle v^2\rangle = \frac{1}{3}mn\langle v^2\rangle
+\]
+
+\subsection*{Ideal Gas Law}
+Using equipartition theorem $\frac{m\langle v^2\rangle}{2}=\frac{3}{2}k_BT$, we get:
+\[
+p = nk_BT
+\]
+Leading to Mendeleev-Clapeyron equation:
+\[
+pV = \nu RT
+\]
+where $\nu$ is number of moles and $R$ is gas constant.
+
+\end{document}

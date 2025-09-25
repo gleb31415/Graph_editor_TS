@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{Equivalent Sources}
+
+For any system of sources with two terminals, we can find equivalent EMF \(\mathscr{E}_0\) and internal resistance \(r_0\). Current and voltage on load \(R_{\rm nагруз}\):
+\[
+I=\frac{\mathscr{E}_0}{R_{\rm нагруз}+r_0}, \quad U_{\rm нагруз}=\mathscr{E}_0 - Ir_0
+\]
+
+\subsection{Series Connection}
+For sources \(\mathscr{E}_1,r_1\) and \(\mathscr{E}_2,r_2\) in series:
+\[
+\mathscr{E}_0 = \mathscr{E}_1 + \mathscr{E}_2, \quad r_0 = r_1 + r_2
+\]
+
+\subsection{Parallel Connection}
+For sources in parallel, equivalent parameters are:
+\[
+\mathscr{E}_0 = \frac{\mathscr{E}_1\,r_2 + \mathscr{E}_2\,r_1}{r_1 + r_2}, \quad
+r_0 = \frac{r_1\,r_2}{r_1 + r_2}
+\]
+
+\end{document}

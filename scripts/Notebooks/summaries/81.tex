@@ -1,0 +1,48 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Метод изображений: точечный заряд и проводящая плоскость}
+
+Пусть плоскость $z=0$ с потенциалом $\varphi=0$, заряд $q$ в точке $\vec r_0=(0,0,H)$, изображение $-q$ в $\vec r_0'=(0,0,-H)$. Тогда потенциал при $z>0$:
+\[
+\varphi(\vec r)=k\left(\frac{q}{|\vec r-\vec r_0|}-\frac{q}{|\vec r-\vec r_0'|}\right), \quad k=\frac{1}{4\pi\varepsilon_0}.
+\]
+
+Индуцированный заряд на плоскости:
+\[
+\sigma(\rho)=-\frac{q\,H}{2\pi(\rho^2+H^2)^{3/2}}, \quad \int \sigma\, dS = -q.
+\]
+
+Сила притяжения:
+\[
+F=\frac{k\,q^2}{4H^2}.
+\]
+
+\subsubsection*{Изображение в сфере}
+
+Проводящая сфера радиуса $R$, заряд $q$ на расстоянии $d>R$ от центра. Изображение:
+\[
+q' = -q \frac{R}{d}, \quad r' = \frac{R^2}{d}.
+\]
+
+Потенциал вне сферы ($r \ge R$):
+\[
+\varphi(\vec r) = k\left(\frac{q}{|\vec r - \vec d|} + \frac{q'}{|\vec r - \vec r'|}\right).
+\]
+
+Индуцированный заряд и сила:
+\[
+Q_{\text{ин}} = q' = -q \frac{R}{d}, \quad F = \frac{k q^2 R d}{(d^2 - R^2)^2}.
+\]
+
+\end{document}

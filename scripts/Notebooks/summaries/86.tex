@@ -1,0 +1,45 @@
+<latex>
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Логарифм и его свойства}
+\[
+\log_a b = c \iff a^c = b, \quad a>0, a\neq 1, b>0,
+\quad \log_a(bc) = \log_a b + \log_a c.
+\]
+
+\subsubsection*{Производная \(a^x\) и число \(e\)}
+\[
+\frac{d}{dx}a^x = a^x \lim_{h\to0} \frac{a^h - 1}{h} = a^x M(a),
+\quad e = \lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n,
+\quad \frac{d}{dx} e^x = e^x.
+\]
+
+\subsubsection*{Натуральный логарифм и производные}
+\[
+y = \ln x \iff e^y = x, \quad \frac{d}{dx} \ln x = \frac{1}{x},
+\quad \frac{d}{dx} \log_a x = \frac{1}{x \ln a}.
+\]
+
+\subsubsection*{Производные показательных и степенных функций}
+\[
+\frac{d}{dx} a^x = \ln a \cdot a^x,
+\quad \frac{d}{dx} x^p = p x^{p-1}, \quad x>0.
+\]
+
+\subsubsection*{Пример логарифмического дифференцирования}
+\[
+y = x^x, \quad \ln y = x \ln x, \quad y' = x^x (\ln x + 1).
+\]
+
+\end{document}
+</latex>

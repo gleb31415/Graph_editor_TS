@@ -1,0 +1,222 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Ввод энтропии для квазистатического процесса}
+
+
+\begin{wrapfigure}[8]{r}{160}
+\includegraphics{entropy1.jpeg}
+\centering
+\end{wrapfigure}
+
+Пусть есть цикл, состоящий из квазистатических процессов:
+\[\int\limits_{1\rightarrow2}^{\mathrm{I}}\frac{\delta Q}{T}+\int\limits_{2\rightarrow1}^{\mathrm{II}}\frac{\delta Q}{T}=0\]\[
+\int\limits_{1\rightarrow2}^{\mathrm{I}}\frac{\delta Q}{T}=\int\limits_{1\rightarrow2}^{\mathrm{II}}\frac{\delta Q}{T}\]
+
+
+Введём \textit{энтропию} $S$ для квазистатического процесса:
+
+
+
+\[dS=\frac{\delta Q_{\text{кв.ст.}}}{T}\]\[ S_1-S_0=\int\limits_{0 \rightarrow 1}\frac{\delta Q}{T}\]Энтропия определяется с точностью до константы и является функцией состояния:
+\[\int\limits_{1\rightarrow2}^{\mathrm{I}}\frac{\delta Q}{T}=\int\limits_{1\rightarrow2}^{\mathrm{II}}\frac{\delta Q}{T}\]Её изменение в обратимом процессе не зависит от пути перехода, а определяется значениями энтропии начального и конечного состояния.
+Энтропия --- величина аддитивная, то есть изменение энтропии системы равно сумме изменений энтропии ее отдельных частей.
+
+\subsubsection*{Ограничения для энтропии}
+
+\begin{wrapfigure}[8]{r}{160}
+\includegraphics{entropy2.jpeg}
+\centering
+\end{wrapfigure}
+
+
+
+Пусть между состояниями $1$ и $2$ проводится неквазистатический процесс $\mathrm{I}$ и квазистатический процесс $\mathrm{II}$.
+\[\int\limits_{1\rightarrow2}^{\mathrm{I}}\frac{\delta Q}{T}+\int\limits_{2\rightarrow1}^{\mathrm{II}}\frac{\delta Q_{\text{кв.ст.}}}{T}\le0\]Поскольку для любого цикла $\oint\frac{\delta Q}{T}\le0$
+\[\int\limits_{1\rightarrow2}^{\mathrm{I}}\frac{\delta Q}{T}\le\int\limits_{1\rightarrow2}^{\mathrm{II}}\frac{\delta Q_{\text{кв.ст.}}}{T}=S_2-S_1\]
+
+
+Если процесс $\mathrm{I}$ происходит самопроизвольно:
+\[0=\int\limits_{1\rightarrow2}^{\mathrm{I}}\frac{\delta Q}{T}\le\int\limits_{1\rightarrow2}^{\mathrm{II}}\frac{\delta Q_{\text{кв.ст.}}}{T}=S_2-S_1\]\[
+S_2\ge S_1\]То есть энтропия самопроизвольно не уменьшается (система стремится к беспорядку).
+
+\subsubsection*{Энтропия идеального газа}
+Для идеального газа:
+\[\delta Q=dU+pdV=\nu C_VdT+pdV\]\[
+dS=\nu C_V\frac{dT}{T}+\frac{pdV}{pV}\nu R\]\[
+dS=\nu C_V\frac{dT}{T}+\nu R\frac{dV}{V}\]\[
+C_V=const\qquad\nu=const\]\[
+\Delta S=\nu C_V\ln\left(\frac{T}{T_0}\right)+\nu R\ln\left(\frac{V}{V_0}\right)
+\]
+
+\textbf{Пример.}
+
+Есть сосуд объёма $V$ с перегородкой, по одну сторону которой находится газ объёма $V_0$ и температуры $T_0$, а по другую --- вакуум. Сможет ли газ заполнить сосуд, если убрать перегородку?
+\[V>V_0\]Поскольку энергия газа не изменилась 
+\[T=T_0\]Получаем $\Delta S>0$. То есть такой процесс возможен.
+
+
+\subsubsection*{Извлечение максимальной работы}
+
+
+Пусть есть два тела с равными теплоёмкостями $C$ и с начальными температурами $T_{10}$ и $T_{20}$ соответственно. Какую максимальную работу $A$ можно из них получить?
+
+Подключим эти тела к циклу Карно:
+\[\delta A=\delta Q_+\left(1-\frac{T_1}{T_2}\right)=\frac{\Delta T}{T_2}\delta Q_+\]где $\Delta T=T_2-T_1$
+\[d\Delta T=-\frac{\delta Q_+}{C}-\frac{\delta Q_-}{C}=-\frac{Q_+}{C}\left(1+\frac{T_1}{T_2}\right)=-\frac{\delta Q_+}{C}\left(2-\frac{\Delta T}{T_2}\right)
+\]\[\frac{\delta A}{d\Delta T}=-C\frac{\Delta Td\Delta T}{T_2\left(2-\frac{\Delta T}{T_2}\right)}\]\[
+dT_2=-\frac{\delta Q_+}{C}\qquad dT_1=\frac{\delta Q_-}{C}\]\[
+Cd(T_2-T_1)=-\delta A=-\delta Q_+\frac{T_2-T_1}{T_2}\]\[
+dT_2+dT_1=\frac{T_2-T_1}{T_2}dT_2\]\[
+dQ_+=-CdT_2\]\[
+dT_2+dT_1=\left(1-\frac{T_1}{T_2}\right)dT_2\]\[
+\frac{dT_1}{T_1}=-\frac{dT_2}{T_2}\]\[
+\ln\frac{T_1}{T_{10}}+\ln\frac{T_2}{T_{20}}=0\]\[
+\ln\frac{T_1T_2}{T_{10}T_{20}}=0\]\[
+T_1T_2=T_{10}T_{20}\]Из ЗСЭ:
+\[T_1+T_2=T_{10}+T_{20}+\frac{A}{C}\]Поскольку температуры тел в конце сравняются (иначе из них можно получить ещё работу):
+\[\begin{cases}2T=T_{10}+T_{20}-\frac AC\\
+T^2=T_{10}T_{20}\end{cases}\]\[
+A=\left(T_{10}+T_{20}-2\sqrt{T_{10}T_{20}}\right)C\]\[
+A=C\left(\sqrt{T_{20}}-\sqrt{T_{10}}\right)^2\]
+Рассмотрим задачу с $n$ резервуарами с теплоёмкостями $C_i$ и начальными температурами $T_{i0}$. Запишем изменение энтропии:
+\[(S_1-S_{10})+(S_2-S_{20})+\cdots+(S_n-S_{n0})\ge0\]\[
+\sum\Delta S_i\ge0\]\[
+\Delta S_i=\int\frac{C_idT_i}{T_i}=C_i\ln\frac{T_i}{T_{i0}}\]Поскольку в конце температуры резервуаров равны $T$:
+\[\Delta S_i=C_i\ln\frac{T}{T_{i0}}\]\[
+\sum C_i\ln\frac{T}{T_{i0}}\ge0\]Пусть $\sum C_i=C$ --- суммарная теплоёмкость системы.
+\[\sum\ln\left(\frac{T}{T_{i0}}\right)^{\frac{C_i}{C}}\]\[
+\ln\left(\frac{\Pi T^{\frac{C_i}{C}}}{\Pi T_{i0}^{\frac{C_i}{C}}}\right)\ge0\]Раскрывая логарифм, получаем
+\[T^{\sum\frac{C_i}{C}}\ge\Pi T_{i0}^{\frac{C_i}{C}}\]\[
+T\ge T^{\frac{C_1}{C}}_{10}T^{\frac{C_2}{C}}_{20}\dots T^{\frac{C_n}{C}}_{n0}\]Для двух тел с $C_1=C_2=\frac C2$
+\[T\ge\sqrt{T_{10}T_{20}}\]Совершённая работа:
+\[A=\sum C_iT_{i0}-CT\]
+То есть $A_{\text{max}}$ достигается при $T_{\text{min}}$.
+
+
+\subsubsection*{Координаты $TS$}
+
+\begin{wrapfigure}[8]{r}{220}
+\includegraphics{entropy3.jpeg}
+\centering
+\end{wrapfigure}
+
+Рассмотрим цикл Карно в $PV$ и $TS$ координатах.
+Изотерма на $TS$ диаграмме выглядит как отрезок,  параллельный оси $S$, а адиабата --- как параллельный оси $T$ (так как $\Delta S=\int\frac{\delta Q}{T}=0)$.
+Заметим, что площадь под графиком процесса имеет смысл подведённого тепла к системе в этом процессе:
+\[Q=\int\frac{\delta Q}{T}T=\int\delta Q\]
+
+
+\begin{wrapfigure}[8]{r}{220}
+\includegraphics{entropy4.jpeg}
+\centering
+\end{wrapfigure}
+
+Площадь цикла в координатах $TS$ равна $Q_+-Q_-$, где $Q_+$ --- суммарная подведённая теплота, а $Q_-$ --- суммарная отведённая $(Q_-=|Q_{\text{отведённое}}|)$. Тогда по Первому началу  термодинамики для цикла:
+\[Q_+-Q_-=A\]Где $A$ --- работа, совершённая за цикл.
+То есть размерная площадь цикла в координатах $TS$, как и в координатах $PV$, имеет смысл совершённой за цикл работы.
+
+\begin{wrapfigure}[8]{r}{160}
+\includegraphics{entropy5.jpeg}
+\centering
+\end{wrapfigure}
+
+Для цикла Карно:
+\[Q_-=\Delta ST_1\]\[Q_+=\Delta ST_2\]\[
+\eta =  \frac AQ_+=\frac{Q_+-Q_-}{Q_+}=\frac{T_2-T_1}{T_2}\]
+
+\begin{wrapfigure}[8]{r}{160}
+\includegraphics{entropy6.jpeg}
+\centering
+\end{wrapfigure}
+
+Для любого выпуклого цикла в координатах $TS$ верно, что
+\[\eta = \frac{Q_+-Q_-}{Q_+}=\frac{s_{\text{in}}}{s_{\text{out}}}\] где $s_{\text{in}}$ --- размерная площадь внутри цикла, а $s_{\text{out}}$ --- под циклом (см рис).
+
+\vspace{2.5cm}
+
+\textbf{Пример 1.  КПД цикла}
+
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{entropy7.jpeg}
+\label{fig:mpr}
+\end{center}
+
+
+Рассмотрим цикл, состоящий из адиабаты, изобары и изохоры (см рис). Найдём его КПД.
+Рассмотрим изохору:
+\[dS_V=\frac{C_VdT}{T}\]\[
+\Delta S_V=C_V\ln\left(\frac{T}{T_0}\right)\]\[
+T=T_0e^{\frac{\Delta S_V}{C_V}}\]Аналогично для изобары:
+\[T=T_0e^{\frac{\Delta S_P}{C_P}}\]Получаем:
+\[T_3=T_1e^{\frac{\Delta S}{C_V}}=T_2e^{\frac{\Delta S}{C_P}}\]\[
+\ln\frac{T_2}{T_1}=\Delta S\left(\frac 1{C_V}-\frac 1{C_P}\right)\]\[
+T_3=T_1\exp{\left(\frac{C_P}{C_P-C_V}\ln\frac{T_2}{T_1}\right)}\]\[
+T_3=T_1\left(\frac{T_2}{T_1}\right)^{\frac{C_P}{C_P-C_V}}\]\[
+Q_+=\int_S^{S+\Delta S}TdS=\int_0^{\Delta S}T_2e^{\frac{S}{C_p}}dS=C_pT_2\left(e^{\frac{\Delta S}{C_P}}-1\right)=C_P(T_3-T_2)\]\[
+Q_-=\int_{S+\Delta S}^{S}TdS=\int_{\Delta S}^0T_2e^{\frac{S}{C_V}}dS=C_VT_1\left(e^{\frac{\Delta S}{C_V}}-1\right)=C_V(T_3-T_1)\]\[
+\eta=\frac{C_P(T_3-T_2)-C_V(T_3-T_1)}{C_P(T_3-T_2)}\]
+
+
+\textbf{Пример 2. Фазовый переход на $TS$ диаграмме} 
+
+
+Пусть есть цикл, включающий в себя фазовый переход (предположим, жидкость-газ).
+
+
+\begin{center}
+\includegraphics[width=0.7\linewidth]{entropy8.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Рассмотрим участки диаграммы:
+\begin{itemize}
+
+\item $1\rightarrow2$ – фазовый переход из жидкости в газ~ 
+\item $2\rightarrow3$ – изотерма (газообразное состояние) 
+\item $3\rightarrow4$ – изобара (газообразное состояние) 
+\item $4\rightarrow5$ – конденсация 
+\item $5\rightarrow6$ – изохора (жидкое состояние) 
+\item $6\rightarrow1$ – изотерма (жидкое состояние) 
+\end{itemize}
+Заметим, что изотерма $6\rightarrow1$ почти вертикальна, поскольку объём жидкости практически не меняется с изменением температуры.
+На диаграмме $TS$ процессы $6\rightarrow1\rightarrow2\rightarrow3$ будут иметь вид единой горизонтальной прямой, поскольку температура не изменяется.
+
+
+\end{document}

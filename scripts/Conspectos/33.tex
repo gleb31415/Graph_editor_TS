@@ -1,0 +1,122 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Баллистика}
+\textit{Баллистика} — раздел механики, изучающий движение тел, брошенных или выпущенных под начальной скоростью в поле тяжести.
+В этом конспекте мы рассмотрим координатный метод: разложим начальную скорость на горизонтальную и вертикальную составляющие,
+составим уравнения движения по каждой оси, выведем уравнение траектории, а затем найдём максимальную высоту полёта и дальность
+полёта.
+
+\subsubsection*{Координатный метод}
+Выберем начало координат в точке запуска. Ось $x$ направим горизонтально в сторону движения, ось $y$ — вертикально вверх. Обозначим:
+\begin{itemize}
+  \item $v_0$ — модуль начальной скорости;
+  \item $\alpha$ — угол подъёма (угол между вектором скорости и горизонталью);
+  \item $g$ — ускорение свободного падения (возьмём $g\approx9.8\ \mathrm{м/с^2}$).
+\end{itemize}
+Разложим начальную скорость на компоненты:
+\[
+v_{0x} = v_0\cos\alpha,
+\]
+\[
+v_{0y} = v_0\sin\alpha.
+\]
+При движении без сопротивления воздуха горизонтальная составляющая не меняется (так как действующая сила вертикальна), а вертикальная уменьшается под действием тяжести.
+
+\subsubsection*{Уравнения движения}
+Движение по оси $x$ — равномерное (нет ускорения):
+\[
+x(t) = v_{0x}t = v_0\cos\alpha\,t,
+\]
+по оси $y$ — равнопеременное (ускорение $-g$):
+\[
+y(t) = v_{0y}t - \frac{gt^2}{2} = v_0\sin\alpha\,t - \frac{gt^2}{2}.
+\]
+Здесь $t$ — время, прощедшее от момента начала движения.
+
+\subsubsection*{Уравнение траектории}
+Чтобы получить зависимость $y$ от $x$, выразим время из первого уравнения:
+\[
+t = \frac{x}{v_0\cos\alpha}
+\]
+и подставим во второе:
+\[
+y(x) = x\text{tg}\,\alpha - \frac{g}{2v_0^2\cos^2\alpha}\,x^2.
+\]
+Это уравнение параболы: высота зависит квадратично от пройденного по горизонтали расстояния:
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{9coord1.jpeg}
+\label{fig:mpr}
+\end{center}
+
+\subsubsection*{Максимальная высота полёта}
+
+\begin{center}
+\includegraphics[width=0.53\linewidth]{9coord3.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Максимум по $y$ достигается, когда вертикальная скорость обнуляется, $v_y(t_H)=0$:
+\[
+v_{0y} - gt_H = 0 \quad\Rightarrow\quad t_H = \frac{v_0\sin\alpha}{g}.
+\]
+Подставим в $y(t)$:
+\[
+H = y(t_H) = \frac{v_0^2\sin^2\alpha}{2g}.
+\]
+Здесь $H$ — максимальная высота над уровнем запуска.
+
+\subsubsection*{Дальность полёта}
+
+\begin{center}
+\includegraphics[width=0.53\linewidth]{9coord2.jpeg}
+\label{fig:mpr}
+\end{center}
+
+Полное время полёта до возврата на уровень запуска $y=0$ найдём из условия $y(T)=0$: это 
+даёт $T = 2t_H = \dfrac{2v_0\sin\alpha}{g}$.
+
+Тогда дальность полёта:
+\[
+L = x(T) = v_{0x}T = \frac{v_0\cos\alpha\cdot 2v_0\sin\alpha}{g} = \frac{v_0^2\sin2\alpha}{g}.
+\]
+Это горизонтальное расстояние между точкой запуска и точкой приземления на ровной поверхности (при равенстве уровня точек запуска и призмеления).
+
+
+\end{document}

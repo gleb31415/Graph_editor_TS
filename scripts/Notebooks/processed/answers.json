@@ -1,0 +1,1181 @@
+{
+  "problem_physics__10AU_1": [
+    "57.2"
+  ],
+  "problem_physics__10AU_2": [
+    "16.0"
+  ],
+  "problem_physics__10AU_3": [
+    "35"
+  ],
+  "problem_physics__10Entropy_1": [
+    "8.6"
+  ],
+  "problem_physics__10Entropy_2": [
+    "45"
+  ],
+  "problem_physics__10G_1": [
+    "2.6"
+  ],
+  "problem_physics__10G_2": [
+    "15"
+  ],
+  "problem_physics__10G_3": [
+    "0.8",
+    "53",
+    "0.05"
+  ],
+  "problem_physics__10KK_1": [
+    "$c > 4R$; $c < 4R$; $c > R$; $c = 2R$"
+  ],
+  "problem_physics__10KK_2": [
+    "1350"
+  ],
+  "problem_physics__10KK_3": [
+    "77"
+  ],
+  "problem_physics__10Tkarno_1": [
+    "6.2"
+  ],
+  "problem_physics__10adiabatic_1": [
+    "10.8"
+  ],
+  "problem_physics__10adiabatic_2": [
+    "0.6"
+  ],
+  "problem_physics__10adiabatic_3": [
+    "12.5"
+  ],
+  "problem_physics__10conduct_1": [
+    "75",
+    "19",
+    "19",
+    "2.12"
+  ],
+  "problem_physics__10conduct_2": [
+    "-6.3"
+  ],
+  "problem_physics__10conduct_3": [
+    "540",
+    "-2"
+  ],
+  "problem_physics__10conduct_4": [
+    "1.24"
+  ],
+  "problem_physics__10cycle_1": [
+    "67"
+  ],
+  "problem_physics__10cycle_2": [
+    "53"
+  ],
+  "problem_physics__10cycle_3": [
+    "43"
+  ],
+  "problem_physics__10cycle_4": [
+    "27"
+  ],
+  "problem_physics__10epsilon_1": [
+    "4"
+  ],
+  "problem_physics__10epsilon_2": [
+    "1800"
+  ],
+  "problem_physics__10equilibrium_1": [
+    "-8"
+  ],
+  "problem_physics__10equilibrium_2": [
+    "0.79"
+  ],
+  "problem_physics__10ftl_1": [
+    "21"
+  ],
+  "problem_physics__10ftl_2": [
+    "336"
+  ],
+  "problem_physics__10ftl_3": [
+    "-0.89"
+  ],
+  "problem_physics__10gauss_1": [
+    "340",
+    "720",
+    "14",
+    "9.4"
+  ],
+  "problem_physics__10gauss_2": [
+    "1.4"
+  ],
+  "problem_physics__10gauss_3": [
+    "360"
+  ],
+  "problem_physics__10gauss_4": [
+    "300"
+  ],
+  "problem_physics__10humid_1": [
+    "50"
+  ],
+  "problem_physics__10humid_2": [
+    "12.2"
+  ],
+  "problem_physics__10humid_3": [
+    "50"
+  ],
+  "problem_physics__10image_1": [
+    "69"
+  ],
+  "problem_physics__10image_2": [
+    "1.85"
+  ],
+  "problem_physics__10karno_1": [
+    "0.53"
+  ],
+  "problem_physics__10karno_2": [
+    "7.5"
+  ],
+  "problem_physics__10karno_3": [
+    "5.7",
+    "15.1"
+  ],
+  "problem_physics__10klapmend_1": [
+    "57"
+  ],
+  "problem_physics__10klapmend_2": [
+    "2.25"
+  ],
+  "problem_physics__10klapmend_3": [
+    "0.4"
+  ],
+  "problem_physics__10klau_1": [
+    "1.56"
+  ],
+  "problem_physics__10klin_1": [
+    "15"
+  ],
+  "problem_physics__10klin_2": [
+    "0.1"
+  ],
+  "problem_physics__10klin_3": [
+    "2.3"
+  ],
+  "problem_physics__10lambda_1": [
+    "19.6",
+    "2",
+    "1.22",
+    "118"
+  ],
+  "problem_physics__10lens_1": [
+    "1"
+  ],
+  "problem_physics__10lens_2": [
+    "1"
+  ],
+  "problem_physics__10lens_3": [
+    "1",
+    "1"
+  ],
+  "problem_physics__10lens_4": [
+    "1"
+  ],
+  "problem_physics__10log_1": [
+    "1.4"
+  ],
+  "problem_physics__10log_2": [
+    "169"
+  ],
+  "problem_physics__10mirror_1": [
+    "33",
+    "2"
+  ],
+  "problem_physics__10mirror_2": [
+    "0.6"
+  ],
+  "problem_physics__10mirror_3": [
+    "4"
+  ],
+  "problem_physics__10politropa_1": [
+    "-2"
+  ],
+  "problem_physics__10politropa_2": [
+    "-0.75"
+  ],
+  "problem_physics__10pvo_1": [
+    "60"
+  ],
+  "problem_physics__10pvo_2": [
+    "2.8"
+  ],
+  "problem_physics__10pvo_3": [
+    "0.8",
+    "12"
+  ],
+  "problem_physics__10qen_1": [
+    "6.8"
+  ],
+  "problem_physics__10qen_2": [
+    "5"
+  ],
+  "problem_physics__10qen_3": [
+    "1.8",
+    "0.014"
+  ],
+  "problem_physics__10qen_4": [
+    "-0.34",
+    "-0.17"
+  ],
+  "problem_physics__10reflection_1": [
+    "19"
+  ],
+  "problem_physics__10reflection_2": [
+    "1.67"
+  ],
+  "problem_physics__10reflection_3": [
+    "30",
+    "30"
+  ],
+  "problem_physics__10reflection_4": [
+    "59"
+  ],
+  "problem_physics__10shadow_1": [
+    "1.3"
+  ],
+  "problem_physics__10shadow_2": [
+    "2.3"
+  ],
+  "problem_physics__10small_1": [
+    "1"
+  ],
+  "problem_physics__10small_2": [
+    "1",
+    "0",
+    "-0.17",
+    "0",
+    "0.0083"
+  ],
+  "problem_physics__10small_3": [
+    "1",
+    "0",
+    "-0.083",
+    "0",
+    "0.00069"
+  ],
+  "problem_physics__10system_1": [
+    "0.33"
+  ],
+  "problem_physics__10tel_1": [
+    "2.09",
+    "3.14",
+    "1.57"
+  ],
+  "problem_physics__10tel_2": [
+    "6.28"
+  ],
+  "problem_physics__10turelec_1": [
+    "20"
+  ],
+  "problem_physics__10turelec_2": [
+    "180",
+    "3",
+    "70.7"
+  ],
+  "problem_physics__10turelec_3": [
+    "-50"
+  ],
+  "problem_physics__10turelec_4": [
+    "0.71"
+  ],
+  "problem_physics__10turelec_5": [
+    "16.3"
+  ],
+  "problem_physics__10turopt_1": [
+    "3.66",
+    "3.3"
+  ],
+  "problem_physics__10turopt_2": [
+    "1"
+  ],
+  "problem_physics__10turopt_3": [
+    "71"
+  ],
+  "problem_physics__10turopt_4": [
+    "56.6"
+  ],
+  "problem_physics__10turopt_5": [
+    "53"
+  ],
+  "problem_physics__10turterm_1": [
+    "320"
+  ],
+  "problem_physics__10turterm_2": [
+    "500"
+  ],
+  "problem_physics__10turterm_3": [
+    "300"
+  ],
+  "problem_physics__10turterm_4": [
+    "60.7"
+  ],
+  "problem_physics__10turterm_5": [
+    "28.5",
+    "10.5",
+    "400"
+  ],
+  "problem_physics__10vdv_1": [
+    "4.0"
+  ],
+  "problem_physics__10vdv_2": [
+    "0.01"
+  ],
+  "problem_physics__7.avgspd_1": [
+    "48"
+  ],
+  "problem_physics__7.avgspd_2": [
+    "18.4",
+    "5.6"
+  ],
+  "problem_physics__7.avgspd_3": [
+    "24"
+  ],
+  "problem_physics__7.avgspd_4": [
+    "100"
+  ],
+  "problem_physics__7.avgspd_5": [
+    "2000"
+  ],
+  "problem_physics__7.avgspd_6": [
+    "120"
+  ],
+  "problem_physics__7.avgspd_7": [
+    "40",
+    "100",
+    "80",
+    "55.6"
+  ],
+  "problem_physics__7.force_1": [
+    "250",
+    "50"
+  ],
+  "problem_physics__7arhimed_1": [
+    "1.7"
+  ],
+  "problem_physics__7arhimed_2": [
+    "25"
+  ],
+  "problem_physics__7arhimed_3": [
+    "960"
+  ],
+  "problem_physics__7arhimed_4": [
+    "1"
+  ],
+  "problem_physics__7arhimed_5": [
+    "2500",
+    "1.17"
+  ],
+  "problem_physics__7arhimed_6": [
+    "2700",
+    "63"
+  ],
+  "problem_physics__7friction_1": [
+    "0.4"
+  ],
+  "problem_physics__7friction_2": [
+    "20"
+  ],
+  "problem_physics__7friction_3": [
+    "225"
+  ],
+  "problem_physics__7friction_4": [
+    "20"
+  ],
+  "problem_physics__7graphs_1": [
+    "$A$"
+  ],
+  "problem_physics__7graphs_2": [
+    "1.125"
+  ],
+  "problem_physics__7graphs_3": [
+    "2.4"
+  ],
+  "problem_physics__7graphs_4": [
+    "4"
+  ],
+  "problem_physics__7kinblok_1": [
+    "9"
+  ],
+  "problem_physics__7kinblok_2": [
+    "100"
+  ],
+  "problem_physics__7kinblok_3": [
+    "-3.6"
+  ],
+  "problem_physics__7mgN_1": [
+    "30"
+  ],
+  "problem_physics__7mgN_2": [
+    "50"
+  ],
+  "problem_physics__7mgN_3": [
+    "4"
+  ],
+  "problem_physics__7mgN_4": [
+    "1.62",
+    "5"
+  ],
+  "problem_physics__7mgN_5": [
+    "176"
+  ],
+  "problem_physics__7pressure_1": [
+    "20"
+  ],
+  "problem_physics__7pressure_2": [
+    "760"
+  ],
+  "problem_physics__7pressure_3": [
+    "5"
+  ],
+  "problem_physics__7pressure_4": [
+    "2"
+  ],
+  "problem_physics__7pressure_5": [
+    "1160",
+    "35"
+  ],
+  "problem_physics__7pressure_6": [
+    "200"
+  ],
+  "problem_physics__7rpo_1": [
+    "18"
+  ],
+  "problem_physics__7rpo_2": [
+    "70"
+  ],
+  "problem_physics__7rpo_3": [
+    "1.5",
+    "7.5"
+  ],
+  "problem_physics__7springs_1": [
+    "200"
+  ],
+  "problem_physics__7springs_2": [
+    "48",
+    "30"
+  ],
+  "problem_physics__7springs_3": [
+    "0.5"
+  ],
+  "problem_physics__7springs_4": [
+    "80"
+  ],
+  "problem_physics__7springs_5": [
+    "900"
+  ],
+  "problem_physics__7springs_6": [
+    "200"
+  ],
+  "problem_physics__7statblock_1": [
+    "0.5"
+  ],
+  "problem_physics__7statblock_2": [
+    "70"
+  ],
+  "problem_physics__7statblock_3": [
+    "5",
+    "75"
+  ],
+  "problem_physics__7statblock_4": [
+    "11",
+    "14",
+    "8"
+  ],
+  "problem_physics__7statblock_5": [
+    "4"
+  ],
+  "problem_physics__7torque_1": [
+    "1"
+  ],
+  "problem_physics__7torque_2": [
+    "100",
+    "150",
+    "200",
+    "50"
+  ],
+  "problem_physics__7torque_3": [
+    "778"
+  ],
+  "problem_physics__7torque_4": [
+    "65",
+    "15",
+    "4",
+    "1.4"
+  ],
+  "problem_physics__7torque_5": [
+    "80"
+  ],
+  "problem_physics__7turmech_1": [
+    "16",
+    "м/мин"
+  ],
+  "problem_physics__7turmech_2": [
+    "16.8"
+  ],
+  "problem_physics__7turmech_3": [
+    "15"
+  ],
+  "problem_physics__7turmech_4": [
+    "71",
+    "14",
+    "37",
+    "94"
+  ],
+  "problem_physics__7turmech_5": [
+    "5"
+  ],
+  "problem_physics__7work_1": [
+    "-200"
+  ],
+  "problem_physics__7work_2": [
+    "1"
+  ],
+  "problem_physics__7work_3": [
+    "96.2"
+  ],
+  "problem_physics__8Energy_1": [
+    "2"
+  ],
+  "problem_physics__8Energy_2": [
+    "9"
+  ],
+  "problem_physics__8Energy_3": [
+    "5.4"
+  ],
+  "problem_physics__8MVP_1": [
+    "0.24"
+  ],
+  "problem_physics__8MVP_2": [
+    "36"
+  ],
+  "problem_physics__8MVP_3": [
+    "0.64"
+  ],
+  "problem_physics__8MVP_4": [
+    "20",
+    "130",
+    "180"
+  ],
+  "problem_physics__8UI_1": [
+    "4"
+  ],
+  "problem_physics__8UI_2": [
+    "4.4",
+    "1440"
+  ],
+  "problem_physics__8UI_3": [
+    "11220"
+  ],
+  "problem_physics__8VAH_1": [
+    "-5"
+  ],
+  "problem_physics__8VAH_2": [
+    "2"
+  ],
+  "problem_physics__8VAH_3": [
+    "2",
+    "0.55"
+  ],
+  "problem_physics__8VAH_4": [
+    "5"
+  ],
+  "problem_physics__8bridge_1": [
+    "326"
+  ],
+  "problem_physics__8bridge_2": [
+    "1",
+    "0"
+  ],
+  "problem_physics__8bridge_3": [
+    "6"
+  ],
+  "problem_physics__8cmt_1": [
+    "Внутренняя энергия изменяется"
+  ],
+  "problem_physics__8cmt_2": [
+    "6.1"
+  ],
+  "problem_physics__8cmt_3": [
+    "10.5",
+    "9.7"
+  ],
+  "problem_physics__8equivist_1": [
+    "\\[\\mathscr E_\\text{eq"
+  ],
+  "problem_physics__8equivist_2": [
+    "2",
+    "21"
+  ],
+  "problem_physics__8equivist_3": [
+    "4"
+  ],
+  "problem_physics__8equivist_4": [
+    "7"
+  ],
+  "problem_physics__8equivr_1": [
+    "20"
+  ],
+  "problem_physics__8equivr_2": [
+    "17"
+  ],
+  "problem_physics__8expand_1": [
+    "24", "36"
+  ],
+  "problem_physics__8expand_2": [
+    "2.4"
+  ],
+  "problem_physics__8expand_3": [
+    "5"
+  ],
+  "problem_physics__8humid_1": [
+    "60"
+  ],
+  "problem_physics__8humid_2": [
+    "0.61"
+  ],
+  "problem_physics__8infinite_1": [
+    "15"
+  ],
+  "problem_physics__8infinite_2": [
+    "11.4"
+  ],
+  "problem_physics__8ist_1": [
+    "500",
+    "543"
+  ],
+  "problem_physics__8kirchhoff_1": [
+    "15"
+  ],
+  "problem_physics__8kirchhoff_2": [
+    "3"
+  ],
+  "problem_physics__8kirchhoff_3": [
+    "45"
+  ],
+  "problem_physics__8kirchhoff_4": [
+    "48"
+  ],
+  "problem_physics__8kulon_1": [
+    "28"
+  ],
+  "problem_physics__8kulon_2": [
+    "1.25"
+  ],
+  "problem_physics__8loss_1": [
+    "8"
+  ],
+  "problem_physics__8loss_2": [
+    "11"
+  ],
+  "problem_physics__8loss_3": [
+    "30"
+  ],
+  "problem_physics__8measure_1": [
+    "9"
+  ],
+  "problem_physics__8measure_2": [
+    "3"
+  ],
+  "problem_physics__8measure_3": [
+    "800",
+    "500"
+  ],
+  "problem_physics__8naprpot_1": [
+    "-2"
+  ],
+  "problem_physics__8naprpot_2": [
+    "4"
+  ],
+  "problem_physics__8om_1": [
+    "$I_1 = I_2$"
+  ],
+  "problem_physics__8om_2": [
+    "$U_1 = U_2$"
+  ],
+  "problem_physics__8om_3": [
+    "2"
+  ],
+  "problem_physics__8om_4": [
+    "12"
+  ],
+  "problem_physics__8overlap_1": [
+    "58"
+  ],
+  "problem_physics__8overlap_2": [
+    "5"
+  ],
+  "problem_physics__8rihman_1": [
+    "380"
+  ],
+  "problem_physics__8rihman_2": [
+    "5.1"
+  ],
+  "problem_physics__8simm_1": [
+    "5"
+  ],
+  "problem_physics__8simm_2": [
+    "30"
+  ],
+  "problem_physics__8simm_3": [
+    "10"
+  ],
+  "problem_physics__8simm_4": [
+    "5"
+  ],
+  "problem_physics__8temperature_1": [
+    "1"
+  ],
+  "problem_physics__8temperature_2": [
+    "77"
+  ],
+  "problem_physics__8temperature_3": [
+    "414000"
+  ],
+  "problem_physics__8trig_1": [
+    "-0.75"
+  ],
+  "problem_physics__8trig_2": [
+    "-0.5"
+  ],
+  "problem_physics__8tristar_1": [
+    "4"
+  ],
+  "problem_physics__8tristar_2": [
+    "22"
+  ],
+  "problem_physics__8turelec_1": [
+    "2"
+  ],
+  "problem_physics__8turelec_2": [
+    "1"
+  ],
+  "problem_physics__8turelec_3": [
+    "11"
+  ],
+  "problem_physics__8turelec_4": [
+    "3",
+    "1.5",
+    "5",
+    "1"
+  ],
+  "problem_physics__8turelec_5": [
+    "800"
+  ],
+  "problem_physics__8turterm_1": [
+    "576"
+  ],
+  "problem_physics__8turterm_2": [
+    "1.25",
+    "2"
+  ],
+  "problem_physics__8turterm_3": [
+    "4.2"
+  ],
+  "problem_physics__8turterm_4": [
+    "580",
+    "5"
+  ],
+  "problem_physics__8turterm_5": [
+    "0.85"
+  ],
+  "problem_physics__8utb_1": [
+    "65"
+  ],
+  "problem_physics__8utb_2": [
+    "30.4"
+  ],
+  "problem_physics__8utb_3": [
+    "0.4"
+  ],
+  "problem_physics__9alpha_1": [
+    "5.0"
+  ],
+  "problem_physics__9alpha_2": [
+    "5.5"
+  ],
+  "problem_physics__9ballvec_1": [
+    "7.64"
+  ],
+  "problem_physics__9ballvec_2": [
+    "5"
+  ],
+  "problem_physics__9ballvec_3": [
+    "2.8",
+    "1"
+  ],
+  "problem_physics__9bernulli_1": [
+    "36.5"
+  ],
+  "problem_physics__9bernulli_2": [
+    "6.3"
+  ],
+  "problem_physics__9bernulli_3": [
+    "500"
+  ],
+  "problem_physics__9centripetal_1": [
+    "0.21"
+  ],
+  "problem_physics__9coord_1": [
+    "45"
+  ],
+  "problem_physics__9coord_2": [
+    "6.25",
+    "14"
+  ],
+  "problem_physics__9coord_3": [
+    "1"
+  ],
+  "problem_physics__9coord_4": [
+    "2100",
+    "1212"
+  ],
+  "problem_physics__9coord_5": [
+    "29"
+  ],
+  "problem_physics__9coord_6": [
+    "30^\\circ"
+  ],
+  "problem_physics__9derivative_1": [
+    "15"
+  ],
+  "problem_physics__9derivative_2": [
+    "-1"
+  ],
+  "problem_physics__9derivative_3": [
+    "3"
+  ],
+  "problem_physics__9derivative_4": [
+    "2"
+  ],
+  "problem_physics__9derivative_5": [
+    "0.5"
+  ],
+  "problem_physics__9friction_1": [
+    "10.3"
+  ],
+  "problem_physics__9friction_2": [
+    "24"
+  ],
+  "problem_physics__9friction_3": [
+    "4",
+    "10",
+    "3",
+    "24"
+  ],
+  "problem_physics__9grav_1": [
+    "383878"
+  ],
+  "problem_physics__9grav_2": [
+    "11",
+    "135",
+    "14"
+  ],
+  "problem_physics__9grav_3": [
+    "4.55"
+  ],
+  "problem_physics__9integral_1": [
+    "50"
+  ],
+  "problem_physics__9integral_2": [
+    "1"
+  ],
+  "problem_physics__9integral_3": [
+    "0.3"
+  ],
+  "problem_physics__9integral_4": [
+    "0.25"
+  ],
+  "problem_physics__9integral_5": [
+    "0.5"
+  ],
+  "problem_physics__9koenig_1": [
+    "50"
+  ],
+  "problem_physics__9mcv_1": [
+    "0.3"
+  ],
+  "problem_physics__9mcv_2": [
+    "10.4"
+  ],
+  "problem_physics__9mcv_3": [
+    "3.1",
+    "0.3",
+    "1.7",
+    "1.0"
+  ],
+  "problem_physics__9momentum_1": [
+    "150"
+  ],
+  "problem_physics__9momentum_2": [
+    "6.8"
+  ],
+  "problem_physics__9momentum_3": [
+    "8",
+    "16",
+    "4",
+    "4",
+    "20",
+    "20"
+  ],
+  "problem_physics__9mu_1": [
+    "3682"
+  ],
+  "problem_physics__9mu_2": [
+    "4000"
+  ],
+  "problem_physics__9newton_1": [
+    "3",
+    "9"
+  ],
+  "problem_physics__9newton_2": [
+    "1.4"
+  ],
+  "problem_physics__9newton_3": [
+    "3.8"
+  ],
+  "problem_physics__9newton_4": [
+    "0.33",
+    "0.33",
+    "0.00"
+  ],
+  "problem_physics__9newton_5": [
+    "1.2"
+  ],
+  "problem_physics__9newton_6": [
+    "56"
+  ],
+  "problem_physics__9newton_7": [
+    "11.0"
+  ],
+  "problem_physics__9noninert_1": [
+    "4"
+  ],
+  "problem_physics__9noninert_2": [
+    "11.3",
+    "40.8"
+  ],
+  "problem_physics__9noninert_3": [
+    "1.12"
+  ],
+  "problem_physics__9noninert_4": [
+    "2.89",
+    "2.52"
+  ],
+  "problem_physics__9omega_1": [
+    "3.82"
+  ],
+  "problem_physics__9omega_2": [
+    "12.57"
+  ],
+  "problem_physics__9omega_3": [
+    "0.5"
+  ],
+  "problem_physics__9omega_4": [
+    "4"
+  ],
+  "problem_physics__9omega_5": [
+    "10.9"
+  ],
+  "problem_physics__9omegaso_1": [
+    "66.4"
+  ],
+  "problem_physics__9omegaso_2": [
+    "19.5"
+  ],
+  "problem_physics__9omegaso_3": [
+    "11.8"
+  ],
+  "problem_physics__9omegaso_4": [
+    "0.31"
+  ],
+  "problem_physics__9omegaso_5": [
+    "53",
+    "2.375"
+  ],
+  "problem_physics__9palka_1": [
+    "11.2",
+    "26.6",
+    "89"
+  ],
+  "problem_physics__9palka_2": [
+    "1",
+    "0.5"
+  ],
+  "problem_physics__9palka_3": [
+    "3"
+  ],
+  "problem_physics__9palka_4": [
+    "4"
+  ],
+  "problem_physics__9palka_5": [
+    "0.66"
+  ],
+  "problem_physics__9rud_1": [
+    "11.25"
+  ],
+  "problem_physics__9rud_2": [
+    "2"
+  ],
+  "problem_physics__9rud_3": [
+    "1"
+  ],
+  "problem_physics__9rud_4": [
+    "26"
+  ],
+  "problem_physics__9rud_5": [
+    "4142"
+  ],
+  "problem_physics__9sound_1": [
+    "3000"
+  ],
+  "problem_physics__9sound_2": [
+    "14.7"
+  ],
+  "problem_physics__9sound_3": [
+    "2.85"
+  ],
+  "problem_physics__9stokes_1": [
+    "5.2"
+  ],
+  "problem_physics__9stokes_2": [
+    "41",
+    "20"
+  ],
+  "problem_physics__9stokes_3": [
+    "1.13",
+    "1.20"
+  ],
+  "problem_physics__9trig_1": [
+    "38"
+  ],
+  "problem_physics__9trig_2": [
+    "0"
+  ],
+  "problem_physics__9turbal_1": [
+    "10",
+    "7.6"
+  ],
+  "problem_physics__9turbal_2": [
+    "30"
+  ],
+  "problem_physics__9turbal_3": [
+    "3"
+  ],
+  "problem_physics__9turbal_4": [
+    "4.4"
+  ],
+  "problem_physics__9turbal_5": [
+    "2.9"
+  ],
+  "problem_physics__9turdin_1": [
+    "12.1"
+  ],
+  "problem_physics__9turdin_2": [
+    "180"
+  ],
+  "problem_physics__9turdin_3": [
+    "0.6"
+  ],
+  "problem_physics__9turdin_4": [
+    "22.6",
+    "60"
+  ],
+  "problem_physics__9turdin_5": [
+    "100",
+    "2.5",
+    "7.5"
+  ],
+  "problem_physics__9turtverd_1": [
+    "3.1"
+  ],
+  "problem_physics__9turtverd_2": [
+    "3",
+    "3",
+    "5.3"
+  ],
+  "problem_physics__9turtverd_3": [
+    "3.3"
+  ],
+  "problem_physics__9turtverd_4": [
+    "2",
+    "2"
+  ],
+  "problem_physics__9turtverd_5": [
+    "13",
+    "10"
+  ],
+  "problem_physics__9turzs_1": [
+    "30"
+  ],
+  "problem_physics__9turzs_2": [
+    "4"
+  ],
+  "problem_physics__9turzs_3": [
+    "2"
+  ],
+  "problem_physics__9turzs_4": [
+    "0.8",
+    "0.84"
+  ],
+  "problem_physics__9turzs_5": [
+    "0.93"
+  ],
+  "problem_physics__9udar_1": [
+    "1.8"
+  ],
+  "problem_physics__9udar_2": [
+    "38"
+  ],
+  "problem_physics__9udar_3": [
+    "80",
+    "37"
+  ],
+  "problem_physics__9udar_4": [
+    "100",
+    "120",
+    "0.49"
+  ],
+  "problem_physics__9vector_1": [
+    "7.1"
+  ],
+  "problem_physics__9vector_2": [
+    "118"
+  ],
+  "problem_physics__9vector_3": [
+    "7.5",
+    "13.0"
+  ],
+  "problem_physics__9wall_1": [
+    "7"
+  ],
+  "problem_physics__9wall_2": [
+    "2",
+    "0.57"
+  ],
+  "problem_physics__9wall_3": [
+    "20",
+    "17.3"
+  ],
+  "problem_physics__mass_1": [
+    "637"
+  ],
+  "problem_physics__mass_2": [
+    "8"
+  ],
+  "problem_physics__mass_3": [
+    "5180"
+  ],
+  "problem_physics__mass_4": [
+    "141"
+  ],
+  "problem_physics__mass_5": [
+    "0.6",
+    "1.2",
+    "0.96",
+    "300"
+  ]
+}

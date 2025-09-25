@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Баллистика: основные формулы}
+
+\subsection*{Начальные компоненты скорости}
+При броске тела со скоростью $v_0$ под углом $\alpha$ к горизонту:
+\[v_{0x} = v_0\cos\alpha, \quad v_{0y} = v_0\sin\alpha\]
+
+\subsection*{Уравнения движения}
+Движение по горизонтали равномерное, по вертикали — с ускорением $-g$:
+\[x(t) = v_0\cos\alpha\,t, \quad y(t) = v_0\sin\alpha\,t - \frac{gt^2}{2}\]
+
+\subsection*{Уравнение траектории}
+Парабола в координатах $(x,y)$:
+\[y(x) = x\text{tg}\,\alpha - \frac{g}{2v_0^2\cos^2\alpha}\,x^2\]
+
+\subsection*{Ключевые параметры}
+Максимальная высота подъёма:
+\[H = \frac{v_0^2\sin^2\alpha}{2g}\]
+
+Дальность полёта (при равных уровнях старта и приземления):
+\[L = \frac{v_0^2\sin2\alpha}{g}\]
+
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Van der Waals Gas Equations}
+
+\subsection*{Basic Equation}
+Van der Waals equation accounts for finite molecular size ($b$) and intermolecular attraction ($a$):
+\[
+\Bigl(p+\frac{a}{V^2}\Bigr)\,(V-b)=RT \quad\Longleftrightarrow\quad p(V,T)=\frac{RT}{V-b}-\frac{a}{V^2}
+\]
+
+\subsection*{Critical Point}
+Critical point occurs where phase transition liquid-gas disappears. Found from conditions:
+\[
+\frac{dp}{dV}=0,\quad \frac{d^2 p}{d V^2}=0
+\]
+
+Critical parameters are related as:
+\[
+V_c=3b,\quad p_c=\frac{RT_c}{8b},\quad a=\frac{27}{8}RT_c\,b
+\]
+
+Parameters $a,b$ can be found from critical temperature and pressure:
+\[
+b=\frac{RT_c}{8p_c},\quad a=\frac{27R^2T_c^2}{64p_c}
+\]
+
+\end{document}

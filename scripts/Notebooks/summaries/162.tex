@@ -1,0 +1,61 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm,bottom=2cm,left=1.5cm,right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Влажный воздух}
+
+\[
+p_\text{sat}(T = 100^\circ C) = p_0 \approx 100\; \text{кПа}.
+\]
+
+\subsubsection*{Изотерма \(p(V)\) для водяного пара}
+
+\[
+p(V)=\frac{\nu R T}{V}, \quad p < p_{\text{sat}}(T).
+\]
+
+\[
+p_{\text{sat}}(T)=\frac{\nu R T}{V_{\text{sat}}} \quad \Longrightarrow \quad V_{\text{sat}}=\frac{\nu R T}{p_{\text{sat}}(T)}.
+\]
+
+\[
+p(V)=p_{\text{sat}}(T)=\text{const}, \quad V \in [V_{\ell}, V_{\text{sat}}].
+\]
+
+\subsubsection*{Изотерма \(p(V)\) для влажного воздуха}
+
+\[
+p(V)=p_d(V)+p_v(V).
+\]
+
+\[
+p(V)=\frac{(\nu_d+\nu_v) R T}{V}, \quad p_v < p_{\text{sat}}(T).
+\]
+
+\[
+p_v = p_{\text{sat}}(T) \quad \Longrightarrow \quad V_{\text{sat}} = \frac{\nu_v R T}{p_{\text{sat}}(T)}.
+\]
+
+\[
+p(V) = \frac{\nu_d R T}{V} + p_{\text{sat}}(T).
+\]
+
+\[
+\frac{dp}{dV} =
+\begin{cases}
+-\dfrac{(\nu_d+\nu_v) R T}{V^2}, & V > V_{\text{sat}} \\
+-\dfrac{\nu_d R T}{V^2}, & V < V_{\text{sat}}
+\end{cases}
+\]
+
+\end{document}

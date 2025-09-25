@@ -1,0 +1,38 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\setlength\parindent{0pt}
+\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+
+\begin{document}
+
+\subsubsection*{Энергия системы зарядов}
+\[
+U=\frac12\sum_{i=1}^N q_i\,\varphi(A_i),
+\]
+где \(\varphi(A_i)\) — потенциал в точке \(A_i\), созданный всеми остальными зарядами.
+
+\subsubsection*{Заряд \(q\) и проводящая пластина}
+
+\begin{center}
+\includegraphics[width=0.33\linewidth]{10image1.jpeg}
+\end{center}
+
+\[
+\varphi_{\text{пл}}(A_q)=-\,\frac{k\,q}{2H},\quad k=\frac{1}{4\pi\varepsilon_0}.
+\]
+
+\[
+\boxed{
+U_{q\leftrightarrow \text{пл}}=-\,\frac{k\,q^2}{2H},\quad
+U_{\text{сист}}=-\,\frac{k\,q^2}{4H},\quad
+U_{\text{пл}\leftrightarrow \text{пл}}=\frac{k\,q^2}{4H}.
+}
+\]
+
+\end{document}

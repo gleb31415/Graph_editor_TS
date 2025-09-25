@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Политропический процесс}
+
+Молярная теплоёмкость и первое начало термодинамики для политропического процесса:
+\[
+C=\frac{1}{\nu}\frac{dQ}{dT}, \quad dQ=dU+p\,dV
+\]
+
+Основное уравнение политропы с показателем $n$:
+\[
+p\,V^n=\text{const}, \quad \text{где} \quad n=\frac{C-C_p}{C-C_V}
+\]
+
+Связанные инварианты политропы:
+\[
+T\,V^{n-1}=\text{const}, \quad p^{1-n}\,T^n=\text{const}
+\]
+
+Частные случаи:
+\begin{itemize}
+\item Изобара: $C=C_p$, $n=0$, $p=\text{const}$
+\item Изотерма: $C\to\infty$, $n=1$, $pV=\text{const}$
+\item Изохора: $C=C_V$, $V=\text{const}$
+\item Адиабата: $C=0$, $n=\gamma=\frac{C_p}{C_V}$
+\end{itemize}
+
+\end{document}

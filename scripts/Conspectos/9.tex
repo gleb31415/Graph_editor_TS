@@ -1,0 +1,129 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+\subsubsection*{Неподвижный блок}
+
+Рассмотрим нерастяжимую нить, переброшенную через неподвижный блок. Обозначим перемещения её концов как
+$s_1(t)$ и $s_2(t)$ (положительные «вниз» для каждого конца). 
+
+\begin{center}
+\includegraphics[width=0.2\linewidth]{7kinblock1.png}
+\label{fig:mpr}
+\end{center}
+
+Поскольку длина $L$ нити фиксирована,  
+\[
+L = s_1 + s_2 + \mathrm{const}.  
+\]  
+Тогда, если за промежуток времени $\Delta t$ концы нити прошли $\Delta s_1$ и $\Delta s_2$, 
+\[
+\Delta L = \Delta s_1 + \Delta s_2.
+\]  
+Нить нерастяжима, поэтому $\Delta L = 0$. Если поделить выражение на $\Delta t$, получим связь скоростей (кинематическую связь) концов нити:
+\[
+\frac{\Delta s_1}{\Delta t} + \frac{\Delta s_2}{\Delta t} = 0
+\]
+
+Обозначив скорости концов $v_1 = \dfrac{\Delta s_1}{\Delta t}$ и $v_2 = \dfrac{\Delta s_2}{\Delta t}$, получаем  
+\[
+v_1 + v_2 = 0,
+\]  
+то есть скорости равны по модулю и направлены противоположно:  
+\begin{center}
+\includegraphics[width=0.2\linewidth]{7kinblock2.png}
+\label{fig:mpr}
+\end{center}
+
+\[
+v_1 = -\,v_2.
+\]  
+
+\subsubsection*{Подвижный блок}
+
+Рассмотрим теперь систему с одним подвижным блоком, подвешенным за сердцевину на нити. Через него также перекинута другая нить, концы которой перемещаются на $s_1(t)$ и $s_2(t)$ (положительное направление вверх), а сам блок смещается вертикально 
+на $s(t)$ (положительное направление вверх) засчёт того, что его тянут или отпускают на нити, на которой он подвешен. 
+
+\begin{center}
+\includegraphics[width=0.2\linewidth]{7kinblock3.png}
+\label{fig:mpr}
+\end{center}
+
+Полная длина нити  
+\[
+L = 2s - s_1 - s_2 + \mathrm{const},
+\]  
+откуда  
+\[
+2\frac{\Delta s}{\Delta t} - \frac{\Delta s_1}{\Delta t} - \frac{\Delta s_2}{\Delta t} = \frac{\Delta L}{\Delta t} = 0.
+\]  
+Обозначив $v_1=\dfrac{\Delta s_1}{\Delta t}$, $v_2=\dfrac{\Delta s_2}{\Delta t}$, $v=\dfrac{\Delta s}{\Delta t}$, получаем 
+
+\begin{center}
+\includegraphics[width=0.2\linewidth]{7kinblock4.png}
+\label{fig:mpr}
+\end{center}
+
+\[
+2v - v_1 - v_2 = 0
+\quad\Longrightarrow\quad
+v = \,\frac{v_1 + v_2}{2}.
+\]  
+
+
+
+
+
+\textbf{Пример 1.}
+
+Через подвижный блок перекинута нить. Один конец нити тянут вниз со скоростью $u$, второй закреплён на месте.
+Тогда сам блок движется вниз со скоростью 
+\[
+v = \,\frac{v_1+v_2}{2} = \frac{u+0}{2} = \frac{u}{2}.
+\]  
+
+
+\textbf{Пример 2.}
+
+Через подвижный блок перекинута нить. Один конец нити тянут вверх со скоростью $3u$, сам блок движется вверх со скоростью $u$.
+Тогда второй конец нити движется вверх со скоростью $v$ такой, что:
+\[
+u = \,\frac{v_1+v_2}{2} = \frac{v+3u}{2}.
+\]  
+\[
+v = -u,
+\]
+то есть второй конец нити движется вниз со скоростью $u$, так как знак учитывает направление (вверх со скоростью $-u \Longleftrightarrow$ вниз со скоростью $u$).
+\end{document}

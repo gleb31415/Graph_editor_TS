@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Влажный воздух - краткие формулы}
+
+\subsection*{Водяной пар}
+При температуре кипения воды давление насыщенного пара:
+\[p_\text{sat}(T = 100^\circ C) = p_0 \approx 100\; \text{кПа}\]
+
+\subsection*{Основные соотношения}
+Для сверхнагретого пара (до насыщения):
+\[p(V)=\frac{\nu R T}{V}, \quad \text{пока} \quad p < p_{\text{sat}}(T)\]
+
+В двухфазной области (конденсация):
+\[p(V)=p_{\text{sat}}(T)=\text{const}, \quad V\in[V_{\ell},V_{\text{sat}}]\]
+
+\subsection*{Влажный воздух}
+Для смеси сухого воздуха и пара до насыщения:
+\[p(V)=\frac{(\nu_d+\nu_v) R T}{V}\]
+
+После насыщения:
+\[p(V)=\frac{\nu_d R T}{V}+p_{\text{sat}}(T)\]
+
+Количество пара в газовой фазе:
+\[\nu_{\text{пар}}(V)=\frac{p_{\text{sat}}(T)}{R T}\,V\]
+
+\end{document}

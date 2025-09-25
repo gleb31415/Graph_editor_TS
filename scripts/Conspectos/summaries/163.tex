@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Клапейрон-Клаузиус и фазовые переходы}
+
+\subsection*{Уравнение Клапейрона-Клаузиуса}
+Описывает кривую насыщения (границу между жидкой и газовой фазой):
+\[
+\frac{dp}{dT}=\frac{L(T)}{T\left(\frac{1}{\rho_2}-\frac{1}{\rho_1}\right)}
+\]
+
+\subsection*{Зависимость теплоты парообразования}
+Изменение теплоты парообразования при постоянных теплоёмкостях:
+\[
+L_2 = L_1 + (4R - C)(T_2-T_1)
+\]
+
+\subsection*{Давление насыщенного пара}
+При постоянной теплоте парообразования:
+\[
+p(T)=p_1\exp\!\left[-\frac{L}{R}\left(\frac{1}{T}-\frac{1}{T_1}\right)\right]
+\]
+
+С учётом линейной зависимости $L(T)$:
+\[
+p(T)=p_1\exp\!\left[\frac{L_1 - k T_1}{R}\left(\frac{1}{T_1}-\frac{1}{T}\right)\right]
+\left(\frac{T}{T_1}\right)^{k/R}
+\]
+где $k=4R-C$.
+
+\end{document}

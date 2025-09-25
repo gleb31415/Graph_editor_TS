@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}% тип документа, размер шрифта
+\usepackage[T2A]{fontenc}%поддержка кириллицы в ЛаТеХ
+\usepackage[utf8]{inputenc}%кодировка
+\usepackage[russian]{babel}%русский язык
+\usepackage{mathtext}% русский текст в формулах
+\usepackage{amsmath}%удобная вёрстка многострочных формул, масштабирующийся текст в формулах, формулы в рамках и др.
+\usepackage{amsfonts}%поддержка ажурного и готического шрифтов — например, для записи символа {\displaystyle \mathbb {R} } \mathbb {R} 
+\usepackage{amssymb}%amsfonts + несколько сотен дополнительных математических символов
+\frenchspacing%запрет длинного пробела после точки
+\usepackage{setspace}%возможность установки межстрочного интервала
+\usepackage{indentfirst}%пакет позволяет делать в первом абзаце после заголовка абзацный отступ
+\usepackage[unicode, pdftex]{hyperref}
+\onehalfspacing%установка полуторного интервала по умолчанию
+\usepackage{graphicx}%подключение рисунков
+\graphicspath{{images/}}%путь ко всем рисункам
+\usepackage{caption}
+\usepackage{float}%плавающие картинки
+\usepackage{tikz} % это для чудо-миллиметровки
+\usepackage{pgfplots}%для построения графиков
+\pgfplotsset{compat=newest, y label style={rotate=-90},  width=10 cm}%версия пакета построения графиков, ширина графиков
+\usepackage{pgfplotstable}%простое рисование табличек
+\usepackage{lastpage}%пакет нумерации страниц
+\usepackage{comment}%возможность вставлять большие комменты
+\usepackage{float}
+%%%%% ПОЛЯъ
+\setlength\parindent{0pt} 
+\usepackage[top = 2 cm, bottom = 2 cm, left = 1.5 cm, right = 1.5 cm]{geometry}
+\setlength\parindent{0pt}
+%%%%% КОЛОНТИТУЛЫ
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{tikz}
+
+\begin{document}
+
+
+
+\subsubsection*{Тангенциальное и нормальное ускорения}
+
+
+\begin{center}
+\includegraphics[width=0.4\linewidth]{9alpha2.png}
+\label{fig:mpr}
+\end{center}
+
+При неравномерном движении по окружности скорость по модулю $v$ меняется, и ускорение разбивается на две ортогональные составляющие:
+\[
+\vec a = \vec a_\tau + \vec a_n,
+\]
+где 
+\begin{itemize}
+	\item \(\vec a_\tau\) — \textit{тангенциальное ускорение} (по касательной к траектории, изменяет модуль скорости);
+	\item \(\vec a_n\) — \textit{нормальное ускорение} (вдоль радиуса, изменяет направление).
+\end{itemize}
+
+\subsubsection*{Нормальное ускорение}
+При любом движении по окружности радиуса $r$ нормальная составляющая всегда равна
+\[
+a_n = \frac{v^2}{r} = \omega v,
+\]
+и направлена к центру окружности.
+
+\subsubsection*{Угловое ускорение и угол поворота}
+Угловое ускорение $\alpha$ определяет изменение угловой скорости:
+\[
+\alpha = \frac{d\omega}{dt}.
+\]
+При постоянном $\alpha$:
+\[
+\omega(t) = \omega_0 + \alpha\,t,
+\]
+
+По аналогии с равноускоренным прямолинейным движением, 
+\[
+\Delta \varphi(t) = \omega_0t + \tfrac12\alpha\,t^2.
+\]
+
+\subsubsection*{Траектория произвольного движения}
+Для любой криволинейной траектории ускорение тоже раскладывается на нормальную и тангенциальную составляющие:
+\[
+\vec a = \underbrace{\dot v}_{a_\tau}\,\vec e_\tau + \underbrace{\frac{v^2}{R}}_{a_n}\,\vec e_n,
+\]
+где $\dot v = \dfrac{\Delta |\vec v|}{\Delta t}$ при $\Delta t \to 0$, $R$ — \textit{радиус кривизны} в данной точке, $\vec e_\tau$ — касательный единичный вектор, $\vec e_n$ — нормальный (кривая локально приближается окружностью радиуса $R$).
+
+
+
+
+Радиус $R$ кривизны траектории определяется как 
+\[
+R = \frac{v^2}{a_n}.
+\]
+
+\end{document}

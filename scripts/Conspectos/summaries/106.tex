@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Star-Delta Circuit Transformations}
+
+Triangle-to-Star transformation formulas for converting resistances $R_i$ (triangle) to $r_i$ (star):
+\[
+r_1 = \frac{R_1R_3}{R_1 + R_2 + R_3}, \quad
+r_2 = \frac{R_1R_2}{R_1 + R_2 + R_3}, \quad
+r_3 = \frac{R_2R_3}{R_1 + R_2 + R_3}
+\]
+
+Star-to-Triangle transformation formulas for converting resistances $r_i$ (star) to $R_i$ (triangle):
+\[
+R_1 = \frac{r_1r_2 + r_2r_3 + r_3r_1}{r_3}, \quad
+R_2 = \frac{r_1r_2 + r_2r_3 + r_3r_1}{r_1}, \quad
+R_3 = \frac{r_1r_2 + r_2r_3 + r_3r_1}{r_2}
+\]
+
+These formulas allow conversion between equivalent three-terminal networks in star (Y) and delta (Δ) configurations while preserving the equivalent resistance between any two terminals.
+
+\end{document}
