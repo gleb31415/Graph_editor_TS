@@ -18,7 +18,7 @@ export const rawNodes = [
     "id": "Равномерное прямолинейное движение",
     "data": {
       "section": "механика",
-      "grade": "7",
+      "grade": "7", 
       "text": "Равномерное прямолинейное движение, скорость, координата, перемещение, график зависимости, вектор, время движения, пример",
       "number": 2,
       "olympiads": [
@@ -727,7 +727,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4420,
-      "y": 4780
+      "y": 4680
     },
     "width": 320,
     "height": 300
@@ -948,7 +948,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4420,
-      "y": 5040
+      "y": 4940
     },
     "width": 320,
     "height": 300
@@ -975,7 +975,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 3860,
-      "y": 6060
+      "y": 6120
     },
     "width": 320,
     "height": 300
@@ -1051,7 +1051,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4920,
-      "y": 5300
+      "y": 5460
     },
     "width": 320,
     "height": 300
@@ -1084,7 +1084,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4920,
-      "y": 4520
+      "y": 4420
     },
     "width": 320,
     "height": 300
@@ -1126,7 +1126,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5400,
-      "y": 4520
+      "y": 4420
     },
     "width": 320,
     "height": 300
@@ -1159,7 +1159,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5400,
-      "y": 4780
+      "y": 4680
     },
     "width": 320,
     "height": 300
@@ -1190,7 +1190,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5400,
-      "y": 5040
+      "y": 4940
     },
     "width": 320,
     "height": 300
@@ -1217,7 +1217,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4920,
-      "y": 4780
+      "y": 4680
     },
     "width": 320,
     "height": 300
@@ -1247,7 +1247,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4920,
-      "y": 5040
+      "y": 4940
     },
     "width": 320,
     "height": 300
@@ -1278,7 +1278,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4920,
-      "y": 5170
+      "y": 5200
     },
     "width": 320,
     "height": 300
@@ -1307,7 +1307,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4920,
-      "y": 6060
+      "y": 6120
     },
     "width": 320,
     "height": 300
@@ -1338,7 +1338,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5200,
-      "y": 6200
+      "y": 6280
     },
     "width": 320,
     "height": 300
@@ -1373,7 +1373,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5200,
-      "y": 6540
+      "y": 6560
     },
     "width": 320,
     "height": 300
@@ -1406,7 +1406,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 4640,
-      "y": 6200
+      "y": 6280
     },
     "width": 320,
     "height": 300
@@ -1439,7 +1439,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5520,
-      "y": 6060
+      "y": 6140
     },
     "width": 320,
     "height": 300
@@ -1462,7 +1462,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 5520,
-      "y": 6380
+      "y": 6420
     },
     "width": 320,
     "height": 300
@@ -1524,7 +1524,7 @@ export const rawNodes = [
     },
     "position": {
       "x": 6040,
-      "y": 6380
+      "y": 6420
     },
     "width": 320,
     "height": 300
@@ -2037,7 +2037,7 @@ export const rawNodes = [
     "data": {
       "section": "математика",
       "grade": "10",
-      "text" : "Базовые тригонометрические тождества: связи между синусом/косинусом/тангенсом/котангенсом, формулы суммы и разности углов, двойных и половинных углов, теоремы синусов и косинусов, формулы площади треугольника.",
+      "text": "Базовые тригонометрические тождества: связи между синусом/косинусом/тангенсом/котангенсом, формулы суммы и разности углов, двойных и половинных углов, теоремы синусов и косинусов, формулы площади треугольника.",
       "number": 68,
       "olympiads": [
         "МОШ, 11",
@@ -4547,6 +4547,7 @@ export const rawNodes = [
     "height": 300
   }
 ];
+
 export const rawEdges = [
   {
     id: "e0",
@@ -5185,14 +5186,24 @@ export const rawEdges = [
     target: "Объёмная плотность энергии электрического поля",
   },
   {
-    id: "e131",
-    source: "Объёмная плотность энергии электрического поля",
+    id: "e122",
+    source: "Соединение конденсаторов. Энергия конденсатора.",
     target: "RC-цепи",
   },
   {
+    id: "e131",
+    source: "Объёмная плотность энергии электрического поля",
+    target: "Тур. Электростатика, 11 класс.",
+  },
+  {
     id: "e132",
-    source: "RC-цепи",
+    source: "Тур. Электростатика, 10 класс.",
     target: "Ток в различных средах",
+  },
+  {
+    id: "e121",
+    source: "RC-цепи",
+    target: "Тур. Электростатика, 11 класс.",
   },
   {
     id: "e133",
